@@ -1,0 +1,459 @@
+<wpml-config>
+    
+    <custom-fields> 
+        <custom-field action="copy">_sb_slider_slider_image</custom-field>
+        <custom-field action="copy">_sb_slider_icon_image</custom-field>
+        <custom-field action="copy">_sb_slider_title</custom-field>
+        <custom-field action="copy">_sb_slider_description</custom-field>
+        <custom-field action="copy">_sb_slider_btn_name1</custom-field>
+        <custom-field action="copy">_sb_slider_btn_link1</custom-field>
+        <custom-field action="copy">_sb_slider_btn_name2</custom-field>
+        <custom-field action="copy">_sb_slider_btn_link2</custom-field>
+        <custom-field action="copy">_sb_slider_video_name</custom-field>
+        <custom-field action="copy">_sb_slider_slider_link1</custom-field>
+        <custom-field action="copy">_sb_slider_slider_link2</custom-field>
+        <custom-field action="copy">_sb_slider_slider_link3</custom-field>
+
+        <custom-field action="copy">_chameleon_company_location_map</custom-field>
+        <custom-field action="copy">_chameleon_company_location_contact</custom-field>
+        <custom-field action="copy">_chameleon_company_location_icon</custom-field>
+
+        <custom-field action="copy">_chameleon_property_address_country_name</custom-field>
+        <custom-field action="copy">_chameleon_property_address_region_name</custom-field>
+        <custom-field action="copy">_chameleon_property_address_address_name</custom-field>
+        <custom-field action="copy">_chameleon_property_address_zip</custom-field>
+        <custom-field action="copy">_chameleon_property_address_map_canvas</custom-field>
+        <custom-field action="copy">_chameleon_property_address_convert_zip</custom-field>
+        <custom-field action="copy">_chameleon_property_address_lat</custom-field>
+        <custom-field action="copy">_chameleon_property_address_lng</custom-field>
+
+        <custom-field action="copy">_sb_progress_bar_accordian_shortcode</custom-field>
+        <custom-field action="copy">_sb_progress_bar_progress_shortcode</custom-field>
+
+        <custom-field action="copy">_sb_pricing_column</custom-field>
+        <custom-field action="copy">_sb_pricing_shortcode</custom-field>
+
+        <custom-field action="copy">_chameleon_testimonial_author_name</custom-field>
+        <custom-field action="copy">_chameleon_testimonial_author_address</custom-field>
+        <custom-field action="copy">_chameleon_testimonial_author_designation</custom-field>
+        <custom-field action="copy">_chameleon_testimonial_author_company</custom-field>
+
+        <custom-field action="copy">_tons_of_feature_icon</custom-field>
+        <custom-field action="copy">_tons_of_featurel_icon</custom-field>
+       
+        <custom-field action="copy">_company_info_feature_icon</custom-field>
+        <custom-field action="copy">_company_info_feature_number</custom-field>
+        <custom-field action="copy">_company_info_feature_title</custom-field>
+    </custom-fields>
+
+
+    <custom-types>
+        <custom-type translate="1">block</custom-type>
+        <custom-type translate="1">testimonial</custom-type>
+        <custom-type translate="1">slider</custom-type>
+        <custom-type translate="1">sb_progress</custom-type>
+        <custom-type translate="1">sb_pricing</custom-type>
+        <custom-type translate="1">company_location</custom-type>
+        <custom-type translate="1">portfolio</custom-type>
+        <custom-type translate="1">feature</custom-type>
+        <custom-type translate="1">company</custom-type>
+    </custom-types>
+
+    <admin-texts>
+        <key name="chameleon_option_data">
+            <key name="chameleon-favicon">
+                <key name="1">
+                    <key name="url" />
+                    <key name= "id" />
+                    <key name="height" />
+                    <key name="width" />
+                    <key name="thumbnail" />
+                </key>
+            </key>
+            <key name="chameleon-favicon-iphone">
+                <key name="1">
+                    <key name="url" />
+                    <key name= "id" />
+                    <key name="height" />
+                    <key name="width" />
+                    <key name="thumbnail" />
+                </key>
+            </key>
+            <key name="chameleon-favicon-ipad">
+                <key name="1">
+                    <key name="url" />
+                    <key name= "id" />
+                    <key name="height" />
+                    <key name="width" />
+                    <key name="thumbnail" />
+                </key>
+            </key>
+            
+            <key name="chameleon-custom-css" />
+            <key name="chameleon-custom-js" />
+            <key name="chameleon-show-page-sidebar" />
+            <key name="chameleon-share-button" />
+            <key name="chameleon-share-button-facebook" />
+            <key name="chameleon-share-button-twitter" />
+            <key name="chameleon-share-button-google" />
+            <key name="chameleon-share-button-linkedin" />
+            <key name="chameleon-share-button-envelope" />
+            <key name="chameleon-share-button-pinterest" />
+            <key name="chameleon-top-language" />
+            <key name="chameleon-login-option" />
+            
+            <key name="chameleon-wpml-select"/>
+            <key name="chameleon-header-switch"/>
+            <key name="chameleon-multi-header-image" />
+            <key name="chameleon-social-profile-title" />
+            <key name="chameleon-blog-switch" />
+            <key name="chameleon-multi-breadcrumb-image" />
+            <key name="chameleon-breadcrumb-switch" />
+            <key name="chameleon-multi-topBar-image" />
+            <key name="chameleon-top-bar-switch" />
+            
+            
+            <key name="chameleon-social-profile"/>
+            <key name="chameleon-facebook-profile"/>
+            <key name="chameleon-twitter-profile"/>
+            <key name="chameleon-google-profile"/>
+            <key name="chameleon-linkedin-profile"/>
+            <key name="chameleon-pinterest-profile"/>
+            
+            <key name="chameleon-partners-switch"/>
+            <key name="chameleon-our-partners">
+                <key name="1">
+                    <key name="title" />
+                    <key name="description" />
+                    <key name="url" />
+                    <key name="sort" />
+                    <key name="attachment_id" />
+                    <key name="thumb" />
+                    <key name="image" />
+                    <key name="height" />
+                    <key name="width" />
+                </key>
+            </key>
+            <key name="chameleon-sidebar-latest-news-image" />
+            <key name="chameleon-footer-menu-switch" />
+            <key name="chameleon-footer-switch" />
+            <key name="chameleon-multi-footer-image" />
+            <key name="chameleon-bottom-switch" />
+            <key name="chameleon-multi-bottom-image" />
+            <key name="chameleon-left-footer-switch" />
+            <key name="chameleon-middle-footer-switch" />
+            <key name="chameleon-right-footer-switch" />
+            <key name="chameleon-down-footer-switch" />
+            <key name="chameleon-extra-middle-footer-switch" />
+            <key name="chameleon-show-footer-credits" />
+            <key name="chameleon-show-footer-copyrights" />
+            <key name="chameleon-copyright-text" />
+            <key name="chameleon-after-copyright-text" />
+            <key name="chameleon-privacy" />
+            <key name="chameleon-condition" />
+            <key name="chameleon-select-stylesheet" />
+            
+            
+            
+            
+            
+            
+            <key name="chameleon-language">
+                <key name="1">
+                    <key name="EN" />
+                    <key name="DE" />
+                    <key name="IT" />
+                    <key name="FR" />
+                </key>
+            </key>
+            
+            
+            <key name="chameleon-left-footer-switch"/>
+            <key name="chameleon-middle-footer-switch"/>
+            <key name="chameleon-right-footer-switch"/>
+            <key name="chameleon-show-footer-copyrights"/>
+            <key name="chameleon-copyright-text"/>
+            <key name="chameleon-powered-by"/>
+            <key name="chameleon-company-link"/>
+            <key name="chameleon-select-stylesheet"/>
+            
+            <key name="chameleon-body-typography">
+                <key name="1">
+                    <key name="font-family" />
+                    <key name="font-options" />
+                    <key name="google" />
+                    <key name="font-backup" />
+                    <key name="font-weight" />
+                    <key name="font-style" />
+                    <key name="text-align" />
+                    <key name="line-height" />
+                    <key name="color" />
+                </key>
+            </key>
+            
+            <key name="chameleon-header-typography">
+                <key name="1">
+                    <key name="font-family" />
+                    <key name="font-options" />
+                    <key name="google" />
+                    <key name="font-backup" />
+                    <key name="font-weight" />
+                    <key name="font-style" />
+                    <key name="text-align" />
+                    <key name="line-height" />
+                    <key name="color" />
+                </key>
+            </key>
+            
+            <key name="chameleon-opt-text">
+                <key name="chameleon-opt-textarea">
+                    
+                    <key name="chameleon-about-company-slides">
+                        <key name="1">
+                            <key name="title" />
+                            <key name="description" />
+                            <key name="url" />
+                            <key name="sort" />
+                            <key name="attachment_id" />
+                            <key name="thumb" />
+                            <key name="image" />
+                            <key name="height" />
+                            <key name="width" />
+                        </key>
+                    </key>
+                    
+                    <!-- need from here -->
+                    <key name="chameleon-about-company-text">
+                        <key name="chameleon-about-company-textarea">
+                            
+                            <key name="chameleon-page-banner-image">
+                                <key name="1">
+                                    <key name="url" />
+                                    <key name="id" />
+                                    <key name="height" />
+                                    <key name="width" />
+                                    <key name="thumbnail" />
+                                </key>
+                            </key>
+                            
+                            <key name="chameleon-page-banner-icon">
+                                <key name="1">
+                                    <key name="url" />
+                                    <key name="id" />
+                                    <key name="height" />
+                                    <key name="width" />
+                                    <key name="thumbnail" />
+                                </key>
+                            </key>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <key name="chameleon-construction-header-slider">
+                                <key name="1">
+                                    <key name="title" />
+                                    <key name="description" />
+                                    <key name="url" />
+                                    <key name="sort" />
+                                    <key name="attachment_id" />
+                                    <key name="thumb" />
+                                    <key name="image" />
+                                    <key name="height" />
+                                    <key name="width" />
+                                </key>
+                            </key>
+                            
+                            
+                            <key name="chameleon-construction-testimonial-footer-banner-image">
+                                <key name="1">
+                                    <key name="url" />
+                                    <key name="id" />
+                                    <key name="height" />
+                                    <key name="width" />
+                                    <key name="thumbnail" />
+                                </key>
+                            </key>
+                            
+                            <key name="construction-feature-big-image">
+                                <key name="1">
+                                    <key name="url" />
+                                    <key name="id" />
+                                    <key name="height" />
+                                    <key name="width" />
+                                    <key name="thumbnail" />
+                                </key>
+                            </key>
+                            
+                            
+                            
+                            <key name="chameleon-testimonial-footer-banner-image">
+                                <key name="1">
+                                    <key name="url" />
+                                    <key name="id" />
+                                    <key name="height" />
+                                    <key name="width" />	
+                                    <key name="thumbnail" />			
+                                </key>				
+                            </key>
+                            
+                            <key name="chameleon-construction-TOF-title">
+                                <key name="construction-construction-image">
+                                    <key name="1">
+                                        <key name="url" />
+                                        <key name="id" />
+                                        <key name="height" />
+                                        <key name="width" />	
+                                        <key name="thumbnail" />			
+                                    </key>				
+                                </key>
+                                
+                                <key name="chameleon-construction-textarea">
+                                    <key name="chameleon-construction-partner">
+                                        <key name="1">
+                                            <key name="title" />
+                                            <key name="description" />
+                                            <key name="url" />
+                                            <key name="sort" />	
+                                            <key name="attachment_id" />
+                                            <key name="thumb" />
+                                            <key name="image" />	
+                                            <key name="height" />
+                                            <key name="width" />				
+                                        </key>			
+                                    </key>
+                                    
+                                    
+                                    <key name="chameleon-service-testimonials">
+                                        <key name="1">
+                                            <key name="title" />
+                                            <key name="description" />
+                                            <key name="url" />
+                                            <key name="sort" />	
+                                            <key name="attachment_id" />
+                                            <key name="thumb" />
+                                            <key name="image" />	
+                                            <key name="height" />
+                                            <key name="width" />				
+                                        </key>			
+                                    </key>
+                                    
+                                    <key name="construction-about-company-slides">
+                                        <key name="1">
+                                            <key name="title" />
+                                            <key name="description" />
+                                            <key name="url" />
+                                            <key name="sort" />	
+                                            <key name="attachment_id" />
+                                            <key name="thumb" />
+                                            <key name="image" />	
+                                            <key name="height" />
+                                            <key name="width" />				
+                                        </key>			
+                                    </key>
+                                    
+                                    
+                                    <key name="chameleon-opt-slides">
+                                        <key name="1">
+                                            <key name="title" />
+                                            <key name="description" />
+                                            <key name="url" />
+                                            <key name="sort" />	
+                                            <key name="attachment_id" />
+                                            <key name="thumb" />
+                                            <key name="image" />	
+                                            <key name="height" />
+                                            <key name="width" />				
+                                        </key>				
+                                    </key>
+                                    
+                                    
+                                    <key name="chameleon-home-page-slider">
+                                        <key name="1">
+                                            <key name="title" />
+                                            <key name="description" />
+                                            <key name="url" />
+                                            <key name="sort" />	
+                                            <key name="attachment_id" />
+                                            <key name="thumb" />
+                                            <key name="image" />	
+                                            <key name="height" />
+                                            <key name="width" />				
+                                        </key>				
+                                    </key>
+                                    <key name="chameleon-login-option"/>
+                                    <key name="chameleon-general-banner">
+                                        <key name="1">
+                                            <key name="url" />
+                                            <key name="height" />
+                                            <key name="width" />
+                                            <key name="thumbnail" />					
+                                        </key>				
+                                    </key>
+                                    <key name="chameleon-product-banner">
+                                        <key name="1">
+                                            <key name="url" />
+                                            <key name="height" />
+                                            <key name="width" />
+                                            <key name="thumbnail" />					
+                                        </key>				
+                                    </key>
+                                    <key name="chameleon-driver-banner">
+                                        <key name="1">
+                                            <key name="url" />
+                                            <key name="height" />
+                                            <key name="width" />
+                                            <key name="thumbnail" />					
+                                        </key>				
+                                    </key>
+                                    <key name="chameleon-testimonial-banner">
+                                        <key name="1">
+                                            <key name="url" />
+                                            <key name="height" />
+                                            <key name="width" />
+                                            <key name="thumbnail" />					
+                                        </key>				
+                                    </key>
+                                    <key name="chameleon-contact-banner">
+                                        <key name="1">
+                                            <key name="url" />
+                                            <key name="height" />
+                                            <key name="width" />
+                                            <key name="thumbnail" />					
+                                        </key>				
+                                    </key>
+                                    <key name="chameleon-location-banner">
+                                        <key name="1">
+                                            <key name="url" />
+                                            <key name="height" />
+                                            <key name="width" />
+                                            <key name="thumbnail" />					
+                                        </key>				
+                                    </key>
+                                    
+                                    
+                                    
+                                    
+                                    <key name="chameleon-show-footer-widgets"/>
+                                    <key name="chameleon-footer-widgets-icon">
+                                        <key name="1">
+                                            <key name="url" />
+                                            <key name="height" />
+                                            <key name="width" />
+                                            <key name="thumbnail" />					
+                                        </key>				
+                                    </key>
+                                    
+                                    <key name="chameleon-copyright-text"/>
+                                    <key name="chameleon-powered-by"/>
+                                    <key name="chameleon-company-link"/>
+                                    <key name="chameleon-select-stylesheet"/>			
+                                    
+                                    
+                                    
+                                </key>
+                            </admin-texts>
+                            
+                        </wpml-config>
