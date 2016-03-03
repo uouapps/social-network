@@ -267,17 +267,7 @@ Send Us a Message
 
 	$page_title='Home';
 	$page_name='home';
-	$page_content='<p class="home-title" style="text-align: center;"><strong>Hospital Categories</strong></p>
-<p class="home-subtitle">With over 5000 doctors and experts in the healthcare field medical directory provides a listing of all doctors 
-across a wide variety if medical fields</p>
-<p style="text-align: center;">[hospital_categories]</p>
-<p  class="home-title" style="text-align: center;"><strong>Doctor Categories</strong></p>
-<p  class="home-subtitle" style="text-align: center;">
-Find the right doctor within the closest hospital across a wide range of medical fields including neurosurgery
-</p>
-<p style="text-align: center;">[doctor_categories]</p>
-<p class="home-title" style="text-align: center;"><strong>Hospital Featured Listing</strong></p>
-<p style="text-align: center;">[hospital_featured]</p>
+	$page_content='test Content
 
 ';
 	$my_post_form = array(

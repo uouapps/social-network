@@ -198,12 +198,12 @@
 					//---- COMMENT FILTERS ----//	
 					//add_filter('comments_template', array(&$this,'no_comments_on_page'),10); 
 					
-					add_action( 'init', array(&$this, 'iv_hospital_post_type') );
-					add_action( 'init', array(&$this, 'tr_create_my_taxonomy_hospital'));					
+					//add_action( 'init', array(&$this, 'iv_hospital_post_type') );
+					//add_action( 'init', array(&$this, 'tr_create_my_taxonomy_hospital'));					
 					//add_filter('request', array(&$this, 'post_type_tags_fix'));	
 					
-					add_action( 'init', array(&$this, 'iv_doctor_post_type') );
-					add_action( 'init', array(&$this, 'tr_create_my_taxonomy_doctor'));
+					//add_action( 'init', array(&$this, 'iv_doctor_post_type') );
+					//add_action( 'init', array(&$this, 'tr_create_my_taxonomy_doctor'));
 					
 					
 					//add_filter( 'template_include', array(&$this, 'include_template_function'), 9, 2  );
