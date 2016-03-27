@@ -37,7 +37,7 @@
 					 get_option('_iv_directories_registration','73');
 					-->
 					<?php 
-					$form_wizard=get_option('_iv_directories_profile_public_page');
+					$form_wizard=get_option('_iv_personal_profile_public_page');
 							//echo get_the_title( $form_wizard );  ?>
 					<a class="btn btn-info btn-xs " href="<?php echo get_permalink( $form_wizard ); ?>" target="blank">View Page</a>
 				

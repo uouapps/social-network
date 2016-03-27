@@ -18,30 +18,24 @@ global $wpdb;
 	
 					
 	parse_str($_POST['form_data'], $form_data);
-	$dir_id=$form_data['dir_id'];	
-	$dir_detail= get_post($dir_id); 
-	$dir_title= '<a href="'.get_permalink($dir_id).'">'.$dir_detail->post_title.'</a>';		
-	// Email for Client	
+	$profile_user=$form_data['profile_user'];	
 	
-	$user_id=$dir_detail->post_author;
-	$user_info = get_userdata( $user_id);		
+	// Email for Client	
+	$dir_title='';
+	
+	$user_info = get_userdata( $profile_user);		
 		
 	$client_email_address =$user_info->user_email;
 	
 	
 	$visitor_id=get_current_user_id();
 	$visitor_email_address='';
-	if($visitor_id==''){
-		$visitor_email_address=$form_data['email_address'];
-	}else{		
-		$user_info_v = get_userdata( $visitor_id);
-		$visitor_email_address= $user_info_v->user_email;
-	}
+	$visitor_email_address=$form_data['email_address'];
 		
 				
 	
 	$email_body = str_replace("[iv_member_sender_email]", $visitor_email_address, $email_body);
-	$email_body = str_replace("[iv_member_directory]", $dir_title, $email_body);
+	$email_body = str_replace("[iv_member_name]", $dir_title, $email_body);
 	$email_body = str_replace("[iv_member_message]", $form_data['message-content'], $email_body);	
 	
 	

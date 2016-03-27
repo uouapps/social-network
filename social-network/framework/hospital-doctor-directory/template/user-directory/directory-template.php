@@ -103,11 +103,10 @@ global $wpdb;
 							$args['search']='*'.$search_user.'*';
 						}
 						
-						$iv_redirect_user = get_option( '_iv_directories_profile_public_page');
+						
+						
 						$reg_page_user='';
-				        if($iv_redirect_user!='defult'){ 
-							$reg_page_user= get_permalink( $iv_redirect_user) ; 										 
-						}
+				        
 						if(isset($atts['role'])){
 							 $args['role']=$atts['role'];
 						}
@@ -121,11 +120,22 @@ global $wpdb;
 									
 								$iv_profile_pic_url=get_user_meta($user->ID, 'iv_profile_pic_thum',true);
 								$reg_page_u=$reg_page_user.'?&id='.$user->user_login; //$reg_page ;
+								$reg_page_user='';
+								$user_type= get_user_meta($user->ID,'iv_member_type',true);
+								if($user_type=='corporate'){
+									$iv_redirect_user = get_option( '_iv_corporate_profile_public_page');
+								    $reg_page_user= get_permalink( $iv_redirect_user) ;
+								}else{
+									
+									$iv_redirect_user = get_option( '_iv_personal_profile_public_page');
+								    $reg_page_user= get_permalink( $iv_redirect_user) ;
+								}
+								
 								?>
 									<li>
 										
 										<div class="ch-item">
-										<a href="<?php echo $reg_page_u; ?>">		 
+										<a href="<?php echo $reg_page_user.'?&id='.$user->user_login; ?>">		 
 						                    <?php
 						                    if($iv_profile_pic_url!=''){ ?>
 								        	 <img src="<?php echo $iv_profile_pic_url; ?>" class="home-img wide tall">
@@ -169,7 +179,7 @@ global $wpdb;
 						  }
 						  ?>
 				</p>
-				<a href="<?php echo $reg_page_u; ?>">
+				<a href="<?php echo $reg_page_user.'?&id='.$user->user_login; ?>">
 				<h5 class="text-center"><?php echo $user->display_name; ?></h5>
 				</a>	
 				<p class="para1 text-center">

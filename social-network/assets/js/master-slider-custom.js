@@ -32,37 +32,6 @@
 
   "use strict";
 
-  // Mobile Sidebar
-// ---------------------------------------------------------
-// $('.uou-block-11a'+'.mobile-sidebar-toggle').on('click', function () {
-//   $body.toggleClass('mobile-sidebar-active');
-//   return false;
-// });
-// // $(".uou-block-11a").each( function() {
-// //     alert("mobile menu toggle bar");
-// // });
-
-// $('.mobile-sidebar-open').on('click', function () {
-//   $body.addClass('mobile-sidebar-active');
-//   return false;
-// });
-
-// $('.mobile-sidebar-close').on('click', function () {
-//   $body.removeClass('mobile-sidebar-active');
-//   return false;
-// });
-
-      // .uou-toggle-btn
-// ---------------------------------------------------------
-
-  $('.content-main h6 a').on('click', function(e){
-    e.preventDefault();
-    $(this).toggleClass('active');
-    $(this).parent().next(".content-hidden").toggleClass('active');
-  });
-
-
-
 
   $('.default-master-slider').masterslider({
       width: 1400,   // slider standard width

@@ -54,8 +54,15 @@ if (!class_exists('wp_iv_directories_Admin')) {
 			add_action('wp_ajax_iv_directories_email_client_template_change', array(&$this, 'iv_directories_email_client_template_change'));
 			add_action('wp_ajax_iv_directories_save_package_table', array(&$this, 'iv_directories_save_package_table'));
 			add_action('wp_ajax_iv_directories_update_profile_fields', array(&$this, 'iv_directories_update_profile_fields'));
-			add_action('wp_ajax_iv_directories_update_dir_fields', array(&$this, 'iv_directories_update_dir_fields'));
-			add_action('wp_ajax_iv_directories_update_doctor_fields', array(&$this, 'iv_directories_update_doctor_fields'));
+			
+			add_action('wp_ajax_iv_directories_update_personal_fields', array(&$this, 'iv_directories_update_personal_fields'));
+			add_action('wp_ajax_iv_directories_update_personal_fields_experience', array(&$this, 'iv_directories_update_personal_fields_experience'));
+			add_action('wp_ajax_iv_directories_update_personal_fields_review', array(&$this, 'iv_directories_update_personal_fields_review'));
+			
+			add_action('wp_ajax_iv_directories_update_corporate_fields', array(&$this, 'iv_directories_update_corporate_fields'));
+			add_action('wp_ajax_iv_directories_update_corporate_fields_experience', array(&$this, 'iv_directories_update_corporate_fields_experience'));
+			add_action('wp_ajax_iv_directories_update_corporate_fields_review', array(&$this, 'iv_directories_update_corporate_fields_review'));
+			
 			add_action('wp_ajax_iv_update_bidding_setting', array(&$this, 'iv_update_bidding_setting'));
 			add_action('wp_ajax_iv_update_dir_setting', array(&$this, 'iv_update_dir_setting'));
 			
@@ -183,7 +190,9 @@ if (!class_exists('wp_iv_directories_Admin')) {
 										
 					self::$pages['wp-iv_directories-payment-setting'] = add_submenu_page('wp-iv_directories', 'WP iv_directories Settings', 'Payment Gateways', 'manage_options', 'wp-iv_directories-payment-settings', array(&$this, 'menu_hook'));
 											
-					self::$pages['wp-iv_dir_fields'] = add_submenu_page('wp-iv_directories', 'WP iv_directories directory-admin', 'Profile Fields', 'manage_options', 'wp-iv_dir_fields', array(&$this, 'menu_hook'));
+					self::$pages['wp-iv_dir_fields'] = add_submenu_page('wp-iv_directories', 'WP iv_directories directory-admin', 'Personal Profile Fields', 'manage_options', 'wp-iv_dir_fields', array(&$this, 'menu_hook'));
+					
+					self::$pages['wp-iv_corporate_fields'] = add_submenu_page('wp-iv_directories', 'WP iv_directories directory-admin', 'Corporate Profile Fields', 'manage_options', 'wp-iv_corporate_fields', array(&$this, 'menu_hook'));
 					
 					self::$pages['wp-iv_user-directory-admin'] = add_submenu_page('wp-iv_directories', 'WP iv_directories directory-admin', 'User Setting', 'manage_options', 'wp-iv_user-directory-admin', array(&$this, 'menu_hook'));
 					
@@ -252,8 +261,12 @@ if (!class_exists('wp_iv_directories_Admin')) {
 							include ('pages/profile_fields.php');
 							
 						break;
+						case self::$pages['wp-iv_corporate_fields']:							
+							include ('pages/corporate_fields.php');
+							
+						break;
 						case self::$pages['wp-iv_directories-profile-fields']:							
-							include ('pages/profile-fields.php');
+							include ('pages/my-account-menu.php');
 							
 						break;
 						case self::$pages['wp-iv_directories-profile-form']:
@@ -268,7 +281,7 @@ if (!class_exists('wp_iv_directories_Admin')) {
 					}
 				}
 				public function  profile_fields_setting (){
-					include ('pages/profile-fields.php');
+					include ('pages/my-account-menu.php');
 				}
 				public function coupon_create_page(){
 					include ('pages/coupon_create.php');
@@ -602,18 +615,7 @@ if (!class_exists('wp_iv_directories_Admin')) {
 					
 					parse_str($_POST['form_data'], $form_data);
 					
-					
-					$opt_array= array();
-					$max = sizeof($form_data['meta_name']);
-					for($i = 0; $i < $max;$i++)
-					{	
-						if($form_data['meta_name'][$i]!="" AND $form_data['meta_label'][$i]!=""){
-							$opt_array[$form_data['meta_name'][$i]]=$form_data['meta_label'][$i];
-						}
-					}													
-					update_option('iv_directories_profile_fields', $opt_array );
-					
-					
+										
 					$opt_array2= array();
 					update_option('iv_directories_profile_menu', '' );
 					if(isset($form_data['menu_title'])){
@@ -690,7 +692,7 @@ if (!class_exists('wp_iv_directories_Admin')) {
 					exit(0);
 				
 				}
-				public function iv_directories_update_dir_fields(){
+				public function iv_directories_update_personal_fields(){
 					
 					parse_str($_POST['form_data'], $form_data);
 					
@@ -704,15 +706,15 @@ if (!class_exists('wp_iv_directories_Admin')) {
 						}
 					}					
 					
-					update_option('iv_hospital_specialtie', $form_data['specialtie'] );												
-					update_option('iv_directories_fields', $opt_array );
+															
+					update_option('iv_social_profile_personal_fields', $opt_array );
 					
 					
 					echo json_encode(array('code' => 'Update Successfully'));
 					exit(0);
 				
 				}
-				public function iv_directories_update_doctor_fields(){
+				public function iv_directories_update_personal_fields_experience(){
 					
 					parse_str($_POST['form_data'], $form_data);
 					
@@ -725,13 +727,98 @@ if (!class_exists('wp_iv_directories_Admin')) {
 							$opt_array[$form_data['meta_name'][$i]]=$form_data['meta_label'][$i];
 						}
 					}													
-					update_option('iv_directories_fields_doctor', $opt_array );
+					update_option('iv_social_profile_personal_fields_experience', $opt_array );
 					
 					
 					echo json_encode(array('code' => 'Update Successfully'));
 					exit(0);
 				
 				}
+				public function iv_directories_update_personal_fields_review(){
+					
+					parse_str($_POST['form_data'], $form_data);
+					
+					
+					$opt_array= array();
+					$max = sizeof($form_data['meta_name']);
+					for($i = 0; $i < $max;$i++)
+					{	
+						if($form_data['meta_name'][$i]!="" AND $form_data['meta_label'][$i]!=""){
+							$opt_array[$form_data['meta_name'][$i]]=$form_data['meta_label'][$i];
+						}
+					}													
+					update_option('iv_social_profile_personal_fields_review', $opt_array );
+					
+					
+					echo json_encode(array('code' => 'Update Successfully'));
+					exit(0);
+				
+				}
+
+				public function iv_directories_update_corporate_fields(){
+					
+					parse_str($_POST['form_data'], $form_data);
+					
+					
+					$opt_array= array();
+					$max = sizeof($form_data['meta_name']);
+					for($i = 0; $i < $max;$i++)
+					{	
+						if($form_data['meta_name'][$i]!="" AND $form_data['meta_label'][$i]!=""){
+							$opt_array[$form_data['meta_name'][$i]]=$form_data['meta_label'][$i];
+						}
+					}					
+					
+															
+					update_option('iv_social_profile_corporate_fields', $opt_array );
+					
+					
+					echo json_encode(array('code' => 'Update Successfully'));
+					exit(0);
+				
+				}
+				public function iv_directories_update_corporate_fields_experience(){
+					
+					parse_str($_POST['form_data'], $form_data);
+					
+					
+					$opt_array= array();
+					$max = sizeof($form_data['meta_name']);
+					for($i = 0; $i < $max;$i++)
+					{	
+						if($form_data['meta_name'][$i]!="" AND $form_data['meta_label'][$i]!=""){
+							$opt_array[$form_data['meta_name'][$i]]=$form_data['meta_label'][$i];
+						}
+					}													
+					update_option('iv_social_profile_corporate_fields_services', $opt_array );
+					
+					
+					echo json_encode(array('code' => 'Update Successfully'));
+					exit(0);
+				
+				}
+				public function iv_directories_update_corporate_fields_review(){
+					
+					parse_str($_POST['form_data'], $form_data);
+					
+					
+					$opt_array= array();
+					$max = sizeof($form_data['meta_name']);
+					for($i = 0; $i < $max;$i++)
+					{	
+						if($form_data['meta_name'][$i]!="" AND $form_data['meta_label'][$i]!=""){
+							$opt_array[$form_data['meta_name'][$i]]=$form_data['meta_label'][$i];
+						}
+					}													
+					update_option('iv_social_profile_corporate_fields_review', $opt_array );
+					
+					
+					echo json_encode(array('code' => 'Update Successfully'));
+					exit(0);
+				
+				}
+				
+
 				public function iv_directories_update_package() {
 					
 					parse_str($_POST['form_data'], $form_data);
@@ -1521,16 +1608,20 @@ public function  iv_directories_update_page_setting(){
 		$signup_page=$form_data['signup_page'];
 		$profile_page=$form_data['profile_page'];
 		$profile_public=$form_data['profile_public'];
+		$corporate_public=$form_data['corporate_public'];
 		$thank_you=$form_data['thank_you_page'];
 		$login=$form_data['login_page'];
+		
+		
 		
 		update_option('_iv_directories_price_table', $pricing_page); 
 		update_option('_iv_directories_registration', $signup_page); 
 		update_option('_iv_directories_profile_page', $profile_page);
-		update_option('_iv_directories_profile_public',$profile_public);
+		update_option('_iv_personal_profile_public_page',$profile_public);
+		update_option('_iv_corporate_profile_public_page',$corporate_public);
+						
 		update_option('_iv_directories_thank_you_page',$thank_you); 
 		update_option('_iv_directories_login_page',$login); 
-		
 		
 		echo json_encode(array("code" => "success","msg"=>"Updated Successfully"));
 		exit(0);

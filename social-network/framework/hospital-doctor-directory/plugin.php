@@ -68,8 +68,8 @@
 					
 					add_action('wp_ajax_iv_directories_update_profile_pic', array(&$this, 'iv_directories_update_profile_pic'));
 					add_action('wp_ajax_nopriv_iv_directories_update_profile_pic', array(&$this, 'iv_directories_update_profile_pic'));
-					add_action('wp_ajax_iv_directories_update_profile_setting', array(&$this, 'iv_directories_update_profile_setting'));
-					add_action('wp_ajax_nopriv_iv_directories_update_profile_setting', array(&$this, 'iv_directories_update_profile_setting'));
+					add_action('wp_ajax_iv_directories_update_profile_setting_corporate', array(&$this, 'iv_directories_update_profile_setting_corporate'));
+					add_action('wp_ajax_nopriv_iv_directories_update_profile_setting_corporate', array(&$this, 'iv_directories_update_profile_setting_corporate'));
 					add_action('wp_ajax_iv_directories_update_wp_post', array(&$this, 'iv_directories_update_wp_post'));
 					add_action('wp_ajax_nopriv_iv_directories_update_wp_post', array(&$this, 'iv_directories_update_wp_post'));
 					add_action('wp_ajax_iv_directories_save_wp_post', array(&$this, 'iv_directories_save_wp_post'));
@@ -94,18 +94,27 @@
 					add_action('wp_ajax_nopriv_iv_directories_cancel_paypal', array(&$this, 'iv_directories_cancel_paypal'));
 					add_action('wp_ajax_iv_directories_profile_stripe_upgrade', array(&$this, 'iv_directories_profile_stripe_upgrade'));
 					add_action('wp_ajax_nopriv_iv_directories_profile_stripe_upgrade', array(&$this, 'iv_directories_profile_stripe_upgrade'));						
-					add_action('wp_ajax_iv_directories_profile_stripe_add_balance', array(&$this, 'iv_directories_profile_stripe_add_balance'));
-					add_action('wp_ajax_nopriv_iv_directories_profile_stripe_add_balance', array(&$this, 'iv_directories_profile_stripe_add_balance'));	
-					add_action('wp_ajax_iv_directories_bidding_position', array(&$this, 'iv_directories_bidding_position'));
-					add_action('wp_ajax_nopriv_iv_directories_bidding_position', array(&$this, 'iv_directories_bidding_position'));	
-					add_action('wp_ajax_iv_directories_bidding_popup', array(&$this, 'iv_directories_bidding_popup'));
-					add_action('wp_ajax_nopriv_iv_directories_bidding_popup', array(&$this, 'iv_directories_bidding_popup'));
-					add_action('wp_ajax_iv_directories_save_bidding', array(&$this, 'iv_directories_save_bidding'));
-					add_action('wp_ajax_nopriv_iv_directories_save_bidding', array(&$this, 'iv_directories_save_bidding'));
-					add_action('wp_ajax_iv_directories_save_favorite', array(&$this, 'iv_directories_save_favorite'));
-					add_action('wp_ajax_nopriv_iv_directories_save_favorite', array(&$this, 'iv_directories_save_favorite'));
-					add_action('wp_ajax_iv_directories_save_un_favorite', array(&$this, 'iv_directories_save_un_favorite'));
-					add_action('wp_ajax_nopriv_iv_directories_save_un_favorite', array(&$this, 'iv_directories_save_un_favorite'));	
+					
+					
+					
+					//follow
+					add_action('wp_ajax_iv_directories_save_follow', array(&$this, 'iv_directories_save_follow'));
+					add_action('wp_ajax_nopriv_iv_directories_save_follow', array(&$this, 'iv_directories_save_follow'));
+					add_action('wp_ajax_iv_directories_save_un_follow', array(&$this, 'iv_directories_save_un_follow'));
+					add_action('wp_ajax_nopriv_iv_directories_save_un_follow', array(&$this, 'iv_directories_save_un_follow'));	
+					//connect
+					add_action('wp_ajax_iv_directories_save_connect', array(&$this, 'iv_directories_save_connect'));
+					add_action('wp_ajax_nopriv_iv_directories_save_connect', array(&$this, 'iv_directories_save_connect'));
+					add_action('wp_ajax_iv_directories_save_deleteconnect', array(&$this, 'iv_directories_save_deleteconnect'));
+					add_action('wp_ajax_nopriv_iv_directories_save_deleteconnect', array(&$this, 'iv_directories_save_deleteconnect'));
+					//bookmark
+					add_action('wp_ajax_iv_directories_save_bookmark', array(&$this, 'iv_directories_save_bookmark'));
+					add_action('wp_ajax_nopriv_iv_directories_save_bookmark', array(&$this, 'iv_directories_save_bookmark'));
+					add_action('wp_ajax_iv_directories_save_deletebookmark', array(&$this, 'iv_directories_save_deletebookmark'));
+					add_action('wp_ajax_nopriv_iv_directories_save_deletebookmark', array(&$this, 'iv_directories_save_deletebookmark'));
+					add_action('wp_ajax_iv_directories_save_rating', array(&$this, 'iv_directories_save_rating'));
+					add_action('wp_ajax_nopriv_iv_directories_save_rating', array(&$this, 'iv_directories_save_rating'));
+					
 					add_action('wp_ajax_iv_directories_save_note', array(&$this, 'iv_directories_save_note'));
 					add_action('wp_ajax_nopriv_iv_directories_save_note', array(&$this, 'iv_directories_save_note'));
 					add_action('wp_ajax_iv_directories_delete_favorite', array(&$this, 'iv_directories_delete_favorite'));
@@ -160,7 +169,7 @@
 						
 						
 					//add_shortcode('iv_directories_display', array(&$this, 'iv_directories_display_func'));	
-					add_shortcode('iv_archive_directories', array(&$this, 'iv_archive_directories_func'));
+					
 					add_shortcode('iv_directories_price_table', array(&$this, 'iv_directories_price_table_func'));
 					add_shortcode('iv_directories_registration_form', array(&$this, 'iv_directories_registration_form_func'));
 					add_shortcode('iv_directories_payment_form', array(&$this, 'iv_directories_payment_form_func'));
@@ -1819,31 +1828,87 @@
 					
 				}
 				
-				public function iv_directories_update_profile_setting(){
+				public function iv_directories_update_profile_setting_corporate(){
 					global $current_user;
 					parse_str($_POST['form_data'], $form_data);			
-					foreach ( $form_data as $field_key => $field_value ) { 
-						
-						update_user_meta($current_user->ID,$field_key, $field_value); 
-					}
-						
-					/*
-					update_user_meta($current_user->ID,'first_name', $form_data['first_name']); 
-					update_user_meta($current_user->ID,'last_name', $form_data['last_name']); 
-					update_user_meta($current_user->ID,'phone', $form_data['phone']); 
 					
-					update_user_meta($current_user->ID,'mobile', $form_data['mobile']); 
-					update_user_meta($current_user->ID,'address', $form_data['address']); 
-					update_user_meta($current_user->ID,'occupation', $form_data['occupation']);
-					update_user_meta($current_user->ID,'description', $form_data['about']);	
-					update_user_meta($current_user->ID,'web_site', $form_data['web_site']);	
-					*/
-					/*
-					update_user_meta($current_user->ID,'twitter', $form_data['twitter']); 
-					update_user_meta($current_user->ID,'facebook', $form_data['facebook']); 
-					update_user_meta($current_user->ID,'gplus', $form_data['gplus']); 
-					update_user_meta($current_user->ID,'linkedin', $form_data['linkedin']); 
-					 */
+					
+				   update_user_meta($current_user->ID,'company_name', $form_data['title']);
+				   update_user_meta($current_user->ID,'about_us', $form_data['about_us']);
+				   update_user_meta($current_user->ID, 'image_gallery_ids', $form_data['gallery_image_ids']); 
+				   update_user_meta($current_user->ID,'company_type', $form_data['company_type']);
+				  
+				   
+				   
+				   
+					update_user_meta($current_user->ID, 'address', $form_data['address']); 
+					update_user_meta($current_user->ID, 'latitude', $form_data['latitude']); 
+					update_user_meta($current_user->ID, 'longitude', $form_data['longitude']);					
+					update_user_meta($current_user->ID, 'city', $form_data['city']); 
+					update_user_meta($current_user->ID, 'postcode', $form_data['postcode']); 
+					update_user_meta($current_user->ID, 'country', $form_data['country']); 
+					
+					if($form_data['top_banner_image_id']!=''){
+						update_user_meta($current_user->ID, 'top_banner_image_id', $form_data['top_banner_image_id']); 
+					}
+					
+				  
+				   $default_fields = array();
+					$field_set=get_option('iv_directories_profile_fields' );
+					if($field_set!=""){ 
+							$default_fields=get_option('iv_directories_profile_fields' );
+					}else{															
+							$default_fields['Number_Employees']='Number of Employees';
+							$default_fields['Legal_Entity']='Legal Entity';
+							$default_fields['Company_Registration']='Company Registration';
+							$default_fields['Operating_Hours']='Operating Hours';
+							$default_fields['Contacts']='Contacts';
+							$default_fields['Email']='Email';								
+							$default_fields['web_site']='Website Url';	
+					}
+					if(sizeof($default_fields )){			
+						foreach( $default_fields as $field_key => $field_value ) { 
+							if(isset($form_data[$field_key])){
+								update_user_meta($current_user->ID, $field_key, $form_data[$field_key] );
+							}
+						}					
+					}
+				     
+				   // For service Save 
+					// Delete 1st
+					$i=0;
+						for($i=0;$i<20;$i++){
+								delete_user_meta($current_user->ID, '_service_title_'.$i); 							
+								delete_user_meta($current_user->ID, '_service_description_'.$i);
+								delete_user_meta($current_user->ID, '_service_image_id_'.$i); 						
+						}		
+					// Delete End
+					
+					if(isset($form_data['service_title'] )){
+						 $service_title= $form_data['service_title'];
+						 $service_description= $form_data['service_description'];	
+						
+						 $service_image_id= (isset($form_data['service_image_id']) ? $form_data['service_image_id']:'');							
+						
+													
+						$i=0;
+						//foreach($award_title  as $one_award_title){							
+						for($i=0;$i<20;$i++){	
+							
+							if(isset($service_title[$i])){
+								update_user_meta($current_user->ID, '_service_title_'.$i, $service_title[$i]); 
+							}
+							if(isset($service_description[$i])){
+								update_user_meta($current_user->ID, '_service_description_'.$i, $service_description[$i]); 
+							}							
+							if(isset($service_image_id[$i])){
+								update_user_meta($current_user->ID, '_service_image_id_'.$i, $service_image_id[$i]); 
+							}
+														
+							//$i++;
+						}						 	
+							
+					} 
 					
 					echo json_encode(array("code" => "success","msg"=>"Updated Successfully"));
 					exit(0);
@@ -2933,7 +2998,9 @@
 						ob_start();						 
 						//include the specified file
 						
-						include(wp_iv_directories_template. 'profile-public/profile-template.php');
+						//include(wp_iv_directories_template. 'profile-public/profile-template.php');
+						include(wp_iv_directories_template. 'profile-public/profile_company.php');
+						
 													
 						$content = ob_get_clean();	
 					
@@ -3104,48 +3171,151 @@
 					
 				
 				}
-				public function iv_directories_save_favorite(){
+				//follow
+				public function iv_directories_save_follow(){
 						parse_str($_POST['data'], $form_data);					
-						$dir_id=$form_data['id'];
+						$profile_user_id=$form_data['id'];
+						$current_user_id=get_current_user_id();
 						
-						$old_favorites= get_post_meta($dir_id,'_favorites',true);
+						$old_favorites= get_user_meta($profile_user_id,'_follower',true);
 						$old_favorites = str_replace(get_current_user_id(), '',  $old_favorites);
 						
 						$new_favorites=$old_favorites.', '.get_current_user_id();
-						update_post_meta($dir_id,'_favorites',$new_favorites);
+						update_user_meta($profile_user_id,'_follower',$new_favorites);						
 						
+						$old_favorites2=get_user_meta(get_current_user_id(),'_following', true);						
+						$old_favorites2 = str_replace($profile_user_id ,'',  $old_favorites2);						
 						
-						$old_favorites2=get_user_meta(get_current_user_id(),'_dir_favorites', true);						
-						$old_favorites2 = str_replace($dir_id ,' ',  $old_favorites2);
-						
-						
-						$new_favorites2=$old_favorites2.', '.$dir_id;
-						update_user_meta(get_current_user_id(),'_dir_favorites',$new_favorites2);
+						$new_favorites2=$old_favorites2.', '.$profile_user_id;
+						update_user_meta(get_current_user_id(),'_following',$new_favorites2);
 						
 						echo json_encode(array("msg" => 'success'));
 						exit(0);	
 				}
-				public function iv_directories_save_un_favorite(){
+				public function iv_directories_save_un_follow(){
 						parse_str($_POST['data'], $form_data);					
-						$dir_id=$form_data['id'];
+						$profile_user_id=$form_data['id'];
 						
-						$old_favorites= get_post_meta($dir_id,'_favorites',true);
+						$old_favorites= get_user_meta($profile_user_id,'_follower',true);
 						$old_favorites = str_replace(get_current_user_id(), '',  $old_favorites);
+						update_user_meta($profile_user_id,'_follower',$old_favorites);	
 						
-						$new_favorites=$old_favorites;
-						update_post_meta($dir_id,'_favorites',$new_favorites);
-						
-						
-						$old_favorites2=get_user_meta(get_current_user_id(),'_dir_favorites', true);						
-						$old_favorites2 = str_replace($dir_id ,' ',  $old_favorites2);
-						
+												
+						$old_favorites2=get_user_meta(get_current_user_id(),'_following', true);						
+						$old_favorites2 = str_replace($profile_user_id ,'',  $old_favorites2);						
 						
 						$new_favorites2=$old_favorites2;
-						update_user_meta(get_current_user_id(),'_dir_favorites',$new_favorites2);
+						update_user_meta(get_current_user_id(),'_following',$new_favorites2);
 						
 						echo json_encode(array("msg" => 'success'));
 						exit(0);	
 				}
+				//Connect
+				public function iv_directories_save_connect(){
+						parse_str($_POST['data'], $form_data);					
+						$profile_user_id=$form_data['id'];
+						$current_user_id=get_current_user_id();
+						
+						$old_favorites= get_user_meta($profile_user_id,'_connecter',true);
+						$old_favorites = str_replace(get_current_user_id(), '',  $old_favorites);
+						
+						$new_favorites=$old_favorites.', '.get_current_user_id();
+						update_user_meta($profile_user_id,'_connecter',$new_favorites);						
+						
+						$old_favorites2=get_user_meta(get_current_user_id(),'_my_connect', true);						
+						$old_favorites2 = str_replace($profile_user_id ,' ',  $old_favorites2);						
+						
+						$new_favorites2=$old_favorites2.', '.$profile_user_id;
+						update_user_meta(get_current_user_id(),'_my_connect',$new_favorites2);
+						
+						echo json_encode(array("msg" => 'success'));
+						exit(0);	
+				}
+				public function iv_directories_save_deleteconnect(){
+						parse_str($_POST['data'], $form_data);					
+						$profile_user_id=$form_data['id'];
+						$current_user_id=get_current_user_id();
+						
+						$old_favorites= get_user_meta($profile_user_id,'_connecter',true);
+						$old_favorites = str_replace($current_user_id, '',  $old_favorites);
+						update_user_meta($profile_user_id,'_connecter',$old_favorites);	
+						
+						
+						$new_favorites=$old_favorites;											
+						
+						$old_favorites2=get_user_meta(get_current_user_id(),'_my_connect', true);						
+						$old_favorites2 = str_replace($profile_user_id ,'',  $old_favorites2);						
+						
+						$new_favorites2=$old_favorites2;
+						update_user_meta(get_current_user_id(),'_my_connect',$new_favorites2);
+						
+						echo json_encode(array("msg" => 'success'));
+						exit(0);	
+				}
+				// Bookmark
+				public function iv_directories_save_bookmark(){
+						parse_str($_POST['data'], $form_data);					
+						$profile_user_id=$form_data['id'];
+						$current_user_id=get_current_user_id();
+						
+						$old_favorites= get_user_meta($profile_user_id,'_bookmarker',true);
+						$old_favorites = str_replace(get_current_user_id(), '',  $old_favorites);
+						
+						$new_favorites=$old_favorites.', '.get_current_user_id();
+						update_user_meta($profile_user_id,'_bookmarker',$new_favorites);						
+						
+						$old_favorites2=get_user_meta(get_current_user_id(),'_my_bookmark', true);						
+						$old_favorites2 = str_replace($profile_user_id ,' ',  $old_favorites2);						
+						
+						$new_favorites2=$old_favorites2.', '.$profile_user_id;
+						update_user_meta(get_current_user_id(),'_my_bookmark',$new_favorites2);
+						
+						echo json_encode(array("msg" => 'success'));
+						exit(0);	
+				}
+				public function iv_directories_save_deletebookmark(){
+						parse_str($_POST['data'], $form_data);					
+						$profile_user_id=$form_data['id'];
+						
+						$old_favorites= get_user_meta($profile_user_id,'_bookmarker',true);
+						$old_favorites = str_replace(get_current_user_id(), '',  $old_favorites);
+						update_user_meta($profile_user_id,'_bookmarker',$old_favorites);	
+							
+						
+						$old_favorites2=get_user_meta(get_current_user_id(),'_my_bookmark', true);						
+						$old_favorites2 = str_replace($profile_user_id ,' ',  $old_favorites2);						
+						
+						$new_favorites2=$old_favorites2;
+						update_user_meta(get_current_user_id(),'_my_bookmark',$new_favorites2);
+						
+						echo json_encode(array("msg" => 'success'));
+						exit(0);	
+				}
+				// Rating********
+				public function iv_directories_save_rating(){
+					parse_str($_POST['data'], $form_data);					
+					echo $profile_user_id=$form_data['id'];
+					echo $rating_text=$form_data['rating_text'];
+					echo $rating_value=$form_data['rating_value'];
+					
+					$total_count=get_user_meta($profile_user_id,'_rating_total_count',true);					
+					$old_rating= get_user_meta(get_current_user_id(),$rating_text.'_rating'.'|'.$profile_user_id,true);
+					if($old_rating<1){
+						$total_count=$total_count+1;
+					}
+					$total_rating=get_user_meta($profile_user_id,$rating_text.'_rating',true);
+					
+					$total_rating=$total_rating-$old_rating;
+					$total_rating=$total_rating+$rating_value;
+					
+					update_user_meta($profile_user_id,$rating_text.'_rating',$total_rating);	
+					update_user_meta($profile_user_id,'_rating_total_count',$total_count);
+					update_user_meta(get_current_user_id(),$rating_text.'_rating'.'|'.$profile_user_id,$rating_value);	
+					
+					echo json_encode(array("msg" => 'success'));
+					exit(0);	
+				}
+				
 				public function iv_directories_save_note(){
 					
 						parse_str($_POST['data'], $form_data);					

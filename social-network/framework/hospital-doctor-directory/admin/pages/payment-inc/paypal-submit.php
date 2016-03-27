@@ -73,12 +73,15 @@ if( isset($_REQUEST['iv-submit-listing']) && isset($_REQUEST['payment_gateway'])
 							
 							 $user_id = wp_insert_user( $userdata ) ;
 							 $user = new WP_User( $user_id );
-							 $user->set_role('basic');
+							 $member_type= $_POST['iv_member_type'];
+							 $user->set_role($member_type);
 							 $userId=$user_id;
+							 
 							 
 							if(isset($_POST['country_select'])){
 								update_user_meta($userId,'country_code',$_POST['country_select']);									
 							}
+							update_user_meta($userId,'iv_member_type',$member_type);
 							 
 							 $expire_interval = get_post_meta($package_id, 'iv_directories_package_initial_expire_interval', true);						
 							 $initial_expire_type = get_post_meta($package_id, 'iv_directories_package_initial_expire_type', true);

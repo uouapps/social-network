@@ -512,27 +512,14 @@ global $current_user;
 			  if(isset($_GET['profile']) AND $_GET['profile']=='all-post' ){
 				 $active='all-post';
 			  }
-			  if(isset($_GET['profile']) AND $_GET['profile']=='new-hospital' ){
-				 $active='new-hospital';
-			  }
-			  if(isset($_GET['profile']) AND $_GET['profile']=='new-hospital' ){
-				 $active='new-hospital';
-			  }
-			   if(isset($_GET['profile']) AND $_GET['profile']=='new-doctor' ){
-				 $active='new-doctor';
-			  }
-			  if(isset($_GET['profile']) AND $_GET['profile']=='bidding' ){
-				 $active='bidding';
-			  }
+			  
 			  if(isset($_GET['profile']) AND $_GET['profile']=='favorites' ){
 				 $active='favorites';
 			  }
 			  if(isset($_GET['profile']) AND $_GET['profile']=='who-is-interested' ){
 				 $active='who-is-interested';
 			  }
-			  if(isset($_GET['profile']) AND $_GET['profile']=='balance' ){
-				 $active='balance';
-			  }
+			 
 			   if(isset($_GET['profile']) AND $_GET['profile']=='post-edit' ){
 				$active='all-post';
 			  }
@@ -683,20 +670,8 @@ global $current_user;
 		  
           <div class="col-md-9 col-sm-9 col-xs-12">
 		  <?php
-		  if(isset($_GET['profile']) AND $_GET['profile']=='all-post' ){
-			include(  wp_iv_directories_template. 'private-profile/profile-all-post-1.php');
-		  } elseif(isset($_GET['profile']) AND $_GET['profile']=='bidding' ){
-			include( wp_iv_directories_template. 'private-profile/bidding-1.php');
-		  } elseif(isset($_GET['profile']) AND $_GET['profile']=='new-doctor' ){
-			include( wp_iv_directories_template. 'private-profile/profile-new-doctor.php');
-		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='new-hospital' ){
-			include( wp_iv_directories_template. 'private-profile/profile-new-hospital.php');
-		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='level' ){
+		  if(isset($_GET['profile']) AND $_GET['profile']=='level' ){
 			include(  wp_iv_directories_template. 'private-profile/profile-level-1.php');
-		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='hospital-edit' ){ 		    
-			include(  wp_iv_directories_template. 'private-profile/profile-hospital-edit.php');
-		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='doctor-edit' ){ 		    
-			include(  wp_iv_directories_template. 'private-profile/profile-doctor-edit.php');	
 		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='favorites' ){ 		    
 			include(  wp_iv_directories_template. 'private-profile/my-favorites-1.php');
 		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='who-is-interested' ){ 		    
@@ -704,11 +679,17 @@ global $current_user;
 		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='balance' ){ 		    
 			include(  wp_iv_directories_template. 'private-profile/balance.php');
 		  
-		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='setting' ){ 		    
-			include(  wp_iv_directories_template. 'private-profile/profile-setting-1.php');
+		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='setting' ){ 		
+				$iv_member_type=get_user_meta($current_user->ID,'iv_member_type',true);     
+				if($iv_member_type=='corporate'){
+					include(  wp_iv_directories_template. 'private-profile/profile-setting-corporate.php');
+				}else{
+					include(  wp_iv_directories_template. 'private-profile/profile-setting-corporate.php');
+					//include(  wp_iv_directories_template. 'private-profile/profile-setting-personal.php');
+				 } 
+			
 		  }
-		  else{ 
-		 
+		  else{ 		 
 			
 			include(  wp_iv_directories_template. 'private-profile/my-favorites-1.php');
 		  }
@@ -782,27 +763,7 @@ jQuery(document).ready(function($) {
 				
 			}
 				
-	function update_profile_setting (){
-	
-	var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
-	var loader_image = '<img src="<?php echo wp_iv_directories_URLPATH. "admin/files/images/loader.gif"; ?>" />';
-				jQuery('#update_message').html(loader_image); 
-				var search_params={
-					"action"  : 	"iv_directories_update_profile_setting",	
-					"form_data":	jQuery("#profile_setting_form").serialize(), 
-				};
-				jQuery.ajax({					
-					url : ajaxurl,					 
-					dataType : "json",
-					type : "post",
-					data : search_params,
-					success : function(response){
-						jQuery('#update_message').html('<div class="alert alert-info alert-dismissable"><a class="panel-close close" data-dismiss="alert">x</a>'+response.msg +'.</div>');
-						
-					}
-				});
-	
-	}		  
+		  
 			  
 			  
 		  </script>	  

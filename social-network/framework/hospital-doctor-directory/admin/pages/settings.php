@@ -696,7 +696,7 @@ global $wpdb;
 																		<div class="checkbox col-md-3 ">
 																			
 																		<?php
-																			$iv_redirect = get_option( '_iv_directories_profile_public_page');
+																			$iv_redirect = get_option( '_iv_personal_profile_public_page');
 																			
 																		 if ( $pages = get_pages( $args ) ){
 																			echo "<select id='profile_redirect' name='profile_redirect' class='form-control'>";
@@ -821,9 +821,11 @@ global $wpdb;
 										$price_table=get_option('_iv_directories_price_table'); 
 										$registration=get_option('_iv_directories_registration'); 
 										$profile_page=get_option('_iv_directories_profile_page'); 	
-										$profile_public=get_option('_iv_directories_profile_public_page');
+										$profile_public=get_option('_iv_personal_profile_public_page');
 										$login_page=get_option('_iv_directories_login_page');  										
-										$thank_you=get_option('_iv_directories_thank_you_page'); 	
+										$thank_you=get_option('_iv_directories_thank_you_page'); 
+										$corporate_public=get_option('_iv_corporate_profile_public_page');
+											
 
 														$args = array(
 															'child_of'     => 0,
@@ -963,7 +965,7 @@ global $wpdb;
 																</div>
 																
 																<div class="form-group">
-																	<label  class="col-md-2   control-label">User Public Profile: </label>
+																	<label  class="col-md-2   control-label">Personal Public Profile: </label>
 																	<div class="col-md-10 col-xs-10 col-sm-10">
 																		<div class="checkbox col-md-4 ">
 																				<?php																				
@@ -984,6 +986,30 @@ global $wpdb;
 																		 </div>
 																	</div>	
 																</div>
+																
+																<div class="form-group">
+																	<label  class="col-md-2   control-label">Corporate Public Profile: </label>
+																	<div class="col-md-10 col-xs-10 col-sm-10">
+																		<div class="checkbox col-md-4 ">
+																				<?php																				
+																			 if ( $pages = get_pages( $args ) ){
+																				echo "<select id='corporate_public'  name='corporate_public'  class='form-control'>";
+																				foreach ( $pages as $page ) {
+																				  echo "<option value='{$page->ID}' ".($corporate_public==$page->ID ? 'selected':'').">{$page->post_title}</option>";
+																				}
+																				echo "</select>";
+																			  }
+																			?>
+																		 </div>
+																		 <div class="checkbox col-md-1 ">
+																		 <?php																				
+																				$reg_page= get_permalink( $corporate_public); 
+																				?>
+																				 <a class="btn btn-info " href="<?php  echo $reg_page; ?>"> View</a>
+																		 </div>
+																	</div>	
+																</div>
+																
 																<div class="form-group">
 																	<label  class="col-md-2   control-label"><?php _e('Cron Job URL','chilepro');  ?> </label>
 																		<div class="col-md-3 col-xs-10 col-sm-10">
