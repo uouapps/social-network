@@ -152,7 +152,7 @@ $user_id=1;
 			  <i class="fa fa-star<?php echo($avg_rating>=2.5? "":"-o"); ?>"></i> 
 			  <i class="fa fa-star<?php echo($avg_rating>=3.5? "":"-o"); ?>"></i>
 			  <i class="fa fa-star<?php echo($avg_rating>=4.5? "":"-o"); ?>"></i> 
-			  <span>(<?php echo $total_count; ?>)</span> 
+			  <span>(<?php echo ($total_count==""?0:$total_count); ?>)</span> 
 			  </div>
             </li>
             <li class="col-sm-6">
@@ -347,7 +347,7 @@ $user_id=1;
               <div class="sidebar-information">
                
                 <?php
-					$i=1;
+					$i=1;$default_fields='';
 					$field_set=get_option('iv_directories_profile_fields' );
 					if($field_set!=""){
 							$default_fields=get_option('iv_directories_profile_fields' );

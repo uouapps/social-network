@@ -1,202 +1,19 @@
-          <style>
-            #profile-account2 .profile-content {
-              border: 0;
-              padding: 0;
-              box-shadow: 0px 2px 0px rgba(0,0,0, .1);
-              background: #fff;
-              margin-bottom: 40px;
-            }
-            #profile-account2 .portlet {
-              padding: 0 15px;
-            }
-            #profile-account2 .caption {
-              display: block;
-              width: 100%;
-              float: none;
-              padding: 15px 20px !important;
-              background: #f0f0f0;
-              border-top-left-radius: 3px !important;
-              border-top-right-radius: 3px !important;
-            }
-            #profile-account2 .caption-subject {
-              color: #333 !important;
-              text-transform: capitalize;
-            }
-            #profile-account2 .nav-tabs {
-              float: none;
-              background: #f4f4f4;
-              width: 100%;
-              position: relative;
-              z-index: 10;
-            }
-
-            #profile-account2 .nav-tabs li {
-              width: 25%;
-              border-right: 2px solid #f0f0f0;
-              border-bottom: o;
-              text-align: center;
-            }
-            #profile-account2 .nav-tabs li:last-child {
-              border-right: 0;
-            }
-
-            #profile-account2 .portlet-title .nav li.active {
-              border-bottom: 0;
-            }
-
-            #profile-account2 .portlet-title .nav li.active a {
-              background:  #0099fe;
-              color: #fff;
-              border-bottom-color: #0099fe !important;
-            }
-
-            #profile-account2 .portlet-title .nav li.active a:before {
-              content: '';
-              position: absolute;
-              left: 45%;
-              top: 100%;
-              width: 0; 
-              height: 0; 
-              border-left: 10px solid transparent;
-              border-right: 10px solid transparent;
-              
-              border-top: 10px solid #0099fe;
-            }
-
-            @media screen and (max-width: 768px) {
-              #profile-account2 .portlet-title .nav li.active a:before {
-                display: none;
-              }
-
-              #profile-account2 .nav-tabs li {
-                width: 50%;
-              }
-            }
-
-            #profile-account2 .nav-tabs li a {
-              padding: 12px 7px;
-              border-bottom: 2px solid #f0f0f0 !important;
-              margin: 0;
-              border-radius: 0;
-              text-transform: uppercase;
-              color: #333;
-              font-size: 13px;
-            }
-
-            #profile-account2 .portlet-title .nav li:hover {
-              border-bottom: 0;
-              background: transparent;
-            }
-
-            #profile-account2 .tabbable-line {
-              border-bottom: 0;
-            }
-
-            #profile-account2 .tab-content {
-              padding: 30px;
-            }
-
-            .tab-content .form-group {
-              position: relative;
-              margin-bottom: 30px;
-            }
-
-            #profile-account2 label {
-              color: #666;
-              font-weight: 600;
-              font-size: 15px;
-              margin-bottom: 8px;
-            }
-
-            #profile-account2 .tab-content .table tbody tr {
-              background: #f4f4f4;
-            }
-
-            #profile-account2 .tab-content .table tbody tr td {
-              border-left: 1px solid #ddd;
-              border-bottom: 1px solid #ddd;
-              padding-left: 20px;
-              padding-top: 16px;
-              color: #333;
-            }
-            #profile-account2 .tab-content .table tbody tr td:last-child {
-              border-right: 1px solid #ddd;
-            }
-
-            #profile-account2 .tab-content .table tbody tr td label {
-              background: transparent;
-            }
-
-            #profile-account2 .tab-content .table tbody tr td label input {
-              margin-right: 5px;
-            }
-
-            #main-wrapper {
-              background: #fbfbfb;
-            }
 
 
-            .btn-new {
-              display: inline-block;
-              margin-bottom: 0;
-              font-weight: inherit;
-              text-align: center;
-              vertical-align: middle;
-              touch-action: manipulation;
-              cursor: pointer;
-              background-image: none;
-              border: 0;
-              white-space: nowrap;
-              color: #ffffff !important;
-              padding: 6px 21.312px;
-              transition: all 0.3s;
-              border-radius: 3px;
-              text-transform: uppercase !important;
-              font-size: 13px !important;
-              font-family: 'Montserrat', sans-serif !important;
-            }
-
-            .btn-custom {
-              background-color: #0099fe;
-              border: 2px solid #0099fe;
-              color: #fff;
-              padding: 6px 30px !important;
-            }
-
-            
-
-            .btn-custom:hover, .btn-custom.hover, .btn-custom:focus, .btn-custom.focus, .btn-custom:active, .btn-custom.active {
-                background-color: #2771aa;
-                border-color: #2771aa;
-            }
-
-          </style>
-
-
-          <div class="profile-content">
-            
-              <div class="portlet row light">
-                  <div class="portlet-title tabbable-line clearfix">
-                    <div class="caption caption-md">
-                      <span class="caption-subject"><?php  esc_html_e('Profile','chilepro');?> </span>
-                    </div>
-                    <ul class="nav nav-tabs">
-                      <li class="active">
-                        <a href="#tab_1_1" data-toggle="tab"><?php  esc_html_e('Company Info','chilepro');?> </a>
-                      </li>
-                      <li>
-                        <a href="#tab_1_3" data-toggle="tab"><?php  esc_html_e('Change Password','chilepro');?> </a>
-                      </li>
-                      <li>
-                        <a href="#tab_1_5" data-toggle="tab"><?php  esc_html_e('Social','chilepro');?> </a>
-                      </li>
-					  <li>
-                        <a href="#tab_1_4" data-toggle="tab"><?php  esc_html_e('Privacy Settings','chilepro');?> </a>
-                      </li>
-                    </ul>
-                  </div>
+        <div class="network">
+            <h4>Information</h4>
+                 
+                     <ul class="nav nav-tabs">
+					  <li class="active"><a data-toggle="tab" href="#tab_1_1"><?php  esc_html_e('Company Info','chilepro');?> </a></li>
+					  <li><a data-toggle="tab" href="#tab_1_3" ><?php  esc_html_e('Change Password','chilepro');?></a></li>
+					  <li> <a data-toggle="tab" href="#tab_1_5"><?php  esc_html_e('Social','chilepro');?></a></li>
+					  <li ><a data-toggle="tab" href="#tab_1_4" ><?php  esc_html_e('Privacy Settings','chilepro');?></a></li>
+					</ul>
+					
+                   
+                
                   
-                  <div class="portlet-body">
+                 
                     <div class="tab-content">
                     
                       <div class="tab-pane active" id="tab_1_1">
@@ -824,8 +641,8 @@
                       </div>
                     
                   </div>
-                </div>
-              </div>
+               
+             
             </div>
           <!-- END PROFILE CONTENT -->
  <script>

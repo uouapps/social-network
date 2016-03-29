@@ -819,11 +819,11 @@ global $wpdb;
 										<form class="form-horizontal" role="form"  name='page_settings' id='page_settings'>
 																<?php
 										$price_table=get_option('_iv_directories_price_table'); 
-										$registration=get_option('_iv_directories_registration'); 
-										$profile_page=get_option('_iv_directories_profile_page'); 	
+										$registration=get_option('_iv_directories_registration'); 										
 										$profile_public=get_option('_iv_personal_profile_public_page');
 										$login_page=get_option('_iv_directories_login_page');  										
-										$thank_you=get_option('_iv_directories_thank_you_page'); 
+										$thank_you=get_option('_iv_directories_thank_you_page');
+										$profile_page=get_option('_iv_directories_profile_page'); 	 
 										$corporate_public=get_option('_iv_corporate_profile_public_page');
 											
 

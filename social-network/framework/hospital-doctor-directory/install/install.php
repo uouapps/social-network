@@ -118,23 +118,7 @@ update_option('_bid_start_amount','.01');
 	update_post_meta( $newpost_id, '_wp_page_template', 'templates/full-width-page.php' );
 	update_option('_iv_directories_profile_page', $newpost_id); 	
 	
-	/// **** Create Page for User public Profile****** c c c c c c c   c
-
-
-	$page_title='Profile Public';
-	$page_name='profile-public';
-	$page_content='[iv_directories_profile_public]';
-	$my_post_form = array(
-		'post_title'    => wp_strip_all_tags( $page_title),
-		'post_name'    => wp_strip_all_tags( $page_name),
-		'post_content'  => $page_content,
-		'post_status'   => 'publish',
-		'post_author'   =>  get_current_user_id(),	
-		'post_type'		=> 'page',
-		);
-	$newpost_id= wp_insert_post( $my_post_form );	
-	update_post_meta( $newpost_id, '_wp_page_template', 'templates/full-width-page.php' );
-	update_option('_iv_directories_profile_public_page', $newpost_id);
+	
 	
 	
 	
@@ -192,6 +176,42 @@ update_option('_bid_start_amount','.01');
 	$newpost_id= wp_insert_post( $my_post_form );	
 	update_post_meta( $newpost_id, '_wp_page_template', 'templates/full-width-page.php' );
 	update_option('_iv_directories_user_dir_page', $newpost_id);
+	
+	/// **** Create Page for User public Profile****** 
+
+
+	$page_title='Personal Public';
+	$page_name='personal-public';
+	$page_content='';
+	$my_post_form = array(
+		'post_title'    => wp_strip_all_tags( $page_title),
+		'post_name'    => wp_strip_all_tags( $page_name),
+		'post_content'  => $page_content,
+		'post_status'   => 'publish',
+		'post_author'   =>  get_current_user_id(),	
+		'post_type'		=> 'page',
+		);
+	$newpost_id= wp_insert_post( $my_post_form );	
+	update_post_meta( $newpost_id, '_wp_page_template', 'templates/profile_personal.php' );
+	update_option('_iv_directories_profile_public_page', $newpost_id);
+	
+	//company Profile
+	
+	$page_title='Company Public';
+	$page_name='company-public';
+	$page_content='';
+	$my_post_form = array(
+		'post_title'    => wp_strip_all_tags( $page_title),
+		'post_name'    => wp_strip_all_tags( $page_name),
+		'post_content'  => $page_content,
+		'post_status'   => 'publish',
+		'post_author'   =>  get_current_user_id(),	
+		'post_type'		=> 'page',
+		);
+	$newpost_id= wp_insert_post( $my_post_form );	
+	update_post_meta( $newpost_id, '_wp_page_template', 'templates/profile_corporate .php' );
+	update_option('_iv_corporate_profile_public_page', $newpost_id);
+	
 	
 	// Contact Us Page**********
 	

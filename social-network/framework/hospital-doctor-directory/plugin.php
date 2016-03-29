@@ -264,9 +264,7 @@
 							$query = "delete from {$wpdb->prefix}posts where  ID='".$page_name."' LIMIT 1";
 							$wpdb->query($query);
 							
-							$page_name=get_option('_iv_directories_profile_public_page');						
-							$query = "delete from {$wpdb->prefix}posts where  ID='".$page_name."' LIMIT 1";
-							$wpdb->query($query);
+						
 							
 							$page_name=get_option('_iv_directories_login_page');					
 							$query = "delete from {$wpdb->prefix}posts where  ID='".$page_name."' LIMIT 1";
@@ -289,6 +287,14 @@
 							$wpdb->query($query);
 							
 							$page_name=get_option('_iv_directories_about_us');						
+							$query = "delete from {$wpdb->prefix}posts where  ID='".$page_name."' LIMIT 1";
+							$wpdb->query($query);
+							
+							$page_name=get_option('_iv_directories_company_profile');						
+							$query = "delete from {$wpdb->prefix}posts where  ID='".$page_name."' LIMIT 1";
+							$wpdb->query($query);
+							
+							$page_name=get_option('_iv_directories_profile_public_page');						
 							$query = "delete from {$wpdb->prefix}posts where  ID='".$page_name."' LIMIT 1";
 							$wpdb->query($query);
 							
