@@ -197,7 +197,7 @@ update_option('_bid_start_amount','.01');
 	
 	//company Profile
 	
-	$page_title='Company Public';
+	$page_title='Company Profile';
 	$page_name='company-public';
 	$page_content='';
 	$my_post_form = array(
@@ -209,7 +209,7 @@ update_option('_bid_start_amount','.01');
 		'post_type'		=> 'page',
 		);
 	$newpost_id= wp_insert_post( $my_post_form );	
-	update_post_meta( $newpost_id, '_wp_page_template', 'templates/profile_corporate .php' );
+	update_post_meta( $newpost_id, '_wp_page_template', 'templates/profile_corporate.php' );
 	update_option('_iv_corporate_profile_public_page', $newpost_id);
 	
 	
