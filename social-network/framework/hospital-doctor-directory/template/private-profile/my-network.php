@@ -83,7 +83,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -108,7 +108,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -133,7 +133,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -158,7 +158,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -183,7 +183,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -208,7 +208,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -233,7 +233,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -322,7 +322,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -347,7 +347,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -372,7 +372,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -397,7 +397,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -422,7 +422,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -447,7 +447,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -472,7 +472,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -563,7 +563,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -588,7 +588,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -613,7 +613,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -638,7 +638,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -663,7 +663,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -688,7 +688,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>
@@ -713,7 +713,7 @@
                               </div>
                               <!-- Name -->
                               <div class="fol-name">
-                                <div class="avatar"> <img src="images/sm-avatar.jpg" alt=""> </div>
+                                <div class="avatar"> <img src="<?php echo wp_iv_directories_URLPATH.'assets/images/sm-avatar.jpg'; ?>" alt=""> </div>
                                 <h6>Collin Weiland</h6>
                                 <span>Web Developer</span> </div>
                             </div>

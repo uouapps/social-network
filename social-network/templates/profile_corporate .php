@@ -505,7 +505,7 @@ $user_id=1;
                 <div class="profile-main">
                   <h3><?php  esc_html_e('Services','chilepro');?> </h3>
                   <div class="profile-in profile-serv">
-                    <h6><?php  esc_html_e('Here’s an overview of the services we provide.','chilepro');?>  </h6>
+                    <h6><?php  esc_html_e('Here an overview of the services we provide.','chilepro');?>  </h6>
                     
                     <?php	$aw=0;	 
 				   for($i=0;$i<20;$i++){

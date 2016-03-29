@@ -231,7 +231,7 @@ global $current_user;
 		  }
 		  else{ 		 
 			
-			include(  wp_iv_directories_template. 'private-profile/my-favorites-1.php');
+			include(  wp_iv_directories_template. 'private-profile/my-network.php');
 		  }
 		  
 		  
