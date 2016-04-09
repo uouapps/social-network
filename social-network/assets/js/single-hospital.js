@@ -272,8 +272,18 @@ function save_connect(id) {
 							type : "post",
 							data : search_params,
 							success : function(response){ 
-								jQuery("#uo").html('<a href="javascript:;" onclick="save_bookmark('+user_id+');" ><i class="fa fa-bookmark-o" ></i></a>');
-							
+								var ii=0;
+								for(ii=0; ii<=5; ii++){									
+									jQuery("#"+rating_text+"_"+ii).removeClass("fa-star");
+									jQuery("#"+rating_text+"_"+ii).addClass("fa-star-o");									
+								}	
+								
+								for(ii=0; ii<=rating_value; ii++){
+									jQuery("#"+rating_text+"_"+ii).removeClass("fa-star-o");
+									jQuery("#"+rating_text+"_"+ii).removeClass("fa-star");
+									jQuery("#"+rating_text+"_"+ii).addClass("fa-star");	
+								}	
+								 
 								
 							}
 						});
@@ -352,3 +362,4 @@ function save_connect(id) {
             this.updateSinglePage(item.html());},
     });
 })(jQuery, window, document);
+

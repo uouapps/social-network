@@ -85,7 +85,7 @@ $user_id=1;
         
         <!-- User Iinfo -->
         <div class="user-info">
-          <h1><?php echo get_user_meta($user_id,'company_name',true); ?> <a data-toggle="tooltip" data-placement="top" title="Verified Member"><img src="<?php echo SB_IMAGE."icon-ver.png";?>" alt="icon" ></a> </h1>
+          <h1><?php echo get_user_meta($user_id,'profile_name',true); ?> <a data-toggle="tooltip" data-placement="top" title="Verified Member"><img src="<?php echo SB_IMAGE."icon-ver.png";?>" alt="icon" ></a> </h1>
           <h6><?php echo get_user_meta($user_id,'company_type',true); ?> </h6>
           <p><?php echo get_user_meta($user_id,'address',true); ?>   (<a href="http://maps.google.com/maps?q=<?php echo $lat;?>%2C<?php echo $lng;?>" target="_blank"><?php  esc_html_e('map','chilepro');?></a> / <a href="http://maps.google.com/maps?q=<?php echo $lat;?>%2C<?php echo $lng;?>" target="_blank"><?php  esc_html_e('street','chilepro');?></a>)</p>
           
@@ -128,11 +128,11 @@ $user_id=1;
 			if($field_set!=""){
 					$default_fields=get_option('iv_social_profile_corporate_fields_review' );
 			}else{
-					$default_fields['Expertise']='Expertise';	
-					$default_fields['Knowledge']='Knowledge';
-					$default_fields['Quality']='Quality';
-					$default_fields['Price']='Price';
-					$default_fields['Services']='Services';
+					$default_fields['Expertise']=esc_html__('Expertise','medico');	
+					$default_fields['Knowledge']=esc_html__('Knowledge','medico');
+					$default_fields['Quality']=esc_html__('Quality','medico');
+					$default_fields['Price']=esc_html__('Price','medico');
+					$default_fields['Services']=esc_html__('Services','medico');
 			}
 			if(sizeof($default_fields)>0){ 	
 				foreach ( $default_fields as $field_key => $field_value ) {
@@ -352,13 +352,13 @@ $user_id=1;
 					if($field_set!=""){
 							$default_fields=get_option('iv_directories_profile_fields' );
 					}else{
-							$default_fields['Number_Employees']='Number of Employees';
-							$default_fields['Legal_Entity']='Legal Entity';
-							$default_fields['Company_Registration']='Company Registration';
-							$default_fields['Operating_Hours']='Operating Hours';
-							$default_fields['Contacts']='Contacts';
-							$default_fields['Email']='Email';								
-							$default_fields['web_site']='Website Url';	
+							$default_fields['Number_Employees']=esc_html__('Number of Employees','medico');
+							$default_fields['Legal_Entity']=esc_html__('Legal Entity','medico');
+							$default_fields['Company_Registration']=esc_html__('Company Registration','medico');
+							$default_fields['Operating_Hours']=esc_html__('Operating Hours','medico');
+							$default_fields['Contacts']=esc_html__('Contacts','medico');
+							$default_fields['Email']=esc_html__('Email','medico');								
+							$default_fields['web_site']=esc_html__('Website Url','medico');	
 					}
 					if(sizeof($default_fields)>0){ 	?>
 						<ul class="single-category">
@@ -391,11 +391,11 @@ $user_id=1;
 					if($field_set!=""){
 							$default_fields=get_option('iv_social_profile_corporate_fields_review' );
 					}else{
-							$default_fields['Expertise']='Expertise';	
-							$default_fields['Knowledge']='Knowledge';
-							$default_fields['Quality']='Quality';
-							$default_fields['Price']='Price';
-							$default_fields['Services']='Services';
+							$default_fields['Expertise']=esc_html__('Expertise','medico');	
+							$default_fields['Knowledge']=esc_html__('Knowledge','medico');
+							$default_fields['Quality']=esc_html__('Quality','medico');
+							$default_fields['Price']=esc_html__('Price','medico');
+							$default_fields['Services']=esc_html__('Services','medico');
 					}
 					if(sizeof($default_fields)>0){ 	?>
 						
@@ -408,20 +408,20 @@ $user_id=1;
 							<li class="row">
 							<h6 class="title col-xs-6"><?php echo $field_value_trim; ?></h6>
 							 <span class="col-xs-6">
-							 <a  href="javascript:;" onclick="save_rating('<?php echo $user_id; ?>','<?php echo $field_key; ?>','1')" >
-							 <i class="uourating fa fa-star<?php echo($old_rating>=1 ? '':'-o'); ?>"></i></a> 
+							 <a  href="javascript:;"  onclick="save_rating('<?php echo $user_id; ?>','<?php echo $field_key; ?>','1')" >
+							 <i  id="<?php echo $field_key ?>_1" class="uourating fa fa-star<?php echo($old_rating>=1 ? '':'-o'); ?>"></i></a> 
 							 
-							 <a  href="javascript:;" onclick="save_rating('<?php echo $user_id; ?>','<?php echo $field_key; ?>','2')" >
-							 <i class="uourating fa fa-star<?php echo($old_rating>=2 ? '':'-o'); ?>"></i></a> 
+							 <a  href="javascript:;"  onclick="save_rating('<?php echo $user_id; ?>','<?php echo $field_key; ?>','2')" >
+							 <i id="<?php echo $field_key ?>_2"  class="uourating fa fa-star<?php echo($old_rating>=2 ? '':'-o'); ?>"></i></a> 
 							 
-							 <a  href="javascript:;" onclick="save_rating('<?php echo $user_id; ?>','<?php echo $field_key; ?>','3')" >
-							 <i class="uourating fa fa-star<?php echo($old_rating>=3 ? '':'-o'); ?>"></i></a> 
+							 <a  href="javascript:;"  onclick="save_rating('<?php echo $user_id; ?>','<?php echo $field_key; ?>','3')" >
+							 <i id="<?php echo $field_key ?>_3"  class="uourating fa fa-star<?php echo($old_rating>=3 ? '':'-o'); ?>"></i></a> 
 							 
 							 <a  href="javascript:;" onclick="save_rating('<?php echo $user_id; ?>','<?php echo $field_key; ?>','4')" >
-							 <i class="uourating fa fa-star<?php echo($old_rating>=4 ? '':'-o'); ?>"></i></a> 
+							 <i id="<?php echo $field_key ?>_4"  class="uourating fa fa-star<?php echo($old_rating>=4 ? '':'-o'); ?>"></i></a> 
 							 
-							 <a  href="javascript:;" onclick="save_rating('<?php echo $user_id; ?>','<?php echo $field_key; ?>','5')" >
-							 <i class="uourating fa fa-star<?php echo($old_rating>=5 ? '':'-o'); ?>"></i></a> 
+							 <a  href="javascript:;" id="<?php echo $field_key ?>_5" onclick="save_rating('<?php echo $user_id; ?>','<?php echo $field_key; ?>','5')" >
+							 <i id="<?php echo $field_key ?>_5" class="uourating fa fa-star<?php echo($old_rating>=5 ? '':'-o'); ?>"></i></a> 
 							 
 							 
 							 

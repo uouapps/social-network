@@ -6,27 +6,30 @@
 											 $recurring_text=''; 
 											 if( $package_name==""){	
 												
-												$sql="SELECT * FROM $wpdb->posts WHERE post_type = 'iv_directories_pack'  and post_status='draft' ";
-												$membership_pack = $wpdb->get_results($sql);
-												$total_package = count($membership_pack);
-												
+											
+											
 												
 												if(sizeof($membership_pack)>0){
 													$i=0;
-													echo'<select name="package_sel" id ="package_sel" class=" form-control">';
+													
 													
 													foreach ( $membership_pack as $row )
 													{	
 														if(get_post_meta($row->ID, 'iv_directories_user_type', true)==$package_type){
+															if($i==0){
+																	echo'<select name="package_sel" id ="package_sel" class=" form-control">';
+															}
 															echo '<option value="'. $row->ID.'" >'. $row->post_title.'</option>';
 															if($i==0){$package_id=$row->ID;}
 															$i++;
 														}
 														
 													}	
-																		
-													echo '</select>';	
-													$package_id= $membership_pack[0]->ID;
+													if($i>0){
+														echo '</select>';	
+													}					
+													
+													
 													$recurring= get_post_meta($package_id, 'iv_directories_package_recurring', true);	
 													if($recurring == 'on'){
 														$package_amount=get_post_meta($package_id, 'iv_directories_package_recurring_cost_initial', true);
@@ -126,7 +129,7 @@
 							?>
 								
 								<input type="hidden" name="reg_error" id="reg_error" value="yes">
-								<input type="hidden" name="package_id" id="package_id" value="<?php echo $package_id; ?>">	
+								
 								
 								<input type="hidden" name="return_page" id="return_page" value="<?php  the_permalink() ?>">
 								<?php
@@ -141,13 +144,11 @@
 								<div class="row">
 									<div class="col-md-3 "> 
 									</div>
-											<div class="col-md-9 term-condition"> 
+									<div class="col-md-9 term-condition"> 
 										<label>
 										  <input type="checkbox" data-validation="required" 
 		 data-validation-error-msg="You have to agree to our terms "  name="check_terms" id="check_terms"> <?php echo $term_text; ?>
 										</label>
-										
-										      
 									  </div>									
 								</div>
 																				

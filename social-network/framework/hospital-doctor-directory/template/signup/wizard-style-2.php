@@ -5,6 +5,7 @@ wp_enqueue_style('profile-signup-style', SB_CSS.'profile-registration.css', arra
 
 
 $api_currency= 'USD';
+$package_type ='corporate' ; 
 if( get_option('_iv_directories_api_currency' )!=FALSE ) {
 	$api_currency= get_option('_iv_directories_api_currency' );
 }	
@@ -72,7 +73,18 @@ if(isset($_REQUEST['payment_gateway'])){
 		$stripe_publishable =get_post_meta($newpost_id, 'iv_directories_stripe_live_publishable_key',true);	
 	}
 				 
-								
+$sql="SELECT * FROM $wpdb->posts WHERE post_type = 'iv_directories_pack'  and post_status='draft' ";
+$membership_pack = $wpdb->get_results($sql);
+$total_package = count($membership_pack);	
+$package_id= 0;
+foreach ( $membership_pack as $row )
+{	
+	if(get_post_meta($row->ID, 'iv_directories_user_type', true)==$package_type){
+		 $package_id= $row->ID;	
+		break;
+	}
+	
+}								
 ?>
 
 <div class="registration-style">
@@ -97,15 +109,15 @@ if(isset($_REQUEST['payment_gateway'])){
 		?>	
 		
 					 
-			<div class="content"> 
+	<div class="content"> 
 			<h3  class="form-title"><?php  esc_html_e('User Information','chilepro');?></h3>
-					  
+				<input type="hidden" name="package_id" id="package_id" value="<?php echo $package_id; ?>">		  
 			<div class="form-content">
 		
-			<div class="row">	
+			<div class="">	
 				  
            
-          <div class="col-md-12"> 
+					<div class="col-md-12"> 
 						<?php
 							 if(isset($_REQUEST['message-error'])){?>
 							  <div class="row alert alert-info alert-dismissable" id='loading-2'><a class="panel-close close" data-dismiss="alert">x</a> <?php  echo $_REQUEST['message-error']; ?></div>
@@ -119,14 +131,14 @@ if(isset($_REQUEST['payment_gateway'])){
 	-->
 
 				
-				<div>
+						
 						<div id="selected-column-1" class=" ">
 						<div class="text-center" id="loading"> </div>
 						<div class="form-group row"  >									
 						<label for="text" class="col-md-3 control-label"><?php  esc_html_e('Type','chilepro');?><span class="chili"></span></label>
 						<div class="col-md-9">
 							<?php
-							$package_type ='corporate' ; 
+							
 							?>
 							<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="corporate" checked data-validation-error-msg="<?php  esc_html_e(' Select user Type','chilepro');?>" class="form-control ctrl-textbox"   data-validation="required" ><?php 	 esc_html_e('Corporate','chilepro');?> </label>
 						</div>
@@ -177,6 +189,7 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 					}else{
 						$country_show=0;
 					}
+					 if(sizeof($membership_pack)>0){
 					if($tax_active_module=='yes' AND $country_show==1){
 					?>
 					<div class="form-group row ">									
@@ -458,23 +471,35 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 					
 					<?php
 					}	
+					}
 					?>
 					</div>							
-					</div>	
+						
 						
 																	
 					<input type="hidden" name="hidden_form_name" id="hidden_form_name" value="iv_directories_registration">
-						
-
+				 
               </div>
-         </div>
-         </div>
-			</div>	
-		 <br/>
+			<?php
+				if(sizeof($membership_pack)<1){ 
+				include(wp_iv_directories_template.'signup/without_payment.php'); 
+				}
+			?>	
+						
+					
+				
+			
+			</div>
+         
+         </div>         
+	</div>	
 		 
+		 <?php
 		
-			<div class="content">
-            
+		 if(sizeof($membership_pack)>0){ ?>
+				  
+		 
+			<div class="content">            
 					<h3 class="form-title"><?php  esc_html_e('Payment Info','chilepro');?></h3>
            
 					<div class="col-md-12">
@@ -490,10 +515,10 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 							?>	
 						</div>		
 					</div>	
-				
-					
 				</div>	
-		
+			<?php
+			}
+			?>
 		</form>
 		<div style="display: none;">
 			<img src='<?php echo wp_iv_directories_URLPATH. 'admin/files/images/loader.gif'; ?>' />

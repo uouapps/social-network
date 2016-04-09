@@ -1,57 +1,16 @@
-<?php
-$network_tab= (isset($_REQUEST['network'])?$_REQUEST['network']:'connection' );
-echo $network_tab;
-?>
- <div class="network">
-            <h4><?php esc_html_e('Network','medico'); ?> </h4>
-            
-            <!-- Nav Tabs -->
-            <ul class="nav nav-tabs">
-              <li <?php echo ($network_tab =='connection'?'class="active"':'' ); ?> ><a data-toggle="tab" href="#connection"><?php esc_html_e('Connections','medico'); 
-                $socialnetwork_value='';
-				$socialnetwork_value = get_user_meta($current_user->ID,'_my_connect',true);				
-				$socialnetwork_value_arr = array_filter( explode(',', $socialnetwork_value), 'strlen' );
-				$socialnetwork_value_arr= array_filter(array_map('trim', $socialnetwork_value_arr));
-				echo ' ('.sizeof($socialnetwork_value_arr).')';
-              	?> </a></li>
-              <li <?php echo ($network_tab=='follower'?'class="active"':'' ); ?> ><a data-toggle="tab" href="#follower"><?php esc_html_e('Followers','medico'); ?> 
-              <?php
-               $socialnetwork_value='';
-				$socialnetwork_value = get_user_meta($current_user->ID,'_follower',true);				
-				$socialnetwork_value_arr = array_filter( explode(',', $socialnetwork_value), 'strlen' );
-				$socialnetwork_value_arr= array_filter(array_map('trim', $socialnetwork_value_arr));
-				echo ' ('.sizeof($socialnetwork_value_arr).')';
-              	?>
-              </a></li>
-              <li  <?php echo ($network_tab=='following'?'class="active"':'' ); ?> ><a data-toggle="tab" href="#following"><?php esc_html_e('Following','medico'); ?> 
-              <?php
-               $socialnetwork_value='';
-				$socialnetwork_value = get_user_meta($current_user->ID,'_following',true);				
-				$socialnetwork_value_arr = array_filter( explode(',', $socialnetwork_value), 'strlen' );
-				$socialnetwork_value_arr= array_filter(array_map('trim', $socialnetwork_value_arr));
-				echo ' ('.sizeof($socialnetwork_value_arr).')';
-              	?>
-              </a></li>
-            </ul>
-            
-            <!-- Tab Content -->
-            <div class="tab-content"> 
-              
-              <!-- Connections -->
-              <div id="connection" class="tab-pane fade in active">
-                <div class="net-work-in"> 
+  <div class="net-work-in"> 
 				<?php
 					$connection_type=(isset($_REQUEST['type'])? $_REQUEST['type']:'All' );
-					$search_connection=(isset($_POST['connnection_search'])? $_POST['connnection_search']:'' );
+					$search_connection=(isset($_POST['follower_search'])? $_POST['follower_search']:'' );
 					?>
                   <!-- Filter -->
                   <div class="filter-flower">
                     <div class="row">
                       <div class="col-sm-7">
                         <ul>
-                          <li><a href="<?php echo the_permalink();?>?&profile=network&network=connection&type=All" <?php echo($connection_type=='All' ?'class="active"':'' ); ?> ><?php esc_html_e('Show All','medico'); ?></a></li>
-                          <li><a href="<?php echo the_permalink();?>?&profile=network&network=connection&type=Professionals" <?php echo($connection_type=='Professionals' ?'class="active"':'' ); ?> ><i class="fa fa-user"></i> <?php esc_html_e('Professionals','medico'); ?></a></li>
-                          <li><a href="<?php echo the_permalink();?>?&profile=network&network=connection&type=Companies" <?php echo($connection_type=='Companies' ?'class="active"':'' ); ?> ><i class="fa fa-building-o"></i> <?php esc_html_e('Companies','medico'); ?></a></li>
+                          <li><a href="<?php echo the_permalink();?>?&profile=network&network=follower&type=All" <?php echo($connection_type=='All' ?'class="active"':'' ); ?> ><?php esc_html_e('Show All','medico'); ?></a></li>
+                          <li><a href="<?php echo the_permalink();?>?&profile=network&network=follower&type=Professionals" <?php echo($connection_type=='Professionals' ?'class="active"':'' ); ?> ><i class="fa fa-user"></i> <?php esc_html_e('Professionals','medico'); ?></a></li>
+                          <li><a href="<?php echo the_permalink();?>?&profile=network&network=follower&type=Companies" <?php echo($connection_type=='Companies' ?'class="active"':'' ); ?> ><i class="fa fa-building-o"></i> <?php esc_html_e('Companies','medico'); ?></a></li>
                         </ul>
                       </div>
                       
@@ -77,12 +36,12 @@ echo $network_tab;
                     <div class="head">
                       <div class="row">
                         <div class="col-sm-8">
-                          <button onclick="connection_make_follow();" ><i class="fa fa-user-plus"></i><?php esc_html_e('Follow','medico'); ?></button>
-                          <button onclick="connection_make_delete_conection();"  ><i class="fa fa-trash"></i><?php esc_html_e('Delete','medico'); ?></button>
+                          <button onclick="follower_make_follow();" ><i class="fa fa-user-plus"></i><?php esc_html_e('Follow','medico'); ?></button>
+                          <button onclick="follower_make_delete_conection();"  ><i class="fa fa-trash"></i><?php esc_html_e('Delete','medico'); ?></button>
                         </div>
                         <div class="col-sm-4">
-                           <form action="<?php echo the_permalink().'?&profile=network&network=connection'; ?>" method="post" id="connection_form" name="connection_form" >
-								<input type="text" id="connnection_search" name="connnection_search"  placeholder="<?php esc_html_e('Search','medico'); ?>" value="<?php echo $search_connection; ?>">
+                           <form action="<?php echo the_permalink().'?&profile=network&network=follower'; ?>" method="post"  >
+								<input type="text" id="follower_search" name="follower_search"  placeholder="<?php esc_html_e('Search','medico'); ?>" value="<?php echo $search_connection; ?>">
 								<button    ><i class="fa fa-search"></i></button>
                           </form>
                         </div>
@@ -100,12 +59,12 @@ echo $network_tab;
                     </div>
                     
                     <!-- Tittle -->
-                    <form id="connection_form_list" name="connection_form_list" style="padding: 0px">
+                    <form id="follower_form_list" name="follower_form_list" style="padding: 0px">
 						<div class="folow-persons">
 						  <ul>
 							<?php
 							$socialnetwork_value='';
-							$socialnetwork_value = get_user_meta($current_user->ID,'_my_connect',true);	                       
+							$socialnetwork_value = get_user_meta($current_user->ID,'_following',true);	                       
 							$socialnetwork_value = array_filter(explode(",", $socialnetwork_value));
 							
 							$args = array();				
@@ -113,7 +72,7 @@ echo $network_tab;
 							$paged = 1;						
 							$offset=0;  
 							
-							if(isset($_POST['connnection_search'])){								
+							if(isset($_POST['follower_search'])){								
 								
 								$args['meta_query']=array(
 										'relation' => 'AND',
@@ -241,10 +200,10 @@ echo $network_tab;
 								$total_pages=ceil($total_user/$no);
 								if($total_pages>1){
 								
-									echo'<div id="add_more_connection"></div>';
-									echo'<div class="text-center" id="add_more_connection_loading"></div>';
+									echo'<div id="add_more_follower"></div>';
+									echo'<div class="text-center" id="add_more_follower_loading"></div>';
 									
-									echo'<div class="text-center" id="add_more_connection_more_button"><button type="button" onclick="add_more_connection_ajax(2);"><i class="fa fa-plus"></i> '.esc_html__(' More','medico').'</button> </div>';
+									echo'<div class="text-center" id="add_more_follower_more_button"><button type="button" onclick="add_more_follower_ajax(2);"><i class="fa fa-plus"></i> '.esc_html__(' More','medico').'</button> </div>';
 								}
 							} else {?>
 								<li>
@@ -264,34 +223,13 @@ echo $network_tab;
                  				
                 </div>
            
-              </div>
-              
-              <!-- Followers -->
-              <div id="follower" class="tab-pane fade">
-				  <?php
-				  include(  wp_iv_directories_template. 'private-profile/my-follower.php');
-				  ?>
-           
-              </div>
-              
-              <!-- Following -->
-              <div id="following" class="tab-pane fade">
-				<?php
-				  include(  wp_iv_directories_template. 'private-profile/following.php');
-				  ?>
-              
-              
-               </div>
-            </div>
-          </div>
- 
-<script>
-function connection_make_follow(){
+ <script>
+function follower_make_follow(){
 	var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 
 	var search_params={
-			"action"  : 	"iv_directories_bulk_connection_make_follow",	
-			"form_data":	jQuery("#connection_form_list").serialize(), 
+			"action"  : 	"iv_directories_bulk_follower_make_follow",	
+			"form_data":	jQuery("#follower_form_list").serialize(), 
 		};
 		jQuery.ajax({					
 			url : ajaxurl,					 
@@ -305,13 +243,13 @@ function connection_make_follow(){
 	
 	//alert(all_connection);
 }
-function connection_make_delete_conection(){
+function follower_make_delete_conection(){
 	var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 	
 
 	var search_params={
-			"action"  : 	"iv_directories_bulk_connection_make_deleteconnection",	
-			"form_data":	jQuery("#connection_form_list").serialize(), 
+			"action"  : 	"iv_directories_bulk_follower_make_deletefollower",	
+			"form_data":	jQuery("#follower_form_list").serialize(), 
 		};
 		jQuery.ajax({					
 			url : ajaxurl,					 
@@ -325,14 +263,14 @@ function connection_make_delete_conection(){
 	
 	//alert(all_connection);
 }	
-function add_more_connection_ajax(page){
+function add_more_follower_ajax(page){
 var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 var total_page=<?php echo $total_pages; ?>;	
 	var loader_image = '<img src="<?php echo wp_iv_directories_URLPATH. "admin/files/images/loader.gif"; ?>" />';
-		jQuery('#add_more_connection_loading').html(loader_image);
+		jQuery('#add_more_follower_loading').html(loader_image);
 		
 		var search_params={
-			"action"  : 	"iv_directories_load_more_connection",	
+			"action"  : 	"iv_directories_load_more_follower",	
 			"data": "page=" + page +"&type=<?php echo $connection_type; ?>" , 
 		};
 		jQuery.ajax({					
@@ -342,17 +280,18 @@ var total_page=<?php echo $total_pages; ?>;
 			data : search_params,
 			success : function(response){						
 				page=page+1;
-				jQuery('#add_more_connection_loading').html('');
-				jQuery('#add_more_connection').append(response);
-				//jQuery('#add_more_connection_more_button').html('')
+				jQuery('#add_more_follower_loading').html('');
+				jQuery('#add_more_follower').append(response);
+				//jQuery('#add_more_follower_more_button').html('')
 				
 				if(page<=total_page){ 
-				jQuery('#add_more_connection_more_button').html('<div class="text-center" id="add_more_connection_more_button"><button type="button" onclick="add_more_connection_ajax('+ page +');"><i class="fa fa-plus"></i> More</button> </div>');
+				jQuery('#add_more_follower_more_button').html('<div class="text-center" id="add_more_follower_more_button"><button type="button" onclick="add_more_follower_ajax('+ page +');"><i class="fa fa-plus"></i> More</button> </div>');
 				}else{
-					jQuery('#add_more_connection_more_button').html('');
+					jQuery('#add_more_follower_more_button').html('');
 				}
 			}
 		});
 
 }	
 </script>	     
+          

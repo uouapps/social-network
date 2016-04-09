@@ -21,7 +21,7 @@
 							<div class=" form-group">
 									<label for="text" class=" control-label"><?php esc_html_e('Company Name','chilepro'); ?></label>
 									<div class="  "> 
-										<input type="text" class="" name="title" id="title" value="<?php echo get_user_meta($current_user->ID,'company_name',true); ?>" placeholder="<?php esc_html_e('Enter company Name Here','chilepro'); ?>">
+										<input type="text" class="" name="title" id="title" value="<?php echo get_user_meta($current_user->ID,'profile_name',true); ?>" placeholder="<?php esc_html_e('Enter company Name Here','chilepro'); ?>">
 									</div>																		
 								</div>
 							<div class=" form-group">

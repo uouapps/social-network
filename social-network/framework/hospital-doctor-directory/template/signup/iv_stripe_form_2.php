@@ -25,24 +25,26 @@ wp_enqueue_script('stripe', 'https://js.stripe.com/v2/', array('jquery'), false,
 											<?php
 											 if( $package_name==""){													
 
-												$sql="SELECT * FROM $wpdb->posts WHERE post_type = 'iv_directories_pack'  and post_status='draft' ";
-												$membership_pack = $wpdb->get_results($sql);
-												$total_package=count($membership_pack);
+												
 												//echo'$total_package.....'.$total_package;
 												if(sizeof($membership_pack)>0){
 													$i=0;
-													echo'<select name="package_sel" id ="package_sel" class=" form-control">';
-													
 													foreach ( $membership_pack as $row )
 													{	
+														if(get_post_meta($row->ID, 'iv_directories_user_type', true)==$package_type){
+															if($i==0){
+																	echo'<select name="package_sel" id ="package_sel" class=" form-control">';
+															}
+															echo '<option value="'. $row->ID.'" >'. $row->post_title.'</option>';
+															if($i==0){$package_id=$row->ID;}
+															$i++;
+														}
 														
-														echo '<option value="'. $row->ID.'" >'. $row->post_title.'</option>';
-														if($i==0){$package_id=$row->ID;}
-														$i++;
 													}	
-																		
-													echo '</select>';	
-													$package_id= $membership_pack[0]->ID;
+													if($i>0){
+														echo '</select>';	
+													}		
+													
 													$recurring= get_post_meta($package_id, 'iv_directories_package_recurring', true);	
 													if($recurring == 'on'){
 														$package_amount=get_post_meta($package_id, 'iv_directories_package_recurring_cost_initial', true);
@@ -207,7 +209,7 @@ data-validation-length="2-6" data-validation-error-msg="CVV number is not correc
 								}	 
 										 
 								?>	
-			<input type="hidden" name="package_id" id="package_id" value="<?php echo $package_id; ?>">	
+			
 			<input type="hidden" name="form_reg" id="form_reg" value="">
 			<input type="hidden" name="action" value="stripe"/>
 			<input type="hidden" name="redirect" value="<?php echo get_permalink(); ?>"/>

@@ -54,7 +54,7 @@ global $current_user;
           <!-- Company Information -->
           <div class="sidebar">
             <h5 class="main-title">Mike Tomlinson</h5>
-            <div class="sidebar-thumbnail"> 
+            <div class="sidebar-thumbnail" id="profile_image_main"> 
 				
 				<?php
 				  	$iv_profile_pic_url=get_user_meta($current_user->ID, 'iv_profile_pic_thum',true);
@@ -73,7 +73,7 @@ global $current_user;
             <div class="sidebar-information">
                 <div class="profile-usermenu">
 			  <?php
-			  $active='favorites';
+			  $active='network';
 			  
 			  if(isset($_GET['profile']) AND $_GET['profile']=='setting' ){
 				 $active='setting';
@@ -85,8 +85,8 @@ global $current_user;
 				 $active='all-post';
 			  }
 			  
-			  if(isset($_GET['profile']) AND $_GET['profile']=='favorites' ){
-				 $active='favorites';
+			  if(isset($_GET['profile']) AND $_GET['profile']=='network' ){
+				 $active='network';
 			  }
 			  if(isset($_GET['profile']) AND $_GET['profile']=='who-is-interested' ){
 				 $active='who-is-interested';
@@ -108,13 +108,13 @@ global $current_user;
 				    
 				  <?php
 					$account_menu_check= '';
-					if( get_option( '_iv_directories_menufavorites' ) ) {
-						 $account_menu_check= get_option('_iv_directories_menufavorites');
+					if( get_option( '_iv_directories_menunetwork' ) ) {
+						 $account_menu_check= get_option('_iv_directories_menunetwork');
 					}
 					if($account_menu_check!='yes'){					
 					?>
-					  <li class="<?php echo ($active=='favorites'? 'active':''); ?> ">
-                    <a href="<?php echo get_permalink(); ?>?&profile=favorites">
+					  <li class="<?php echo ($active=='network'? 'active':''); ?> ">
+                    <a href="<?php echo get_permalink(); ?>?&profile=network">
                     <i class="fa fa-heart-o"></i>
                     <?php  esc_html_e('Network','chilepro');?> </a>
                   </li>
@@ -215,7 +215,7 @@ global $current_user;
        <?php
 		  if(isset($_GET['profile']) AND $_GET['profile']=='level' ){
 			include(  wp_iv_directories_template. 'private-profile/profile-level-1.php');
-		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='favorites' ){ 		    
+		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='network' ){ 		    
 			include(  wp_iv_directories_template. 'private-profile/my-network.php');
 		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='who-is-interested' ){ 		    
 			include(  wp_iv_directories_template. 'private-profile/interested-1.php');
@@ -303,10 +303,7 @@ jQuery(document).ready(function($) {
 				image_gallery_frame.open(); 
 				
 			}
-				
-		  
-			  
-			  
-		  </script>	  
+		
+ </script>	  
 
 		
