@@ -197,8 +197,8 @@
 									<?php
 								}
 								$total_user = $user_query->total_users;  
-								$total_pages=ceil($total_user/$no);
-								if($total_pages>1){
+								$total_pages_follower=ceil($total_user/$no);
+								if($total_pages_follower>1){
 								
 									echo'<div id="add_more_follower"></div>';
 									echo'<div class="text-center" id="add_more_follower_loading"></div>';
@@ -265,7 +265,7 @@ function follower_make_delete_conection(){
 }	
 function add_more_follower_ajax(page){
 var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
-var total_page=<?php echo $total_pages; ?>;	
+var total_page=<?php echo $total_pages_follower; ?>;	
 	var loader_image = '<img src="<?php echo wp_iv_directories_URLPATH. "admin/files/images/loader.gif"; ?>" />';
 		jQuery('#add_more_follower_loading').html(loader_image);
 		

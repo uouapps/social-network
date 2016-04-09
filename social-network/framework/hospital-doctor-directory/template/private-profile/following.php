@@ -36,8 +36,8 @@
                     <div class="head">
                       <div class="row">
                         <div class="col-sm-8">
-                          <button onclick="follower_make_follow();" ><i class="fa fa-user-plus"></i><?php esc_html_e('Follow','medico'); ?></button>
-                          <button onclick="follower_make_delete_conection();"  ><i class="fa fa-trash"></i><?php esc_html_e('Delete','medico'); ?></button>
+                          <button onclick="following_make_unfollow();" ><i class="fa fa-user-times"></i><?php esc_html_e('UnFollow','medico'); ?></button>
+                          <button onclick="following_make_conection();"  ><i class="fa fa-users"></i><?php esc_html_e('Connect','medico'); ?></button>
                         </div>
                         <div class="col-sm-4">
                            <form action="<?php echo the_permalink().'?&profile=network&network=follower'; ?>" method="post"  >
@@ -59,7 +59,7 @@
                     </div>
                     
                     <!-- Tittle -->
-                    <form id="follower_form_list" name="follower_form_list" style="padding: 0px">
+                    <form id="following_form_list" name="following_form_list" style="padding: 0px">
 						<div class="folow-persons">
 						  <ul>
 							<?php
@@ -197,13 +197,13 @@
 									<?php
 								}
 								$total_user = $user_query->total_users;  
-								$total_pages=ceil($total_user/$no);
-								if($total_pages>1){
+								$total_pages_following=ceil($total_user/$no);
+								if($total_pages_following>1){
 								
-									echo'<div id="add_more_follower"></div>';
-									echo'<div class="text-center" id="add_more_follower_loading"></div>';
+									echo'<div id="add_more_following"></div>';
+									echo'<div class="text-center" id="add_more_following_loading"></div>';
 									
-									echo'<div class="text-center" id="add_more_follower_more_button"><button type="button" onclick="add_more_follower_ajax(2);"><i class="fa fa-plus"></i> '.esc_html__(' More','medico').'</button> </div>';
+									echo'<div class="text-center" id="add_more_following_more_button"><button type="button" onclick="add_more_following_ajax(2);"><i class="fa fa-plus"></i> '.esc_html__(' More','medico').'</button> </div>';
 								}
 							} else {?>
 								<li>
@@ -224,12 +224,12 @@
                 </div>
            
  <script>
-function follower_make_follow(){
+function following_make_unfollow(){
 	var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 
 	var search_params={
-			"action"  : 	"iv_directories_bulk_follower_make_follow",	
-			"form_data":	jQuery("#follower_form_list").serialize(), 
+			"action"  : 	"iv_directories_bulk_following_make_unfollow",	
+			"form_data":	jQuery("#following_form_list").serialize(), 
 		};
 		jQuery.ajax({					
 			url : ajaxurl,					 
@@ -243,13 +243,13 @@ function follower_make_follow(){
 	
 	//alert(all_connection);
 }
-function follower_make_delete_conection(){
+function following_make_conection(){
 	var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 	
 
 	var search_params={
-			"action"  : 	"iv_directories_bulk_follower_make_deletefollower",	
-			"form_data":	jQuery("#follower_form_list").serialize(), 
+			"action"  : 	"iv_directories_bulk_following_make_connect",	
+			"form_data":	jQuery("#following_form_list").serialize(), 
 		};
 		jQuery.ajax({					
 			url : ajaxurl,					 
@@ -263,14 +263,14 @@ function follower_make_delete_conection(){
 	
 	//alert(all_connection);
 }	
-function add_more_follower_ajax(page){
+function add_more_following_ajax(page){
 var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
-var total_page=<?php echo $total_pages; ?>;	
+var total_page=<?php echo $total_pages_following; ?>;	
 	var loader_image = '<img src="<?php echo wp_iv_directories_URLPATH. "admin/files/images/loader.gif"; ?>" />';
-		jQuery('#add_more_follower_loading').html(loader_image);
+		jQuery('#add_more_following_loading').html(loader_image);
 		
 		var search_params={
-			"action"  : 	"iv_directories_load_more_follower",	
+			"action"  : 	"iv_directories_load_more_following",	
 			"data": "page=" + page +"&type=<?php echo $connection_type; ?>" , 
 		};
 		jQuery.ajax({					
@@ -280,14 +280,14 @@ var total_page=<?php echo $total_pages; ?>;
 			data : search_params,
 			success : function(response){						
 				page=page+1;
-				jQuery('#add_more_follower_loading').html('');
-				jQuery('#add_more_follower').append(response);
-				//jQuery('#add_more_follower_more_button').html('')
+				jQuery('#add_more_following_loading').html('');
+				jQuery('#add_more_following').append(response);
+				//jQuery('#add_more_following_more_button').html('')
 				
 				if(page<=total_page){ 
-				jQuery('#add_more_follower_more_button').html('<div class="text-center" id="add_more_follower_more_button"><button type="button" onclick="add_more_follower_ajax('+ page +');"><i class="fa fa-plus"></i> More</button> </div>');
+				jQuery('#add_more_following_more_button').html('<div class="text-center" id="add_more_following_more_button"><button type="button" onclick="add_more_following_ajax('+ page +');"><i class="fa fa-plus"></i> More</button> </div>');
 				}else{
-					jQuery('#add_more_follower_more_button').html('');
+					jQuery('#add_more_following_more_button').html('');
 				}
 			}
 		});

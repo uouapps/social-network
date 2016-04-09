@@ -107,6 +107,15 @@
 					add_action('wp_ajax_nopriv_iv_directories_bulk_follower_make_follow', array(&$this, 'iv_directories_bulk_follower_make_follow'));
 					
 					
+					add_action('wp_ajax_iv_directories_load_more_following', array(&$this, 'iv_directories_load_more_following'));
+					add_action('wp_ajax_nopriv_iv_directories_load_more_following', array(&$this, 'iv_directories_load_more_following'));
+					
+					add_action('wp_ajax_iv_directories_bulk_following_make_unfollow', array(&$this, 'iv_directories_bulk_following_make_unfollow'));
+					add_action('wp_ajax_nopriv_iv_directories_bulk_following_make_unfollow', array(&$this, 'iv_directories_bulk_following_make_unfollow'));
+					
+					add_action('wp_ajax_iv_directories_bulk_following_make_connect', array(&$this, 'iv_directories_bulk_following_make_connect'));
+					add_action('wp_ajax_nopriv_iv_directories_bulk_following_make_connect', array(&$this, 'iv_directories_bulk_following_make_connect'));
+					
 					//follow
 					add_action('wp_ajax_iv_directories_save_follow', array(&$this, 'iv_directories_save_follow'));
 					add_action('wp_ajax_nopriv_iv_directories_save_follow', array(&$this, 'iv_directories_save_follow'));
@@ -3476,6 +3485,117 @@
 						exit(0);	
 						
 				}
+				public function iv_directories_load_more_following(){
+						global $current_user;
+						parse_str($_POST['data'], $form_data);	
+						$paged =$form_data['page'];
+						$connection_type =$form_data['type'];
+						$args = array();
+						$result='';
+						$socialnetwork_value='';
+                        $socialnetwork_value = get_user_meta($current_user->ID,'_following',true);	                       
+						$socialnetwork_value = array_filter(explode(",", $socialnetwork_value));
+										
+						$no=1;							
+						if($connection_type!='All'){
+							if($connection_type=='Professionals'){								
+								
+								$args['meta_query']=array(
+									'relation' => 'AND',
+										array(
+											'key'     => 'iv_member_type',
+											'value'   => 'professional',
+											'compare' => '='
+										)
+										
+								);
+							}
+							if($connection_type=='Companies'){
+								
+								$args['meta_query']=array(
+									'relation' => 'AND',
+										array(
+											'key'     => 'iv_member_type',
+											'value'   => 'corporate',
+											'compare' => '='
+										)
+										
+								);
+							}	
+						}					
+										
+						$offset= ($paged-1)*$no;					
+				        $args['number']=$no;
+				        $args['offset']=$offset;						
+						$args['include']=$socialnetwork_value;
+						
+					   $user_query = new WP_User_Query( $args );	
+					  
+						if ( ! empty( $user_query->results ) ) {
+							foreach ( $user_query->results as $user ) {	
+								
+								$Followers='';
+								$Followers = get_user_meta($user->ID,'_follower',true);				
+								$Followers = array_filter( explode(',', $Followers), 'strlen' );
+								$Followers= array_filter(array_map('trim', $Followers));	
+								
+								$Following='';
+								$Following = get_user_meta($user->ID,'_following',true);				
+								$Following = array_filter( explode(',', $Following), 'strlen' );
+								$Following= array_filter(array_map('trim', $Following));	
+								
+								$Connections='';
+								$Connections = get_user_meta($user->ID,'_connecter',true);				
+								$Connections = array_filter( explode(',', $Connections), 'strlen' );
+								$Connections= array_filter(array_map('trim', $Connections));					
+								$iv_profile_pic_url=get_user_meta($user->ID, 'iv_profile_pic_thum',true);
+								if($iv_profile_pic_url==''){ 
+									$iv_profile_pic_url= wp_iv_directories_URLPATH.'assets/images/Blank-Profile.jpg';
+								}
+								$reg_page_user='';
+								$user_type= get_user_meta($user->ID,'iv_member_type',true);
+								if($user_type=='corporate'){
+									$iv_redirect_user = get_option( '_iv_corporate_profile_public_page');
+								    $reg_page_user= get_permalink( $iv_redirect_user) ;
+								}else{
+									
+									$iv_redirect_user = get_option( '_iv_personal_profile_public_page');
+								    $reg_page_user= get_permalink( $iv_redirect_user) ;
+								}		
+								
+								$result=$result.'<li ><div class="row">
+										<div class="col-xs-4">
+										  <div class="checkbox">
+											<input id="connection_id[]" name="connection_id[]" value="'.$user->ID.'" class="styled" type="checkbox">
+											<label for="checkbox1"></label>
+										  </div>
+										  <div class="fol-name">
+											<div class="avatar"> 
+											<a href="'.$reg_page_user.'?&id='.$user->user_login.'">	
+											<img src="'.$iv_profile_pic_url.'" alt="image"> </div>
+											</a>
+											<a href="'.$reg_page_user.'?&id='.$user->user_login.'">	
+											<h6>'. (get_user_meta($user->ID,'profile_name',true)!=''? get_user_meta($user->ID,'profile_name',true): $user->display_name ).'</h6>
+											</a>
+											<span>'.( get_user_meta($user->ID,'iv_member_type',true)=='corporate' ? get_user_meta($user->ID,'company_type',true):get_user_meta($user->ID,'designation',true) ).'</span> </div>
+										</div>
+										<div class="col-xs-3 n-p-r n-p-l"> <span>'. get_user_meta($user->ID,'address',true).' </span> </div>
+										<div class="col-xs-3 n-p-r"> <span>
+												'. sizeof($Followers).' '. esc_html__('Followers','medico').'</span> <span>'. sizeof($Following).' '. esc_html__('Following','medico').'</span> </div>								
+										<div class="col-xs-2 n-p-r n-p-l"> <span>'. sizeof($Connections).' '.esc_html__('Connections','medico').'</span> </div>
+									  </div>
+									</li>
+									';
+									
+								
+							}
+						}
+						
+						//echo json_encode(array("result" => $result));
+						echo $result;
+						exit(0);	
+						
+				}
 				public function iv_directories_bulk_connection_make_follow(){
 					parse_str($_POST['form_data'], $form_data);	
 					$current_user_id=get_current_user_id();					
@@ -3543,15 +3663,68 @@
 					echo json_encode(array("msg" => 'success'));
 					exit(0);		
 				}
+				public function iv_directories_bulk_following_make_connect(){
+					parse_str($_POST['form_data'], $form_data);	
+					$current_user_id=get_current_user_id();					
+					
+					foreach($form_data['connection_id'] as $profile_user_id){
+						
+						
+						$old_favorites= get_user_meta($profile_user_id,'_connecter',true);
+						$old_favorites = str_replace(get_current_user_id(), '',  $old_favorites);
+						
+						$new_favorites=$old_favorites.', '.get_current_user_id();
+						update_user_meta($profile_user_id,'_connecter',$new_favorites);						
+						
+						$old_favorites2=get_user_meta(get_current_user_id(),'_my_connect', true);						
+						$old_favorites2 = str_replace($profile_user_id ,'',  $old_favorites2);						
+						
+						$new_favorites2=$old_favorites2.', '.$profile_user_id;
+						update_user_meta(get_current_user_id(),'_my_connect',$new_favorites2);
+					
+					
+					
+					}
+					echo json_encode(array("msg" => 'success'));
+					exit(0);		
+				}
 				public function  iv_directories_bulk_follower_make_deletefollower(){
 					parse_str($_POST['form_data'], $form_data);	
 						$current_user_id=get_current_user_id();					
 						
 						foreach($form_data['connection_id'] as $profile_user_id){
 							
-							$old_favorites= get_user_meta($profile_user_id,'_follower',true);
-							$old_favorites = str_replace($current_user_id, '',  $old_favorites);
+							$old_favorites= get_user_meta(get_current_user_id(),'_follower',true);
+							$old_favorites = str_replace($profile_user_id, '',  $old_favorites);
 							update_user_meta(get_current_user_id(),'_follower',$old_favorites);	
+							
+							
+							$old_favorites2=get_user_meta($profile_user_id,'_following', true);						
+							$old_favorites2 = str_replace(get_current_user_id() ,'',  $old_favorites2);						
+							
+							update_user_meta($profile_user_id,'_following',$old_favorites2);
+																					
+						
+						}
+						echo json_encode(array("msg" => 'success'));
+						exit(0);		
+				
+				}
+				public function  iv_directories_bulk_following_make_unfollow(){
+						parse_str($_POST['form_data'], $form_data);	
+						$current_user_id=get_current_user_id();					
+						
+						foreach($form_data['connection_id'] as $profile_user_id){
+							
+							$old_favorites= get_user_meta($profile_user_id,'_follower',true);
+							$old_favorites = str_replace(get_current_user_id(), '',  $old_favorites);
+							update_user_meta($profile_user_id,'_follower',$old_favorites);	
+							
+							
+							$old_favorites2=get_user_meta(get_current_user_id(),'_following', true);						
+							$old_favorites2 = str_replace($profile_user_id ,'',  $old_favorites2);						
+							
+							update_user_meta(get_current_user_id(),'_following',$old_favorites2);
 																					
 						
 						}

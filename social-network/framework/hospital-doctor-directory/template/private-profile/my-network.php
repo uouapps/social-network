@@ -1,6 +1,6 @@
 <?php
 $network_tab= (isset($_REQUEST['network'])?$_REQUEST['network']:'connection' );
-echo $network_tab;
+
 ?>
  <div class="network">
             <h4><?php esc_html_e('Network','medico'); ?> </h4>
@@ -238,8 +238,8 @@ echo $network_tab;
 									<?php
 								}
 								$total_user = $user_query->total_users;  
-								$total_pages=ceil($total_user/$no);
-								if($total_pages>1){
+								$total_pages_connection=ceil($total_user/$no);
+								if($total_pages_connection>1){
 								
 									echo'<div id="add_more_connection"></div>';
 									echo'<div class="text-center" id="add_more_connection_loading"></div>';
@@ -327,7 +327,7 @@ function connection_make_delete_conection(){
 }	
 function add_more_connection_ajax(page){
 var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
-var total_page=<?php echo $total_pages; ?>;	
+var total_page=<?php echo $total_pages_connection; ?>;	
 	var loader_image = '<img src="<?php echo wp_iv_directories_URLPATH. "admin/files/images/loader.gif"; ?>" />';
 		jQuery('#add_more_connection_loading').html(loader_image);
 		
