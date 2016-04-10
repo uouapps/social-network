@@ -4,18 +4,16 @@
  *
  */
  ?>
- <?php get_header(); ?>
- <?php
+<?php get_header(); ?>
+<?php
 wp_enqueue_style('iv_directories-owlcarousel', SB_CSS . 'owl.carousel.css');
 wp_enqueue_style('iv_directories-copywriter', SB_CSS . 'copywriter-style.css');
 wp_enqueue_style('iv_directories-creative', SB_CSS . 'creative-style.css');
 wp_enqueue_style('iv_directories-profile', SB_CSS . 'user-public-profile.css');
-
-
 ?>
 
 <div id="main-wrapper"> 
-  
+
   <!-- HOME PRO-->
   <div class="home-pro"> 
     
@@ -184,53 +182,47 @@ wp_enqueue_style('iv_directories-profile', SB_CSS . 'user-public-profile.css');
     <section class="clients-says">
       <div class="container">
         <h3 class="section-title">what our users say </h3>
-        
-        
         <div class="testi">
-        <div class="texti-slide"> 
-          <!-- SLide -->
-          <div class="clints-text">
-          
-          
-          <div class="text-in">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue.</p>
+          <div class="texti-slide"> 
+            <!-- SLide -->
+            <div class="clints-text">
+              <div class="text-in">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue.</p>
+              </div>
+              <div class="avatar">
+                <div class="media-left"> <a href="#."> <img src="<?php echo SB_IMAGE;?>clients-avatar-1.jpg" alt=""> </a> </div>
+                <div class="media-body">
+                  <h6>John Kevin Mara</h6>
+                  <span>smashingmagazine.com</span> </div>
+              </div>
+            </div>
             
+            <!-- SLide -->
+            <div class="clints-text">
+              <div class="text-in">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue.</p>
+              </div>
+              <div class="avatar">
+                <div class="media-left"> <a href="#."> <img src="<?php echo SB_IMAGE;?>clients-avatar-1.jpg" alt=""> </a> </div>
+                <div class="media-body">
+                  <h6>John Kevin Mara</h6>
+                  <span>smashingmagazine.com</span> </div>
+              </div>
             </div>
-            <div class="avatar">
-              <div class="media-left"> <a href="#."> <img src="<?php echo SB_IMAGE;?>clients-avatar-1.jpg" alt=""> </a> </div>
-              <div class="media-body">
-                <h6>John Kevin Mara</h6>
-                <span>smashingmagazine.com</span> </div>
-            </div>
-          </div>
-          
-          <!-- SLide -->
-          <div class="clints-text">
-          <div class="text-in">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue.</p>
-            </div>
-            <div class="avatar">
-              <div class="media-left"> <a href="#."> <img src="<?php echo SB_IMAGE;?>clients-avatar-1.jpg" alt=""> </a> </div>
-              <div class="media-body">
-                <h6>John Kevin Mara</h6>
-                <span>smashingmagazine.com</span> </div>
-            </div>
-          </div>
-          
-          <!-- SLide -->
-          <div class="clints-text">
-          
-          <div class="text-in">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue.</p>
             
-            </div><div class="avatar">
-              <div class="media-left"> <a href="#."> <img src="<?php echo SB_IMAGE;?>clients-avatar-1.jpg" alt=""> </a> </div>
-              <div class="media-body">
-                <h6>John Kevin Mara</h6>
-                <span>smashingmagazine.com</span> </div>
+            <!-- SLide -->
+            <div class="clints-text">
+              <div class="text-in">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue.</p>
+              </div>
+              <div class="avatar">
+                <div class="media-left"> <a href="#."> <img src="<?php echo SB_IMAGE;?>clients-avatar-1.jpg" alt=""> </a> </div>
+                <div class="media-body">
+                  <h6>John Kevin Mara</h6>
+                  <span>smashingmagazine.com</span> </div>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </section>
@@ -256,38 +248,5 @@ wp_enqueue_style('iv_directories-profile', SB_CSS . 'user-public-profile.css');
     </div>
   </div>
 </div>
-
-<?php
-wp_enqueue_script('superfish', SB_JS.'/plugins/superfish.min.js', array('jquery'), $ver = true, true );
-wp_enqueue_script('jqueryuiminjs', SB_JS.'jquery.ui.min.js', array('jquery'), $ver = true, true );
-wp_enqueue_script('select2', SB_JS.'/plugins/select2.min.js', array('jquery'), $ver = true, true );
-
-
-wp_enqueue_script('rangeslider', SB_JS.'/plugins/rangeslider.min.js', array('jquery'), $ver = true, true );
-wp_enqueue_script('flexslider', SB_JS.'/plugins/jquery.flexslider-min.js', array('jquery'), $ver = true, true );
-wp_enqueue_script('accordions', SB_JS.'uou-accordions.js', array('jquery'), $ver = true, true );
-wp_enqueue_script('tabs', SB_JS.'uou-tabs.js', array('jquery'), $ver = true, true );
-wp_enqueue_script('gmap3', SB_JS.'gmap3.min.js', array('jquery'), $ver = true, true );
-
-?>
-
-<script>
-
-jQuery('.texti-slide').owlCarousel({
-    loop:true,
-    nav:true,
-	items: 2,
-	navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-}});
-</script>	
-
-
-
 <?php get_footer();
+
