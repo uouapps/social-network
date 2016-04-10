@@ -30,6 +30,14 @@ $('.texti-slide').owlCarousel({
 }});
 
 
+// UOU Tabs
+// ---------------------------------------------------------
+if ($.fn.uouTabs) {
+  $('.uou-tabs').uouTabs();
+} else {
+  console.warn('not loaded -> uou-tabs.js');
+}
+
 $(contact).on('click', function(e){
   $(this).find(contactWindow).toggle();
   e.preventDefault();
