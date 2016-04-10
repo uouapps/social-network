@@ -6,15 +6,14 @@
  ?>
  <?php get_header(); ?>
  <?php
- wp_enqueue_style( 'iv_directories-font', 'https://fonts.googleapis.com/css?family=Raleway');
+wp_enqueue_style('iv_directories-owlcarousel', SB_CSS . 'owl.carousel.css');
+wp_enqueue_style('iv_directories-copywriter', SB_CSS . 'copywriter-style.css');
+wp_enqueue_style('iv_directories-creative', SB_CSS . 'creative-style.css');
+wp_enqueue_style('iv_directories-profile', SB_CSS . 'user-public-profile.css');
 
-wp_enqueue_style('Company-Profile-style', SB_CSS.'user-public-profile.css', array(), $ver = false, $media = 'all');
 
-wp_enqueue_style('Company-creative-style22', SB_CSS.'creative-style.css', array(), $ver = false, $media = 'all');
-wp_enqueue_style('Company-copywriter-style23', SB_CSS.'copywriter-style.css', array(), $ver = false, $media = 'all');
-wp_enqueue_style('Company-carousel-style23', SB_CSS.'owl.carousel.css', array(), $ver = false, $media = 'all');
-	
 ?>
+
 <div id="main-wrapper"> 
   
   <!-- HOME PRO-->
@@ -57,7 +56,6 @@ wp_enqueue_style('Company-carousel-style23', SB_CSS.'owl.carousel.css', array(),
                       <input type="password" placeholder="Password">
                       <button type="submit">Register</button>
                       <div class="login-with"> <span>Or login with:</span> <a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-google"></i></a> <a href="#."><i class="fa fa-linkedin"></i></a> </div>
-                      
                     </form>
                   </div>
                   
@@ -123,7 +121,7 @@ wp_enqueue_style('Company-carousel-style23', SB_CSS.'owl.carousel.css', array(),
         <div class="row"> 
           
           <!-- PRO IMAGE -->
-          <div class="col-md-6 pro-inside" style="background:url(<?php echo SB_IMAGE;?>/pro-img-1.jpg) center center no-repeat;"></div>
+          <div class="col-md-6 pro-inside" style="background:url(<?php echo SB_IMAGE;?>pro-img-1.jpg) center center no-repeat;"></div>
           
           <!-- PRO CONTENT -->
           <div class="col-md-6 pro-inside">
@@ -147,7 +145,7 @@ wp_enqueue_style('Company-carousel-style23', SB_CSS.'owl.carousel.css', array(),
           <div class="col-md-6 pro-inside">
             <div class="position-center-center col-md-6">
               <h1>Collaborate on a
-project</h1>
+                project</h1>
               <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
                 accusantium doloremque laudantium, totam rem aperiam, 
                 eaque ipsa quae ab illo inventore veritatis et quasi architecto 
@@ -156,79 +154,115 @@ project</h1>
           </div>
           
           <!-- PRO BACKGROUND -->
-          <div class="col-md-6 pro-inside" style="background:url(<?php echo SB_IMAGE;?>/pro-img-2.jpg) center center no-repeat;"></div>
+          <div class="col-md-6 pro-inside" style="background:url(<?php echo SB_IMAGE;?>pro-img-2.jpg) center center no-repeat;"></div>
         </div>
       </div>
     </section>
     
-    
-    
-    
-    
     <!-- APP IMAGE -->
     <section class="app-images">
-    	
-        <div class="container">
-        	<div class="row">
-            
-             <!-- TEXT -->
-            	<div class="col-md-6 text-center text-area">
-                	
-                    
-                    <h1>SocialMe for your 
-Smartphone</h1>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
-accusantium doloremque laudantium, totam rem aperiam, 
-eaque ipsa quae ab illo inventore veritatis et quasi architecto 
-beatae vitae dicta sunt explicabo. </p>      
-                <a href="#."><i class="fa fa-apple"></i> App Store</a>
-                
-                
-                </div>
-                
-                
-                 <!-- APP IMAGE -->
-                <div class="col-md-6 text-right"><img src="<?php echo SB_IMAGE;?>/app-img.png" alt="" > </div>
-            
-            </div>
-        
+      <div class="container">
+        <div class="row"> 
+          
+          <!-- TEXT -->
+          <div class="col-md-6 text-center text-area">
+            <h1>SocialMe for your 
+              Smartphone</h1>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+              accusantium doloremque laudantium, totam rem aperiam, 
+              eaque ipsa quae ab illo inventore veritatis et quasi architecto 
+              beatae vitae dicta sunt explicabo. </p>
+            <a href="#."><i class="fa fa-apple"></i> App Store</a> </div>
+          
+          <!-- APP IMAGE -->
+          <div class="col-md-6 text-right"><img src="<?php echo SB_IMAGE;?>app-img.png" alt="" > </div>
         </div>
-    
-    
-    
+      </div>
     </section>
     
-    
+    <!-- TESTIMONIALS -->
+    <section class="clients-says">
+      <div class="container">
+        <h3 class="section-title">what our users say </h3>
+        
+        
+        <div class="testi">
+        <div class="texti-slide"> 
+          <!-- SLide -->
+          <div class="clints-text">
+          
+          
+          <div class="text-in">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue.</p>
+            
+            </div>
+            <div class="avatar">
+              <div class="media-left"> <a href="#."> <img src="<?php echo SB_IMAGE;?>clients-avatar-1.jpg" alt=""> </a> </div>
+              <div class="media-body">
+                <h6>John Kevin Mara</h6>
+                <span>smashingmagazine.com</span> </div>
+            </div>
+          </div>
+          
+          <!-- SLide -->
+          <div class="clints-text">
+          <div class="text-in">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue.</p>
+            </div>
+            <div class="avatar">
+              <div class="media-left"> <a href="#."> <img src="<?php echo SB_IMAGE;?>clients-avatar-1.jpg" alt=""> </a> </div>
+              <div class="media-body">
+                <h6>John Kevin Mara</h6>
+                <span>smashingmagazine.com</span> </div>
+            </div>
+          </div>
+          
+          <!-- SLide -->
+          <div class="clints-text">
+          
+          <div class="text-in">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue.</p>
+            
+            </div><div class="avatar">
+              <div class="media-left"> <a href="#."> <img src="<?php echo SB_IMAGE;?>clients-avatar-1.jpg" alt=""> </a> </div>
+              <div class="media-body">
+                <h6>John Kevin Mara</h6>
+                <span>smashingmagazine.com</span> </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
     
     <!-- sponsors -->
     <div class="sponsors has-bg-image" data-bg-color="f5f5f5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="section-title">Our Sponsors</h3>
-          <div class="sponsors-slider">
-            <div class="item"><img src="<?php echo SB_IMAGE;?>/sponsor_logo1.png" alt="" class="img-responsive"></div>
-            <div class="item"><img src="<?php echo SB_IMAGE;?>/sponsor_logo2.png" alt="" class="img-responsive"></div>
-            <div class="item"><img src="<?php echo SB_IMAGE;?>/sponsor_logo3.png" alt="" class="img-responsive"></div>
-            <div class="item"><img src="<?php echo SB_IMAGE;?>/sponsor_logo4.png" alt="" class="img-responsive"></div>
-            <div class="item"><img src="<?php echo SB_IMAGE;?>/sponsor_logo5.png" alt="" class="img-responsive"></div>
-            <div class="item"><img src="<?php echo SB_IMAGE;?>/sponsor_logo6.png" alt="" class="img-responsive"></div>
-            <div class="item"><img src="<?php echo SB_IMAGE;?>/sponsor_logo4.png" alt="" class="img-responsive"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="section-title">Our Sponsors</h3>
+            <div class="sponsors-slider">
+              <div class="item"><img src="<?php echo SB_IMAGE;?>sponsor_logo1.png" alt="" class="img-responsive"></div>
+              <div class="item"><img src="<?php echo SB_IMAGE;?>sponsor_logo2.png" alt="" class="img-responsive"></div>
+              <div class="item"><img src="<?php echo SB_IMAGE;?>sponsor_logo3.png" alt="" class="img-responsive"></div>
+              <div class="item"><img src="<?php echo SB_IMAGE;?>sponsor_logo4.png" alt="" class="img-responsive"></div>
+              <div class="item"><img src="<?php echo SB_IMAGE;?>sponsor_logo5.png" alt="" class="img-responsive"></div>
+              <div class="item"><img src="<?php echo SB_IMAGE;?>sponsor_logo6.png" alt="" class="img-responsive"></div>
+              <div class="item"><img src="<?php echo SB_IMAGE;?>sponsor_logo4.png" alt="" class="img-responsive"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-    
-        
-    
-    
-    
-  </div>
 </div>
+
 <?php
 wp_enqueue_script('superfish', SB_JS.'/plugins/superfish.min.js', array('jquery'), $ver = true, true );
+wp_enqueue_script('jqueryuiminjs', SB_JS.'jquery.ui.min.js', array('jquery'), $ver = true, true );
+wp_enqueue_script('select2', SB_JS.'/plugins/select2.min.js', array('jquery'), $ver = true, true );
+
+
 wp_enqueue_script('rangeslider', SB_JS.'/plugins/rangeslider.min.js', array('jquery'), $ver = true, true );
 wp_enqueue_script('flexslider', SB_JS.'/plugins/jquery.flexslider-min.js', array('jquery'), $ver = true, true );
 wp_enqueue_script('accordions', SB_JS.'uou-accordions.js', array('jquery'), $ver = true, true );
@@ -237,7 +271,22 @@ wp_enqueue_script('gmap3', SB_JS.'gmap3.min.js', array('jquery'), $ver = true, t
 
 ?>
 
+<script>
 
+jQuery('.texti-slide').owlCarousel({
+    loop:true,
+    nav:true,
+	items: 2,
+	navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+}});
+</script>	
 
 
 

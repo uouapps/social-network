@@ -3599,21 +3599,22 @@
 				public function iv_directories_bulk_connection_make_follow(){
 					parse_str($_POST['form_data'], $form_data);	
 					$current_user_id=get_current_user_id();					
-					
-					foreach($form_data['connection_id'] as $profile_user_id){
+					if(isset($form_data['connection_id'])){
+						foreach($form_data['connection_id'] as $profile_user_id){
+							
+							$old_favorites= get_user_meta($profile_user_id,'_follower',true);
+							$old_favorites = str_replace(get_current_user_id(), '',  $old_favorites);
+							
+							$new_favorites=$old_favorites.', '.get_current_user_id();
+							update_user_meta($profile_user_id,'_follower',$new_favorites);						
+							
+							$old_favorites2=get_user_meta(get_current_user_id(),'_following', true);						
+							$old_favorites2 = str_replace($profile_user_id ,'',  $old_favorites2);						
+							
+							$new_favorites2=$old_favorites2.', '.$profile_user_id;
+							update_user_meta(get_current_user_id(),'_following',$new_favorites2);
 						
-						$old_favorites= get_user_meta($profile_user_id,'_follower',true);
-						$old_favorites = str_replace(get_current_user_id(), '',  $old_favorites);
-						
-						$new_favorites=$old_favorites.', '.get_current_user_id();
-						update_user_meta($profile_user_id,'_follower',$new_favorites);						
-						
-						$old_favorites2=get_user_meta(get_current_user_id(),'_following', true);						
-						$old_favorites2 = str_replace($profile_user_id ,'',  $old_favorites2);						
-						
-						$new_favorites2=$old_favorites2.', '.$profile_user_id;
-						update_user_meta(get_current_user_id(),'_following',$new_favorites2);
-					
+						}
 					}
 					echo json_encode(array("msg" => 'success'));
 					exit(0);		
@@ -3621,21 +3622,22 @@
 				public function iv_directories_bulk_follower_make_follow(){
 					parse_str($_POST['form_data'], $form_data);	
 					$current_user_id=get_current_user_id();					
-					
-					foreach($form_data['connection_id'] as $profile_user_id){
+					if(isset($form_data['connection_id'])){
+						foreach($form_data['connection_id'] as $profile_user_id){
+							
+							$old_favorites= get_user_meta($profile_user_id,'_follower',true);
+							$old_favorites = str_replace(get_current_user_id(), '',  $old_favorites);
+							
+							$new_favorites=$old_favorites.', '.get_current_user_id();
+							update_user_meta($profile_user_id,'_follower',$new_favorites);						
+							
+							$old_favorites2=get_user_meta(get_current_user_id(),'_following', true);						
+							$old_favorites2 = str_replace($profile_user_id ,'',  $old_favorites2);						
+							
+							$new_favorites2=$old_favorites2.', '.$profile_user_id;
+							update_user_meta(get_current_user_id(),'_following',$new_favorites2);
 						
-						$old_favorites= get_user_meta($profile_user_id,'_follower',true);
-						$old_favorites = str_replace(get_current_user_id(), '',  $old_favorites);
-						
-						$new_favorites=$old_favorites.', '.get_current_user_id();
-						update_user_meta($profile_user_id,'_follower',$new_favorites);						
-						
-						$old_favorites2=get_user_meta(get_current_user_id(),'_following', true);						
-						$old_favorites2 = str_replace($profile_user_id ,'',  $old_favorites2);						
-						
-						$new_favorites2=$old_favorites2.', '.$profile_user_id;
-						update_user_meta(get_current_user_id(),'_following',$new_favorites2);
-					
+						}
 					}
 					echo json_encode(array("msg" => 'success'));
 					exit(0);		
@@ -3643,22 +3645,23 @@
 				public function iv_directories_bulk_connection_make_deleteconnection(){
 					parse_str($_POST['form_data'], $form_data);	
 					$current_user_id=get_current_user_id();					
-					
-					foreach($form_data['connection_id'] as $profile_user_id){
+					if(isset($form_data['connection_id'])){
+						foreach($form_data['connection_id'] as $profile_user_id){
+							
+							$old_favorites= get_user_meta($profile_user_id,'_connecter',true);
+							$old_favorites = str_replace($current_user_id, '',  $old_favorites);
+							update_user_meta($profile_user_id,'_connecter',$old_favorites);	
+							
+							
+							$new_favorites=$old_favorites;											
+							
+							$old_favorites2=get_user_meta(get_current_user_id(),'_my_connect', true);						
+							$old_favorites2 = str_replace($profile_user_id ,'',  $old_favorites2);						
+							
+							$new_favorites2=$old_favorites2;
+							update_user_meta(get_current_user_id(),'_my_connect',$new_favorites2);
 						
-						$old_favorites= get_user_meta($profile_user_id,'_connecter',true);
-						$old_favorites = str_replace($current_user_id, '',  $old_favorites);
-						update_user_meta($profile_user_id,'_connecter',$old_favorites);	
-						
-						
-						$new_favorites=$old_favorites;											
-						
-						$old_favorites2=get_user_meta(get_current_user_id(),'_my_connect', true);						
-						$old_favorites2 = str_replace($profile_user_id ,'',  $old_favorites2);						
-						
-						$new_favorites2=$old_favorites2;
-						update_user_meta(get_current_user_id(),'_my_connect',$new_favorites2);
-					
+						}
 					}
 					echo json_encode(array("msg" => 'success'));
 					exit(0);		
@@ -3666,46 +3669,48 @@
 				public function iv_directories_bulk_following_make_connect(){
 					parse_str($_POST['form_data'], $form_data);	
 					$current_user_id=get_current_user_id();					
-					
-					foreach($form_data['connection_id'] as $profile_user_id){
+					if(isset($form_data['connection_id'])){
+						foreach($form_data['connection_id'] as $profile_user_id){
+							
+							
+							$old_favorites= get_user_meta($profile_user_id,'_connecter',true);
+							$old_favorites = str_replace(get_current_user_id(), '',  $old_favorites);
+							
+							$new_favorites=$old_favorites.', '.get_current_user_id();
+							update_user_meta($profile_user_id,'_connecter',$new_favorites);						
+							
+							$old_favorites2=get_user_meta(get_current_user_id(),'_my_connect', true);						
+							$old_favorites2 = str_replace($profile_user_id ,'',  $old_favorites2);						
+							
+							$new_favorites2=$old_favorites2.', '.$profile_user_id;
+							update_user_meta(get_current_user_id(),'_my_connect',$new_favorites2);
 						
 						
-						$old_favorites= get_user_meta($profile_user_id,'_connecter',true);
-						$old_favorites = str_replace(get_current_user_id(), '',  $old_favorites);
 						
-						$new_favorites=$old_favorites.', '.get_current_user_id();
-						update_user_meta($profile_user_id,'_connecter',$new_favorites);						
-						
-						$old_favorites2=get_user_meta(get_current_user_id(),'_my_connect', true);						
-						$old_favorites2 = str_replace($profile_user_id ,'',  $old_favorites2);						
-						
-						$new_favorites2=$old_favorites2.', '.$profile_user_id;
-						update_user_meta(get_current_user_id(),'_my_connect',$new_favorites2);
-					
-					
-					
-					}
+						}
+					}	
 					echo json_encode(array("msg" => 'success'));
 					exit(0);		
 				}
 				public function  iv_directories_bulk_follower_make_deletefollower(){
 					parse_str($_POST['form_data'], $form_data);	
 						$current_user_id=get_current_user_id();					
-						
-						foreach($form_data['connection_id'] as $profile_user_id){
+						if(isset($form_data['connection_id'])){
+							foreach($form_data['connection_id'] as $profile_user_id){
+								
+								$old_favorites= get_user_meta(get_current_user_id(),'_follower',true);
+								$old_favorites = str_replace($profile_user_id, '',  $old_favorites);
+								update_user_meta(get_current_user_id(),'_follower',$old_favorites);	
+								
+								
+								$old_favorites2=get_user_meta($profile_user_id,'_following', true);						
+								$old_favorites2 = str_replace(get_current_user_id() ,'',  $old_favorites2);						
+								
+								update_user_meta($profile_user_id,'_following',$old_favorites2);
+																						
 							
-							$old_favorites= get_user_meta(get_current_user_id(),'_follower',true);
-							$old_favorites = str_replace($profile_user_id, '',  $old_favorites);
-							update_user_meta(get_current_user_id(),'_follower',$old_favorites);	
-							
-							
-							$old_favorites2=get_user_meta($profile_user_id,'_following', true);						
-							$old_favorites2 = str_replace(get_current_user_id() ,'',  $old_favorites2);						
-							
-							update_user_meta($profile_user_id,'_following',$old_favorites2);
-																					
-						
-						}
+							}
+						}	
 						echo json_encode(array("msg" => 'success'));
 						exit(0);		
 				
@@ -3713,21 +3718,22 @@
 				public function  iv_directories_bulk_following_make_unfollow(){
 						parse_str($_POST['form_data'], $form_data);	
 						$current_user_id=get_current_user_id();					
-						
-						foreach($form_data['connection_id'] as $profile_user_id){
+						if(isset($form_data['connection_id'])){
+							foreach($form_data['connection_id'] as $profile_user_id){
+								
+								$old_favorites= get_user_meta($profile_user_id,'_follower',true);
+								$old_favorites = str_replace(get_current_user_id(), '',  $old_favorites);
+								update_user_meta($profile_user_id,'_follower',$old_favorites);	
+								
+								
+								$old_favorites2=get_user_meta(get_current_user_id(),'_following', true);						
+								$old_favorites2 = str_replace($profile_user_id ,'',  $old_favorites2);						
+								
+								update_user_meta(get_current_user_id(),'_following',$old_favorites2);
+																						
 							
-							$old_favorites= get_user_meta($profile_user_id,'_follower',true);
-							$old_favorites = str_replace(get_current_user_id(), '',  $old_favorites);
-							update_user_meta($profile_user_id,'_follower',$old_favorites);	
-							
-							
-							$old_favorites2=get_user_meta(get_current_user_id(),'_following', true);						
-							$old_favorites2 = str_replace($profile_user_id ,'',  $old_favorites2);						
-							
-							update_user_meta(get_current_user_id(),'_following',$old_favorites2);
-																					
-						
-						}
+							}
+						}	
 						echo json_encode(array("msg" => 'success'));
 						exit(0);		
 				

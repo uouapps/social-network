@@ -10,6 +10,9 @@ wp_enqueue_style('Company-Profile-style', SB_CSS.'user-public-profile.css', arra
 $display_name='';
 $email='';
 $user_id=1;
+ global $current_user;
+get_currentuserinfo();
+ 
  if(isset($_REQUEST['id'])){	
 	   $author_name= $_REQUEST['id'];
 		$user = get_user_by( 'slug', $author_name );
@@ -19,8 +22,7 @@ $user_id=1;
 		$email=$user->user_email;
 	}
   }else{
-	  global $current_user;
-	  get_currentuserinfo();
+	 
 	  $user_id=$current_user->ID;
 	  $display_name=$current_user->display_name;
 	  $email=$current_user->user_email;
@@ -86,9 +88,15 @@ $user_id=1;
         <!-- User Iinfo -->
         <div class="user-info">
           <h1><?php echo get_user_meta($user_id,'profile_name',true); ?> <a data-toggle="tooltip" data-placement="top" title="Verified Member"><img src="<?php echo SB_IMAGE."icon-ver.png";?>" alt="icon" ></a> </h1>
+         
           <h6><?php echo get_user_meta($user_id,'company_type',true); ?> </h6>
-          <p><?php echo get_user_meta($user_id,'address',true); ?>   (<a href="http://maps.google.com/maps?q=<?php echo $lat;?>%2C<?php echo $lng;?>" target="_blank"><?php  esc_html_e('map','chilepro');?></a> / <a href="http://maps.google.com/maps?q=<?php echo $lat;?>%2C<?php echo $lng;?>" target="_blank"><?php  esc_html_e('street','chilepro');?></a>)</p>
-          
+          <?php
+          if(get_user_meta($user_id,'address',true)!=''){
+          ?>
+          <p><?php echo get_user_meta($user_id,'address',true); ?>   ( <a href="http://maps.google.com/maps?q=<?php echo $lat;?>%2C<?php echo $lng;?>" target="_blank"><?php  esc_html_e('map','chilepro');?></a> )</p>
+          <?php
+			}
+          ?>
           <!-- Social Icon -->
           <div class="social-links">
 			  <?php
@@ -201,18 +209,80 @@ $user_id=1;
         <div class="right-top-bnr">
           <div class="connect"> 
 			  <span id="uouconnect"  >
-					<a   href="javascript:;" onclick="save_connect('<?php echo $user_id; ?>')" ><i class="fa fa-user-plus" ></i> <?php  esc_html_e('Connect','chilepro');?></a>
+						<?php
+						$current_user_ID = $current_user->ID;
+						if($current_user_ID>0){
+							$my_connect = get_user_meta($current_user_ID,'_my_connect',true);
+							$all_users = explode(",", $my_connect);
+							
+							if (in_array($user_id, $all_users)) { ?>
+									<a  class="blue-background" title="<?php esc_html_e('Added to Connection','chilepro'); ?>"  href="javascript:;" onclick="save_deleteconnect('<?php echo $user_id; ?>')" ><i class="fa fa-user-plus" ></i> <?php  esc_html_e('Connected','chilepro');?></a>
+							<?php
+							}else{ ?>
+								<a    title="<?php esc_html_e('Add to Connection','chilepro'); ?>"  href="javascript:;" onclick="save_connect('<?php echo $user_id; ?>')" ><i class="fa fa-user-plus" ></i> <?php  esc_html_e('Connect','chilepro');?></a>
+							<?php
+							}
+						}else{ ?>
+									<a    title="<?php esc_html_e('Add to Connection','chilepro'); ?>"  href="javascript:;" onclick="save_connect('<?php echo $user_id; ?>')" ><i class="fa fa-user-plus" ></i> <?php  esc_html_e('Connect','chilepro');?></a>
+					<?php
+						}
+					?>
+					
+					
 			  </span>
 			   <a href="#." data-toggle="modal" data-target="#modal-share"><i class="fa fa-share-alt"></i> <?php  esc_html_e('Share','chilepro');?></a>
            
             <div class="bt-ns">
 				<span id="uoufollow"  >
-				  <a href="javascript:;" onclick="save_follow('<?php echo $user_id; ?>')"><i class="fa fa fa-eye"></i> </a>
+					
+					<?php
+						$current_user_ID = $current_user->ID;
+						if($current_user_ID>0){
+							 $my_connect = get_user_meta($current_user_ID,'_following',true);
+							$all_users = explode(",", $my_connect);
+							
+							if (in_array($user_id, $all_users)) { ?>
+									 <a class="blue-background"  href="javascript:;" title="<?php esc_html_e('Following','chilepro'); ?>" onclick="save_unfollow('<?php echo $user_id; ?>')"><i class="fa fa fa-eye"></i> </a>
+							<?php
+							}else{ ?>
+								 <a href="javascript:;" title="<?php esc_html_e('Add to Follow','chilepro'); ?>" onclick="save_follow('<?php echo $user_id; ?>')"><i class="fa fa fa-eye"></i> </a>
+				  
+							<?php
+							}
+						}else{ ?>
+								<a href="javascript:;" title="<?php esc_html_e('Add to Follow','chilepro'); ?>" onclick="save_follow('<?php echo $user_id; ?>')"><i class="fa fa fa-eye"></i> </a>
+				  
+					<?php
+						}
+					?>					
+				 
 				 </span>  
 				 <span id="uoubookmark"  >
-					<a href="javascript:;" onclick="save_bookmark('<?php echo $user_id; ?>')"><i class="fa fa-bookmark-o"></i> </a> 
+					 <?php
+						$current_user_ID = $current_user->ID;
+						if($current_user_ID>0){
+							 $my_connect = get_user_meta($current_user_ID,'_my_bookmark',true);
+							$all_users = explode(",", $my_connect);
+							
+							if (in_array($user_id, $all_users)) { ?>
+										<a class="blue-background"  href="javascript:;" title="<?php esc_html_e('Added to Bookmark','chilepro'); ?>" onclick="save_deletebookmark('<?php echo $user_id; ?>')"><i class="fa fa-bookmark-o"></i> </a> 
+					
+							<?php
+							}else{ ?>
+									<a href="javascript:;" title="<?php esc_html_e('Add to Bookmark','chilepro'); ?>" onclick="save_bookmark('<?php echo $user_id; ?>')"><i class="fa fa-bookmark-o"></i> </a> 
+					
+				  
+							<?php
+							}
+						}else{ ?>
+									<a href="javascript:;" title="<?php esc_html_e('Add to Bookmark','chilepro'); ?>" onclick="save_bookmark('<?php echo $user_id; ?>')"><i class="fa fa-bookmark-o"></i> </a> 
+					
+				  
+					<?php
+						}
+					?>						
 				</span>  
-				<a href="#." data-toggle="modal" data-target="#modal-contact"><i class="fa fa-envelope-o"></i> </a> <a href="#." data-toggle="modal" data-target="#modal-claim"><i class="fa fa-exclamation"></i> </a> 
+				<a title="<?php esc_html_e('Report the profile','chilepro'); ?>"  href="#." data-toggle="modal" data-target="#modal-contact"><i class="fa fa-envelope-o"></i> </a> <a href="#." data-toggle="modal" data-target="#modal-claim"><i class="fa fa-exclamation"></i> </a> 
            </div>
           </div>
         </div>
@@ -420,7 +490,7 @@ $user_id=1;
 							 <a  href="javascript:;" onclick="save_rating('<?php echo $user_id; ?>','<?php echo $field_key; ?>','4')" >
 							 <i id="<?php echo $field_key ?>_4"  class="uourating fa fa-star<?php echo($old_rating>=4 ? '':'-o'); ?>"></i></a> 
 							 
-							 <a  href="javascript:;" id="<?php echo $field_key ?>_5" onclick="save_rating('<?php echo $user_id; ?>','<?php echo $field_key; ?>','5')" >
+							 <a  href="javascript:;" onclick="save_rating('<?php echo $user_id; ?>','<?php echo $field_key; ?>','5')" >
 							 <i id="<?php echo $field_key ?>_5" class="uourating fa fa-star<?php echo($old_rating>=5 ? '':'-o'); ?>"></i></a> 
 							 
 							 

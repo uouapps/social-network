@@ -1,6 +1,6 @@
   <div class="net-work-in"> 
 				<?php
-					$connection_type=(isset($_REQUEST['type'])? $_REQUEST['type']:'All' );
+					$connection_type_following=(isset($_REQUEST['following-type'])? $_REQUEST['following-type']:'All' );
 					$search_connection=(isset($_POST['following_search'])? $_POST['following_search']:'' );
 					?>
                   <!-- Filter -->
@@ -8,9 +8,9 @@
                     <div class="row">
                       <div class="col-sm-7">
                         <ul>
-                          <li><a href="<?php echo the_permalink();?>?&profile=network&network=follower&type=All" <?php echo($connection_type=='All' ?'class="active"':'' ); ?> ><?php esc_html_e('Show All','medico'); ?></a></li>
-                          <li><a href="<?php echo the_permalink();?>?&profile=network&network=follower&type=Professionals" <?php echo($connection_type=='Professionals' ?'class="active"':'' ); ?> ><i class="fa fa-user"></i> <?php esc_html_e('Professionals','medico'); ?></a></li>
-                          <li><a href="<?php echo the_permalink();?>?&profile=network&network=follower&type=Companies" <?php echo($connection_type=='Companies' ?'class="active"':'' ); ?> ><i class="fa fa-building-o"></i> <?php esc_html_e('Companies','medico'); ?></a></li>
+                          <li><a href="<?php echo the_permalink();?>?&profile=network&network=following&following-type=All" <?php echo($connection_type_following=='All' ?'class="active"':'' ); ?> ><?php esc_html_e('Show All','medico'); ?></a></li>
+                          <li><a href="<?php echo the_permalink();?>?&profile=network&network=following&following-type=Professionals" <?php echo($connection_type_following=='Professionals' ?'class="active"':'' ); ?> ><i class="fa fa-user"></i> <?php esc_html_e('Professionals','medico'); ?></a></li>
+                          <li><a href="<?php echo the_permalink();?>?&profile=network&network=following&following-type=Companies" <?php echo($connection_type_following=='Companies' ?'class="active"':'' ); ?> ><i class="fa fa-building-o"></i> <?php esc_html_e('Companies','medico'); ?></a></li>
                         </ul>
                       </div>
                       
@@ -87,8 +87,8 @@
 							
 							}
 							
-							if($connection_type!='All'){
-								if($connection_type=='Professionals'){								
+							if($connection_type_following!='All'){
+								if($connection_type_following=='Professionals'){								
 									
 									$args['meta_query']=array(
 										'relation' => 'AND',
@@ -100,7 +100,7 @@
 											
 									);
 								}
-								if($connection_type=='Companies'){
+								if($connection_type_following=='Companies'){
 									
 									$args['meta_query']=array(
 										'relation' => 'AND',
@@ -271,7 +271,7 @@ var total_page=<?php echo $total_pages_following; ?>;
 		
 		var search_params={
 			"action"  : 	"iv_directories_load_more_following",	
-			"data": "page=" + page +"&type=<?php echo $connection_type; ?>" , 
+			"data": "page=" + page +"&type=<?php echo $connection_type_following; ?>" , 
 		};
 		jQuery.ajax({					
 			url : ajaxurl,					 

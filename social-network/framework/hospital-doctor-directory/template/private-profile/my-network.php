@@ -38,7 +38,7 @@ $network_tab= (isset($_REQUEST['network'])?$_REQUEST['network']:'connection' );
             <div class="tab-content"> 
               
               <!-- Connections -->
-              <div id="connection" class="tab-pane fade in active">
+              <div id="connection" class="tab-pane fade <?php echo ($network_tab =='connection'?'in active':'' ); ?> ">
                 <div class="net-work-in"> 
 				<?php
 					$connection_type=(isset($_REQUEST['type'])? $_REQUEST['type']:'All' );
@@ -267,7 +267,7 @@ $network_tab= (isset($_REQUEST['network'])?$_REQUEST['network']:'connection' );
               </div>
               
               <!-- Followers -->
-              <div id="follower" class="tab-pane fade">
+              <div id="follower" class="tab-pane fade  <?php echo ($network_tab =='follower'?'in active':'' ); ?> ">
 				  <?php
 				  include(  wp_iv_directories_template. 'private-profile/my-follower.php');
 				  ?>
@@ -275,7 +275,7 @@ $network_tab= (isset($_REQUEST['network'])?$_REQUEST['network']:'connection' );
               </div>
               
               <!-- Following -->
-              <div id="following" class="tab-pane fade">
+              <div id="following" class="tab-pane fade  <?php echo ($network_tab =='following'?'in active':'' ); ?> ">
 				<?php
 				  include(  wp_iv_directories_template. 'private-profile/following.php');
 				  ?>
