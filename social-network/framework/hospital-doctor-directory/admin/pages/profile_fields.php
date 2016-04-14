@@ -65,25 +65,27 @@
 																$default_fields=get_option('iv_social_profile_personal_fields' );
 														}else{															
 																	
-															$default_fields['first_name']='First Name';
-															$default_fields['last_name']='Last Name';
-															$default_fields['phone']='Phone Number';
-															$default_fields['mobile']='Mobile Number';
-															$default_fields['address']='Address';
-															$default_fields['occupation']='Occupation';
-															$default_fields['description']='About';
-															$default_fields['web_site']='Website Url';
+															$default_fields['Age']=esc_html__('Age','medico');
+															$default_fields['Location']=esc_html__('Location','medico');
+															$default_fields['Experiance']=esc_html__('Experiance','medico');
+															$default_fields['Dgree']=esc_html__('Dgree','medico');
+															$default_fields['Career Lavel']=esc_html__('Career Lavel','medico');
+															$default_fields['Phone']=esc_html__('Phone','medico');								
+															$default_fields['Fax']=esc_html__('Fax','medico');	
+															$default_fields['E-mail']=esc_html__('E-mail','medico');
+															$default_fields['web_site']=esc_html__('Website Url','medico');
 														}
 														if(sizeof($field_set)<1){																
 																	
-															$default_fields['first_name']='First Name';
-															$default_fields['last_name']='Last Name';
-															$default_fields['phone']='Phone Number';
-															$default_fields['mobile']='Mobile Number';
-															$default_fields['address']='Address';
-															$default_fields['occupation']='Occupation';
-															$default_fields['description']='About';
-															$default_fields['web_site']='Website Url';
+															$default_fields['Age']=esc_html__('Age','medico');
+															$default_fields['Location']=esc_html__('Location','medico');
+															$default_fields['Experiance']=esc_html__('Experiance','medico');
+															$default_fields['Dgree']=esc_html__('Dgree','medico');
+															$default_fields['Career Lavel']=esc_html__('Career Lavel','medico');
+															$default_fields['Phone']=esc_html__('Phone','medico');								
+															$default_fields['Fax']=esc_html__('Fax','medico');	
+															$default_fields['E-mail']=esc_html__('E-mail','medico');
+															$default_fields['web_site']=esc_html__('Website Url','medico');
 														 }	
 														
 														$i=1;		
@@ -150,66 +152,6 @@
 												</div>		
 																		  
 										</div>
-										
-																 
-									
-											<div id="custom_field_div_experience">			
-														<?php
-														
-														$default_fields = array();
-															$field_set=get_option('iv_social_profile_personal_fields_experience' );
-														if($field_set!=""){ 
-																$default_fields=get_option('iv_social_profile_personal_fields_experience' );
-														}else{													
-																$default_fields['Gender']='Gender';	
-																$default_fields['HospitalAffiliations']='Hospital Affiliations';
-																$default_fields['ExperienceTranining']='Experience / Tranining';
-																$default_fields['MedicalSchool']='Medical School';
-																$default_fields['Internship']='Internship';
-																$default_fields['Residency']='Residency';
-																$default_fields['Fellowship']='Fellowship';	
-																$default_fields['Certifications']='Certifications';	
-																$default_fields['LeadershipRoles']='Leadership Roles';	
-															
-														}
-														if(sizeof($field_set)<1){	
-																$default_fields['Gender']='Gender';																
-																$default_fields['HospitalAffiliations']='Hospital Affiliations';
-																$default_fields['ExperienceTranining']='Experience / Tranining';
-																$default_fields['MedicalSchool']='Medical School';
-																$default_fields['Internship']='Internship';
-																$default_fields['Residency']='Residency';
-																$default_fields['Fellowship']='Fellowship';	
-																$default_fields['Certifications']='Certifications';	
-																$default_fields['LeadershipRoles']='Leadership Roles';	
-														 }			
-														
-
-														
-														foreach ( $default_fields as $field_key => $field_value ) {												
-															
-																//echo'<br/>$field_key....'.$field_key.'......$field_values....'.$field_values;
-																echo '<div class="row form-group " id="field_'.$i.'"><div class=" col-sm-5"> <input type="text" class="form-control" name="meta_name[]" id="meta_name[]" value="'.$field_key . '" placeholder="Enter Post Meta Name "> </div>		
-																<div  class=" col-sm-5">
-																<input type="text" class="form-control" name="meta_label[]" id="meta_label[]" value="'.$field_value . '" placeholder="Enter Post Meta Label">													
-																</div>
-																<div  class=" col-sm-2">';
-																?>
-																<button class="btn btn-danger btn-xs" onclick="return iv_remove_field_experience('<?php echo $i; ?>');"><?php _e('Delete','chilepro'); ?></button>
-																<?php																								
-																echo '</div></div>';
-															
-															$i++;	
-															
-														}	
-													?>
-														
-													
-											</div>				  
-										<div class="col-xs-12">											
-											<button class="btn btn-warning btn-xs" onclick="return iv_add_field_profile();"><?php _e('Add More','chilepro'); ?></button>
-									 </div>	
-									 
 							</form>	
 					
 								<div class="col-xs-12">					

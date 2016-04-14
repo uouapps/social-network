@@ -1,90 +1,224 @@
 <?php 
 /**
- * Template Name: Personal Profile Template
+ * Template Name: Professional Profile Template
  *
  */
  ?>
 <?php get_header(); 
+wp_enqueue_style('iv_directories-style-71', wp_iv_directories_URLPATH . 'assets/cube/css/cubeportfolio.css');
 wp_enqueue_style('Company-Profile-style', SB_CSS.'user-public-profile.css', array(), $ver = false, $media = 'all');
-?>
+$display_name='';
+$email='';
+$user_id=1;
+ global $current_user;
+get_currentuserinfo();
+ 
+ if(isset($_REQUEST['id'])){	
+	   $author_name= $_REQUEST['id'];
+		$user = get_user_by( 'slug', $author_name );
+	if(isset($user->ID)){
+		$user_id=$user->ID;
+		$display_name=$user->display_name;
+		$email=$user->user_email;
+	}
+  }else{
+	 
+	  $user_id=$current_user->ID;
+	  $display_name=$current_user->display_name;
+	  $email=$current_user->user_email;
+	  if($user_id==0){
+		$user_id=1;
+	  }
+  }	
+  $iv_profile_pic_url=get_user_meta($user_id, 'iv_profile_pic_thum',true);
+   $iv_post = get_option( '_iv_directories_profile_post');
+	if($iv_post!=''){
+		$post_type=  $iv_post;											
+	}else{
+		$post_type=  'Post';
+	}
+	$lat=get_user_meta($user_id,'latitude',true);
+	$lng=get_user_meta($user_id,'longitude',true);
 
+	// Get latlng from address* START********
+	$dir_lat=$lat;
+	$dir_lng=$lng;
+	$address = get_user_meta($user_id,'address',true);
+	if($address!=''){
+			if($dir_lat=='' || $dir_lng==''){
+				$latitude='';$longitude='';
+
+				$prepAddr = str_replace(' ','+',$address);
+				$geocode=wp_remote_fopen('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
+				$output= json_decode($geocode);
+				if(isset( $output->results[0]->geometry->location->lat)){
+					$latitude = $output->results[0]->geometry->location->lat;
+				}
+				if(isset($output->results[0]->geometry->location->lng)){
+					$longitude = $output->results[0]->geometry->location->lng;
+				}
+				if($latitude!=''){
+					update_user_meta($user_id,'latitude',$latitude);
+				}
+				if($longitude!=''){
+					update_user_meta($user_id,'longitude',$longitude);
+				}
+				$lat=$latitude;
+				$lng=$longitude;
+			}
+	}
+?>
 
 <div id="main-wrapper">
   <div class="compny-profile"> 
     <!-- SUB Banner -->
-    <div class="profile-bnr" style="background:url(<?php echo SB_IMAGE."profile-bnr.jpg";?>) no-repeat; background-size:cover;">
-      <div class="container"> 
-        
-        <!-- User Iinfo -->
-        <div class="user-info">
-          <h1>UOU Motors Inc. <a data-toggle="tooltip" data-placement="top" title="Verified Member"><img src="<?php echo SB_IMAGE."icon-ver.png";?>" alt="" ></a> </h1>
-          <h6>Automotive</h6>
-          <p>7979 Leary Way Northeast
-            Redmond, WA 98052  (<a href="#.">map</a> / <a href="#.">street</a>)</p>
-          
-          <!-- Social Icon -->
-          <div class="social-links"> <a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-twitter"></i></a> <a href="#."><i class="fa fa-google"></i></a> <a href="#."><i class="fa fa-linkedin"></i></a> </div>
-          
-          <!-- Stars -->
-          <ul class="row">
-            <li class="col-sm-6">
-              <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span>(06)</span> </div>
-            </li>
-            <li class="col-sm-6">
-              <p><i class="fa fa-bookmark-o"></i> 28 Bookmarks</p>
-            </li>
-          </ul>
-          
-          <!-- Followers -->
-          <div class="followr">
-            <ul class="row">
-              <li class="col-sm-6">
-                <p>Followers <span>(31)</span></p>
-              </li>
-              <li class="col-sm-6">
-                <p>Following <span>(38)</span></p>
-              </li>
-            </ul>
-          </div>
+    <div  class="profile-bnr user-profile-bnr" style="background:url(<?php echo SB_IMAGE."user-bg.jpg";?>) no-repeat; background-size:cover;">
+      <div class="container">
+        <div class="pull-left">
+          <h2><?php echo get_user_meta($user_id,'profile_name',true); ?></h2>
+          <h5>Front-End Developer</h5>
         </div>
         
         <!-- Top Riht Button -->
-        <div class="right-top-bnr">
-          <div class="connect"> <a href="#." data-toggle="modal" data-target="#myModal"><i class="fa fa-user-plus"></i> Connect</a> <a href="#."><i class="fa fa-share-alt"></i> Share</a>
-            <div class="bt-ns"> <a href="#."><i class="fa fa-bookmark-o"></i> </a> <a href="#."><i class="fa fa-envelope-o"></i> </a> <a href="#."><i class="fa fa-exclamation"></i> </a> </div>
+         <div class="right-top-bnr">
+          <div class="connect"> 
+			  <span id="uouconnect"  >
+						<?php
+						$current_user_ID = $current_user->ID;
+						if($current_user_ID>0){
+							$my_connect = get_user_meta($current_user_ID,'_my_connect',true);
+							$all_users = explode(",", $my_connect);
+							
+							if (in_array($user_id, $all_users)) { ?>
+									<a  class="blue-background" title="<?php esc_html_e('Added to Connection','chilepro'); ?>"  href="javascript:;" onclick="save_deleteconnect('<?php echo $user_id; ?>')" ><i class="fa fa-user-plus" ></i> <?php  esc_html_e('Connected','chilepro');?></a>
+							<?php
+							}else{ ?>
+								<a    title="<?php esc_html_e('Add to Connection','chilepro'); ?>"  href="javascript:;" onclick="save_connect('<?php echo $user_id; ?>')" ><i class="fa fa-user-plus" ></i> <?php  esc_html_e('Connect','chilepro');?></a>
+							<?php
+							}
+						}else{ ?>
+									<a    title="<?php esc_html_e('Add to Connection','chilepro'); ?>"  href="javascript:;" onclick="save_connect('<?php echo $user_id; ?>')" ><i class="fa fa-user-plus" ></i> <?php  esc_html_e('Connect','chilepro');?></a>
+					<?php
+						}
+					?>
+					
+					
+			  </span>
+			   <a href="#." data-toggle="modal" data-target="#modal-share"><i class="fa fa-share-alt"></i> <?php  esc_html_e('Share','chilepro');?></a>
+           
+            <div class="bt-ns">
+				<span id="uoufollow"  >
+					
+					<?php
+						$current_user_ID = $current_user->ID;
+						if($current_user_ID>0){
+							 $my_connect = get_user_meta($current_user_ID,'_following',true);
+							$all_users = explode(",", $my_connect);
+							
+							if (in_array($user_id, $all_users)) { ?>
+									 <a class="blue-background"  href="javascript:;" title="<?php esc_html_e('Following','chilepro'); ?>" onclick="save_unfollow('<?php echo $user_id; ?>')"><i class="fa fa fa-eye"></i> </a>
+							<?php
+							}else{ ?>
+								 <a href="javascript:;" title="<?php esc_html_e('Add to Follow','chilepro'); ?>" onclick="save_follow('<?php echo $user_id; ?>')"><i class="fa fa fa-eye"></i> </a>
+				  
+							<?php
+							}
+						}else{ ?>
+								<a href="javascript:;" title="<?php esc_html_e('Add to Follow','chilepro'); ?>" onclick="save_follow('<?php echo $user_id; ?>')"><i class="fa fa fa-eye"></i> </a>
+				  
+					<?php
+						}
+					?>					
+				 
+				 </span>  
+				 <span id="uoubookmark"  >
+					 <?php
+						$current_user_ID = $current_user->ID;
+						if($current_user_ID>0){
+							 $my_connect = get_user_meta($current_user_ID,'_my_bookmark',true);
+							$all_users = explode(",", $my_connect);
+							
+							if (in_array($user_id, $all_users)) { ?>
+										<a class="blue-background"  href="javascript:;" title="<?php esc_html_e('Added to Bookmark','chilepro'); ?>" onclick="save_deletebookmark('<?php echo $user_id; ?>')"><i class="fa fa-bookmark-o"></i> </a> 
+					
+							<?php
+							}else{ ?>
+									<a href="javascript:;" title="<?php esc_html_e('Add to Bookmark','chilepro'); ?>" onclick="save_bookmark('<?php echo $user_id; ?>')"><i class="fa fa-bookmark-o"></i> </a> 
+					
+				  
+							<?php
+							}
+						}else{ ?>
+									<a href="javascript:;" title="<?php esc_html_e('Add to Bookmark','chilepro'); ?>" onclick="save_bookmark('<?php echo $user_id; ?>')"><i class="fa fa-bookmark-o"></i> </a> 
+					
+				  
+					<?php
+						}
+					?>						
+				</span>  
+				<a title="<?php esc_html_e('Report the profile','chilepro'); ?>"  href="#." data-toggle="modal" data-target="#modal-contact"><i class="fa fa-envelope-o"></i> </a> <a href="#." data-toggle="modal" data-target="#modal-claim"><i class="fa fa-exclamation"></i> </a> 
+           </div>
           </div>
         </div>
+    
+     
       </div>
       
-      <!-- Modal POPUP -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <!-- Modal contact POPUP -->
+      <div class="modal fade" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="container">
-              <h6><a class="close" href="#." data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a> Send Message</h6>
+              <h6><a class="close" href="#." data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a> <?php  esc_html_e('Send Message','chilepro');?></h6>
 
               <!-- Forms -->
-              <form action="#">
+              <form name="message-modal" id="message-modal" method="POST" >
                 <ul class="row">
                   <li class="col-xs-6">
-                    <input type="text" placeholder="First Name ">
-                  </li>
-                  <li class="col-xs-6">
-                    <input type="text" placeholder="Last Name">
-                  </li>
-                  <li class="col-xs-6">
-                    <input type="text" placeholder="Country">
-                  </li>
-                  <li class="col-xs-6">
-                    <input type="text" placeholder="Email">
-                  </li>
+                    <input name ="contact_name" id="contact_name"  type="text" placeholder="<?php  esc_html_e('Name & Surname','chilepro');?>">
+                  </li>                 
                   
-                  
-                  <li class="col-xs-12">
-                    <textarea placeholder="Your Message"></textarea>
+                  <li class="col-xs-6">
+                    <input name ="email_address" id="email_address"  type="text" placeholder="<?php  esc_html_e('E-mail address','chilepro');?>">
                   </li>
                   <li class="col-xs-12">
-                    <button class="btn btn-primary">Send message</button>
+                    <textarea name="message-content" id="message-content"  placeholder="<?php  esc_html_e('Your Message','chilepro');?>"></textarea>
+                  </li>
+                  <li class="col-xs-12">
+				  <input type="hidden" name="profile_user" id="profile_user" value="<?php echo $user_id; ?>">
+                    <button class="btn btn-primary" onclick="modal_send_message_iv();return false;"><?php  esc_html_e('Send message','chilepro');?></button>
+					<div class="btn pull-right" id="update_message_modal"> </div>
+                  </li>
+                </ul>
+				
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+	 <!-- Modal Claim POPUP -->
+      <div class="modal fade" id="modal-claim" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="container">
+              <h6><a class="close" href="#." data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a> <?php  esc_html_e('Claim/Report','chilepro');?></h6>
+
+              <!-- Forms -->
+              <form id="message-claim" name="message-claim"  method="POST">
+                <ul class="row">
+                  <li class="col-xs-6">                    
+					<input id="subject" name ="subject" type="text" placeholder="Enter Subject" Value="<?php _e('Claim The Listing', 'ivproperty' ); ?>" >
+                  </li>                 
+                  
+                  <li class="col-xs-6">
+                    <input name ="email_address" id="email_address"  type="text" placeholder="<?php  esc_html_e('E-mail address','chilepro');?>">
+                  </li>
+                  <li class="col-xs-12">
+                    <textarea name="message-content" id="message-content"  placeholder="<?php  esc_html_e('Your Message','chilepro');?>"></textarea>
+                  </li>
+                  <li class="col-xs-12">
+                    <button class="btn btn-primary" onclick="send_message_claim();return false;"><?php  esc_html_e('Send message','chilepro');?></button>
+					<div class="btn pull-right" id="update_message_claim"> </div>
                   </li>
                 </ul>
               </form>
@@ -92,279 +226,336 @@ wp_enqueue_style('Company-Profile-style', SB_CSS.'user-public-profile.css', arra
           </div>
         </div>
       </div>
+   
+   <!-- Modal Share POPUP -->
+      <div class="modal fade" id="modal-share" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="container">
+              <h6><a class="close" href="#." data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a> <?php  esc_html_e('Share the profile','chilepro');?></h6>
+
+              <!-- Forms --> 
+			  
+                <div class="row">
+				 <div class="col-xs-12 col-md-3">
+				 </div> 
+                  <div class="col-xs-12 col-md-6">
+				   <div class="social-links">
+						<a class="col-md-3 " href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink().'&id='.$author_name;  ?>"><i class="fa fa-facebook"></i> Facebook</a>
+						<a class="col-md-3 " href="#."><i class="fa fa-twitter"></i> Twitter</a>
+					    <a class="col-md-3 " href="#."><i class="fa fa-google"></i> Google+</a>
+						<a class="col-md-3 "  href="#."><i class="fa fa-linkedin"></i> Linkedin</a>
+					</div>	
+                  </div> 
+				  <div class="col-xs-12 col-md-3">
+				 </div> 
+                   
+                </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+   
+   
     </div>
     
     <!-- Profile Company Content -->
-    <div class="profile-company-content has-bg-image" data-bg-color="f5f5f5">
+    <div class="profile-company-content has-bg-image user-profile" data-bg-color="f5f5f5">
       <div class="container">
         <div class="row"> 
           
-          <!-- Nav Tabs -->
-          <div class="col-md-12">
-            <ul class="nav nav-tabs">
-              <li class="active"><a data-toggle="tab" href="#profile">Profile</a></li>
-              <li><a data-toggle="tab" href="#jobs">Jobs</a></li>
-              <li><a data-toggle="tab" href="#contact">Contact</a></li>
-            </ul>
-          </div>
-          
-          <!-- SIDE BAR -->
-          <div class="col-md-4"> 
-            
-            <!-- Company Information -->
-            <div class="sidebar">
-              <h5 class="main-title">Company Information</h5>
-              <div class="sidebar-thumbnail"> <img src="<?php echo SB_IMAGE."avatar-profile.jpg";?>" alt="Profile image"> </div>
-              <div class="sidebar-information">
-                <ul class="single-category">
-                  <li class="row">
-                    <h6 class="title col-xs-6">Industry</h6>
-                    <span class="subtitle col-xs-6">Automotive</span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Location</h6>
-                    <span class="subtitle col-xs-6">California, USA</span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Number of Employees</h6>
-                    <span class="subtitle col-xs-6">11,245</span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Legal Entity</h6>
-                    <span class="subtitle col-xs-6">Gesselschaft</span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Company Registration</h6>
-                    <span class="subtitle col-xs-6">HSD7589</span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Operating Hours</h6>
-                    <span class="subtitle col-xs-6">10:00 AM - 5:00 PM</span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Contacts</h6>
-                    <div class="col-xs-6"> <span class="subtitle">*****************<i class="fa fa-exclamation-circle"></i></span> <span class="subtitle">***************** <i class="fa fa-exclamation-circle"></i></span> <a href="#.">example@example.com</a> <a href="#.">example.com</a> </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            
-            <!-- Company Rating -->
-            <div class="sidebar">
-              <h5 class="main-title">Company Rating</h5>
-              <div class="sidebar-information">
-                <ul class="single-category com-rate">
-                  <li class="row">
-                    <h6 class="title col-xs-6">Expertise:</h6>
-                    <span class="col-xs-6"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Knowledge:</h6>
-                    <span class="col-xs-6"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> <i class="fa fa-star-o"></i></span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Quality::</h6>
-                    <span class="col-xs-6"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i></span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Price:</h6>
-                    <span class="col-xs-6"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span> </li>
-                  <li class="row">
-                    <h6 class="title col-xs-6">Services:</h6>
-                    <span class="col-xs-6"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i></span> </li>
-                </ul>
-              </div>
-            </div>
-            
-            <!-- Company Rating -->
-            <div class="sidebar">
-              <h5 class="main-title">Contact</h5>
-              <div class="sidebar-information form-side">
-                <form action="#">
-                  <input type="text" placeholder="Name & Surname">
-                  <input type="text" placeholder="E-mail address">
-                  <textarea placeholder="Your Message"></textarea>
-                  <button class="btn btn-primary">Send message</button>
-                </form>
-              </div>
-            </div>
-          </div>
-          
           <!-- Tab Content -->
-          <div class="col-md-8">
+          <div class="col-md-12">
             <div class="tab-content"> 
               
               <!-- PROFILE -->
               <div id="profile" class="tab-pane fade in active">
-                <div class="profile-main">
-                  <h3>About the Company</h3>
-                  <div class="profile-in">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus 
-                      similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque. </p>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nihil, dolores, culpa ullam vero ipsum placeat 
-                      accusamus nemoitate id molestiae consectetur quae pariatur repudi andae vel ex quaerat nam iusto aliquid 
-                      laborum quia adipisci aut ut imcati nisi deleniti tempore maxime sequi fugit reiciendis libero quo. Rerum
-                      assumenda.</p>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="profile-main">
+                      <h3>About</h3>
+                      <div class="profile-in">
+                        <div class="media-left">
+                          <div class="img-profile">
+							<?php			  	
+						if($iv_profile_pic_url!=''){ ?>
+						 <img class="media-object"  src="<?php echo $iv_profile_pic_url; ?>">
+						<?php
+						}else{
+						 echo'	 <img class="media-object"  src="'. SB_IMAGE.'avatar-profile.jpg" >';
+						}
+						?>  
+							   
+							    </div>
+                        </div>
+                        <div class="media-body">
+                          <?php echo get_user_meta($user_id,'about_us',true); ?>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-8"> 
                     
-                    <!-- Video -->
-                    <iframe src="https://www.youtube.com/embed/uVju5--RqtY"></iframe>
+                    <!-- Skills -->
+                    <div class="sidebar">
+                      <h5 class="main-title">Skills</h5>
+                      <div class="job-skills"> 
+                        
+                        <!-- Logo Design -->
+                        <ul class="row">
+                          <li class="col-sm-3">
+                            <h6><i class="fa fa-plus"></i> HTML5 and Css3</h6>
+                          </li>
+                          <li class="col-sm-9">
+                            <div class="progress">
+                              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"> </div>
+                            </div>
+                          </li>
+                        </ul>
+                        
+                        <!-- Logo Design -->
+                        <ul class="row">
+                          <li class="col-sm-3">
+                            <h6><i class="fa fa-plus"></i> Logo Design</h6>
+                          </li>
+                          <li class="col-sm-9">
+                            <div class="progress">
+                              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"> </div>
+                            </div>
+                          </li>
+                        </ul>
+                        
+                        <!-- Logo Design -->
+                        <ul class="row">
+                          <li class="col-sm-3">
+                            <h6><i class="fa fa-plus"></i> Web Design</h6>
+                          </li>
+                          <li class="col-sm-9">
+                            <div class="progress">
+                              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"> </div>
+                            </div>
+                          </li>
+                        </ul>
+                        
+                        <!-- UI / UX -->
+                        <ul class="row">
+                          <li class="col-sm-3">
+                            <h6><i class="fa fa-plus"></i> UI/UX</h6>
+                          </li>
+                          <li class="col-sm-9">
+                            <div class="progress">
+                              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"> </div>
+                            </div>
+                            <p>Preferred languages are Arabic, French & Italian. Proin nibh augue, suscipit asce lerisque sed, lacinia in, mi.</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <!-- Professional Details -->
+                    <div class="sidebar">
+                      <h5 class="main-title">Similar Professionals</h5>
+                      
+                      <!-- Similar -->
+                      <div class="similar">
+                        <div class="media">
+                          <div class="media-left">
+                            <div class="inn-simi"> <img class="media-object" src="images/med-avatar.jpg" alt=""> <a href="#">Profile </a> </div>
+                          </div>
+                          <div class="media-body">
+                            <h5>Media heading</h5>
+                            <p>SEO Specialist - New York, USA</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, 
+                              voluptatibus similique aliquid a dolores autem laudantium sapiente ad enim ipsa modi laborum 
+                              accusantium deleniti neque architecto vitae.</p>
+                            
+                            <!-- Share -->
+                            <div class="share-w"><a href="#."><i class="fa fa-bookmark-o"></i></a> <a href="#."><i class="fa fa-envelope-o"></i></a> <a href="#."><i class="fa fa-eye"></i></a></div>
+                          </div>
+                        </div>
+                        
+                        <!-- Similar -->
+                        <div class="media">
+                          <div class="media-left">
+                            <div class="inn-simi"> <img class="media-object" src="images/med-avatar.jpg" alt=""> <a href="#">Profile </a> </div>
+                          </div>
+                          <div class="media-body">
+                            <h5>Denise Walsh</h5>
+                            <p>SEO Specialist - New York, USA</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, 
+                              voluptatibus similique aliquid a dolores autem laudantium sapiente ad enim ipsa modi laborum 
+                              accusantium deleniti neque architecto vitae.</p>
+                            
+                            <!-- Share -->
+                            <div class="share-w"><a href="#."><i class="fa fa-bookmark-o"></i></a> <a href="#."><i class="fa fa-envelope-o"></i></a> <a href="#."><i class="fa fa-eye"></i></a></div>
+                          </div>
+                        </div>
+                        
+                        <!-- Similar -->
+                        <div class="media">
+                          <div class="media-left">
+                            <div class="inn-simi"> <img class="media-object" src="images/med-avatar.jpg" alt=""> <a href="#">Profile </a> </div>
+                          </div>
+                          <div class="media-body">
+                            <h5>Denise Walsh</h5>
+                            <p>SEO Specialist - New York, USA</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, 
+                              voluptatibus similique aliquid a dolores autem laudantium sapiente ad enim ipsa modi laborum 
+                              accusantium deleniti neque architecto vitae.</p>
+                            
+                            <!-- Share -->
+                            <div class="share-w"><a href="#."><i class="fa fa-bookmark-o"></i></a> <a href="#."><i class="fa fa-envelope-o"></i></a> <a href="#."><i class="fa fa-eye"></i></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                
-                <!-- Services -->
-                <div class="profile-main">
-                  <h3>Services</h3>
-                  <div class="profile-in profile-serv">
-                    <h6>Here’s an overview of the services we provide.</h6>
-                    <div class="media">
-                      <div class="media-left">
-                        <div class="icon"> <img src="<?php echo SB_IMAGE."icon-prifile-1.png";?>" alt="icon" > </div>
-                      </div>
-                      <div class="media-body">
-                        <h6>Engine diagnostics and repairs</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, 
-                          mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi 
-                          labo rum accusantium deleniti neque.</p>
+                  
+                  <!-- Col -->
+                  <div class="col-md-4"> 
+                    
+                    <!-- Professional Details -->
+                    <div class="sidebar">
+                      <h5 class="main-title">Professional Details</h5>
+                      <div class="sidebar-information">
+						  
+						    <?php
+								$i=1;$default_fields='';
+								$field_set=get_option('iv_social_profile_personal_fields' );
+								if($field_set!=""){
+										$default_fields=get_option('iv_social_profile_personal_fields' );
+								}else{
+										$default_fields['Age']=esc_html__('Age','medico');
+										$default_fields['Location']=esc_html__('Location','medico');
+										$default_fields['Experiance']=esc_html__('Experiance','medico');
+										$default_fields['Dgree']=esc_html__('Dgree','medico');
+										$default_fields['Career Lavel']=esc_html__('Career Lavel','medico');
+										$default_fields['Phone']=esc_html__('Phone','medico');								
+										$default_fields['Fax']=esc_html__('Fax','medico');	
+										$default_fields['E-mail']=esc_html__('E-mail','medico');
+										$default_fields['web_site']=esc_html__('Website Url','medico');
+								}
+								if(sizeof($default_fields)>0){ 	?>
+									<ul class="single-category">
+											<li class="row">
+											<h6 class="title col-xs-6"><?php echo 'Name'; ?></h6>
+											<span class="subtitle col-xs-6"><?php echo get_user_meta($user_id,'profile_name',true); ?></span> 
+											</li>
+									<?php
+									foreach ( $default_fields as $field_key => $field_value ) {
+										$field_value_trim=trim($field_value);
+										?>
+										<li class="row">
+										<h6 class="title col-xs-6"><?php echo $field_value_trim; ?></h6>
+										<span class="subtitle col-xs-6"><?php echo '  '.get_user_meta($user_id,$field_key,true); ?></span> 
+										</li>
+									<?php
+									}
+									?>
+								</ul>
+								<?php
+								}
+								?>
+						  
+                       
                       </div>
                     </div>
-                    <div class="media">
-                      <div class="media-left">
-                        <div class="icon"> <img src="<?php echo SB_IMAGE."icon-prifile-2.png";?>" alt="icon" > </div>
-                      </div>
-                      <div class="media-body">
-                        <h6>Engine diagnostics and repairs</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, 
-                          mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi 
-                          labo rum accusantium deleniti neque.</p>
+                    
+                    <!-- Rating -->
+                    <div class="sidebar">
+                      <h5 class="main-title">Rating</h5>
+                      <div class="sidebar-information">
+                        <ul class="single-category com-rate">					
+					<?php
+					$i=1;$default_fields='';
+					$field_set=get_option('iv_social_profile_personal_fields_review' );
+					if($field_set!=""){
+							$default_fields=get_option('iv_social_profile_personal_fields_review' );
+					}else{
+							$default_fields['Expertise']=esc_html__('Expertise','medico');	
+							$default_fields['Knowledge']=esc_html__('Knowledge','medico');
+							$default_fields['Quality']=esc_html__('Quality','medico');
+							$default_fields['Price']=esc_html__('Price','medico');
+							$default_fields['Services']=esc_html__('Services','medico');
+					}
+					if(sizeof($default_fields)>0){ 	?>
+						
+						<?php
+						foreach ( $default_fields as $field_key => $field_value ) {
+							$field_value_trim=trim($field_value);
+							
+							$old_rating= get_user_meta($user_id,$field_key.'_rating',true);
+							?>
+							<li class="row">
+							<h6 class="title col-xs-6"><?php echo $field_value_trim; ?></h6>
+							 <span class="col-xs-6">
+							 <a  href="javascript:;"  onclick="save_rating('<?php echo $user_id; ?>','<?php echo $field_key; ?>','1')" >
+							 <i  id="<?php echo $field_key ?>_1" class="uourating fa fa-star<?php echo($old_rating>=1 ? '':'-o'); ?>"></i></a> 
+							 
+							 <a  href="javascript:;"  onclick="save_rating('<?php echo $user_id; ?>','<?php echo $field_key; ?>','2')" >
+							 <i id="<?php echo $field_key ?>_2"  class="uourating fa fa-star<?php echo($old_rating>=2 ? '':'-o'); ?>"></i></a> 
+							 
+							 <a  href="javascript:;"  onclick="save_rating('<?php echo $user_id; ?>','<?php echo $field_key; ?>','3')" >
+							 <i id="<?php echo $field_key ?>_3"  class="uourating fa fa-star<?php echo($old_rating>=3 ? '':'-o'); ?>"></i></a> 
+							 
+							 <a  href="javascript:;" onclick="save_rating('<?php echo $user_id; ?>','<?php echo $field_key; ?>','4')" >
+							 <i id="<?php echo $field_key ?>_4"  class="uourating fa fa-star<?php echo($old_rating>=4 ? '':'-o'); ?>"></i></a> 
+							 
+							 <a  href="javascript:;" onclick="save_rating('<?php echo $user_id; ?>','<?php echo $field_key; ?>','5')" >
+							 <i id="<?php echo $field_key ?>_5" class="uourating fa fa-star<?php echo($old_rating>=5 ? '':'-o'); ?>"></i></a> 
+							 
+							 
+							 
+							 </span>
+							
+							</li>
+						<?php
+						}
+						?>
+					
+					<?php
+					}
+					?>					
+                </ul>
                       </div>
                     </div>
-                    <div class="media">
-                      <div class="media-left">
-                        <div class="icon"> <img src="<?php echo SB_IMAGE."icon-prifile-3.png";?>" alt="icon" > </div>
-                      </div>
-                      <div class="media-body">
-                        <h6>Engine diagnostics and repairs</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, 
-                          mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi 
-                          labo rum accusantium deleniti neque.</p>
-                      </div>
+                    
+                    <!-- Social Profiles -->
+                    <div class="sidebar">
+                      <h5 class="main-title">Social Profiles</h5>
+                      <ul class="socil">
+						   <?php
+								if(get_user_meta($user_id,'facebook',true)!=""){ ?>
+							  <li> <a href="<?php echo get_user_meta($user_id,'facebook',true); ?>"><i class="fa fa-facebook"></i></a></li>
+							   <?php
+								}
+							   ?>
+								<?php
+								if(get_user_meta($user_id,'twitter',true)!=""){ ?>
+							  <li> <a href="<?php echo get_user_meta($user_id,'twitter',true); ?>"><i class="fa fa-twitter"></i></a></li>
+							   <?php
+								}
+							   ?>
+								  <?php
+								if(get_user_meta($user_id,'gplus',true)!=""){ ?>
+							   <li><a href="<?php echo get_user_meta($user_id,'gplus',true); ?>"><i class="fa fa-google"></i></a></li>
+							   <?php
+								}
+							   ?>
+								  <?php
+								if(get_user_meta($user_id,'linkedin',true)!=""){ ?>
+							   <li><a href="<?php echo get_user_meta($user_id,'linkedin',true); ?>"><i class="fa fa-linkedin"></i></a></li>
+							   <?php
+								}
+							   ?>
+                        
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <!-- Jobs -->
-              <div id="jobs" class="tab-pane fade">
-                <div class="header-listing">
-                  <h6>Sort by</h6>
-                  <div class="custom-select-box">
-                    <select name="order" class="custom-select">
-                      <option value="0">Most popular</option>
-                      <option value="1">The latest</option>
-                      <option value="2">The best rating</option>
-                    </select>
-                  </div>
-                  <ul class="listing-views">
-                    <li class="active"><a href="#"><i class="fa fa-list"></i></a></li>
-                    <li><a href="#"><i class="fa fa-th"></i></a></li>
-                    <li><a href="#"><i class="fa fa-th-large"></i></a></li>
-                  </ul>
-                </div>
-                <div class="listing listing-1">
-                  <div class="listing-section">
-                    <div class="listing-ver-3">
-                      <div class="listing-heading">
-                        <h5>Front-End Web Developer</h5>
-                        <ul class="bookmark list-inline">
-                          <li><a href="#"><i class="fa fa-bookmark"></i></a></li>
-                          <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                          <li><a href="#"><i class="fa fa-share"></i></a></li>
-                        </ul>
-                      </div>
-                      <div class="listing-inner">
-                        <div class="listing-content">
-                          <h6 class="title-company">Mars Planet Telecommunications Inc.</h6>
-                          <span class="location"> <i class="fa fa-map-marker"></i> Manhattan, New york, USA </span> <span class="type-work full-time"> Full Time </span>
-                          <p>Proin gravida nibh vel velit auctor aliquet aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio pellentesque habitant morbi tristique senectus et netus et malesuada. <a href="single_job.html">read more</a></p>
-                          <h6 class="title-tags">Skills required:</h6>
-                          <ul class="tags list-inline">
-                            <li><a href="#">Javascript</a></li>
-                            <li><a href="#">Wordpress</a></li>
-                            <li><a href="#">Presta</a></li>
-                            <li><a href="#">Sass</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="listing-tabs">
-                        <ul>
-                          <li><a href="#"><i class="fa fa-envelope"></i> email@mail.com</a></li>
-                          <li><a href="#"><i class="fa fa-phone"></i> 012 345 678</a></li>
-                          <li><a href="#"><i class="fa fa-globe"></i> www.webstite.com</a></li>
-                          <li class="share-button"> <a href="#"><i class="fa fa-share"></i> Share</a>
-                            <div class="contact-share">
-                              <ul>
-                                <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                              </ul>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="listing-ver-3">
-                      <div class="listing-heading">
-                        <h5>Front-End Web Developer</h5>
-                        <ul class="bookmark list-inline">
-                          <li><a href="#"><i class="fa fa-bookmark"></i></a></li>
-                          <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                          <li><a href="#"><i class="fa fa-share"></i></a></li>
-                        </ul>
-                      </div>
-                      <div class="listing-inner">
-                        <div class="listing-content">
-                          <h6 class="title-company">Mars Planet Telecommunications Inc.</h6>
-                          <span class="location"> <i class="fa fa-map-marker"></i> Manhattan, New york, USA </span> <span class="type-work full-time"> Full Time </span>
-                          <p>Proin gravida nibh vel velit auctor aliquet aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio pellentesque habitant morbi tristique senectus et netus et malesuada. <a href="single_job.html">read more</a></p>
-                          <h6 class="title-tags">Skills required:</h6>
-                          <ul class="tags list-inline">
-                            <li><a href="#">Javascript</a></li>
-                            <li><a href="#">Wordpress</a></li>
-                            <li><a href="#">Presta</a></li>
-                            <li><a href="#">Sass</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="listing-tabs">
-                        <ul>
-                          <li><a href="#"><i class="fa fa-envelope"></i> email@mail.com</a></li>
-                          <li><a href="#"><i class="fa fa-phone"></i> 012 345 678</a></li>
-                          <li><a href="#"><i class="fa fa-globe"></i> www.webstite.com</a></li>
-                          <li class="share-button"> <a href="#"><i class="fa fa-share"></i> Share</a>
-                            <div class="contact-share">
-                              <ul>
-                                <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                              </ul>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Contact -->
-              <div id="contact" class="tab-pane fade">
-                <div class="profile-main">
-                  <h3>Contact the Company</h3>
-                  <div class="profile-in">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quis tenetur velit! Provident eum molestias aperiam suscipit distinctio ipsum cupiditate quasi, dolor sunt, cum reprehenderit quibusdam, repellendus eaque, quas magni.</p>
-                    <form action="#">
-                      <input type="text" placeholder="Name & Surname">
-                      <input type="text" placeholder="E-mail address">
-                      <input type="text" placeholder="Phone Number">
-                      <textarea placeholder="Your Message"></textarea>
-                      <button class="btn btn-primary">Send message</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -375,21 +566,35 @@ wp_enqueue_style('Company-Profile-style', SB_CSS.'user-public-profile.css', arra
 
 
 
+<?php
+wp_enqueue_script('iv_directories-ar-script-23', wp_iv_directories_URLPATH . 'assets/cube/js/jquery.cubeportfolio.min.js');
+wp_enqueue_script('iv_directories-ar-script-102', wp_iv_directories_URLPATH . 'assets/cube/js/meet-team.js');
+wp_enqueue_script('single-hospital-js', SB_JS.'single-hospital.js', array('jquery'), $ver = true, true );
+wp_localize_script('single-hospital-js', 'chilepro_data', array( 			'ajaxurl' 			=> admin_url( 'admin-ajax.php' ),
+'loading_image'		=> '<img src="'.SB_IMAGE.'loader2.gif">',
+'current_user_id'	=>get_current_user_id(),
+'login_message'		=> esc_html__('Please login to remove favorite','medico'),
+'Add_to_Follow'		=> esc_html__('Add to Follow','medico'),
+'Add_to_Connect'		=> esc_html__('Add to Connect','medico'),
+'Add_to_Bookmark'		=> esc_html__('Add to Bookmark','medico'),
+'Login_claim'		=> esc_html__('Please login to Report/Claim The Profile','medico'),
+'login_connect'	=> esc_html__("Please login to add connection",'medico'),
+'login_bookmark'	=> esc_html__("Please login to add bookmark",'medico'),
+'login_follw'	=> esc_html__("Please login to add follow",'medico'),
+'Connected'=> esc_html__("Connected",'medico'),
+'Connect'=> esc_html__("Connect",'medico'),
+'following'=> esc_html__("following",'medico'),
+) );
 
-<script src="js/plugins/superfish.min.js"></script> 
-<script src="js/jquery.ui.min.js"></script> 
-<script src="js/plugins/rangeslider.min.js"></script> 
-<script src="js/plugins/jquery.flexslider-min.js"></script> 
-<script src="js/uou-accordions.js"></script> 
-<script src="js/uou-tabs.js"></script> 
-<script src="js/plugins/select2.min.js"></script> 
-<script src="js/owl.carousel.min.js"></script> 
-<script src="js/gmap3.min.js"></script> 
-<script src="js/bootstrap.js"></script> 
-<script src="js/scripts.js"></script> 
+?>
+
 <script>
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+
+jQuery(function () {
+ jQuery('[data-toggle="tooltip"]').tooltip()
 })
+
+
 </script>
+	
 <?php get_footer();
