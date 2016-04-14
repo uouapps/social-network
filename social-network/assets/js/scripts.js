@@ -9,6 +9,15 @@ var body = $('body');
 // var $head = $('head');
 // var $mainWrapper = $('#main-wrapper');
 
+$(function() {
+    $('.matchHeight').matchHeight({
+      byRow: true,
+      property: 'height',
+      target: null,
+      remove: false
+    });
+});
+
 var contact = $(body).find('.contact-button');
 var contactWindow = $(contact).find('.contact-details');
 
@@ -138,7 +147,7 @@ $("#map-top").gmap3({
         } else {
           $(this).gmap3({
             infowindow:{
-              anchor:marker, 
+              anchor:marker,
               options:{content: context.data}
             }
           });
@@ -191,7 +200,7 @@ $(".contact-map").gmap3({
         } else {
           $(this).gmap3({
             infowindow:{
-              anchor:marker, 
+              anchor:marker,
               options:{content: context.data}
             }
           });
@@ -806,6 +815,8 @@ $('.uou-block-12c').each(function () {
     map.setCenter(center);
   });
 });
+
+
 
 
 

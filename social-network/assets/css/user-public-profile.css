@@ -1,3 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic);
+
+
+
+
+
 #profile-template-5 .profile-sidebar {
 	float: left;
 	width: 100%;
@@ -1274,25 +1280,32 @@ iframe {
 	background: #be78ff;
 }
 .home-pro .services li .ser-inn {
-	padding: 100px 15%;
+	padding: 100px 19%;
 }
 .home-pro .services li .ser-inn h4 {
-	font-weight: bold;
+	font-weight: 500;
 	color: #fff;
 	font-size: 24px;
 	margin: 0px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+	position: relative;
+	z-index: 50;
 }
 .home-pro .services li .ser-inn i {
-	font-size: 240px;
-	position: absolute;
-	right: -80px;
-	top: 10%;
-	color: rgba(255,255,255,0.1);
+	font-size: 290px;
+  position: absolute;
+  right: -120px;
+  top: 17%;
+	color: rgba(0,0,0,0.2);
+	z-index: 30;
 }
 .home-pro .services li .ser-inn p {
 	color: #fff;
 	margin: 0px;
+	position: relative;
+	z-index: 50;
+	font-weight: normal;
+	font-family: 'Open Sans', sans-serif;
 }
 .home-pro .services li .ser-inn .gray-border {
 	border-color: #c4c4c4;
@@ -1307,6 +1320,7 @@ iframe {
 }
 .pro-inside h1 {
 	font-size: 46px;
+	margin-bottom: 40px;
 }
 .pro-inside {
 	text-align: center;
@@ -1318,6 +1332,7 @@ iframe {
 	background:url(../images/app-bg.jpg) center center no-repeat;
 	background-size:cover;
 	padding-top:50px;
+	padding-bottom: 50px;
 }
 .app-images .text-area{
 	margin-top:50px;
@@ -1326,9 +1341,16 @@ iframe {
 .app-images .text-area h1{
 	color:#fff;
 	font-size:46px;
+	font-weight: 500;
+	padding-bottom: 20px;
 }
 .app-images .text-area p{
 	color:#fff;
+}
+
+.app-images img {
+	position: relative;
+	top: 50px;
 }
 .app-images .text-area a i{
 	margin-right:10px;
@@ -1350,5 +1372,126 @@ iframe {
 	color:#333;
 }
 .sponsors{
-	
+
 }
+
+
+.clients-says {
+	position: relative;
+	width :100%;
+	padding: 70px 0;
+}
+
+.clients-says  .section-title {
+	text-align: center;
+}
+
+.clients-says .testi {
+	position: relative;
+	padding: 20px 120px;
+}
+
+.clients-says .testi .text-in {
+	position: relative;
+	padding: 30px;
+  margin: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 18px;
+  font-family: 'Libre Baskerville';
+  font-style: italic;
+}
+
+.clients-says .testi .text-in  p {
+	margin: 0;
+	color: #333;
+}
+
+.clients-says .testi .text-in:before {
+	content: "\f10e";
+	font-family: 'FontAwesome';
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+	font-size: 30px;
+	color: #ddd;
+}
+
+.clients-says .testi .text-in:after {
+	content: "";
+	position: absolute;
+	bottom: -11px;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #ddd;
+	transform: rotate(45deg);
+	border-top: 0;
+	border-left: 0;
+	background: #fff;
+	border-radius: 0 0 3px 0px;
+	left: 50%;
+}
+
+
+.clients-says .testi .avatar {
+	position: relative;
+	width: 100%;
+	margin-right: 15px;
+	padding: 30px 50px 0;
+	display: inline-block;
+}
+
+.clients-says .testi .avatar img {
+	float: left;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin-right: 30px;
+	position: relative;
+	top: -18px;
+}
+
+.clients-says .testi .avatar .media-body {
+	position: relative;
+}
+
+.avatar .media-body h6 {
+	margin: 0;
+}
+
+.sponsors {
+	position: relative;
+	padding: 90px 0;
+}
+
+.sponsors .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0, .8);
+}
+
+.sponsors .section-title {
+	margin: 0;
+	color: #fff;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
