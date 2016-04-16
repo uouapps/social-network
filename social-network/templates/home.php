@@ -53,7 +53,9 @@ wp_enqueue_style('iv_directories-profile', SB_CSS . 'user-public-profile.css');
                       <input type="text" placeholder="Phone">
                       <input type="password" placeholder="Password">
                       <button type="submit">Register</button>
-                      <div class="login-with"> <span>Or login with:</span> <a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-google"></i></a> <a href="#."><i class="fa fa-linkedin"></i></a> </div>
+                      <div class="login-with"> <span>Or login with:</span> <a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-google"></i></a> <a href="#."><i class="fa fa-linkedin"></i></a> 
+                    
+                      </div>
                     </form>
                   </div>
 
@@ -63,7 +65,12 @@ wp_enqueue_style('iv_directories-profile', SB_CSS . 'user-public-profile.css');
                       <input type="email" placeholder="Email Address">
                       <input type="password" placeholder="Password">
                       <button type="submit">Login</button>
-                      <div class="login-with"> <span>Or login with:</span> <a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-google"></i></a> <a href="#."><i class="fa fa-linkedin"></i></a> </div>
+                      <div class="login-with"> <span><?php echo do_action('oa_social_login'); ?> </span> 
+                      
+                      <!--
+                      <a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-google"></i></a> <a href="#."><i class="fa fa-linkedin"></i></a>
+                      -->  
+                       </div>
                       <div class="forget">Forgot your password? <a href="#."> Click Here</a></div>
                     </form>
                   </div>

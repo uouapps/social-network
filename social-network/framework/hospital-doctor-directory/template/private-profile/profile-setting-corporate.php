@@ -5,9 +5,10 @@
                  
                      <ul class="nav nav-tabs">
 					  <li class="active"><a data-toggle="tab" href="#tab_1_1"><?php  esc_html_e('Company Info','chilepro');?> </a></li>
+					  <li> <a data-toggle="tab" href="#tab_1_5"><?php  esc_html_e('Social Profile','chilepro');?></a></li>
 					  <li><a data-toggle="tab" href="#tab_1_3" ><?php  esc_html_e('Change Password','chilepro');?></a></li>
-					  <li> <a data-toggle="tab" href="#tab_1_5"><?php  esc_html_e('Social','chilepro');?></a></li>
-					  <li ><a data-toggle="tab" href="#tab_1_4" ><?php  esc_html_e('Privacy Settings','chilepro');?></a></li>
+					  
+					  <!--<li ><a data-toggle="tab" href="#tab_1_4" ><?php  esc_html_e('Privacy Settings','chilepro');?></a></li>-->
 					</ul>
 					
                    
@@ -798,7 +799,7 @@ function update_profile_setting (){
 	var loader_image = '<img src="<?php echo wp_iv_directories_URLPATH. "admin/files/images/loader.gif"; ?>" />';
 				jQuery('#update_message').html(loader_image); 
 				var search_params={
-					"action"  : 	"iv_directories_update_profile_setting_corporate",	
+					"action"  : 	"iv_directories_update_profile_setting",	
 					"form_data":	jQuery("#profile_setting_form").serialize(), 
 				};
 				jQuery.ajax({					

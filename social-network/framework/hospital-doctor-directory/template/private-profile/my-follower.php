@@ -64,7 +64,7 @@
 						  <ul>
 							<?php
 							$socialnetwork_value='';
-							$socialnetwork_value = get_user_meta($current_user->ID,'_following',true);	                       
+							$socialnetwork_value = get_user_meta($current_user->ID,'_follower',true);	                       
 							$socialnetwork_value = array_filter(explode(",", $socialnetwork_value));
 							
 							$args = array();				
@@ -120,7 +120,8 @@
 							$args['offset']=$offset;
 							
 							$args['include']=$socialnetwork_value;
-						
+							
+						if(sizeof($socialnetwork_value)>0){
 						   $user_query = new WP_User_Query( $args );
 						  	
 							if ( ! empty( $user_query->results ) ) {
@@ -211,7 +212,15 @@
 								</li>
 							<?php	 
 							}
-							
+						}else{
+							?>
+								<li>
+								 <?php esc_html_e('No result found.','medico'); ?>
+								</li>
+							<?php
+						
+						
+						}	
 							?>
 							
 							

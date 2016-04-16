@@ -120,7 +120,7 @@
 							$args['offset']=$offset;
 							
 							$args['include']=$socialnetwork_value;
-						
+						if(sizeof($socialnetwork_value)>0){
 						   $user_query = new WP_User_Query( $args );
 						  	
 							if ( ! empty( $user_query->results ) ) {
@@ -211,7 +211,15 @@
 								</li>
 							<?php	 
 							}
-							
+						}else{
+							?>
+								<li>
+								 <?php esc_html_e('No result found.','medico'); ?>
+								</li>
+							<?php
+						
+						
+						}		
 							?>
 							
 							

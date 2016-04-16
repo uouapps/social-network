@@ -1,7 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic);
 
 
-
+.blue-background{
+ background-color: #0099fe;
+}
 
 
 #profile-template-5 .profile-sidebar {

@@ -158,11 +158,11 @@ $network_tab= (isset($_REQUEST['network'])?$_REQUEST['network']:'connection' );
 							
 							
 							$args['number']=$no;
-							$args['offset']=$offset;
-							
+							$args['offset']=$offset;							
 							$args['include']=$socialnetwork_value;
-						
-						   $user_query = new WP_User_Query( $args );
+							
+						if(sizeof($socialnetwork_value)>0){
+							$user_query = new WP_User_Query( $args );	
 						  	
 							if ( ! empty( $user_query->results ) ) {
 								foreach ( $user_query->results as $user ) {		
@@ -252,6 +252,15 @@ $network_tab= (isset($_REQUEST['network'])?$_REQUEST['network']:'connection' );
 								</li>
 							<?php	 
 							}
+						}else{
+							?>
+								<li>
+								 <?php esc_html_e('No result found.','medico'); ?>
+								</li>
+							<?php
+						
+						
+						}	
 							
 							?>
 							

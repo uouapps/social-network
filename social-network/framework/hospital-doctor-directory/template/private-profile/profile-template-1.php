@@ -224,8 +224,8 @@ global $current_user;
 				if($iv_member_type=='corporate'){
 					include(  wp_iv_directories_template. 'private-profile/profile-setting-corporate.php');
 				}else{
-					include(  wp_iv_directories_template. 'private-profile/profile-setting-corporate.php');
-					//include(  wp_iv_directories_template. 'private-profile/profile-setting-personal.php');
+					//include(  wp_iv_directories_template. 'private-profile/profile-setting-corporate.php');
+					include(  wp_iv_directories_template. 'private-profile/profile-setting-personal.php');
 				 } 
 			
 		  }

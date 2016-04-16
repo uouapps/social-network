@@ -30,13 +30,8 @@ get_currentuserinfo();
 		$user_id=1;
 	  }
   }	
-  $iv_profile_pic_url=get_user_meta($user_id, 'iv_profile_pic_thum',true);
-   $iv_post = get_option( '_iv_directories_profile_post');
-	if($iv_post!=''){
-		$post_type=  $iv_post;											
-	}else{
-		$post_type=  'Post';
-	}
+   $iv_profile_pic_url=get_user_meta($user_id, 'iv_profile_pic_thum',true);
+  
 	$lat=get_user_meta($user_id,'latitude',true);
 	$lng=get_user_meta($user_id,'longitude',true);
 
@@ -76,7 +71,7 @@ get_currentuserinfo();
       <div class="container">
         <div class="pull-left">
           <h2><?php echo get_user_meta($user_id,'profile_name',true); ?></h2>
-          <h5>Front-End Developer</h5>
+          <h5> <?php echo get_user_meta($user_id,'designation',true);   ?></h5>
         </div>
         
         <!-- Top Riht Button -->
@@ -299,115 +294,127 @@ get_currentuserinfo();
                     
                     <!-- Skills -->
                     <div class="sidebar">
-                      <h5 class="main-title">Skills</h5>
+                      <h5 class="main-title"><?php esc_html_e('Skills','medico'); ?></h5>
                       <div class="job-skills"> 
                         
-                        <!-- Logo Design -->
-                        <ul class="row">
-                          <li class="col-sm-3">
-                            <h6><i class="fa fa-plus"></i> HTML5 and Css3</h6>
-                          </li>
-                          <li class="col-sm-9">
-                            <div class="progress">
-                              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"> </div>
-                            </div>
-                          </li>
-                        </ul>
-                        
-                        <!-- Logo Design -->
-                        <ul class="row">
-                          <li class="col-sm-3">
-                            <h6><i class="fa fa-plus"></i> Logo Design</h6>
-                          </li>
-                          <li class="col-sm-9">
-                            <div class="progress">
-                              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"> </div>
-                            </div>
-                          </li>
-                        </ul>
-                        
-                        <!-- Logo Design -->
-                        <ul class="row">
-                          <li class="col-sm-3">
-                            <h6><i class="fa fa-plus"></i> Web Design</h6>
-                          </li>
-                          <li class="col-sm-9">
-                            <div class="progress">
-                              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"> </div>
-                            </div>
-                          </li>
-                        </ul>
-                        
-                        <!-- UI / UX -->
-                        <ul class="row">
-                          <li class="col-sm-3">
-                            <h6><i class="fa fa-plus"></i> UI/UX</h6>
-                          </li>
-                          <li class="col-sm-9">
-                            <div class="progress">
-                              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"> </div>
-                            </div>
-                            <p>Preferred languages are Arabic, French & Italian. Proin nibh augue, suscipit asce lerisque sed, lacinia in, mi.</p>
-                          </li>
-                        </ul>
+                           <?php	$aw=0;	 
+							   for($i=0;$i<20;$i++){
+										  
+								   if(get_user_meta($user_id,'_service_title_'.$i,true)!='' || get_user_meta($user_id,'_service_value'.$i,true) ){?>
+
+
+											 <ul class="row">
+											  <li class="col-sm-3">
+												<h6><i class="fa fa-plus"></i> <?php echo get_user_meta($user_id,'_service_title_'.$i,true); ?></h6>
+											  </li>
+											  <li class="col-sm-9">
+												<div class="progress">
+												  <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo get_user_meta($user_id,'_service_value_'.$i,true); ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo get_user_meta($user_id,'_service_value_'.$i,true); ?>%;"> </div>
+												</div>
+												<p><?php echo get_user_meta($user_id,'_service_description_'.$i,true); ?></p>
+											  </li>
+											</ul>
+
+									
+								<?php
+									}
+								}
+								?>
+                  
+                       
+                       
                       </div>
                     </div>
                     
                     <!-- Professional Details -->
                     <div class="sidebar">
-                      <h5 class="main-title">Similar Professionals</h5>
-                      
-                      <!-- Similar -->
+                      <h5 class="main-title"><?php esc_html_e('Similar Professionals','medico'); ?> </h5>
                       <div class="similar">
-                        <div class="media">
-                          <div class="media-left">
-                            <div class="inn-simi"> <img class="media-object" src="images/med-avatar.jpg" alt=""> <a href="#">Profile </a> </div>
-                          </div>
-                          <div class="media-body">
-                            <h5>Media heading</h5>
-                            <p>SEO Specialist - New York, USA</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, 
-                              voluptatibus similique aliquid a dolores autem laudantium sapiente ad enim ipsa modi laborum 
-                              accusantium deleniti neque architecto vitae.</p>
-                            
-                            <!-- Share -->
-                            <div class="share-w"><a href="#."><i class="fa fa-bookmark-o"></i></a> <a href="#."><i class="fa fa-envelope-o"></i></a> <a href="#."><i class="fa fa-eye"></i></a></div>
-                          </div>
-                        </div>
+                      <?php
+                      $connection_type=get_user_meta($user_id,'iv_member_type',true);
+                       $args = array();
+				      $args['number']='3';
+					  if($connection_type=='professional'){								
+									
+									$args['meta_query']=array(
+										'relation' => 'AND',
+											array(
+												'key'     => 'iv_member_type',
+												'value'   => 'professional',
+												'compare' => '='
+											)
+											
+									);
+						}else{
+							$args['meta_query']=array(
+										'relation' => 'AND',
+											array(
+												'key'     => 'iv_member_type',
+												'value'   => 'corporate',
+												'compare' => '='
+											)
+											
+									);
+						}
+					  $args['exclude']=array($user_id);		
+                      $user_query = new WP_User_Query( $args );
+						$reg_page_user='';
+						
+						if($connection_type=='corporate'){
+							$iv_redirect_user = get_option( '_iv_corporate_profile_public_page');
+							$reg_page_user= get_permalink( $iv_redirect_user) ;
+						}else{							
+							$iv_redirect_user = get_option( '_iv_personal_profile_public_page');
+							$reg_page_user= get_permalink( $iv_redirect_user) ;
+						}		
+				        // User Loop
+				        if ( ! empty( $user_query->results ) ) {
+				        	foreach ( $user_query->results as $user ) {
+								$iv_profile_pic_url=''; 
+								 $iv_profile_pic_url=get_user_meta($user->ID, 'iv_profile_pic_thum',true);
+								?>
+								 <div class="media">
+									  <div class="media-left">
+										<div class="inn-simi"> 
+											
+											<a href="<?php echo $reg_page_user.'?&id='.$user->user_login; ?>">	
+											<?php			  	
+												if($iv_profile_pic_url!=''){ ?>
+												 <img class="media-object"  src="<?php echo $iv_profile_pic_url; ?>">
+												<?php
+												}else{
+												 echo'	 <img class="media-object" src="'. SB_IMAGE.'avatar-profile.jpg" >';
+												}
+												?>  
+											</a>	
+										<a href="<?php echo $reg_page_user.'?&id='.$user->user_login; ?>">	
+										<?php esc_html_e('Profile','medico'); ?>  </a>
+										
+										</div>
+										
+									  </div>
+									  <div class="media-body">
+										<h5><?php echo get_user_meta($user->ID,'profile_name',true); ?> </h5>
+										<p><?php echo get_user_meta($user->ID,'designation',true);   ?>  <?php echo '-'.get_user_meta($user->ID,'address',true); ?> </p>
+										<p><?php $content = get_user_meta($user->ID,'about_us',true); 
+											$content = str_replace( ']]>', ']]&gt;', $content );	
+											echo substr($content ,0,100);
+										
+										?>
+										
+										</p>
+										
+										<!-- Share -->
+										<div class="share-w"><a href="#."><i class="fa fa-bookmark-o"></i></a> <a href="#."><i class="fa fa-envelope-o"></i></a> <a href="#."><i class="fa fa-eye"></i></a></div>
+									  </div>
+									</div>
                         
-                        <!-- Similar -->
-                        <div class="media">
-                          <div class="media-left">
-                            <div class="inn-simi"> <img class="media-object" src="images/med-avatar.jpg" alt=""> <a href="#">Profile </a> </div>
-                          </div>
-                          <div class="media-body">
-                            <h5>Denise Walsh</h5>
-                            <p>SEO Specialist - New York, USA</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, 
-                              voluptatibus similique aliquid a dolores autem laudantium sapiente ad enim ipsa modi laborum 
-                              accusantium deleniti neque architecto vitae.</p>
-                            
-                            <!-- Share -->
-                            <div class="share-w"><a href="#."><i class="fa fa-bookmark-o"></i></a> <a href="#."><i class="fa fa-envelope-o"></i></a> <a href="#."><i class="fa fa-eye"></i></a></div>
-                          </div>
-                        </div>
-                        
-                        <!-- Similar -->
-                        <div class="media">
-                          <div class="media-left">
-                            <div class="inn-simi"> <img class="media-object" src="images/med-avatar.jpg" alt=""> <a href="#">Profile </a> </div>
-                          </div>
-                          <div class="media-body">
-                            <h5>Denise Walsh</h5>
-                            <p>SEO Specialist - New York, USA</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, 
-                              voluptatibus similique aliquid a dolores autem laudantium sapiente ad enim ipsa modi laborum 
-                              accusantium deleniti neque architecto vitae.</p>
-                            
-                            <!-- Share -->
-                            <div class="share-w"><a href="#."><i class="fa fa-bookmark-o"></i></a> <a href="#."><i class="fa fa-envelope-o"></i></a> <a href="#."><i class="fa fa-eye"></i></a></div>
-                          </div>
-                        </div>
+							<?php	
+							}
+						}		
+                      
+                      ?>
+                    
                       </div>
                     </div>
                   </div>

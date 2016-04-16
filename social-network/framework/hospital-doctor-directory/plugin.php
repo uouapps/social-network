@@ -68,8 +68,8 @@
 					
 					add_action('wp_ajax_iv_directories_update_profile_pic', array(&$this, 'iv_directories_update_profile_pic'));
 					add_action('wp_ajax_nopriv_iv_directories_update_profile_pic', array(&$this, 'iv_directories_update_profile_pic'));
-					add_action('wp_ajax_iv_directories_update_profile_setting_corporate', array(&$this, 'iv_directories_update_profile_setting_corporate'));
-					add_action('wp_ajax_nopriv_iv_directories_update_profile_setting_corporate', array(&$this, 'iv_directories_update_profile_setting_corporate'));
+					add_action('wp_ajax_iv_directories_update_profile_setting', array(&$this, 'iv_directories_update_profile_setting'));
+					add_action('wp_ajax_nopriv_iv_directories_update_profile_setting', array(&$this, 'iv_directories_update_profile_setting'));
 					add_action('wp_ajax_iv_directories_update_wp_post', array(&$this, 'iv_directories_update_wp_post'));
 					add_action('wp_ajax_nopriv_iv_directories_update_wp_post', array(&$this, 'iv_directories_update_wp_post'));
 					add_action('wp_ajax_iv_directories_save_wp_post', array(&$this, 'iv_directories_save_wp_post'));
@@ -1860,7 +1860,7 @@
 					
 				}
 				
-				public function iv_directories_update_profile_setting_corporate(){
+				public function iv_directories_update_profile_setting(){
 					global $current_user;
 					parse_str($_POST['form_data'], $form_data);			
 					
@@ -1868,8 +1868,12 @@
 				   update_user_meta($current_user->ID,'profile_name', $form_data['title']);
 				   update_user_meta($current_user->ID,'about_us', $form_data['about_us']);
 				   update_user_meta($current_user->ID, 'image_gallery_ids', $form_data['gallery_image_ids']); 
+				  if(isset($form_data['company_type'])){
 				   update_user_meta($current_user->ID,'company_type', $form_data['company_type']);
-				  
+				  }
+				   if(isset($form_data['designation'])){
+				   update_user_meta($current_user->ID,'designation', $form_data['designation']);
+				  }
 				   
 				   
 				   
@@ -1880,10 +1884,12 @@
 					update_user_meta($current_user->ID, 'postcode', $form_data['postcode']); 
 					update_user_meta($current_user->ID, 'country', $form_data['country']); 
 					
-					if($form_data['top_banner_image_id']!=''){
-						update_user_meta($current_user->ID, 'top_banner_image_id', $form_data['top_banner_image_id']); 
-					}
 					
+					if(isset($form_data['top_banner_image_id'])){
+						if($form_data['top_banner_image_id']!=''){
+						update_user_meta($current_user->ID, 'top_banner_image_id', $form_data['top_banner_image_id']); 
+						}
+					}
 				  
 				   $default_fields = array();
 					$field_set=get_option('iv_directories_profile_fields' );
@@ -1919,22 +1925,26 @@
 					if(isset($form_data['service_title'] )){
 						 $service_title= $form_data['service_title'];
 						 $service_description= $form_data['service_description'];	
-						
+						 $service_value= (isset($form_data['service_value']) ? $form_data['service_value']:'');	
 						 $service_image_id= (isset($form_data['service_image_id']) ? $form_data['service_image_id']:'');							
 						
 													
 						$i=0;
 						//foreach($award_title  as $one_award_title){							
 						for($i=0;$i<20;$i++){	
-							
-							if(isset($service_title[$i])){
-								update_user_meta($current_user->ID, '_service_title_'.$i, $service_title[$i]); 
-							}
-							if(isset($service_description[$i])){
-								update_user_meta($current_user->ID, '_service_description_'.$i, $service_description[$i]); 
-							}							
-							if(isset($service_image_id[$i])){
-								update_user_meta($current_user->ID, '_service_image_id_'.$i, $service_image_id[$i]); 
+							if(isset($service_title[$i]) AND $service_title[$i]!=''){
+								if(isset($service_title[$i])){
+									update_user_meta($current_user->ID, '_service_title_'.$i, $service_title[$i]); 
+								}
+								if(isset($service_description[$i])){
+									update_user_meta($current_user->ID, '_service_description_'.$i, $service_description[$i]); 
+								}							
+								if(isset($service_image_id[$i])){
+									update_user_meta($current_user->ID, '_service_image_id_'.$i, $service_image_id[$i]); 
+								}
+								if(isset($service_value[$i])){
+									update_user_meta($current_user->ID, '_service_value_'.$i, $service_value[$i]); 
+								}
 							}
 														
 							//$i++;
