@@ -235,7 +235,7 @@ wp_enqueue_style('iv_directories-profile', SB_CSS . 'user-public-profile.css');
     </section>
 
     <!-- sponsors -->
-    <div class="sponsors" style="background: url('<?php echo SB_IMAGE;?>blog-header.jpg') top center no-repeat; background-size: cover;">
+    <div class="sponsors" style="background: url('<?php echo SB_IMAGE;?>sponsor.png') top center no-repeat; background-size: cover;">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
