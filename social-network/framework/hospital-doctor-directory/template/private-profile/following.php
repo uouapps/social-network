@@ -68,7 +68,7 @@
 							$socialnetwork_value = array_filter(explode(",", $socialnetwork_value));
 							
 							$args = array();				
-							$no=1;						
+							$no=10;						
 							$paged = 1;						
 							$offset=0;  
 							

@@ -3284,7 +3284,7 @@
                         $socialnetwork_value = get_user_meta($current_user->ID,'_my_connect',true);	                       
 						$socialnetwork_value = array_filter(explode(",", $socialnetwork_value));
 										
-						$no=1;							
+						$no=10;							
 						if($connection_type!='All'){
 							if($connection_type=='Professionals'){								
 								
@@ -3395,7 +3395,7 @@
                         $socialnetwork_value = get_user_meta($current_user->ID,'_follower',true);	                       
 						$socialnetwork_value = array_filter(explode(",", $socialnetwork_value));
 										
-						$no=1;							
+						$no=10;							
 						if($connection_type!='All'){
 							if($connection_type=='Professionals'){								
 								
@@ -3506,7 +3506,7 @@
                         $socialnetwork_value = get_user_meta($current_user->ID,'_following',true);	                       
 						$socialnetwork_value = array_filter(explode(",", $socialnetwork_value));
 										
-						$no=1;							
+						$no=10;							
 						if($connection_type!='All'){
 							if($connection_type=='Professionals'){								
 								

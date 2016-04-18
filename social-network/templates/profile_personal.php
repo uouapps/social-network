@@ -269,7 +269,7 @@ get_currentuserinfo();
                 <div class="row">
                   <div class="col-md-12">
                     <div class="profile-main">
-                      <h3>About</h3>
+                      <h3><?php  esc_html_e('About','chilepro');?> </h3>
                       <div class="profile-in">
                         <div class="media-left">
                           <div class="img-profile">
@@ -405,7 +405,81 @@ get_currentuserinfo();
 										</p>
 										
 										<!-- Share -->
-										<div class="share-w"><a href="#."><i class="fa fa-bookmark-o"></i></a> <a href="#."><i class="fa fa-envelope-o"></i></a> <a href="#."><i class="fa fa-eye"></i></a></div>
+										<div class="share-w">
+											<span id="s_following_<?php echo $user->ID; ?>">
+											<?php
+												$current_user_ID = $current_user->ID;
+												if($current_user_ID>0){
+													 $my_connect = get_user_meta($current_user_ID,'_following',true);
+													$all_users = explode(",", $my_connect);
+													
+													if (in_array($user->ID, $all_users)) { ?>
+															 <a class="gray-background"  href="javascript:;" title="<?php esc_html_e('Following','chilepro'); ?>" onclick="similar_save_unfollow('<?php echo $user->ID; ?>')"><i class="fa fa fa-eye"></i> </a>
+													<?php
+													}else{ ?>
+														 <a href="javascript:;" title="<?php esc_html_e('Add to Follow','chilepro'); ?>" onclick="similar_save_follow('<?php echo $user->ID; ?>')"><i class="fa fa fa-eye"></i> </a>
+										  
+													<?php
+													}
+												}else{ ?>
+														<a href="javascript:;" title="<?php esc_html_e('Add to Follow','chilepro'); ?>" onclick="similar_save_follow('<?php echo $user->ID; ?>')"><i class="fa fa fa-eye"></i> </a>
+										  
+											<?php
+												}
+											?>	
+											</span>
+											<span id="s_bookmark_<?php echo $user->ID; ?>">
+											 <?php
+												$current_user_ID = $current_user->ID;
+												if($current_user_ID>0){
+													 $my_connect = get_user_meta($current_user_ID,'_my_bookmark',true);
+													$all_users = explode(",", $my_connect);
+													
+													if (in_array($user->ID, $all_users)) { ?>
+																<a class="gray-background"  href="javascript:;" title="<?php esc_html_e('Added to Bookmark','chilepro'); ?>" onclick="similar_save_deletebookmark('<?php echo $user->ID; ?>')"><i class="fa fa-bookmark-o"></i> </a> 
+											
+													<?php
+													}else{ ?>
+															<a href="javascript:;" title="<?php esc_html_e('Add to Bookmark','chilepro'); ?>" onclick="similar_save_bookmark('<?php echo $user->ID; ?>')"><i class="fa fa-bookmark-o"></i> </a> 
+											
+										  
+													<?php
+													}
+												}else{ ?>
+															<a href="javascript:;" title="<?php esc_html_e('Add to Bookmark','chilepro'); ?>" onclick="similar_save_bookmark('<?php echo $user->ID; ?>')"><i class="fa fa-bookmark-o"></i> </a> 
+											
+										  
+											<?php
+												}
+											?>				
+											</span>
+												<span id="s_connection_<?php echo $user->ID; ?>">
+												 <?php
+														$current_user_ID = $current_user->ID;
+														if($current_user_ID>0){
+															$my_connect = get_user_meta($current_user_ID,'_my_connect',true);
+															$all_users = explode(",", $my_connect);
+															
+															if (in_array($user->ID, $all_users)) { ?>
+																		<a class="gray-background"  href="javascript:;" title="<?php esc_html_e('Added to Connection','chilepro'); ?>" onclick="similar_save_deleteconnect('<?php echo $user->ID; ?>')"><i class="fa fa-user-plus"></i> </a> 
+													
+															<?php
+															}else{ ?>
+																	<a href="javascript:;" title="<?php esc_html_e('Add to Connection','chilepro'); ?>" onclick="similar_save_connect('<?php echo $user->ID; ?>')"><i class="fa fa-user-plus"></i> </a> 
+													
+												  
+															<?php
+															}
+														}else{ ?>
+																	<a href="javascript:;" title="<?php esc_html_e('Add to Connection','chilepro'); ?>" onclick="similar_save_connect('<?php echo $user->ID; ?>')"><i class="fa fa-user-plus"></i> </a> 
+													
+												  
+													<?php
+														}
+													?>		
+													
+												</span>
+											</div>
 									  </div>
 									</div>
                         
@@ -424,7 +498,7 @@ get_currentuserinfo();
                     
                     <!-- Professional Details -->
                     <div class="sidebar">
-                      <h5 class="main-title">Professional Details</h5>
+                      <h5 class="main-title"><?php  esc_html_e('Professional Details','chilepro');?> </h5>
                       <div class="sidebar-information">
 						  
 						    <?php
@@ -471,7 +545,7 @@ get_currentuserinfo();
                     
                     <!-- Rating -->
                     <div class="sidebar">
-                      <h5 class="main-title">Rating</h5>
+                      <h5 class="main-title"><?php  esc_html_e('Rating','chilepro');?></h5>
                       <div class="sidebar-information">
                         <ul class="single-category com-rate">					
 					<?php
@@ -530,7 +604,7 @@ get_currentuserinfo();
                     
                     <!-- Social Profiles -->
                     <div class="sidebar">
-                      <h5 class="main-title">Social Profiles</h5>
+                      <h5 class="main-title"><?php  esc_html_e('Social Profiles','chilepro');?></h5>
                       <ul class="socil">
 						   <?php
 								if(get_user_meta($user_id,'facebook',true)!=""){ ?>

@@ -68,7 +68,7 @@
 							$socialnetwork_value = array_filter(explode(",", $socialnetwork_value));
 							
 							$args = array();				
-							$no=1;						
+							$no=10;						
 							$paged = 1;						
 							$offset=0;  
 							
@@ -246,7 +246,7 @@ function follower_make_follow(){
 			type : "post",
 			data : search_params,
 			success : function(response){						
-				alert('success');
+				alert("<?php echo the_permalink(); ?>?profile=network");
 			}
 		});
 	
@@ -265,8 +265,9 @@ function follower_make_delete_conection(){
 			dataType : "json",
 			type : "post",
 			data : search_params,
-			success : function(response){						
-				alert('success');
+			success : function(response){	
+									
+				alert("<?php echo the_permalink(); ?>");
 			}
 		});
 	

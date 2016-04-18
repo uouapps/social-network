@@ -82,6 +82,8 @@ function send_message_claim(){
 	}
 function save_follow(id) {       
 		
+		var background="blue-background" ;
+		
 		  var isLogged = chilepro_data.current_user_id;
                                
                 if (isLogged=="0") {                   
@@ -101,7 +103,7 @@ function save_follow(id) {
 							data : search_params,
 							success : function(response){ 
 								
-								jQuery("#uoufollow").html('<a   href="javascript:;" class="blue-background"  onclick="save_unfollow('+id+')" ><i class="fa fa fa-eye" ></i> </a>');
+								jQuery("#uoufollow").html('<a   href="javascript:;" class="'+background+'"  onclick="save_unfollow('+id+')" ><i class="fa fa fa-eye" ></i> </a>');
 							
 								
 							}
@@ -110,7 +112,8 @@ function save_follow(id) {
 				}  
 				
     }
-function save_unfollow(id) {
+function save_unfollow(id,spanid) {
+		
 		  var isLogged = chilepro_data.current_user_id;
                                
                 if (isLogged=="0") {                   
@@ -196,6 +199,7 @@ function save_connect(id) {
 				
     }  
     function save_bookmark(id) {       
+		var background="blue-background" ;
 		
 		  var isLogged = chilepro_data.current_user_id;
                                
@@ -216,7 +220,7 @@ function save_connect(id) {
 							data : search_params,
 							success : function(response){ 
 							
-							jQuery("#uoubookmark").html('<a href="javascript:;" class="blue-background" onclick="save_deletebookmark('+id+');" ><i class="fa fa-bookmark-o" ></i></a>');
+							jQuery("#uoubookmark").html('<a href="javascript:;" class="'+background+'" onclick="save_deletebookmark('+id+');" ><i class="fa fa-bookmark-o" ></i></a>');
 								
 							}
 						});
@@ -225,6 +229,7 @@ function save_connect(id) {
 				
     }
     function save_deletebookmark(id) {
+		
 		  var isLogged = chilepro_data.current_user_id;
                                
                 if (isLogged=="0") {                   
@@ -362,4 +367,181 @@ function save_connect(id) {
             this.updateSinglePage(item.html());},
     });
 })(jQuery, window, document);
-
+// Similar
+    function similar_save_bookmark(id) {       
+		var background="gray-background" ;
+		
+		  var isLogged = chilepro_data.current_user_id;
+                               
+                if (isLogged=="0") {                   
+                     alert(chilepro_data.login_bookmark);
+                } else { 
+						
+						var ajaxurl = chilepro_data.ajaxurl;
+						var search_params={
+							"action"  : 	"iv_directories_save_bookmark",	
+							"data": "id=" + id,
+						};
+						
+						jQuery.ajax({					
+							url : ajaxurl,					 
+							dataType : "json",
+							type : "post",
+							data : search_params,
+							success : function(response){ 
+							
+							jQuery("#s_bookmark_"+id).html('<a href="javascript:;" class="'+background+'" onclick="similar_save_deletebookmark('+id+');" ><i class="fa fa-bookmark-o" ></i></a>');
+								
+							}
+						});
+						
+				}  
+				
+    }
+    function similar_save_deletebookmark(id) {
+		
+		  var isLogged = chilepro_data.current_user_id;
+                               
+                if (isLogged=="0") {                   
+                     alert(chilepro_data.login_bookmark);
+                } else { 
+						
+						var ajaxurl = chilepro_data.ajaxurl;								
+						var search_params={
+							"action"  : 	"iv_directories_save_deletebookmark",	
+							"data": "id=" + id,
+						};
+						
+						jQuery.ajax({					
+							url : ajaxurl,					 
+							dataType : "json",
+							type : "post",
+							data : search_params,
+							success : function(response){ 
+								jQuery("#s_bookmark_"+id).html('<a href="javascript:;" onclick="similar_save_bookmark('+id+');" ><i class="fa fa-bookmark-o" ></i></a>');
+							
+								
+							}
+						});
+						
+				}  
+				
+    }	
+function similar_save_follow(id) {       
+		
+		var background="gray-background" ;
+		
+		  var isLogged = chilepro_data.current_user_id;
+                               
+                if (isLogged=="0") {                   
+                     alert(chilepro_data.login_follw);
+                } else { 
+						
+						var ajaxurl = chilepro_data.ajaxurl;
+						var search_params={
+							"action"  : 	"iv_directories_save_follow",	
+							"data": "id=" + id,
+						};
+						
+						jQuery.ajax({					
+							url : ajaxurl,					 
+							dataType : "json",
+							type : "post",
+							data : search_params,
+							success : function(response){ 
+								
+								jQuery("#s_following_"+id).html('<a   href="javascript:;" class="'+background+'"  onclick="similar_save_unfollow('+id+')" ><i class="fa fa fa-eye" ></i> </a>');
+							
+								
+							}
+						});
+						
+				}  
+				
+    }
+function similar_save_unfollow(id) {
+		
+		  var isLogged = chilepro_data.current_user_id;
+                               
+                if (isLogged=="0") {                   
+                     alert(chilepro_data.login_follw);
+                } else { 
+						
+						var ajaxurl = chilepro_data.ajaxurl;								
+						var search_params={
+							"action"  : 	"iv_directories_save_un_follow",	
+							"data": "id=" + id,
+						};
+						
+						jQuery.ajax({					
+							url : ajaxurl,					 
+							dataType : "json",
+							type : "post",
+							data : search_params,
+							success : function(response){ 
+								jQuery("#s_following_"+id).html('<a   href="javascript:;"   onclick="similar_save_follow('+id+')" ><i class="fa fa fa-eye" ></i> </a>');
+							
+								
+							}
+						});
+						
+				}  
+				
+    }	    
+function similar_save_connect(id) {       
+		  var background="gray-background" ;
+		  var isLogged = chilepro_data.current_user_id;
+                               
+                if (isLogged=="0") {                   
+                     alert(chilepro_data.login_connect);
+                } else { 
+						
+						var ajaxurl = chilepro_data.ajaxurl;
+						var search_params={
+							"action"  : 	"iv_directories_save_connect",	
+							"data": "id=" + id,
+						};
+						
+						jQuery.ajax({					
+							url : ajaxurl,					 
+							dataType : "json",
+							type : "post",
+							data : search_params,
+							success : function(response){ 
+								jQuery("#s_connection_"+id).html('<a href="javascript:;" class="'+background+'"  onclick="save_deleteconnect('+id+');" ><i class="fa fa-user-plus" ></i></a>');
+							
+								
+							}
+						});
+						
+				}  
+				
+    }
+  function similar_save_deleteconnect(id) {       
+		
+		  var isLogged = chilepro_data.current_user_id;
+                               
+                if (isLogged=="0") {                   
+                     alert(chilepro_data.login_connect);
+                } else { 
+						
+						var ajaxurl = chilepro_data.ajaxurl;
+						var search_params={
+							"action"  : 	"iv_directories_save_deleteconnect",	
+							"data": "id=" + id,
+						};
+						
+						jQuery.ajax({					
+							url : ajaxurl,					 
+							dataType : "json",
+							type : "post",
+							data : search_params,
+							success : function(response){ 
+								jQuery("#s_connection_"+id).html('<a   href="javascript:;"  onclick="save_connect('+id+')" ><i class="fa fa-user-plus" ></i></a>');
+																
+							}
+						});
+						
+				}  
+				
+    }  
