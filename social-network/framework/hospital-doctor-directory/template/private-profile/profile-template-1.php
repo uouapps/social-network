@@ -78,22 +78,12 @@ global $current_user;
 			  if(isset($_GET['profile']) AND $_GET['profile']=='setting' ){
 				 $active='setting';
 			  }
-			  if(isset($_GET['profile']) AND $_GET['profile']=='level' ){
-				 $active='level';
-			  }
-			  if(isset($_GET['profile']) AND $_GET['profile']=='all-post' ){
-				 $active='all-post';
-			  }
-			  
+					  
 			  if(isset($_GET['profile']) AND $_GET['profile']=='network' ){
 				 $active='network';
 			  }
-			  if(isset($_GET['profile']) AND $_GET['profile']=='who-is-interested' ){
-				 $active='who-is-interested';
-			  }
-			 
-			   if(isset($_GET['profile']) AND $_GET['profile']=='post-edit' ){
-				$active='all-post';
+			  if(isset($_GET['profile']) AND $_GET['profile']=='bookmark' ){
+				 $active='bookmark';
 			  }
 			  
 			  
@@ -137,7 +127,7 @@ global $current_user;
 					}
 				  ?>
 				  
-					
+					<!--
                   <?php
 					$account_menu_check= '';
 					if( get_option( '_iv_directories_mylevel' ) ) {
@@ -153,7 +143,7 @@ global $current_user;
 					 <?php
 					}
 					?>
-					
+					-->
 				  <?php
 					$account_menu_check= '';
 					if( get_option( '_iv_directories_menusetting' ) ) {
@@ -164,7 +154,7 @@ global $current_user;
                   <li class="<?php echo ($active=='setting'? 'active':''); ?> ">
                     <a href="<?php echo get_permalink(); ?>?&profile=setting">
                     <i class="fa fa-cog"></i>
-                    <?php esc_html_e('Account Settings','chilepro');?> </a>
+                    <?php esc_html_e('Edit Profile','chilepro');?> </a>
                   </li>
 				  <?php
 					}
