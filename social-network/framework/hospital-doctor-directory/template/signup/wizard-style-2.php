@@ -146,10 +146,7 @@ foreach ( $membership_pack as $row )
 						<div class="col-md-9">
 							<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="professional"  data-validation-error-msg="<?php  esc_html_e(' Select user Type','chilepro');?>" class="form-control ctrl-textbox"   data-validation="required"><?php  esc_html_e('Professional','chilepro');?> </label>
 						</div>
-						<div class="col-md-3"></div>
-						<div class="col-md-9">
-							<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="personal"  data-validation-error-msg="<?php  esc_html_e(' Select user Type','chilepro');?>" class="form-control ctrl-textbox"  data-validation="required"><?php  esc_html_e('Personal','chilepro');?> </label>
-						</div>
+						
 						
 						
 						

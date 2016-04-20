@@ -107,10 +107,12 @@
 								
 								<div class="col-md-2">
 									<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="professional"   ><?php  esc_html_e(' Professional','chilepro');?> </label>
-								</div>								
+								</div>	
+								<!--							
 								<div class="col-md-2">
 									<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="personal" ><?php  esc_html_e(' Personal','chilepro');?> </label>
-								</div>								
+								</div>	
+								-->							
 							</div>	
 							
 							   <div class="form-group ">
@@ -287,7 +289,7 @@
 							</div> <!-- Trial Block -->		  
 									  
 						</div> <!-- Recurring Block -->
-							  
+						<!--	  
 						<h3 class="page-header"> <?php _e('Access Control/Options','chilepro'); ?> </h3>
 						 <div class="form-group">
 							<label for="text" class="col-md-2  control-label"><?php _e('Maximum listing (Hospital + Doctor)','chilepro'); ?> </label>
@@ -349,7 +351,7 @@
 								</label>								 										
 							</div>																
 						</div>
-						
+						-->
 														 
 						</form>
 					

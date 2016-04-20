@@ -129,42 +129,7 @@
 					
 					
 					
-				<div id="success_message_experience">	</div>								
-										
-				<div class="panel panel-info">
-						<div class="panel-heading"><h4><?php _e('Experience Fields','chilepro'); ?>  </h4></div>
-						<div class="panel-body">	
-							<form id="experience_fields" name="experience_fields" class="form-horizontal" role="form" onsubmit="return false;">
-											
-							
-										
-										
-										<div class="row ">
-												<div class="col-sm-5 ">										
-													<h4><?php _e('Post Meta Name','chilepro'); ?> </h4>
-												</div>
-												<div class="col-sm-5">
-													<h4><?php _e('Display Label','chilepro'); ?> </h4>									
-												</div>
-												<div class="col-sm-2">
-													<h4><?php _e('Action','chilepro'); ?> </h4>
-													
-												</div>		
-																		  
-										</div>
-							</form>	
-					
-								<div class="col-xs-12">					
-									<div align="center">
-										<div id="loading"></div>
-										<button class="btn btn-info btn-lg" onclick="return update_personal_fields_experience();"><?php _e('Update','chilepro'); ?> </button>
-									</div>
-									<p>&nbsp;</p>
-								</div>
-						</div>							 
 				
-				</div>			 	
-					
 					<div id="success_message_review">	</div>		
 					<div class="panel panel-info">
 						<div class="panel-heading"><h4><?php _e('Review Fields','chilepro'); ?>  </h4></div>

@@ -321,10 +321,10 @@
 								  <div class="panel-body">											
 													 <?php											
 												$default_fields = array();
-												$field_set=get_option('iv_directories_profile_fields' );
+												$field_set=get_option('iv_social_profile_corporate_fields' );
 											
 												if($field_set!=""){ 
-														$default_fields=get_option('iv_directories_profile_fields' );
+														$default_fields=get_option('iv_social_profile_corporate_fields' );
 												}else{									
 													$default_fields['Number_Employees']='Number of Employees';
 													$default_fields['Legal_Entity']='Legal Entity';

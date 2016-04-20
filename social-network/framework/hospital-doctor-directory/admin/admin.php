@@ -60,7 +60,7 @@ if (!class_exists('wp_iv_directories_Admin')) {
 			add_action('wp_ajax_iv_directories_update_personal_fields_review', array(&$this, 'iv_directories_update_personal_fields_review'));
 			
 			add_action('wp_ajax_iv_directories_update_corporate_fields', array(&$this, 'iv_directories_update_corporate_fields'));
-			add_action('wp_ajax_iv_directories_update_corporate_fields_experience', array(&$this, 'iv_directories_update_corporate_fields_experience'));
+			
 			add_action('wp_ajax_iv_directories_update_corporate_fields_review', array(&$this, 'iv_directories_update_corporate_fields_review'));
 			
 			add_action('wp_ajax_iv_update_bidding_setting', array(&$this, 'iv_update_bidding_setting'));
@@ -449,7 +449,7 @@ if (!class_exists('wp_iv_directories_Admin')) {
 													
 						
 						update_post_meta($newpost_id, 'iv_directories_package_user_role', $role_name_new);						
-						update_post_meta($newpost_id, 'iv_directories_package_max_post_no', $form_data['max_pst_no']);				
+						//update_post_meta($newpost_id, 'iv_directories_package_max_post_no', $form_data['max_pst_no']);				
 						
 						if(isset($form_data['listing_hide'])){
 							update_post_meta($newpost_id, 'iv_directories_package_hide_exp', $form_data['listing_hide']);
@@ -876,7 +876,7 @@ if (!class_exists('wp_iv_directories_Admin')) {
 						}
 						
 															
-						update_post_meta($newpost_id, 'iv_directories_package_max_post_no', $form_data['max_pst_no']);				
+						//update_post_meta($newpost_id, 'iv_directories_package_max_post_no', $form_data['max_pst_no']);				
 						if(isset($form_data['listing_hide'])){
 							update_post_meta($newpost_id, 'iv_directories_package_hide_exp', $form_data['listing_hide']);
 						}else{

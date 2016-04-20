@@ -419,9 +419,9 @@ get_currentuserinfo();
                
                 <?php
 					$i=1;$default_fields='';
-					$field_set=get_option('iv_directories_profile_fields' );
+					$field_set=get_option('iv_social_profile_corporate_fields' );
 					if($field_set!=""){
-							$default_fields=get_option('iv_directories_profile_fields' );
+							$default_fields=get_option('iv_social_profile_corporate_fields' );
 					}else{
 							$default_fields['Number_Employees']=esc_html__('Number of Employees','medico');
 							$default_fields['Legal_Entity']=esc_html__('Legal Entity','medico');

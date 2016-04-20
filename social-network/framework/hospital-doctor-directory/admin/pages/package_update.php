@@ -54,10 +54,6 @@
 			$form_meta_data= get_post_meta( $package_id,'iv_directories_content',true);			
 		
 			$row = $wpdb->get_row("SELECT * FROM $wpdb->posts WHERE id = '".$package_id."' ");
-			//echo'<br/>ID..'.$package_id;
-			//echo '-----------------------------'.get_post_meta($package_id, 'iv_directories_package_recurring', true);
-			
-			
 			
 			
 			?>
@@ -109,10 +105,12 @@
 								
 								<div class="col-md-2">
 									<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="professional"  <?php echo (get_post_meta($package_id, 'iv_directories_user_type', true)=='professional'?'checked' : '' ); ?> ><?php  esc_html_e(' Professional','chilepro');?> </label>
-								</div>								
+								</div>
+								<!--								
 								<div class="col-md-2">
 									<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="personal" <?php echo (get_post_meta($package_id, 'iv_directories_user_type', true)=='personal'?'checked' : '' ); ?> ><?php  esc_html_e(' Personal','chilepro');?> </label>
-								</div>								
+								</div>	
+								-->							
 							</div>	
 							
 							  <div class="form-group">
@@ -286,6 +284,7 @@
 						
 						</div> <!-- Trial Block --> 
 				</div> <!-- Recurring Block -->	  
+					<!--
 							<h3 class="page-header"> <?php _e('Access Control/Options','chilepro'); ?> </h3>
 						 <div class="form-group">
 							<label for="text" class="col-md-2  control-label"><?php _e('Maximum listing (Hospital + Doctor)','chilepro'); ?> </label>
@@ -346,7 +345,7 @@
 								</label>								 										
 							</div>																
 						</div>
-						
+						-->
 						
 						</form>
 					

@@ -10,6 +10,13 @@ wp_enqueue_style('iv_directories-owlcarousel', SB_CSS . 'owl.carousel.css');
 wp_enqueue_style('iv_directories-copywriter', SB_CSS . 'copywriter-style.css');
 wp_enqueue_style('iv_directories-creative', SB_CSS . 'creative-style.css');
 wp_enqueue_style('iv_directories-profile', SB_CSS . 'user-public-profile.css');
+
+
+$iv_gateway='paypal-express';
+$stripe_publishable='';
+$package_amount=0;
+$api_currency='USD';
+$package_id=0;
 ?>
 
 <div id="main-wrapper">
@@ -40,20 +47,29 @@ wp_enqueue_style('iv_directories-profile', SB_CSS . 'user-public-profile.css');
               <!-- TABS -->
               <div class="uou-tabs">
                 <ul class="tabs">
-                  <li><a href="#register">Register Now</a></li>
-                  <li class="active"><a href="#log-in">Member Login</a></li>
+                  <li><a href="#register"><?php  esc_html_e('Register Now','chilepro');?></a></li>
+                  <li class="active"><a href="#log-in"><?php  esc_html_e('Member Login','chilepro');?></a></li>
                 </ul>
 
                 <!-- REGISTER -->
                 <div class="content">
                   <div id="register">
-                    <form>
+                   	<form id="iv_home_registration" name="iv_home_registration"  action="<?php  the_permalink() ?>?package_id=<?php echo $package_id; ?>&payment_gateway=paypal&iv-submit-listing=register" method="post" >
+                 
+							<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="corporate" checked data-validation-error-msg="<?php  esc_html_e(' Select user Type','chilepro');?>" class="form-control ctrl-textbox"   data-validation="required" ><?php 	 esc_html_e('Corporate','chilepro');?> </label>
+						
+						
+							<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="professional"  data-validation-error-msg="<?php  esc_html_e(' Select user Type','chilepro');?>" class="form-control ctrl-textbox"   data-validation="required"><?php  esc_html_e('Professional','chilepro');?> </label>
+					
+						
+                      	
                       <input type="text" placeholder="Full Name">
-                      <input type="email" placeholder="Email Address">
-                      <input type="text" placeholder="Phone">
-                      <input type="password" placeholder="Password">
-                      <button type="submit">Register</button>
-                      <div class="login-with"> <span>Or login with:</span> <a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-google"></i></a> <a href="#."><i class="fa fa-linkedin"></i></a> 
+                      
+                      <input type="email" placeholder="<?php  esc_html_e('Email Address','chilepro');?>">
+                      <input type="text" placeholder="<?php  esc_html_e('User Name','chilepro');?>">
+                      <input type="password" placeholder="<?php  esc_html_e('Password','chilepro');?>">
+                      <button type="submit"><?php  esc_html_e('Register','chilepro');?> </button>
+                      <div class="login-with"> <span><?php echo do_action('oa_social_login'); ?> </span> 
                     
                       </div>
                     </form>
@@ -259,9 +275,27 @@ wp_enqueue_style('iv_directories-profile', SB_CSS . 'user-public-profile.css');
   </div>
 </div>
  <?php 
- wp_enqueue_script( 'profile-login-js', SB_JS.'profile-login.js', array('jquery'), $ver = true, true );
- wp_localize_script( 'profile-login-js', 'HDAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ),'loading_image'=> wp_iv_directories_URLPATH. 'admin/files/images/loader.gif' ) );
+ wp_enqueue_script('iv_directories-script-signup-2-15', wp_iv_directories_URLPATH . 'admin/files/js/jquery.form-validator.js');
  
+ wp_enqueue_script( 'profile-login-js', SB_JS.'profile-login.js', array('jquery'), $ver = true, true );
+ wp_localize_script( 'profile-login-js', 'chilepro_data', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ),'loading_image'=> wp_iv_directories_URLPATH. 'admin/files/images/loader.gif' ) );
+
+ wp_enqueue_script( 'home-registration-js', SB_JS.'profile-registration.js', array('jquery'), $ver = true, true );
+ wp_localize_script( 'home-registration-js', 'chilepro_data', array( 	'ajaxurl' 			=> admin_url( 'admin-ajax.php' ),
+																		'loading_image'		=> wp_iv_directories_URLPATH.'admin/files/images/loader.gif',
+																		'old_loader'		=> wp_iv_directories_URLPATH.'admin/files/images/old-loader.gif',
+																		'iv_gateway'		=>$iv_gateway,
+																		'stripe_publishable'=>$stripe_publishable,
+																		'package_amount'	=> $package_amount,
+																		'api_currency'		=>$api_currency ,
+																		'right_icon'		=> wp_iv_directories_URLPATH. 'admin/files/images/right_icon.png' ,
+																		'wrong_icon'		=> wp_iv_directories_URLPATH. 'admin/files/images/wrong_16x16.png' ,
+																		'Hide_Coupon'=> __('Hide Coupon','chilepro'),
+																		'have_Coupon'=> __('Have a coupon?','chilepro'),
+																		
+																		) );
+ 
+
  ?> 
 <?php get_footer();
 

@@ -65,13 +65,13 @@
 																$default_fields=get_option('iv_social_profile_corporate_fields' );
 														}else{															
 																	
-															$default_fields['Number_Employees']='Number of Employees';
-															$default_fields['Legal_Entity']='Legal Entity';
-															$default_fields['Company_Registration']='Company Registration';
-															$default_fields['Operating_Hours']='Operating Hours';
-															$default_fields['Contacts']='Contacts';
-															$default_fields['Email']='Email';								
-															$default_fields['web_site']='Website Url';
+														$default_fields['Number_Employees']='Number of Employees';
+														$default_fields['Legal_Entity']='Legal Entity';
+														$default_fields['Company_Registration']='Company Registration';
+														$default_fields['Operating_Hours']='Operating Hours';
+														$default_fields['Contacts']='Contacts';
+														$default_fields['Email']='Email';								
+														$default_fields['web_site']='Website Url';
 														}
 														if(sizeof($field_set)<1){																
 																	
@@ -125,102 +125,7 @@
 					
 					
 					
-				<div id="success_message_experience">	</div>								
-										
-				<div class="panel panel-info">
-						<div class="panel-heading"><h4><?php _e('Services Fields','chilepro'); ?>  </h4></div>
-						<div class="panel-body">	
-							<form id="experience_fields" name="experience_fields" class="form-horizontal" role="form" onsubmit="return false;">
-											
-							
-										
-										
-										<div class="row ">
-												<div class="col-sm-5 ">										
-													<h4><?php _e('Post Meta Name','chilepro'); ?> </h4>
-												</div>
-												<div class="col-sm-5">
-													<h4><?php _e('Display Label','chilepro'); ?> </h4>									
-												</div>
-												<div class="col-sm-2">
-													<h4><?php _e('Action','chilepro'); ?> </h4>
-													
-												</div>		
-																		  
-										</div>
-										
-																 
-									
-											<div id="custom_field_div_experience">			
-														<?php
-														
-														$default_fields = array();
-															$field_set=get_option('iv_social_profile_corporate_fields_services' );
-														if($field_set!=""){ 
-																$default_fields=get_option('iv_social_profile_corporate_fields_services' );
-														}else{													
-																$default_fields['Gender']='Gender';	
-																$default_fields['HospitalAffiliations']='Hospital Affiliations';
-																$default_fields['ExperienceTranining']='Experience / Tranining';
-																$default_fields['MedicalSchool']='Medical School';
-																$default_fields['Internship']='Internship';
-																$default_fields['Residency']='Residency';
-																$default_fields['Fellowship']='Fellowship';	
-																$default_fields['Certifications']='Certifications';	
-																$default_fields['LeadershipRoles']='Leadership Roles';	
-															
-														}
-														if(sizeof($field_set)<1){	
-																$default_fields['Gender']='Gender';																
-																$default_fields['HospitalAffiliations']='Hospital Affiliations';
-																$default_fields['ExperienceTranining']='Experience / Tranining';
-																$default_fields['MedicalSchool']='Medical School';
-																$default_fields['Internship']='Internship';
-																$default_fields['Residency']='Residency';
-																$default_fields['Fellowship']='Fellowship';	
-																$default_fields['Certifications']='Certifications';	
-																$default_fields['LeadershipRoles']='Leadership Roles';	
-														 }			
-														
-
-														
-														foreach ( $default_fields as $field_key => $field_value ) {												
-															
-																//echo'<br/>$field_key....'.$field_key.'......$field_values....'.$field_values;
-																echo '<div class="row form-group " id="field_'.$i.'"><div class=" col-sm-5"> <input type="text" class="form-control" name="meta_name[]" id="meta_name[]" value="'.$field_key . '" placeholder="Enter Post Meta Name "> </div>		
-																<div  class=" col-sm-5">
-																<input type="text" class="form-control" name="meta_label[]" id="meta_label[]" value="'.$field_value . '" placeholder="Enter Post Meta Label">													
-																</div>
-																<div  class=" col-sm-2">';
-																?>
-																<button class="btn btn-danger btn-xs" onclick="return iv_remove_field_experience('<?php echo $i; ?>');"><?php _e('Delete','chilepro'); ?></button>
-																<?php																								
-																echo '</div></div>';
-															
-															$i++;	
-															
-														}	
-													?>
-														
-													
-											</div>				  
-										<div class="col-xs-12">											
-											<button class="btn btn-warning btn-xs" onclick="return iv_add_field_profile();"><?php _e('Add More','chilepro'); ?></button>
-									 </div>	
-									 
-							</form>	
-					
-								<div class="col-xs-12">					
-									<div align="center">
-										<div id="loading"></div>
-										<button class="btn btn-info btn-lg" onclick="return update_corporate_fields_experience();"><?php _e('Update','chilepro'); ?> </button>
-									</div>
-									<p>&nbsp;</p>
-								</div>
-						</div>							 
 				
-				</div>			 	
-					
 					<div id="success_message_review">	</div>		
 					<div class="panel panel-info">
 						<div class="panel-heading"><h4><?php _e('Review Fields','chilepro'); ?>  </h4></div>

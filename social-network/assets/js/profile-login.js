@@ -1,7 +1,7 @@
 function  forget_pass(){
 				
-			var ajaxurl = HDAjax.ajaxurl;
-			var loader_image = "<img src='"+HDAjax.loading_image+"'/>";
+			var ajaxurl = chilepro_data.ajaxurl;
+			var loader_image = "<img src='"+chilepro_data.loading_image+"'/>";
 			
 				jQuery('#forget_message').html(loader_image);
 				var search_params={
@@ -34,8 +34,8 @@ function  forget_pass(){
 	}
 	function  chack_login(){
 				
-			var ajaxurl = HDAjax.ajaxurl;
-			var loader_image = "<img src='"+HDAjax.loading_image+"'/>";
+			var ajaxurl = chilepro_data.ajaxurl;
+			var loader_image = "<img src='"+chilepro_data.loading_image+"'/>";
 				jQuery('#error_message').html(loader_image);
 				var search_params={
 					"action"  : 	"iv_directories_check_login",	
