@@ -245,8 +245,10 @@ function follower_make_follow(){
 			dataType : "json",
 			type : "post",
 			data : search_params,
-			success : function(response){						
-				alert("<?php echo the_permalink(); ?>?profile=network");
+			success : function(response){		
+				var url="<?php echo the_permalink(); ?>?&profile=network&network=connection#follower";
+				  location.href = url;				
+				
 			}
 		});
 	
@@ -267,7 +269,8 @@ function follower_make_delete_conection(){
 			data : search_params,
 			success : function(response){	
 									
-				alert("<?php echo the_permalink(); ?>");
+				var url="<?php echo the_permalink(); ?>?&profile=network&network=connection#follower";
+				  location.href = url;		
 			}
 		});
 	

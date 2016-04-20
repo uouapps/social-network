@@ -245,7 +245,8 @@ function following_make_unfollow(){
 			type : "post",
 			data : search_params,
 			success : function(response){						
-				alert('success');
+				var url="<?php echo the_permalink(); ?>?&profile=network&network=connection#follower";
+				  location.href = url;		
 			}
 		});
 	
@@ -265,7 +266,8 @@ function following_make_conection(){
 			type : "post",
 			data : search_params,
 			success : function(response){						
-				alert('success');
+				var url="<?php echo the_permalink(); ?>?&profile=network&network=connection#follower";
+				  location.href = url;		
 			}
 		});
 	

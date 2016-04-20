@@ -442,8 +442,8 @@ $contact_email_template='
                                 </tr>
                               </tbody>
 							  <tr>
-                                <td bgcolor="#efefef" style="text-align:left; " scope="row">Your Directory :</td>
-                                <td bgcolor="#efefef" style="text-align:left; vertical-align:middle; "><span class="amount">[iv_member_directory]</span></td>
+                                <td bgcolor="#efefef" style="text-align:left; " scope="row">Sender Name :</td>
+                                <td bgcolor="#efefef" style="text-align:left; vertical-align:middle; "><span class="amount">[sender_name]</span></td>
                               </tr>
                               <tr>
                                 <td bgcolor="#FFFFFF" style="text-align:left; " scope="row">Message :</td>

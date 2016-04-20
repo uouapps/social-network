@@ -308,7 +308,10 @@ function connection_make_follow(){
 			type : "post",
 			data : search_params,
 			success : function(response){						
-				alert('success');
+				
+				var url="<?php echo the_permalink(); ?>?&profile=network&network=connection";
+				  location.href = url;	
+				
 			}
 		});
 	
@@ -328,7 +331,8 @@ function connection_make_delete_conection(){
 			type : "post",
 			data : search_params,
 			success : function(response){						
-				alert('success');
+				var url="<?php echo the_permalink(); ?>?&profile=network&network=connection";
+				  location.href = url;	
 			}
 		});
 	

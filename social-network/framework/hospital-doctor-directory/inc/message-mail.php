@@ -31,11 +31,11 @@ global $wpdb;
 	$visitor_id=get_current_user_id();
 	$visitor_email_address='';
 	$visitor_email_address=$form_data['email_address'];
-		
+	$sender_name=(isset($form_data['contact_name'])?$form_data['contact_name']:'');
 				
 	
 	$email_body = str_replace("[iv_member_sender_email]", $visitor_email_address, $email_body);
-	$email_body = str_replace("[iv_member_name]", $dir_title, $email_body);
+	$email_body = str_replace("[sender_name]", $sender_name, $email_body);
 	$email_body = str_replace("[iv_member_message]", $form_data['message-content'], $email_body);	
 	
 	

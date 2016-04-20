@@ -61,18 +61,20 @@ wp_enqueue_style('iv_directories-profile', SB_CSS . 'user-public-profile.css');
 
                   <!-- LOGIN -->
                   <div id="log-in"  class="active">
-                    <form>
-                      <input type="email" placeholder="Email Address">
-                      <input type="password" placeholder="Password">
-                      <button type="submit">Login</button>
-                      <div class="login-with"> <span><?php echo do_action('oa_social_login'); ?> </span> 
-                      
-                      <!--
-                      <a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-google"></i></a> <a href="#."><i class="fa fa-linkedin"></i></a>
-                      -->  
-                       </div>
-                      <div class="forget">Forgot your password? <a href="#."> Click Here</a></div>
-                    </form>
+					   
+						<form id="login_form"  action="" method="post">
+							<div class="display-hide" id="error_message">  </div>
+						  <input type="text" name="username" id="username"  placeholder="<?php  esc_html_e('User Name','chilepro');?>" >
+						  <input type="password" placeholder="<?php  esc_html_e('Password','chilepro');?>" name="password" id="password">
+						  <button type="button" onclick="return chack_login();"><?php  esc_html_e('Login','chilepro');?> </button>
+						  <div class="login-with"> <span><?php echo do_action('oa_social_login'); ?> </span> 
+						  
+						  <!--
+						  <a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-google"></i></a> <a href="#."><i class="fa fa-linkedin"></i></a>
+						  -->  
+						   </div>
+						  <div class="forget">Forgot your password? <a href="#."> Click Here</a></div>
+						</form>
                   </div>
                 </div>
               </div>
@@ -256,5 +258,10 @@ wp_enqueue_style('iv_directories-profile', SB_CSS . 'user-public-profile.css');
     </div>
   </div>
 </div>
+ <?php 
+ wp_enqueue_script( 'profile-login-js', SB_JS.'profile-login.js', array('jquery'), $ver = true, true );
+ wp_localize_script( 'profile-login-js', 'HDAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ),'loading_image'=> wp_iv_directories_URLPATH. 'admin/files/images/loader.gif' ) );
+ 
+ ?> 
 <?php get_footer();
 
