@@ -56,19 +56,27 @@ $package_id=0;
                   <div id="register">
                    	<form id="iv_home_registration" name="iv_home_registration"  action="<?php  the_permalink() ?>?package_id=<?php echo $package_id; ?>&payment_gateway=paypal&iv-submit-listing=register" method="post" >
                  
-							<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="corporate" checked data-validation-error-msg="<?php  esc_html_e(' Select user Type','chilepro');?>" class="form-control ctrl-textbox"   data-validation="required" ><?php 	 esc_html_e('Corporate','chilepro');?> </label>
+							<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="corporate" checked data-validation-error-msg="<?php  esc_html_e(' Select user Type','chilepro');?>" class="form-control ctrl-textbox"   data-validation="required" ><?php esc_html_e('Corporate','chilepro');?> </label>
 						
 						
 							<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="professional"  data-validation-error-msg="<?php  esc_html_e(' Select user Type','chilepro');?>" class="form-control ctrl-textbox"   data-validation="required"><?php  esc_html_e('Professional','chilepro');?> </label>
 					
 						
-                      	
-                      <input type="text" placeholder="Full Name">
-                      
-                      <input type="email" placeholder="<?php  esc_html_e('Email Address','chilepro');?>">
-                      <input type="text" placeholder="<?php  esc_html_e('User Name','chilepro');?>">
-                      <input type="password" placeholder="<?php  esc_html_e('Password','chilepro');?>">
-                      <button type="submit"><?php  esc_html_e('Register','chilepro');?> </button>
+                       <div>	
+                      <input type="text" id="full_name"  name="full_name"  data-validation="required"  placeholder="<?php esc_html_e('Display Name','chilepro');?>"  data-validation-error-msg="<?php  esc_html_e('Please enter Name','chilepro');?> ">
+                      </div>
+                      <div>
+                      <input type="email" name="iv_member_email" data-validation="email"  data-validation="required" placeholder="<?php esc_html_e('Enter email address','chilepro');?>" data-validation-error-msg="<?php  esc_html_e('Please enter a valid email address','chilepro');?> ">
+                      </div>
+                      <div>
+                      <input type="text"  name="iv_member_user_name"  data-validation="length alphanumeric" 
+data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The user name has to be an alphanumeric value between 4-12 characters','chilepro');?>" class="form-control ctrl-textbox" placeholder="<?php esc_html_e('Enter User Name','chilepro');?>"  >
+					</div>
+					 <div>
+                      <input type="password" name="iv_member_password"  data-validation="required" class="form-control ctrl-textbox" placeholder="<?php esc_html_e('Enter Password','chilepro');?>" data-validation="strength" 
+		 data-validation-strength="2">
+					</div>	
+                      <button type="submit" id="submit_iv_directories_payment" name="submit_iv_directories_payment"><?php  esc_html_e('Register','chilepro');?> </button>
                       <div class="login-with"> <span><?php echo do_action('oa_social_login'); ?> </span> 
                     
                       </div>
@@ -280,7 +288,7 @@ $package_id=0;
  wp_enqueue_script( 'profile-login-js', SB_JS.'profile-login.js', array('jquery'), $ver = true, true );
  wp_localize_script( 'profile-login-js', 'chilepro_data', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ),'loading_image'=> wp_iv_directories_URLPATH. 'admin/files/images/loader.gif' ) );
 
- wp_enqueue_script( 'home-registration-js', SB_JS.'profile-registration.js', array('jquery'), $ver = true, true );
+ wp_enqueue_script( 'home-registration-js', SB_JS.'home-registration.js', array('jquery'), $ver = true, true );
  wp_localize_script( 'home-registration-js', 'chilepro_data', array( 	'ajaxurl' 			=> admin_url( 'admin-ajax.php' ),
 																		'loading_image'		=> wp_iv_directories_URLPATH.'admin/files/images/loader.gif',
 																		'old_loader'		=> wp_iv_directories_URLPATH.'admin/files/images/old-loader.gif',

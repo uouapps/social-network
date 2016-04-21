@@ -1,6 +1,6 @@
 <?php
 $network_tab= (isset($_REQUEST['network'])?$_REQUEST['network']:'connection' );
-
+$total_pages_connection=0;
 ?>
  <div class="network">
             <h4><?php esc_html_e('Network','medico'); ?> </h4>

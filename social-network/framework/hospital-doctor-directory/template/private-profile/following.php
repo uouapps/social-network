@@ -275,7 +275,7 @@ function following_make_conection(){
 }	
 function add_more_following_ajax(page){
 var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
-var total_page=<?php echo $total_pages_following; ?>;	
+var total_page=<?php echo (isset($total_pages_following)?$total_pages_following:0 ); ?>;	 
 	var loader_image = '<img src="<?php echo wp_iv_directories_URLPATH. "admin/files/images/loader.gif"; ?>" />';
 		jQuery('#add_more_following_loading').html(loader_image);
 		

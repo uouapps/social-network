@@ -1,5 +1,6 @@
   <div class="net-work-in"> 
 				<?php
+					$total_pages_followe=0;
 					$connection_type_follower=(isset($_REQUEST['follower-type'])? $_REQUEST['follower-type']:'All' );
 					$search_connection=(isset($_POST['follower_search'])? $_POST['follower_search']:'' );
 					?>
@@ -278,7 +279,7 @@ function follower_make_delete_conection(){
 }	
 function add_more_follower_ajax(page){
 var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
-var total_page=<?php echo $total_pages_follower; ?>;	
+var total_page=<?php echo (isset($total_pages_follower)?$total_pages_follower:0 ); ?>;	
 	var loader_image = '<img src="<?php echo wp_iv_directories_URLPATH. "admin/files/images/loader.gif"; ?>" />';
 		jQuery('#add_more_follower_loading').html(loader_image);
 		

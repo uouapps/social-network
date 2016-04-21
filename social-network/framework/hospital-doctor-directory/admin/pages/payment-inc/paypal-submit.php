@@ -56,12 +56,10 @@ if( isset($_REQUEST['iv-submit-listing']) && isset($_REQUEST['payment_gateway'])
 					if(isset($_POST['iv_member_password'])){
 						$userdata['user_pass']=$_POST['iv_member_password'];
 					}
-					if(isset($_POST['iv_member_fname'])){
-						$userdata['first_name']=$_POST['iv_member_fname'];
+					if(isset($_POST['full_name'])){
+						$userdata['profile_name']=$_POST['full_name'];
 					}
-					if(isset($_POST['iv_member_lname'])){
-						$userdata['last_name']=$_POST['iv_member_lname'];
-					}
+					
 					
 												
 					
@@ -109,7 +107,8 @@ if( isset($_REQUEST['iv-submit-listing']) && isset($_REQUEST['payment_gateway'])
 								$exp_d=date('Y-m-d', strtotime('+19 year'));
 							 } 							  
 							 
-							 							
+							 
+							 update_user_meta($user_id, 'profile_name',$_POST['full_name']); 					
 							 update_user_meta($user_id, 'iv_directories_exprie_date',$exp_d); 
 							 update_user_meta($user_id, 'iv_directories_package_id',$package_id);
 							 

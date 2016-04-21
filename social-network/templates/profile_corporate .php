@@ -404,7 +404,7 @@ get_currentuserinfo();
             
             <!-- Company Information -->
             <div class="sidebar">
-              <h5 class="main-title"><?php  esc_html_e('Company Information','chilepro');?></h5>
+              <h5 class="main-title"><?php echo get_user_meta($user_id,'profile_name',true); ?><?php  esc_html_e(' Information','chilepro');?></h5>
               <div class="sidebar-thumbnail"> 				
 					<?php			  	
 				  	if($iv_profile_pic_url!=''){ ?>
@@ -534,7 +534,7 @@ get_currentuserinfo();
               <!-- PROFILE -->
               <div id="profile" class="tab-pane fade in active">
                 <div class="profile-main">
-                  <h3><?php  esc_html_e('About the Company','chilepro');?> </h3>
+                  <h3><?php  esc_html_e('About the ','chilepro');?> <?php echo get_user_meta($user_id,'profile_name',true); ?></h3>
                   <div class="profile-in">
 					  <?php
 					$gallery_ids=get_user_meta($user_id,'image_gallery_ids',true);

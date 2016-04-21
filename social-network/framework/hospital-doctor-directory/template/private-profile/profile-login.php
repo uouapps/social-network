@@ -85,7 +85,7 @@ wp_enqueue_style('profile-login-style', SB_CSS.'profile-login.css', array(), $ve
     </div>
  <?php 
  wp_enqueue_script( 'profile-login-js', SB_JS.'profile-login.js', array('jquery'), $ver = true, true );
- wp_localize_script( 'profile-login-js', 'HDAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ),'loading_image'=> wp_iv_directories_URLPATH. 'admin/files/images/loader.gif' ) );
+ wp_localize_script( 'profile-login-js', 'chilepro_data', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ),'loading_image'=> wp_iv_directories_URLPATH. 'admin/files/images/loader.gif' ) );
  
  ?>   
 

@@ -153,11 +153,10 @@ foreach ( $membership_pack as $row )
 							
 					</div>
 					
-						<div class="form-group row"  >									
-						<label for="text" class="col-md-3 control-label"><?php  esc_html_e('User Name','chilepro');?><span class="chili"></span></label>
+					<div class="form-group row"  >									
+						<label for="text" class="col-md-3 control-label"><?php  esc_html_e('Display Name','chilepro');?><span class="chili"></span></label>
 						<div class="col-md-9">
-							<input type="text"  name="iv_member_user_name"  data-validation="length alphanumeric" 
-data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The user name has to be an alphanumeric value between 4-12 characters','chilepro');?>" class="form-control ctrl-textbox" placeholder="Enter User Name"  alt="required">
+							<input type="text" id="full_name"  name="full_name"  data-validation="required"  placeholder="<?php esc_html_e('Full Name','chilepro');?>"  data-validation-error-msg="<?php  esc_html_e('Please enter Name','chilepro');?> ">
 
 						</div>
 					</div>
@@ -168,6 +167,17 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 							<input type="email" name="iv_member_email" data-validation="email"  class="form-control ctrl-textbox" placeholder="Enter email address" data-validation-error-msg="<?php  esc_html_e('Please enter a valid email address','chilepro');?> " >
 						</div>
 					</div>
+					
+						<div class="form-group row"  >									
+						<label for="text" class="col-md-3 control-label"><?php  esc_html_e('User Name','chilepro');?><span class="chili"></span></label>
+						<div class="col-md-9">
+							<input type="text"  name="iv_member_user_name"  data-validation="length alphanumeric" 
+data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The user name has to be an alphanumeric value between 4-12 characters','chilepro');?>" class="form-control ctrl-textbox" placeholder="Enter User Name"  alt="required">
+
+						</div>
+					</div>
+					
+					
 					<div class="form-group row ">									
 						<label for="text" class="col-md-3 control-label"><?php  esc_html_e('Password','chilepro');?><span class="chili"></span></label>
 						<div class="col-md-9">
