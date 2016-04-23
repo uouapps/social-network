@@ -1,5 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic);
 
+.cbp-slider{
+    max-height: 400px!important;
+}
 
 .blue-background{
  background-color: #0099fe;
