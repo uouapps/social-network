@@ -48,9 +48,30 @@
 									<label for="text" class=" control-label"><?php  _e('Company Type','chilepro');?></label>
 							</div>
 							<div class="form-group">
-									<select name="company_type" id="company_type"  class="form-control">
-											<option value="Automotive"><?php  _e('Automotive','chilepro');?></option>
-											<option value="IT"><?php  _e('IT','chilepro');?></option>
+								<select name="company_type" id="company_type"  class="form-control">
+								<?php
+								$company_type =__('Automotive,IT,Basic Industries,Capital Goods,Finance,Healthcare,Technology,Consumer Services,Transportation,Energy,Agriculture,Arts,Entertainment,Construction,Business Services,Education,Electric ,Finance & Insurance ,Government,Health Care,Lodging,Manufacturing,Media,Mining,Natural Gas Distribution,Nonprofit,Oil & Gas,Private Households,Real Estate,Religious Organizations,Rental & Leasing,Restaurants,Bars & Food','chilepro');
+								
+										$field_set=get_option('iv_social_profile_company_type' );
+											if($field_set!=""){ 
+													$company_type=get_option('iv_social_profile_company_type' );
+											}
+										$company_type= explode("," , $company_type);	
+										$company_type_saved = get_user_meta($current_user->ID,'company_type',true);
+								
+										sort($company_type);
+																				
+										
+										foreach ( $company_type as $field_value ) { 
+											if($field_value!='' ){
+												?>
+													<option value="<?php echo $field_value ; ?>" <?php echo ($company_type_saved==$field_value ?'selected':''); ?>><?php echo $field_value ; ?></option>
+											<?php	
+											}
+										}
+										?>
+											
+										
 									</select>	
 							</div>	
 							<div class="upload-content">

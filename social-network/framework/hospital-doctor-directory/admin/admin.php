@@ -777,26 +777,7 @@ if (!class_exists('wp_iv_directories_Admin')) {
 					exit(0);
 				
 				}
-				public function iv_directories_update_corporate_fields_experience(){
-					
-					parse_str($_POST['form_data'], $form_data);
-					
-					
-					$opt_array= array();
-					$max = sizeof($form_data['meta_name']);
-					for($i = 0; $i < $max;$i++)
-					{	
-						if($form_data['meta_name'][$i]!="" AND $form_data['meta_label'][$i]!=""){
-							$opt_array[$form_data['meta_name'][$i]]=$form_data['meta_label'][$i];
-						}
-					}													
-					update_option('iv_social_profile_corporate_fields_services', $opt_array );
-					
-					
-					echo json_encode(array('code' => 'Update Successfully'));
-					exit(0);
 				
-				}
 				public function iv_directories_update_corporate_fields_review(){
 					
 					parse_str($_POST['form_data'], $form_data);
@@ -809,7 +790,8 @@ if (!class_exists('wp_iv_directories_Admin')) {
 						if($form_data['meta_name'][$i]!="" AND $form_data['meta_label'][$i]!=""){
 							$opt_array[$form_data['meta_name'][$i]]=$form_data['meta_label'][$i];
 						}
-					}													
+					}		
+					update_option('iv_social_profile_company_type', $form_data['company_type'] );											
 					update_option('iv_social_profile_corporate_fields_review', $opt_array );
 					
 					

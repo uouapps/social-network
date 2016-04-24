@@ -94,68 +94,8 @@ $('.slider-range-container').each(function(){
 
 $('.custom-select').select2();
 
-$(".map-listing-04").gmap3({
-  map:{
-    address:"POURRIERES, FRANCE",
-    options:{
-      zoom:17,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      mapTypeControl: false,
-      mapTypeControlOptions: {
-        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
-      },
-      navigationControl: true,
-      scrollwheel: false,
-      streetViewControl: true
-    }
-  }
-});
 
-$("#map-top").gmap3({
-  map:{
-    address:"New York, USA",
-    options:{
-      zoom:17,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      mapTypeControl: false,
-      mapTypeControlOptions: {
-        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
-      },
-      navigationControl: false,
-      scrollwheel: false,
-      streetViewControl: false
-    }
-  },
-  marker:{
-    values:[
-      {address:"St james St New York, USA", data:"Office 1", options:{icon: "http://piotr.stare.pro/qf/img/marker.png"}},
-      {address:"elk St New York, USA", data:"Office 2", options:{icon: "http://piotr.stare.pro/qf/img/marker.png"}},
-      {address:"Vesey ST New York, USA", data:"Office 3", options:{icon: "http://piotr.stare.pro/qf/img/marker.png"}},
-      {address:"park pl New York, USA", data:"Office 4", options:{icon: "http://piotr.stare.pro/qf/img/marker.png"}},
-      {address:"park row New York, USA", data:"Office 5", options:{icon: "http://piotr.stare.pro/qf/img/marker.png"}}
-    ],
-    options:{
-      draggable: false
-    },
-    events:{
-      click: function(marker, event, context){
-        var map = $(this).gmap3("get"),
-          infowindow = $(this).gmap3({get:{name:"infowindow"}});
-        if (infowindow){
-          infowindow.open(map, marker);
-          infowindow.setContent(context.data);
-        } else {
-          $(this).gmap3({
-            infowindow:{
-              anchor:marker,
-              options:{content: context.data}
-            }
-          });
-        }
-      }
-    }
-  }
-});
+
 
 var subtleOptions = {
   id: "subtle",
@@ -165,95 +105,9 @@ var subtleOptions = {
   styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
 };
 
-$(".contact-map").gmap3({
-  map:{
-    address:"St james St New York, USA",
-    options:{
-      zoom:17,
-      mapTypeId: "subtle",
-      mapTypeControl: false,
-      mapTypeControlOptions: {
-        mapTypeIds: ["subtle"]
-      },
-      navigationControl: false,
-      scrollwheel: false,
-      draggable: false,
-      streetViewControl: false,
-      disableDefaultUI: true,
-    },
-  },
-  styledmaptype: subtleOptions,
-  marker:{
-    values:[
-      {address:"St james St New York, USA", data:"<h3>Simple Builder</h3><ul><li><i class='fa fa-home'></i><span>21 Dedman Ct San Francisco CA 94124 United States</span>   </li></ul><ul><li><i class='fa fa-phone'></i><span>(01) 213 432 5432</span></li><li><i class='fa fa-envelope'></i><span><a href='#'>example@example.com</a> </span></li></ul>", options:{icon: "http://piotr.stare.pro/qf/img/marker.png"}}
-    ],
-    options:{
-      draggable: false
-    },
-    events:{
-      click: function(marker, event, context){
-        var map = $(this).gmap3("get"),
-          infowindow = $(this).gmap3({get:{name:"infowindow"}});
-        if (infowindow){
-          infowindow.open(map, marker);
-          infowindow.setContent(context.data);
-        } else {
-          $(this).gmap3({
-            infowindow:{
-              anchor:marker,
-              options:{content: context.data}
-            }
-          });
-        }
-      }
-    }
-  }
-});
 
-$("#single-company-map").gmap3({
-  map:{
-    address:"St james St New York, USA",
-    options:{
-      zoom:14,
-      mapTypeId: "subtle",
-      mapTypeControl: false,
-      mapTypeControlOptions: {
-        mapTypeIds: ["subtle"]
-      },
-      navigationControl: false,
-      scrollwheel: false,
-      draggable: false,
-      streetViewControl: false,
-      disableDefaultUI: true,
-    },
-  },
-  styledmaptype: subtleOptions
-});
 
-$("#map-listing-05").gmap3({
-  map:{
-    address:"POURRIERES, FRANCE",
-    options:{
-      zoom:17,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      mapTypeControl: false,
-      mapTypeControlOptions: {
-        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
-      },
-      navigationControl: false,
-      scrollwheel: false,
-      streetViewControl: false
-    }
-  }
-});
 
-$('a[href="#contact"]').on('shown.bs.tab', function () {
-  $("#map-listing-04").gmap3({trigger:"resize"});
-});
-
-$('a[href="#contact"]').on('shown.bs.tab', function () {
-  $("#map-listing-05").gmap3({trigger:"resize"});
-});
 
 // Mediaqueries
 // ---------------------------------------------------------

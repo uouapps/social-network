@@ -33,10 +33,19 @@
 						<div class="panel panel-info">
 						<div class="panel-heading"><h4><?php _e('corporate Profile Fields','chilepro'); ?>  </h4></div>
 						<div class="panel-body">	
+							<?php
+							$comapny_type='Automotive,IT,Basic Industries,Capital Goods,Finance,Healthcare,Technology,Consumer Services,Transportation,Energy,Agriculture,Arts,Entertainment,Construction,Business Services,Education,Electric ,Finance & Insurance ,Government,Health Care,Lodging,Manufacturing,Media,Mining,Natural Gas Distribution,Nonprofit,Oil & Gas,Private Households,Real Estate,Religious Organizations,Rental & Leasing,Restaurants,Bars & Food','chilepro';
 							
-							
+							?>
 							<form id="corporate_fields" name="corporate_fields" class="form-horizontal" role="form" onsubmit="return false;">	
-								
+								<div class="row form-group ">
+									<label class=" col-sm-12"> <?php _e('Company Type/ Category','chilepro'); ?>  </label>
+									<div class=" col-sm-12"> 
+										<textarea  rows="4" cols="150" name="company_type" id="company_type" placeholder="Enter Company type "><?php echo $comapny_type; ?> </textarea>
+										
+									</div>	
+								 </div>		
+															
 																	
 										<div class="row ">
 												<div class="col-sm-5 ">										
@@ -254,23 +263,7 @@
 			}
 		});
 	}
-	function update_corporate_fields_experience(){	
-		var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
-		var search_params = {
-			"action": 		"iv_directories_update_corporate_fields_experience",
-			"form_data":	jQuery("#experience_fields").serialize(), 	
-		};
-		jQuery.ajax({
-			url: ajaxurl,
-			dataType: "json",
-			type: "post",
-			data: search_params,
-			success: function(response) {              		
-				//jQuery("#success_message").html('<h4><span style="color: #04B404;"> ' + response.code + '</span></h4>');
-				jQuery('#success_message_experience').html('<div class="alert alert-info alert-dismissable"><a class="panel-close close" data-dismiss="alert">x</a>'+response.code +'.</div>');
-			}
-		});
-	}
+	
 	function iv_add_field_profile(){	
 	
 		jQuery('#custom_field_div_experience').append('<div class="row form-group " id="field_'+i+'"><div class=" col-sm-5"> <input type="text" class="form-control" name="meta_name[]" id="meta_name[]" value="" placeholder="Enter Post Meta Name "> </div>	<div  class=" col-sm-5"><input type="text" class="form-control" name="meta_label[]" id="meta_label[]" value="" placeholder="Enter Post Meta Label"></div><div  class=" col-sm-2"><button class="btn btn-danger btn-xs" onclick="return iv_remove_field_experience('+i+');">Delete</button>');		

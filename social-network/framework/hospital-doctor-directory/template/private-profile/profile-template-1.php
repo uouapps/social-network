@@ -105,7 +105,7 @@ global $current_user;
 					?>
 					  <li class="<?php echo ($active=='network'? 'active':''); ?> ">
                     <a href="<?php echo get_permalink(); ?>?&profile=network">
-                    <i class="fa fa-heart-o"></i>
+                    <i class="fa fa-group"></i>
                     <?php  esc_html_e('Network','chilepro');?> </a>
                   </li>
 				  <?php
@@ -118,9 +118,9 @@ global $current_user;
 					}
 					if($account_menu_check!='yes'){					
 					?>
-				    <li class="<?php echo ($active=='who-is-interested'? 'active':''); ?> ">
-                    <a href="<?php echo get_permalink(); ?>?&profile=who-is-interested">
-                    <i class="fa fa-group"></i>
+				    <li class="<?php echo ($active=='bookmark'? 'active':''); ?> ">
+                    <a href="<?php echo get_permalink(); ?>?&profile=bookmark">
+                    <i class="fa fa-bookmark"></i>
                     <?php  esc_html_e('Bookmarks','chilepro');?> </a>
                   </li>
 				  <?php
@@ -207,8 +207,8 @@ global $current_user;
 			include(  wp_iv_directories_template. 'private-profile/profile-level-1.php');
 		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='network' ){ 		    
 			include(  wp_iv_directories_template. 'private-profile/my-network.php');
-		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='who-is-interested' ){ 		    
-			include(  wp_iv_directories_template. 'private-profile/interested-1.php');
+		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='bookmark' ){ 		    
+			include(  wp_iv_directories_template. 'private-profile/bookmark.php');
 		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='setting' ){ 		
 				$iv_member_type=get_user_meta($current_user->ID,'iv_member_type',true);     
 				if($iv_member_type=='corporate'){

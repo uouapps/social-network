@@ -29,14 +29,15 @@ global $wpdb;
 					<div class="panel-heading">
 							<ul class="nav nav-tabs">
 								<li class="active"><a href="#page" data-toggle="tab"><?php _e('Page','chilepro'); ?></a></li>
-								
+								<!--
 								<li ><a href="#dir-setting" data-toggle="tab"><?php _e('Directory','chilepro'); ?> </a></li>
 								<li ><a href="#dir-marker" data-toggle="tab"><?php _e('Category Image/Marker','chilepro'); ?></a></li>
+								-->
 								<li><a href="#payment" data-toggle="tab"><?php _e('Payment Page','chilepro'); ?></a></li>
 								<li><a href="#email" data-toggle="tab"><?php _e('Email','chilepro'); ?> </a></li>								
 								<li><a href="#mailchimp" data-toggle="tab"><?php _e('MailChimp','chilepro'); ?> </a></li>
 								<li ><a href="#user_reg" data-toggle="tab"><?php _e('Page Redirect','chilepro'); ?></a></li>								
-								<li ><a href="#protected_content" data-toggle="tab"><?php _e('Visibility Control','chilepro'); ?></a></li>
+								<!--<li ><a href="#protected_content" data-toggle="tab"><?php _e('Visibility Control','chilepro'); ?></a></li>-->
 								
 								<li ><a href="#tax" data-toggle="tab"><?php _e('Tax','chilepro'); ?></a></li>
 								

@@ -453,7 +453,7 @@ get_currentuserinfo();
             
             <!-- Company Rating -->
             <div class="sidebar">
-              <h5 class="main-title"><?php  esc_html_e('Company Rating','chilepro');?> </h5>
+              <h5 class="main-title"><?php echo get_user_meta($user_id,'profile_name',true); ?> <?php  esc_html_e(' Rating','chilepro');?> </h5>
               <div class="sidebar-information">	
                 <ul class="single-category com-rate">					
 					<?php
