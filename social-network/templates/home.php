@@ -19,7 +19,7 @@ $api_currency='USD';
 $package_id=0;
 ?>
 
-<div id="main-wrapper">
+<div id="">
 
   <!-- HOME PRO-->
   <div class="home-pro">
@@ -55,47 +55,46 @@ $package_id=0;
                 <div class="content">
                   <div id="register">
                    	<form id="iv_home_registration" name="iv_home_registration"  action="<?php  the_permalink() ?>?package_id=<?php echo $package_id; ?>&payment_gateway=paypal&iv-submit-listing=register" method="post" >
-                 
-							<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="corporate" checked data-validation-error-msg="<?php  esc_html_e(' Select user Type','chilepro');?>" class="form-control ctrl-textbox"   data-validation="required" ><?php esc_html_e('Corporate','chilepro');?> </label>
-						
-						
-							<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="professional"  data-validation-error-msg="<?php  esc_html_e(' Select user Type','chilepro');?>" class="form-control ctrl-textbox"   data-validation="required"><?php  esc_html_e('Professional','chilepro');?> </label>
-					
-						
-                       <div>	
+
+							<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="corporate" checked data-validation-error-msg="<?php  esc_html_e(' Select user Type','chilepro');?>" class="form-control ctrl-textbox"   data-validation="required" > <span><?php esc_html_e('Corporate','chilepro');?> </span> </label>
+
+
+							<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="professional"  data-validation-error-msg="<?php  esc_html_e(' Select user Type','chilepro');?>" class="form-control ctrl-textbox"   data-validation="required"> <span><?php  esc_html_e('Professional','chilepro');?></span>  </label>
+
+
+                       <div>
                       <input type="text" id="full_name"  name="full_name"  data-validation="required"  placeholder="<?php esc_html_e('Display Name','chilepro');?>"  data-validation-error-msg="<?php  esc_html_e('Please enter Name','chilepro');?> ">
                       </div>
                       <div>
                       <input type="email" name="iv_member_email" data-validation="email"  data-validation="required" placeholder="<?php esc_html_e('Enter email address','chilepro');?>" data-validation-error-msg="<?php  esc_html_e('Please enter a valid email address','chilepro');?> ">
                       </div>
                       <div>
-                      <input type="text"  name="iv_member_user_name"  data-validation="length alphanumeric" 
+                      <input type="text"  name="iv_member_user_name"  data-validation="length alphanumeric"
 data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The user name has to be an alphanumeric value between 4-12 characters','chilepro');?>" class="form-control ctrl-textbox" placeholder="<?php esc_html_e('Enter User Name','chilepro');?>"  >
 					</div>
 					 <div>
-                      <input type="password" name="iv_member_password"  data-validation="required" class="form-control ctrl-textbox" placeholder="<?php esc_html_e('Enter Password','chilepro');?>" data-validation="strength" 
+                      <input type="password" name="iv_member_password"  data-validation="required" class="form-control ctrl-textbox" placeholder="<?php esc_html_e('Enter Password','chilepro');?>" data-validation="strength"
 		 data-validation-strength="2">
-					</div>	
+					</div>
                       <button type="submit" id="submit_iv_directories_payment" name="submit_iv_directories_payment"><?php  esc_html_e('Register','chilepro');?> </button>
-                      <div class="login-with"> <span><?php echo do_action('oa_social_login'); ?> </span> 
-                    
+                      <div class="login-with"> <span><?php echo do_action('oa_social_login'); ?> </span>
+
                       </div>
                     </form>
                   </div>
 
                   <!-- LOGIN -->
                   <div id="log-in"  class="active">
-					   
+
 						<form id="login_form"  action="" method="post">
 							<div class="display-hide" id="error_message">  </div>
 						  <input type="text" name="username" id="username"  placeholder="<?php  esc_html_e('User Name','chilepro');?>" >
 						  <input type="password" placeholder="<?php  esc_html_e('Password','chilepro');?>" name="password" id="password">
 						  <button type="button" onclick="return chack_login();"><?php  esc_html_e('Login','chilepro');?> </button>
-						  <div class="login-with"> <span><?php echo do_action('oa_social_login'); ?> </span> 
-						  
-						  <!--
-						  <a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-google"></i></a> <a href="#."><i class="fa fa-linkedin"></i></a>
-						  -->  
+						  <div class="login-with"> <span><?php echo do_action('oa_social_login'); ?>Or login with:</span>
+  						  <a href="#."><i class="fa fa-facebook"></i>
+                </a> <a href="#."><i class="fa fa-google"></i></a>
+                <a href="#."><i class="fa fa-linkedin"></i></a>
 						   </div>
 						  <div class="forget">Forgot your password? <a href="#."> Click Here</a></div>
 						</form>
@@ -282,9 +281,9 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
     </div>
   </div>
 </div>
- <?php 
+ <?php
  wp_enqueue_script('iv_directories-script-signup-2-15', wp_iv_directories_URLPATH . 'admin/files/js/jquery.form-validator.js');
- 
+
  wp_enqueue_script( 'profile-login-js', SB_JS.'profile-login.js', array('jquery'), $ver = true, true );
  wp_localize_script( 'profile-login-js', 'chilepro_data', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ),'loading_image'=> wp_iv_directories_URLPATH. 'admin/files/images/loader.gif' ) );
 
@@ -300,10 +299,10 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 																		'wrong_icon'		=> wp_iv_directories_URLPATH. 'admin/files/images/wrong_16x16.png' ,
 																		'Hide_Coupon'=> __('Hide Coupon','chilepro'),
 																		'have_Coupon'=> __('Have a coupon?','chilepro'),
-																		
-																		) );
- 
 
- ?> 
+																		) );
+
+
+ ?>
 <?php get_footer();
 

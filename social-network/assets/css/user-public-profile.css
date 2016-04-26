@@ -1186,14 +1186,36 @@ iframe {
 	float: left;
 	text-align: center;
 }
+
+.banr-head .has-error {
+	margin-bottom: 15px;
+}
+.banr-head .has-error input {
+	margin-bottom: 5px !important;
+}
+
+.banr-head .has-error .form-error {
+	color: #BB4500;
+	padding-left: 20px;
+}
+
+
+.banr-head .login-sec label {
+	margin-bottom: 20px;
+	margin-right: 10px;
+}
+
+.banr-head .login-sec label span {
+	color :#fff;
+}
 .banr-head .login-sec input {
 	background: #424242;
 	border-radius: 30px;
 	border: none;
-	height: 40px;
 	font-size: 14px;
 	padding: 0 30px;
 	margin-bottom: 15px;
+	margin-right: 5px;
 }
 .banr-head .login-sec .uou-tabs form {
 	padding: 40px;
