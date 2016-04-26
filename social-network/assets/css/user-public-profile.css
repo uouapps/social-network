@@ -434,6 +434,7 @@ iframe {
 .profile-company-content .sidebar {
 	margin-bottom: 30px;
 	border-radius: 5px;
+	padding: 0 !important;
 }
 .profile-company-content .com-rate i {
 	color: #2aadde;
@@ -1003,6 +1004,19 @@ iframe {
 	line-height: 22px;
 	font-size: 14px;
 }
+
+.job-skills {
+  position: relative;
+}
+
+.job-skills li p {
+  margin-bottom: 0;
+}
+.job-skills li h6.active .fa-plus:before {
+  content: "\f068";
+}
+
+
 .job-tittle {
 	margin-bottom: 0px;
 	position: relative;

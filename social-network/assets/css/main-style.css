@@ -14325,7 +14325,7 @@ a:hover, a:focus, a:active, a.active {
 }
 .profile-company-content .sidebar {
 	position: relative;
-	padding: 21px;
+	padding: 0 !important;
 	display: inline-block;
 	width: 100%;
 	background: #fff;
@@ -14340,13 +14340,15 @@ a:hover, a:focus, a:active, a.active {
 	margin: 0 auto 30px auto;
 	padding: 4px;
 	text-align: center;
-	border: 1px solid #eaeaea;
+	border: 0 !important;
+	padding: 20px !important;
 }
 .profile-company-content .sidebar .sidebar-thumbnail img {
 	margin: 0 auto;
 	display: inline-block;
-	max-width: 100%;
+	width: 100%;
 	height: auto;
+	border-radius: 4px;
 }
 .profile-company-content .sidebar .sidebar-information {
 	position: relative;

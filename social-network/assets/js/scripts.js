@@ -39,6 +39,13 @@ $('.texti-slide').owlCarousel({
 }});
 
 
+$('.job-skills li p').hide();
+$('.job-skills li h6').on('click', function(){
+  $(this).toggleClass('active');
+  $(this).parent().next().children('p').slideToggle(300);
+})
+
+
 // UOU Tabs
 // ---------------------------------------------------------
 if ($.fn.uouTabs) {
