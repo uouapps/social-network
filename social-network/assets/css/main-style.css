@@ -14325,11 +14325,15 @@ a:hover, a:focus, a:active, a.active {
 }
 .profile-company-content .sidebar {
 	position: relative;
-	padding: 0 !important;
+	padding: 21px;
 	display: inline-block;
 	width: 100%;
 	background: #fff;
 	box-shadow: 0 0 3px rgba(206, 206, 206, 0.36);
+}
+
+.profile-company-content .sidebar.my-accont {
+	padding: 0 !important;
 }
 @media (max-width: 992px) {
 .profile-company-content .sidebar {

@@ -92,9 +92,9 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 						  <input type="password" placeholder="<?php  esc_html_e('Password','chilepro');?>" name="password" id="password">
 						  <button type="button" onclick="return chack_login();"><?php  esc_html_e('Login','chilepro');?> </button>
 						  <div class="login-with"> <span><?php echo do_action('oa_social_login'); ?>Or login with:</span>
-  						  <a href="#."><i class="fa fa-facebook"></i>
+  						  <!-- <a href="#."><i class="fa fa-facebook"></i>
                 </a> <a href="#."><i class="fa fa-google"></i></a>
-                <a href="#."><i class="fa fa-linkedin"></i></a>
+                <a href="#."><i class="fa fa-linkedin"></i></a> -->
 						   </div>
 						  <div class="forget">Forgot your password? <a href="#."> Click Here</a></div>
 						</form>

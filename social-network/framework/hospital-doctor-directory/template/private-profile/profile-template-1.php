@@ -12,9 +12,9 @@ wp_enqueue_style('wp-iv_directories-myaccount-style-17', wp_iv_directories_URLPA
 
 //wp_enqueue_style('myaccount-style-12', SB_CSS . 'my-account.css');
 
-wp_enqueue_media(); 
+wp_enqueue_media();
 global $current_user;
-   
+
 ?>
 
 
@@ -34,28 +34,28 @@ global $current_user;
 	$currencies['ILS'] ='₪';$currencies['MXN'] ='$';
 	$currencies['BRL'] ='R$';$currencies['PHP'] ='₱';
 	$currencies['MYR'] ='RM';$currencies['AUD'] ='$';
-	$currencies['TWD'] ='NT$';$currencies['THB'] ='฿';	
-	$currencies['TRY'] ='TRY';	$currencies['CNY'] ='¥';	
+	$currencies['TWD'] ='NT$';$currencies['THB'] ='฿';
+	$currencies['TRY'] ='TRY';	$currencies['CNY'] ='¥';
 	$currency= get_option('_iv_directories_api_currency');
-	
+
 	$currency_symbol=(isset($currencies[$currency]) ? $currencies[$currency] :$currency );
       ?>
 
 
-<div class="compny-profile bootstrap-wrapper around-separetor"> 
-  
+<div class="compny-profile bootstrap-wrapper around-separetor">
+
   <!-- Profile Company Content -->
   <div class="profile-company-content has-bg-image" data-bg-color="f5f5f5">
     <div class="container">
-      <div class="row"> 
-        
+      <div class="row">
+
         <!-- SIDE BAR -->
-        <div class="col-md-4"> 
+        <div class="col-md-4">
           <!-- Company Information -->
-          <div class="sidebar">
+          <div class="sidebar my-accont">
             <h5 class="main-title">Mike Tomlinson</h5>
-            <div class="sidebar-thumbnail" id="profile_image_main"> 
-				
+            <div class="sidebar-thumbnail" id="profile_image_main">
+
 				<?php
 				  	$iv_profile_pic_url=get_user_meta($current_user->ID, 'iv_profile_pic_thum',true);
 				  	if($iv_profile_pic_url!=''){ ?>
@@ -65,7 +65,7 @@ global $current_user;
 					 echo'	 <img src="'. wp_iv_directories_URLPATH.'assets/images/Blank-Profile.jpg">';
 					}
 				  	?>
-            
+
             </div>
              <div class="profile-userbuttons">
                 <button type="button" onclick="edit_profile_image('profile_image_main');"  class="btn-new btn-custom"><?php esc_html_e('Change Image','chilepro'); ?> </button>
@@ -74,34 +74,34 @@ global $current_user;
                 <div class="profile-usermenu">
 			  <?php
 			  $active='network';
-			  
+
 			  if(isset($_GET['profile']) AND $_GET['profile']=='setting' ){
 				 $active='setting';
 			  }
-					  
+
 			  if(isset($_GET['profile']) AND $_GET['profile']=='network' ){
 				 $active='network';
 			  }
 			  if(isset($_GET['profile']) AND $_GET['profile']=='bookmark' ){
 				 $active='bookmark';
 			  }
-			  
-			  
-			  
 
-				
+
+
+
+
 				$post_type=  'directories';
-						
+
 			  ?>
                 <ul class="nav">
-					
-				    
+
+
 				  <?php
 					$account_menu_check= '';
 					if( get_option( '_iv_directories_menunetwork' ) ) {
 						 $account_menu_check= get_option('_iv_directories_menunetwork');
 					}
-					if($account_menu_check!='yes'){					
+					if($account_menu_check!='yes'){
 					?>
 					  <li class="<?php echo ($active=='network'? 'active':''); ?> ">
                     <a href="<?php echo get_permalink(); ?>?&profile=network">
@@ -116,7 +116,7 @@ global $current_user;
 					if( get_option( '_iv_directories_menuinterested' ) ) {
 						 $account_menu_check= get_option('_iv_directories_menuinterested');
 					}
-					if($account_menu_check!='yes'){					
+					if($account_menu_check!='yes'){
 					?>
 				    <li class="<?php echo ($active=='bookmark'? 'active':''); ?> ">
                     <a href="<?php echo get_permalink(); ?>?&profile=bookmark">
@@ -126,14 +126,14 @@ global $current_user;
 				  <?php
 					}
 				  ?>
-				  
+
 					<!--
                   <?php
 					$account_menu_check= '';
 					if( get_option( '_iv_directories_mylevel' ) ) {
 						 $account_menu_check= get_option('_iv_directories_mylevel');
 					}
-					if($account_menu_check!='yes'){					
+					if($account_menu_check!='yes'){
 					?>
 					  <li class="<?php echo ($active=='level'? 'active':''); ?> ">
 						<a href="<?php echo get_permalink(); ?>?&profile=level">
@@ -149,7 +149,7 @@ global $current_user;
 					if( get_option( '_iv_directories_menusetting' ) ) {
 						 $account_menu_check= get_option('_iv_directories_menusetting');
 					}
-					if($account_menu_check!='yes'){					
+					if($account_menu_check!='yes'){
 					?>
                   <li class="<?php echo ($active=='setting'? 'active':''); ?> ">
                     <a href="<?php echo get_permalink(); ?>?&profile=setting">
@@ -159,44 +159,44 @@ global $current_user;
 				  <?php
 					}
 				  ?>
-				  
-				 
-				 
-				 
-					
+
+
+
+
+
 			  <?php     $old_custom_menu = array();
 							if(get_option('iv_directories_profile_menu')){
 								$old_custom_menu=get_option('iv_directories_profile_menu' );
 							}
-							$ii=1;		
+							$ii=1;
 							if($old_custom_menu!=''){
 								foreach ( $old_custom_menu as $field_key => $field_value ) { ?>
-									
+
 									  <li class="">
 											<a href="<?php echo $field_value; ?>">
 												<i class="fa fa-cog"></i>
 											 <?php echo $field_key;?> </a>
 									  </li>
-								
+
 								<?php
 								}
-							}	
-									
-                  
-					?>                  
+							}
+
+
+					?>
 					<li class="<?php echo ($active=='log-out'? 'active':''); ?> ">
 						<a href="<?php echo wp_logout_url( home_url() ); ?>" >
 						<i class="fa fa-sign-out"></i>
-						  <?php esc_html_e('Sign out','chilepro');?> 
+						  <?php esc_html_e('Sign out','chilepro');?>
 						 </a>
 					 </li>
-                    
-				
+
+
                 </ul>
               </div>
-             
-             
-         
+
+
+
             </div>
           </div>
         </div>
@@ -205,34 +205,34 @@ global $current_user;
        <?php
 		  if(isset($_GET['profile']) AND $_GET['profile']=='level' ){
 			include(  wp_iv_directories_template. 'private-profile/profile-level-1.php');
-		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='network' ){ 		    
+		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='network' ){
 			include(  wp_iv_directories_template. 'private-profile/my-network.php');
-		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='bookmark' ){ 		    
+		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='bookmark' ){
 			include(  wp_iv_directories_template. 'private-profile/bookmark.php');
-		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='setting' ){ 		
-				$iv_member_type=get_user_meta($current_user->ID,'iv_member_type',true);     
+		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='setting' ){
+				$iv_member_type=get_user_meta($current_user->ID,'iv_member_type',true);
 				if($iv_member_type=='corporate'){
 					include(  wp_iv_directories_template. 'private-profile/profile-setting-corporate.php');
 				}else{
 					//include(  wp_iv_directories_template. 'private-profile/profile-setting-corporate.php');
 					include(  wp_iv_directories_template. 'private-profile/profile-setting-personal.php');
-				 } 
-			
+				 }
+
 		  }
-		  else{ 		 
-			
+		  else{
+
 			include(  wp_iv_directories_template. 'private-profile/my-network.php');
 		  }
-		  
-		  
+
+
 		  ?>
        </div>
-      
+
       </div>
     </div>
   </div>
 </div>
- 
+
 
 
 
@@ -242,10 +242,10 @@ jQuery(document).ready(function($) {
 		  e.preventDefault()
 		 jQuery(this).tab('show')
 		});
-})	
-	
-			  
-			  function edit_profile_image(profile_image_id){	
+})
+
+
+			  function edit_profile_image(profile_image_id){
 				var image_gallery_frame;
 
                // event.preventDefault();
@@ -257,7 +257,7 @@ jQuery(document).ready(function($) {
                     },
                     multiple: false,
                     displayUserSettings: true,
-                });                
+                });
                 image_gallery_frame.on( 'select', function() {
                     var selection = image_gallery_frame.state().get('selection');
                     selection.map( function( attachment ) {
@@ -275,25 +275,25 @@ jQuery(document).ready(function($) {
 										dataType: "json",
 										type: "post",
 										data: search_params,
-										success: function(response) {   
-											if(response=='success'){					
-												
-												jQuery('#'+profile_image_id).html('<img  class="img-circle img-responsive"  src="'+attachment.sizes.thumbnail.url+'">');                              
-						
+										success: function(response) {
+											if(response=='success'){
+
+												jQuery('#'+profile_image_id).html('<img  class="img-circle img-responsive"  src="'+attachment.sizes.thumbnail.url+'">');
+
 
 											}
-											
+
 										}
-									});									
-                              
+									});
+
 						}
 					});
-                   
-                });               
-				image_gallery_frame.open(); 
-				
-			}
-		
- </script>	  
 
-		
+                });
+				image_gallery_frame.open();
+
+			}
+
+ </script>
+
+
