@@ -993,6 +993,7 @@ input[type="checkbox"].styled:checked + label:after, input[type="radio"].styled:
 }
 .folow-persons .avatar img {
 	width: 100%;
+	border-radius: 50%;
 }
 .folow-persons li:hover .avatar {
 	height: 60px;
