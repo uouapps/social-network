@@ -45,7 +45,7 @@ global $current_user;
 <div class="compny-profile bootstrap-wrapper around-separetor">
 
   <!-- Profile Company Content -->
-  <div class="profile-company-content has-bg-image" data-bg-color="f5f5f5">
+  <div class="profile-company-content has-bg-image" data-bg-color="">
     <div class="container">
       <div class="row">
 
@@ -237,13 +237,14 @@ global $current_user;
 
 
  <script>
+ /*
 jQuery(document).ready(function($) {
 		jQuery('[href^=#tab]').click(function (e) {
 		  e.preventDefault()
 		 jQuery(this).tab('show')
 		});
 })
-
+*/
 
 			  function edit_profile_image(profile_image_id){
 				var image_gallery_frame;

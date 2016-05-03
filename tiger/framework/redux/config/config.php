@@ -231,7 +231,7 @@ if (!class_exists('tiger_admin_config')) {
                         'title'     => esc_html__('Banner Image Title', 'tiger'), 
 						'compiler'  => 'true',
 						'validate' => 'html',
-                        'default' => esc_html__('Welcome to Medical Directory',"tiger"),
+                        'default' => esc_html__('Here comes the social networking platform that you’ve been waiting',"tiger"),
                         'allowed_html' => array(
                             'a' => array(
                                 'href' => array(),
@@ -250,7 +250,7 @@ if (!class_exists('tiger_admin_config')) {
                         'title'     => esc_html__('Banner Image sub title', 'tiger'), 
 						'compiler'  => 'true',
 						'validate' 	=> 'html',
-                        'default' 	=>esc_html__( 'Search for hospitals and doctors on world wide basis',"tiger"),
+                        'default' 	=>esc_html__( "This is Photoshop's version of Lorem Ipsum proin venin consequat veniam.","tiger"),
                         'allowed_html' => array(
                             'a' => array(
                                 'href' => array(),
@@ -727,7 +727,7 @@ if (!class_exists('tiger_admin_config')) {
 
         $this->sections[] = array(
             'icon'      => 'el el-cog',
-            'title'     => esc_html__('tiger Multi TopBar Options', 'tiger'),
+            'title'     => esc_html__('Tiger Multi TopBar Options', 'tiger'),
             'fields'    => array(
 
                 array(
@@ -823,129 +823,6 @@ if (!class_exists('tiger_admin_config')) {
 
      /*
     |--------------------------------------------------------------------------
-    | Start tiger Multi Breadcrumb Options settings
-    |--------------------------------------------------------------------------
-    |
-    |
-    |
-    */
-
-$this->sections[] = array(
-            'icon'      => 'el el-cog',
-            'title'     => esc_html__('tiger Multi-Breadcrumb Options', 'tiger'),
-            'fields'    => array(
-
-                array(
-                    'id'        => 'tiger-breadcrumb-switch',
-                    'type'      => 'switch',
-                    'title'     => esc_html__('Show Breadcrumb', 'tiger'),
-                    'subtitle'  => esc_html__('Decide to show Breadcrumb or Not', 'tiger'),
-                    'default'   => true,
-                    ),
-                
-                array(
-                    'id'        => 'tiger-multi-breadcrumb-image',
-                    'type'      => 'image_select',
-                    'title'     => esc_html__('tiger Breadcrumb images', 'tiger'),
-                    'subtitle'  => esc_html__('Select Which breadcrumb Image to show', 'tiger'),
-                    'options'  => Array(
-                        '1'      =>  Array (
-                                 'alt'  => 'default',
-                                 'img'  =>  ReduxFramework::$_url.'assets/img/breadcrumbs/crumb1.png',
-                            ),
-
-                        '2'      =>  Array (
-                                 'alt'  => 'Breadcrumb 1',
-                                 'img'  =>  ReduxFramework::$_url.'assets/img/breadcrumbs/crumb2.png',
-                            ),
-
-                        '3'      =>  Array (
-                                 'alt'  => 'Breadcrumb 2',
-                                 'img'  =>  ReduxFramework::$_url.'assets/img/breadcrumbs/crumb3.png',
-                            ),
-
-                        '4'      =>  Array (
-                                 'alt'  => 'Breadcrumb 3',
-                                 'img'  =>  ReduxFramework::$_url.'assets/img/breadcrumbs/crumb4.png',
-                            ),
-
-                        '5'      =>  Array (
-                                 'alt'  => 'Breadcrumb 4',
-                                 'img'  =>  ReduxFramework::$_url.'assets/img/breadcrumbs/crumb5.png',
-                            ),
-
-                        '6'      =>  Array (
-                                 'alt'  => 'Breadcrumb 5',
-                                 'img'  =>  ReduxFramework::$_url.'assets/img/breadcrumbs/crumb6.png',
-                            ),
-
-                        '7'      =>  Array (
-                                 'alt'  => 'Breadcrumb 6',
-                                 'img'  =>  ReduxFramework::$_url.'assets/img/breadcrumbs/crumb7.png',
-                            ),
-
-                        '8'      =>  Array (
-                                 'alt'  => 'Breadcrumb 7',
-                                 'img'  =>  ReduxFramework::$_url.'assets/img/breadcrumbs/crumb8.png',
-                            ),
-
-                        '9'      =>  Array (
-                                 'alt'  => 'Breadcrumb 8',
-                                 'img'  =>  ReduxFramework::$_url.'assets/img/breadcrumbs/crumb9.png',
-                            ),
-
-                        '10'      =>  Array (
-                                 'alt'  => 'Breadcrumb 9',
-                                 'img'  =>  ReduxFramework::$_url.'assets/img/breadcrumbs/crumb10.png',
-                            ),
-
-                        '11'      =>  Array (
-                                 'alt'  => 'Breadcrumb 10',
-                                 'img'  =>  ReduxFramework::$_url.'assets/img/breadcrumbs/crumb11.png',
-                            ),
-
-                        '12'      =>  Array (
-                                 'alt'  => 'Breadcrumb 11',
-                                 'img'  =>  ReduxFramework::$_url.'assets/img/breadcrumbs/crumb12.png',
-                            ),
-
-                        '13'      =>  Array (
-                                 'alt'  => 'Breadcrumb 12',
-                                 'img'  =>  ReduxFramework::$_url.'assets/img/breadcrumbs/crumb13.png',
-                            ),
-
-                        '14'      =>  Array (
-                                 'alt'  => 'Breadcrumb 13',
-                                 'img'  =>  ReduxFramework::$_url.'assets/img/breadcrumbs/crumb14.png',
-                            ),
-
-                        '15'      =>  Array (
-                                 'alt'  => 'Header 14',
-                                 'img'  =>  ReduxFramework::$_url.'assets/img/breadcrumbs/crumb15.png',
-                            ),
-
-                        '16'      =>  Array (
-                                 'alt'  => 'Header 15',
-                                 'img'  =>  ReduxFramework::$_url.'assets/img/breadcrumbs/crumb16.png',
-                            ),
-
-                        ),
-                    'default'   => 1,
-                ),
-            )
-        );
-
-
-     /*
-    |--------------------------------------------------------------------------
-    | End tiger Multi Breadcrumb Options settings
-    |--------------------------------------------------------------------------
-    |
-    |
-    |
-    */
-     /*
-    |--------------------------------------------------------------------------
     | Start tiger Multi Top Bar Options settings
     |--------------------------------------------------------------------------
     |
@@ -955,7 +832,7 @@ $this->sections[] = array(
 
         $this->sections[] = array(
             'icon'      => 'el el-cog',
-            'title'     => esc_html__('tiger Multi Blog Options', 'tiger'),
+            'title'     => esc_html__('Tiger Multi Blog Options', 'tiger'),
             'fields'    => array(
 
                 array(
@@ -1024,7 +901,7 @@ $this->sections[] = array(
         $this->sections[] = array(
 
             'icon'      => 'el el-cog',
-            'title'     => esc_html__('tiger Template', 'tiger'),
+            'title'     => esc_html__('Tiger Template', 'tiger'),
             'fields'    => array(
 
 
@@ -1480,7 +1357,7 @@ $this->sections[] = array(
                 'display_version'   => $theme->get('Version'),  // Version that appears at the top of your panel
                 'menu_type'         => 'menu',                  //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
                 'allow_sub_menu'    => false,                    // Show the sections below the admin menu item or not
-                'menu_title'        => esc_html__('Medical Theme Options', 'tiger'),
+                'menu_title'        => esc_html__('Tiger Theme Options', 'tiger'),
                 'page_title'        => esc_html__('tiger', 'tiger'),
 
                 // You will need to generate a Google API key to use this feature.
