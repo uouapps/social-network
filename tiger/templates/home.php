@@ -25,7 +25,14 @@ $package_id=0;
   <div class="home-pro">
 
     <!-- PRO BANNER HEAD -->
-    <div class="banr-head">
+    <?php
+	if(isset($tiger_option_data['tiger-show-page-banner-image']) AND $tiger_option_data['tiger-show-page-banner-image']==1){
+		$top_banner_image= tiger_IMAGE."main-bg.jpg";
+		 if(isset($tiger_option_data['tiger-home-banner-image']['url']) AND $tiger_option_data['tiger-home-banner-image']['url'] !=""){
+			$top_banner_image=  $tiger_option_data['tiger-home-banner-image']['url'];
+		}
+		?>
+    <div class="banr-head" style="background: url('<?php echo esc_attr($top_banner_image);?>') ">
       <div class="container">
         <div class="row">
 
@@ -33,9 +40,20 @@ $package_id=0;
           <div class="col-sm-7">
             <div class="text-area">
               <div class="position-center-center col-md-10">
-                <h1> Here comes the social networking platform that you’ve been waiting</h1>
-                <h6>This is Photoshop's version  of Lorem Ipsum proin venin
-                  consequat veniam.</h6>
+                <h1>
+					<?php
+					echo esc_attr($tiger_option_data['tiger-home-banner-text']);
+					?>
+					
+					 
+					
+					</h1>
+                <h6>
+					<?php
+					$banner_subtitle= (isset($tiger_option_data['tiger-home-banner-subtitle'])?$tiger_option_data['tiger-home-banner-subtitle']:"");
+					echo esc_attr($banner_subtitle);
+				  ?>
+					</h6>
               </div>
             </div>
           </div>
@@ -106,7 +124,10 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
         </div>
       </div>
     </div>
-
+	
+	<?php
+	}
+	?>
     <!-- SERVICES -->
     <section class="services">
 

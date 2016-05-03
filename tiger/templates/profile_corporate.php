@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Corporate Profile Template
+ * Template Name: Company Profile Template
  *
  */
  ?>
