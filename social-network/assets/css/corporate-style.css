@@ -14976,6 +14976,9 @@ padding-right: 0  !important;
   background-color: #ffffff;
 }
 
+#branding {
+  display: none !important;
+}
 
 
 

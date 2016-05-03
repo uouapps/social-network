@@ -1242,6 +1242,9 @@ iframe {
 	width: 100%;
 	margin: 0px;
 }
+.banr-head .login-sec  .branding {
+	display: none;
+}
 .banr-head .login-sec .login-with {
 	float: right;
 	margin-top: 5px;
@@ -1528,7 +1531,9 @@ iframe {
 	padding-bottom: 30px;
 }
 
-
+.plugin .footer #branding {
+	display: none !important;
+}
 
 
 

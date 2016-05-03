@@ -6,9 +6,9 @@ TABLE OF CONTENT
   2. BOOTSTRAP 3.3.2
   3. FONT AWESOME 4.3.0
   4. GENERAL STYLES
-      4.1 General 
+      4.1 General
       4.2 Typography
-        4.2.1 Headings 
+        4.2.1 Headings
         4.2.2 Basic Typography Styles
         4.2.3 List Styles
         4.2.4 Blockquotes
@@ -28,8 +28,8 @@ TABLE OF CONTENT
     5.3 Block 1c
     5.4 Block 1d
     5.5 Block 1e
-    5.6 Block 1f 
-    5.7 Block 2a 
+    5.6 Block 1f
+    5.7 Block 2a
     5.8 Block 2b
     5.9 Block 2c
     5.10 Block 2d
@@ -42,7 +42,7 @@ TABLE OF CONTENT
     5.17 Block 4a
     5.18 Block 4b
     5.19 Block 4c
-    5.20 Block 4d 
+    5.20 Block 4d
     5.21 Block 4e
     5.22 Block 6a
     5.23 Block 6b
@@ -53,7 +53,7 @@ TABLE OF CONTENT
     5.28 Block 7f
     5.29 Block 7g
     5.30 Block 8a
-    5.31 Block 8b 
+    5.31 Block 8b
     5.32 Block 8c
     5.33 Block 8d
     5.34 Block 9a
@@ -64,7 +64,7 @@ TABLE OF CONTENT
   8. Cta section
   9. Welcome-message
   10. Dropcaps
-  11. Service 
+  11. Service
   12. Uou sidebar
   13. Icon counter
 
@@ -14205,7 +14205,7 @@ CANVAS PAGE STYLE
 
 .authentication li {
   position: relative;
-  
+
 }
 
 .authentication li:hover .login-reg-popup {
