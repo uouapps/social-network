@@ -1,0 +1,682 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: tiger\n"
+"POT-Creation-Date: 2016-03-30 18:38+0600\n"
+"PO-Revision-Date: 2016-03-30 18:39+0600\n"
+"Last-Translator: \n"
+"Language-Team: tiger <aktar567@gmail.com>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: category.php:25 archive-doctor.php:375 tag.php:22 single.php:21
+#: search.php:22 page-grid.php:26 archive.php:30 archive-hospital.php:393
+#: templates/page/content-page.php:10 templates/topS/header-top12.php:4
+#: templates/topS/header-top10.php:4 templates/topS/header-top8.php:4
+#: templates/topS/header-top13.php:9 templates/topS/header-top3.php:3
+#: templates/topS/header-top7.php:4 templates/topS/header-top11.php:4
+#: templates/topS/header-top11.php:8 templates/topS/header-top9.php:4
+#: templates/blog/content-gridNS.php:19 templates/blog/content-listNS.php:23
+#: templates/blog/content-list.php:21 templates/blog/content-grid.php:19
+#: templates/headerS/header-four.php:10 templates/headerS/header-six.php:10
+#: templates/headerS/header-five.php:10 templates/headerS/header-three.php:10
+#: templates/headerS/header-one.php:10
+#: framework/ext/widget-contact-info.php:53
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:180
+#: framework/redux/ReduxCore/inc/fields/media/field_media.php:190
+#: framework/redux/ReduxCore/inc/fields/gallery/field_gallery.php:67
+#: framework/uoulib/class-tgm-plugin-activation.php:2322
+msgid "image"
+msgstr ""
+
+#: category.php:49 tag.php:46 single.php:61 search.php:46 archive.php:54
+msgid "No post have found!"
+msgstr ""
+
+#: category.php:76 tag.php:72 single.php:147 search.php:72 page-grid.php:94
+#: page.php:70 archive.php:82 templates/blog/content-blogChoose.php:42
+#: templates/blog/content-blogChoose.php:97
+msgid "Please activate some Widgets"
+msgstr ""
+
+#: archive-doctor.php:99 single-hospital.php:10 single-doctor.php:17
+#: archive-hospital.php:103 templates/contact-us-template.php:10
+#: templates/about-us.php:10 templates/full-width-page.php:10
+msgid "banner"
+msgstr ""
+
+#: archive-doctor.php:103
+msgid "Doctors Directory"
+msgstr ""
+
+#: archive-doctor.php:125 archive-hospital.php:126
+msgid "Keyword"
+msgstr ""
+
+#: archive-doctor.php:208 single-hospital.php:485 single-doctor.php:357
+#: archive-hospital.php:208
+msgid "Location"
+msgstr ""
+
+#: archive-doctor.php:217 archive-doctor.php:241 archive-hospital.php:234
+#: archive-hospital.php:255
+msgid "Search"
+msgstr ""
+
+#: archive-doctor.php:242 archive-hospital.php:256
+msgid "Show Map"
+msgstr ""
+
+#: archive-doctor.php:251 archive-doctor.php:282 archive-hospital.php:267
+#: archive-hospital.php:300
+msgid "Show All"
+msgstr ""
+
+#: archive-doctor.php:419
+msgid "Sorry, no doctor matched your criteria."
+msgstr ""
+
+#: single-hospital.php:107
+msgid "About Us"
+msgstr ""
+
+#: single-hospital.php:117 single-doctor.php:81
+msgid "Added to Favorites"
+msgstr ""
+
+#: single-hospital.php:121 single-hospital.php:127 single-hospital.php:682
+#: single-doctor.php:85 single-doctor.php:91
+msgid "Add to Favorites"
+msgstr ""
+
+#: single-hospital.php:200
+msgid "Specialties"
+msgstr ""
+
+#: single-hospital.php:230
+msgid "Awards"
+msgstr ""
+
+#: single-hospital.php:286 single-doctor.php:262
+msgid "Video"
+msgstr ""
+
+#: single-hospital.php:323
+msgid "Event"
+msgstr ""
+
+#: single-hospital.php:373
+msgid "Our Doctors"
+msgstr ""
+
+#: single-hospital.php:400
+msgid "View Profile"
+msgstr ""
+
+#: single-hospital.php:478 single-doctor.php:351
+msgid "Contact Info"
+msgstr ""
+
+#: single-hospital.php:490 single-doctor.php:362
+msgid "Phone"
+msgstr ""
+
+#: single-hospital.php:493 single-doctor.php:365
+msgid "Fax"
+msgstr ""
+
+#: single-hospital.php:495 single-doctor.php:367
+msgid "Email"
+msgstr ""
+
+#: single-hospital.php:497 single-doctor.php:369
+msgid "Web Site"
+msgstr ""
+
+#: single-hospital.php:500 single-doctor.php:373
+msgid "Social Profile"
+msgstr ""
+
+#: single-hospital.php:509 single-doctor.php:382
+msgid "Facebook Profile"
+msgstr ""
+
+#: single-hospital.php:515 single-doctor.php:388
+msgid "Twitter Profile"
+msgstr ""
+
+#: single-hospital.php:521 single-doctor.php:394
+msgid "linkedin Profile"
+msgstr ""
+
+#: single-hospital.php:527 single-doctor.php:400
+msgid "google+ Profile"
+msgstr ""
+
+#: single-hospital.php:534 single-doctor.php:408
+msgid "Share"
+msgstr ""
+
+#: single-hospital.php:535 single-doctor.php:409
+msgid "Share On Facebook"
+msgstr ""
+
+#: single-hospital.php:537 single-doctor.php:411
+msgid "Share On Twitter"
+msgstr ""
+
+#: single-hospital.php:539 single-doctor.php:413
+msgid "Share On linkedin"
+msgstr ""
+
+#: single-hospital.php:541 single-doctor.php:415
+msgid "Share On google+"
+msgstr ""
+
+#: single-hospital.php:567 single-doctor.php:477
+msgid "Working Time"
+msgstr ""
+
+#: single-hospital.php:587
+msgid "Contact Us"
+msgstr ""
+
+#: single-hospital.php:599 single-hospital.php:631 single-doctor.php:509
+#: single-doctor.php:546
+msgid "Enter Message"
+msgstr ""
+
+#: single-hospital.php:602 single-doctor.php:512
+msgid "Send Message"
+msgstr ""
+
+#: single-hospital.php:625
+msgid "Claim"
+msgstr ""
+
+#: single-hospital.php:628 single-doctor.php:539 single-doctor.php:543
+msgid "Claim The Listing"
+msgstr ""
+
+#: single-hospital.php:634 single-doctor.php:549
+msgid "Submit Claim"
+msgstr ""
+
+#: single-hospital.php:681
+msgid "Please login to remove favorite"
+msgstr ""
+
+#: single-hospital.php:683
+msgid "Please login to Claim The Listing"
+msgstr ""
+
+#: single-hospital.php:684
+msgid "Please login to add favorite"
+msgstr ""
+
+#: comments.php:24
+msgid "The post is password protected ! Enter password to see the post"
+msgstr ""
+
+#: comments.php:85
+msgid "comments are closed ."
+msgstr ""
+
+#: single.php:57
+msgid "No Tag have Found!"
+msgstr ""
+
+#: single.php:68
+msgid "Share This Story"
+msgstr ""
+
+#: single.php:103
+msgid "Back To Home"
+msgstr ""
+
+#: single.php:113 templates/full-width-page.php:34
+msgid "Comments"
+msgstr ""
+
+#: 404.php:19
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:23
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: header.php:18
+msgid "Menu"
+msgstr ""
+
+#: header.php:19
+msgid "times"
+msgstr ""
+
+#: single-doctor.php:73
+msgid "Profile Description"
+msgstr ""
+
+#: single-doctor.php:202
+msgid "Awards & Certificates"
+msgstr ""
+
+#: single-doctor.php:302
+msgid "Appointment"
+msgstr ""
+
+#: single-doctor.php:496
+msgid "Contact Me"
+msgstr ""
+
+#: page.php:44
+msgid "are closed from Admin-Pannel"
+msgstr ""
+
+#: archive.php:17
+msgid "Archives"
+msgstr ""
+
+#: archive-hospital.php:106
+msgid "Hospital Directory"
+msgstr ""
+
+#: archive-hospital.php:221
+msgid "Radius"
+msgstr ""
+
+#: archive-hospital.php:398
+msgid "VIEW DETAIL"
+msgstr ""
+
+#: archive-hospital.php:432
+msgid "Sorry, no hospital matched your criteria."
+msgstr ""
+
+#: templates/home.php:87
+msgid "Hospitals"
+msgstr ""
+
+#: templates/home.php:101
+msgid "Doctors"
+msgstr ""
+
+#: templates/home.php:116
+msgid "Register Now"
+msgstr ""
+
+#: templates/header-login.php:14
+msgid "&nbsp;Profile &nbsp;"
+msgstr ""
+
+#: templates/header-login.php:15
+msgid "Logout"
+msgstr ""
+
+#: templates/header-login.php:25
+msgid "Login"
+msgstr ""
+
+#: templates/header-login.php:36
+msgid "Remember Me"
+msgstr ""
+
+#: templates/header-login.php:43 templates/header-login.php:46
+msgid "Register"
+msgstr ""
+
+#: templates/topS/header-top8.php:8
+msgid "Call Us:"
+msgstr ""
+
+#: templates/topS/header-top13.php:12 templates/topS/header-top9.php:7
+msgid "Shopping Cart"
+msgstr ""
+
+#: templates/blog/content-blogChoose.php:18
+#: templates/blog/content-blogChoose.php:74
+#: templates/blog/content-blogChoose.php:122
+#: templates/blog/content-blogChoose.php:153
+msgid "Sorry ! no blog post found "
+msgstr ""
+
+#: framework/ext/widget-tag.php:77
+#: framework/ext/widget-newsletter-subscription.php:113
+#: framework/ext/widget-social.php:135 framework/ext/widget-categories.php:93
+#: framework/ext/widget-logo.php:70 framework/ext/tiger-doctor.php:79
+#: framework/ext/widget-catagories_one.php:91
+#: framework/ext/widget-legal.php:113 framework/ext/tiger-hospital.php:79
+#: framework/ext/widget-contact-info.php:129
+#: framework/ext/widget-archives.php:116
+msgid "Title:"
+msgstr ""
+
+#: framework/ext/widget-tag.php:79
+msgid "Taxonomy:"
+msgstr ""
+
+#: framework/ext/widget-newsletter-subscription.php:59
+msgid "Newsletter"
+msgstr ""
+
+#: framework/ext/widget-newsletter-subscription.php:62
+msgid ""
+" Subscribe to our newsletter to receive our latest news and updates. We do "
+"not spam."
+msgstr ""
+
+#: framework/ext/widget-newsletter-subscription.php:118
+msgid "Google/Feedburner ID:"
+msgstr ""
+
+#: framework/ext/widget-newsletter-subscription.php:123
+msgid "Input Text:"
+msgstr ""
+
+#: framework/ext/widget-newsletter-subscription.php:127
+msgid "Submit Text:"
+msgstr ""
+
+#: framework/ext/widget-social.php:138
+msgid "Facebook Profile Link:"
+msgstr ""
+
+#: framework/ext/widget-social.php:141
+msgid "Twitter Profile Link:"
+msgstr ""
+
+#: framework/ext/widget-social.php:144
+msgid "Linkedin Profile Link:"
+msgstr ""
+
+#: framework/ext/widget-social.php:147
+msgid "GooglePlus Profile Link:"
+msgstr ""
+
+#: framework/ext/widget-social.php:150
+msgid "Pinterest Profile Link:"
+msgstr ""
+
+#: framework/ext/widget-social.php:155 framework/ext/widget-logo.php:73
+#: framework/ext/widget-legal.php:127
+#: framework/ext/widget-contact-info.php:144
+msgid "Automatically add paragraphs"
+msgstr ""
+
+#: framework/ext/widget-categories.php:97
+#: framework/ext/widget-catagories_one.php:95
+#: framework/ext/widget-archives.php:118
+msgid "Display as dropdown"
+msgstr ""
+
+#: framework/ext/widget-categories.php:100
+#: framework/ext/widget-catagories_one.php:98
+#: framework/ext/widget-archives.php:120
+msgid "Show post counts"
+msgstr ""
+
+#: framework/ext/widget-categories.php:103
+#: framework/ext/widget-catagories_one.php:101
+msgid "Show hierarchy"
+msgstr ""
+
+#: framework/ext/tiger-doctor.php:84 framework/ext/tiger-hospital.php:84
+msgid "Number of posts to show:"
+msgstr ""
+
+#: framework/ext/tiger-doctor.php:89 framework/ext/tiger-hospital.php:89
+msgid "Words of words to be displayed:"
+msgstr ""
+
+#: framework/ext/tiger-doctor.php:94 framework/ext/tiger-hospital.php:94
+msgid "Only Display Ids "
+msgstr ""
+
+#: framework/ext/tiger-doctor.php:95 framework/ext/tiger-hospital.php:95
+msgid "Enter IDs by , [# of post will not work]"
+msgstr ""
+
+#: framework/ext/widget-legal.php:116
+msgid "Our Privacy & Policy Link:"
+msgstr ""
+
+#: framework/ext/widget-legal.php:119
+msgid "Terms & Conditions Link:"
+msgstr ""
+
+#: framework/ext/widget-legal.php:122
+msgid "Secure Payments Link:"
+msgstr ""
+
+#: framework/ext/widget-contact-info.php:132
+msgid "Background Image:"
+msgstr ""
+
+#: framework/ext/widget-contact-info.php:135
+msgid "Address:"
+msgstr ""
+
+#: framework/ext/widget-contact-info.php:138
+msgid "Phone No:"
+msgstr ""
+
+#: framework/ext/widget-contact-info.php:141
+msgid "Email :"
+msgstr ""
+
+#: framework/admin/theme-functions.php:200
+msgid "Your comment is awaiting to approve"
+msgstr ""
+
+#: framework/redux/class.redux-plugin.php:307
+msgid "Redux Framework has an embedded demo."
+msgstr ""
+
+#: framework/redux/class.redux-plugin.php:307
+msgid "Click here to activate the sample config file."
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:228
+#, php-format
+msgid "Options panel created using %1$s"
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:228
+msgid "Redux Framework"
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:232
+#: framework/redux/ReduxCore/framework.php:236
+msgid "Options"
+msgstr ""
+
+#: framework/redux/ReduxCore/templates/panel/header.tpl.php:49
+msgid "Developer Mode Enabled"
+msgstr ""
+
+#: framework/redux/ReduxCore/templates/panel/header.tpl.php:58
+msgid "FORCED DEV MODE OFF ENABLED"
+msgstr ""
+
+#: framework/redux/ReduxCore/templates/panel/footer.tpl.php:67
+msgid "Working..."
+msgstr ""
+
+#: framework/redux/ReduxCore/core/panel.php:141
+msgid "Settings Imported!"
+msgstr ""
+
+#: framework/redux/ReduxCore/core/panel.php:204
+msgid "Settings have changed, you should save them!"
+msgstr ""
+
+#: framework/redux/ReduxCore/core/panel.php:212
+msgid "error(s) were found!"
+msgstr ""
+
+#: framework/redux/ReduxCore/core/panel.php:220
+msgid "warning(s) were found!"
+msgstr ""
+
+#: framework/redux/ReduxCore/core/panel.php:312
+msgid ""
+"Your panel has bundled outdated copies of Redux Framework template files. if "
+"you encounter functionality issues this could be the reason. Ensure you "
+"update or remove them."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/class.redux_filesystem.php:270
+#, php-format
+msgid ""
+"We were unable to modify required files. Please ensure that <code>%1s</code> "
+"has the proper read-write permissions, or modify your wp-config.php file to "
+"contain your FTP login credentials as <a href=\"%2s\" target=\"_blank"
+"\">outlined here</a>."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/class.redux_cdn.php:81
+#, php-format
+msgid "%s CDN unavailable.  Some controls may not render properly."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:68
+msgid "Slide"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:73
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:174
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:126
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:188
+msgid "Upload"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:133
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:190
+msgid "Remove"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:145
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:200
+msgid "Title"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:149
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:204
+msgid "Description"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:153
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:207
+msgid "URL"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:167
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:220
+msgid "Delete"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:223
+#, php-format
+msgid "Add %s"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/media/field_media.php:149
+#: framework/redux/ReduxCore/inc/fields/background/field_background.php:277
+msgid "No media selected"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/color/field_color.php:73
+msgid "Transparent"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/spacing/field_spacing.php:191
+msgid "All"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/spacing/field_spacing.php:215
+msgid "Top"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/spacing/field_spacing.php:222
+msgid "Right"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/select/field_select.php:83
+msgid "Select an item"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:480
+msgid "Font color"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/options_object/options_object/field_options_object.php:104
+msgid "Options Object"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/options_object/options_object/field_options_object.php:107
+msgid "Show Object in Javascript Console Object"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/customizer/inc/customizer_section.php:72
+msgid "Press return or enter to open"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/customizer/inc/customizer_section.php:79
+msgid "Back"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/customizer/inc/customizer_panel.php:89
+msgid "Press return or enter to open this panel"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/extension_import_export.php:120
+msgid "Import / Export"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:91
+msgid "Import Options"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:95
+msgid "Import from File"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:98
+msgid "Import from URL"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:116
+msgid "Import"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:120
+msgid "Export Options"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:132
+msgid "Copy Data"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:133
+msgid "Download Data File"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:134
+msgid "Copy Export URL"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/validation/css/validation_css.php:39
+msgid "Unsafe strings were found in your CSS and have been filtered out."
+msgstr ""
