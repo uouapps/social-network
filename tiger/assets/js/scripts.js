@@ -328,6 +328,42 @@ $('select').each(function () {
 
 
 
+// Advanced Search
+// ---------------------------------------------------------
+var $advancedSearchBar = $('#header .header-search-bar');
+
+$advancedSearchBar.each(function () {
+  var $this = $(this);
+
+  $this.find('.toggle').on('click', function (event) {
+    event.preventDefault();
+
+    if (!$this.hasClass('active')) {
+      $this.addClass('active');
+      $this.find('.advanced-form').slideDown();
+    } else {
+      $this.removeClass('active');
+      $this.find('.advanced-form').slideUp();
+    }
+  });
+
+  function moveAdvancedBarSelect(XS) {
+    if (XS.matches) {
+      $this.find('.advanced-form .container').prepend($this.find('.hsb-select'));
+    } else {
+      $this.find('.hsb-select').appendTo($this.find('.hsb-container'));
+    }
+  }
+
+  moveAdvancedBarSelect(XS);
+  XS.addListener(moveAdvancedBarSelect);
+
+});
+
+
+
+
+
 // ---------------------------------------------------------
 // BLOCKS
 // BLOCKS
