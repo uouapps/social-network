@@ -1,0 +1,459 @@
+<wpml-config>
+    
+    <custom-fields> 
+        <custom-field action="copy">_tiger_slider_slider_image</custom-field>
+        <custom-field action="copy">_tiger_slider_icon_image</custom-field>
+        <custom-field action="copy">_tiger_slider_title</custom-field>
+        <custom-field action="copy">_tiger_slider_description</custom-field>
+        <custom-field action="copy">_tiger_slider_btn_name1</custom-field>
+        <custom-field action="copy">_tiger_slider_btn_link1</custom-field>
+        <custom-field action="copy">_tiger_slider_btn_name2</custom-field>
+        <custom-field action="copy">_tiger_slider_btn_link2</custom-field>
+        <custom-field action="copy">_tiger_slider_video_name</custom-field>
+        <custom-field action="copy">_tiger_slider_slider_link1</custom-field>
+        <custom-field action="copy">_tiger_slider_slider_link2</custom-field>
+        <custom-field action="copy">_tiger_slider_slider_link3</custom-field>
+
+        <custom-field action="copy">_tiger_company_location_map</custom-field>
+        <custom-field action="copy">_tiger_company_location_contact</custom-field>
+        <custom-field action="copy">_tiger_company_location_icon</custom-field>
+
+        <custom-field action="copy">_tiger_property_address_country_name</custom-field>
+        <custom-field action="copy">_tiger_property_address_region_name</custom-field>
+        <custom-field action="copy">_tiger_property_address_address_name</custom-field>
+        <custom-field action="copy">_tiger_property_address_zip</custom-field>
+        <custom-field action="copy">_tiger_property_address_map_canvas</custom-field>
+        <custom-field action="copy">_tiger_property_address_convert_zip</custom-field>
+        <custom-field action="copy">_tiger_property_address_lat</custom-field>
+        <custom-field action="copy">_tiger_property_address_lng</custom-field>
+
+        <custom-field action="copy">_tiger_progress_bar_accordian_shortcode</custom-field>
+        <custom-field action="copy">_tiger_progress_bar_progress_shortcode</custom-field>
+
+        <custom-field action="copy">_tiger_pricing_column</custom-field>
+        <custom-field action="copy">_tiger_pricing_shortcode</custom-field>
+
+        <custom-field action="copy">_tiger_testimonial_author_name</custom-field>
+        <custom-field action="copy">_tiger_testimonial_author_address</custom-field>
+        <custom-field action="copy">_tiger_testimonial_author_designation</custom-field>
+        <custom-field action="copy">_tiger_testimonial_author_company</custom-field>
+
+        <custom-field action="copy">_tons_of_feature_icon</custom-field>
+        <custom-field action="copy">_tons_of_featurel_icon</custom-field>
+       
+        <custom-field action="copy">_company_info_feature_icon</custom-field>
+        <custom-field action="copy">_company_info_feature_number</custom-field>
+        <custom-field action="copy">_company_info_feature_title</custom-field>
+    </custom-fields>
+
+
+    <custom-types>
+        <custom-type translate="1">block</custom-type>
+        <custom-type translate="1">testimonial</custom-type>
+        <custom-type translate="1">slider</custom-type>
+        <custom-type translate="1">tiger_progress</custom-type>
+        <custom-type translate="1">tiger_pricing</custom-type>
+        <custom-type translate="1">company_location</custom-type>
+        <custom-type translate="1">portfolio</custom-type>
+        <custom-type translate="1">feature</custom-type>
+        <custom-type translate="1">company</custom-type>
+    </custom-types>
+
+    <admin-texts>
+        <key name="tiger_option_data">
+            <key name="tiger-favicon">
+                <key name="1">
+                    <key name="url" />
+                    <key name= "id" />
+                    <key name="height" />
+                    <key name="width" />
+                    <key name="thumbnail" />
+                </key>
+            </key>
+            <key name="tiger-favicon-iphone">
+                <key name="1">
+                    <key name="url" />
+                    <key name= "id" />
+                    <key name="height" />
+                    <key name="width" />
+                    <key name="thumbnail" />
+                </key>
+            </key>
+            <key name="tiger-favicon-ipad">
+                <key name="1">
+                    <key name="url" />
+                    <key name= "id" />
+                    <key name="height" />
+                    <key name="width" />
+                    <key name="thumbnail" />
+                </key>
+            </key>
+            
+            <key name="tiger-custom-css" />
+            <key name="tiger-custom-js" />
+            <key name="tiger-show-page-sidebar" />
+            <key name="tiger-share-button" />
+            <key name="tiger-share-button-facebook" />
+            <key name="tiger-share-button-twitter" />
+            <key name="tiger-share-button-google" />
+            <key name="tiger-share-button-linkedin" />
+            <key name="tiger-share-button-envelope" />
+            <key name="tiger-share-button-pinterest" />
+            <key name="tiger-top-language" />
+            <key name="tiger-login-option" />
+            
+            <key name="tiger-wpml-select"/>
+            <key name="tiger-header-switch"/>
+            <key name="tiger-multi-header-image" />
+            <key name="tiger-social-profile-title" />
+            <key name="tiger-blog-switch" />
+            <key name="tiger-multi-breadcrumb-image" />
+            <key name="tiger-breadcrumb-switch" />
+            <key name="tiger-multi-topBar-image" />
+            <key name="tiger-top-bar-switch" />
+            
+            
+            <key name="tiger-social-profile"/>
+            <key name="tiger-facebook-profile"/>
+            <key name="tiger-twitter-profile"/>
+            <key name="tiger-google-profile"/>
+            <key name="tiger-linkedin-profile"/>
+            <key name="tiger-pinterest-profile"/>
+            
+            <key name="tiger-partners-switch"/>
+            <key name="tiger-our-partners">
+                <key name="1">
+                    <key name="title" />
+                    <key name="description" />
+                    <key name="url" />
+                    <key name="sort" />
+                    <key name="attachment_id" />
+                    <key name="thumb" />
+                    <key name="image" />
+                    <key name="height" />
+                    <key name="width" />
+                </key>
+            </key>
+            <key name="tiger-sidebar-latest-news-image" />
+            <key name="tiger-footer-menu-switch" />
+            <key name="tiger-footer-switch" />
+            <key name="tiger-multi-footer-image" />
+            <key name="tiger-bottom-switch" />
+            <key name="tiger-multi-bottom-image" />
+            <key name="tiger-left-footer-switch" />
+            <key name="tiger-middle-footer-switch" />
+            <key name="tiger-right-footer-switch" />
+            <key name="tiger-down-footer-switch" />
+            <key name="tiger-extra-middle-footer-switch" />
+            <key name="tiger-show-footer-credits" />
+            <key name="tiger-show-footer-copyrights" />
+            <key name="tiger-copyright-text" />
+            <key name="tiger-after-copyright-text" />
+            <key name="tiger-privacy" />
+            <key name="tiger-condition" />
+            <key name="tiger-select-stylesheet" />
+            
+            
+            
+            
+            
+            
+            <key name="tiger-language">
+                <key name="1">
+                    <key name="EN" />
+                    <key name="DE" />
+                    <key name="IT" />
+                    <key name="FR" />
+                </key>
+            </key>
+            
+            
+            <key name="tiger-left-footer-switch"/>
+            <key name="tiger-middle-footer-switch"/>
+            <key name="tiger-right-footer-switch"/>
+            <key name="tiger-show-footer-copyrights"/>
+            <key name="tiger-copyright-text"/>
+            <key name="tiger-powered-by"/>
+            <key name="tiger-company-link"/>
+            <key name="tiger-select-stylesheet"/>
+            
+            <key name="tiger-body-typography">
+                <key name="1">
+                    <key name="font-family" />
+                    <key name="font-options" />
+                    <key name="google" />
+                    <key name="font-backup" />
+                    <key name="font-weight" />
+                    <key name="font-style" />
+                    <key name="text-align" />
+                    <key name="line-height" />
+                    <key name="color" />
+                </key>
+            </key>
+            
+            <key name="tiger-header-typography">
+                <key name="1">
+                    <key name="font-family" />
+                    <key name="font-options" />
+                    <key name="google" />
+                    <key name="font-backup" />
+                    <key name="font-weight" />
+                    <key name="font-style" />
+                    <key name="text-align" />
+                    <key name="line-height" />
+                    <key name="color" />
+                </key>
+            </key>
+            
+            <key name="tiger-opt-text">
+                <key name="tiger-opt-textarea">
+                    
+                    <key name="tiger-about-company-slides">
+                        <key name="1">
+                            <key name="title" />
+                            <key name="description" />
+                            <key name="url" />
+                            <key name="sort" />
+                            <key name="attachment_id" />
+                            <key name="thumb" />
+                            <key name="image" />
+                            <key name="height" />
+                            <key name="width" />
+                        </key>
+                    </key>
+                    
+                    <!-- need from here -->
+                    <key name="tiger-about-company-text">
+                        <key name="tiger-about-company-textarea">
+                            
+                            <key name="tiger-page-banner-image">
+                                <key name="1">
+                                    <key name="url" />
+                                    <key name="id" />
+                                    <key name="height" />
+                                    <key name="width" />
+                                    <key name="thumbnail" />
+                                </key>
+                            </key>
+                            
+                            <key name="tiger-page-banner-icon">
+                                <key name="1">
+                                    <key name="url" />
+                                    <key name="id" />
+                                    <key name="height" />
+                                    <key name="width" />
+                                    <key name="thumbnail" />
+                                </key>
+                            </key>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <key name="tiger-construction-header-slider">
+                                <key name="1">
+                                    <key name="title" />
+                                    <key name="description" />
+                                    <key name="url" />
+                                    <key name="sort" />
+                                    <key name="attachment_id" />
+                                    <key name="thumb" />
+                                    <key name="image" />
+                                    <key name="height" />
+                                    <key name="width" />
+                                </key>
+                            </key>
+                            
+                            
+                            <key name="tiger-construction-testimonial-footer-banner-image">
+                                <key name="1">
+                                    <key name="url" />
+                                    <key name="id" />
+                                    <key name="height" />
+                                    <key name="width" />
+                                    <key name="thumbnail" />
+                                </key>
+                            </key>
+                            
+                            <key name="construction-feature-big-image">
+                                <key name="1">
+                                    <key name="url" />
+                                    <key name="id" />
+                                    <key name="height" />
+                                    <key name="width" />
+                                    <key name="thumbnail" />
+                                </key>
+                            </key>
+                            
+                            
+                            
+                            <key name="tiger-testimonial-footer-banner-image">
+                                <key name="1">
+                                    <key name="url" />
+                                    <key name="id" />
+                                    <key name="height" />
+                                    <key name="width" />	
+                                    <key name="thumbnail" />			
+                                </key>				
+                            </key>
+                            
+                            <key name="tiger-construction-TOF-title">
+                                <key name="construction-construction-image">
+                                    <key name="1">
+                                        <key name="url" />
+                                        <key name="id" />
+                                        <key name="height" />
+                                        <key name="width" />	
+                                        <key name="thumbnail" />			
+                                    </key>				
+                                </key>
+                                
+                                <key name="tiger-construction-textarea">
+                                    <key name="tiger-construction-partner">
+                                        <key name="1">
+                                            <key name="title" />
+                                            <key name="description" />
+                                            <key name="url" />
+                                            <key name="sort" />	
+                                            <key name="attachment_id" />
+                                            <key name="thumb" />
+                                            <key name="image" />	
+                                            <key name="height" />
+                                            <key name="width" />				
+                                        </key>			
+                                    </key>
+                                    
+                                    
+                                    <key name="tiger-service-testimonials">
+                                        <key name="1">
+                                            <key name="title" />
+                                            <key name="description" />
+                                            <key name="url" />
+                                            <key name="sort" />	
+                                            <key name="attachment_id" />
+                                            <key name="thumb" />
+                                            <key name="image" />	
+                                            <key name="height" />
+                                            <key name="width" />				
+                                        </key>			
+                                    </key>
+                                    
+                                    <key name="construction-about-company-slides">
+                                        <key name="1">
+                                            <key name="title" />
+                                            <key name="description" />
+                                            <key name="url" />
+                                            <key name="sort" />	
+                                            <key name="attachment_id" />
+                                            <key name="thumb" />
+                                            <key name="image" />	
+                                            <key name="height" />
+                                            <key name="width" />				
+                                        </key>			
+                                    </key>
+                                    
+                                    
+                                    <key name="tiger-opt-slides">
+                                        <key name="1">
+                                            <key name="title" />
+                                            <key name="description" />
+                                            <key name="url" />
+                                            <key name="sort" />	
+                                            <key name="attachment_id" />
+                                            <key name="thumb" />
+                                            <key name="image" />	
+                                            <key name="height" />
+                                            <key name="width" />				
+                                        </key>				
+                                    </key>
+                                    
+                                    
+                                    <key name="tiger-home-page-slider">
+                                        <key name="1">
+                                            <key name="title" />
+                                            <key name="description" />
+                                            <key name="url" />
+                                            <key name="sort" />	
+                                            <key name="attachment_id" />
+                                            <key name="thumb" />
+                                            <key name="image" />	
+                                            <key name="height" />
+                                            <key name="width" />				
+                                        </key>				
+                                    </key>
+                                    <key name="tiger-login-option"/>
+                                    <key name="tiger-general-banner">
+                                        <key name="1">
+                                            <key name="url" />
+                                            <key name="height" />
+                                            <key name="width" />
+                                            <key name="thumbnail" />					
+                                        </key>				
+                                    </key>
+                                    <key name="tiger-product-banner">
+                                        <key name="1">
+                                            <key name="url" />
+                                            <key name="height" />
+                                            <key name="width" />
+                                            <key name="thumbnail" />					
+                                        </key>				
+                                    </key>
+                                    <key name="tiger-driver-banner">
+                                        <key name="1">
+                                            <key name="url" />
+                                            <key name="height" />
+                                            <key name="width" />
+                                            <key name="thumbnail" />					
+                                        </key>				
+                                    </key>
+                                    <key name="tiger-testimonial-banner">
+                                        <key name="1">
+                                            <key name="url" />
+                                            <key name="height" />
+                                            <key name="width" />
+                                            <key name="thumbnail" />					
+                                        </key>				
+                                    </key>
+                                    <key name="tiger-contact-banner">
+                                        <key name="1">
+                                            <key name="url" />
+                                            <key name="height" />
+                                            <key name="width" />
+                                            <key name="thumbnail" />					
+                                        </key>				
+                                    </key>
+                                    <key name="tiger-location-banner">
+                                        <key name="1">
+                                            <key name="url" />
+                                            <key name="height" />
+                                            <key name="width" />
+                                            <key name="thumbnail" />					
+                                        </key>				
+                                    </key>
+                                    
+                                    
+                                    
+                                    
+                                    <key name="tiger-show-footer-widgets"/>
+                                    <key name="tiger-footer-widgets-icon">
+                                        <key name="1">
+                                            <key name="url" />
+                                            <key name="height" />
+                                            <key name="width" />
+                                            <key name="thumbnail" />					
+                                        </key>				
+                                    </key>
+                                    
+                                    <key name="tiger-copyright-text"/>
+                                    <key name="tiger-powered-by"/>
+                                    <key name="tiger-company-link"/>
+                                    <key name="tiger-select-stylesheet"/>			
+                                    
+                                    
+                                    
+                                </key>
+                            </admin-texts>
+                            
+                        </wpml-config>
