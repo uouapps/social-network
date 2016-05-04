@@ -3,14 +3,35 @@
   position: relative;
   display: block;
   padding: 15px 0 20px;
+  margin-bottom: 20px;
+  top: -5px;
   background: #fff;
-  _border-top: 1px solid #ebebeb;
-  _-webkit-box-shadow: inset 0 5px 5px -5px rgba(0,0,0,.1);
-  _box-shadow: inset 0 5px 5px -5px rgba(0,0,0,.1);
+  -webkit-box-shadow: 0 5px 5px -5px rgba(0,0,0,.1);
+  box-shadow:  0 5px 5px -5px rgba(0,0,0,.1);
 }
 
 #header .header-search-bar form {
   margin-bottom: 0;
+}
+
+
+
+
+
+#header .header-search-bar input::-webkit-input-placeholder {
+   color: #999;
+}
+
+#header .header-search-bar input:-moz-placeholder { /* Firefox 18- */
+   color: #999;
+}
+
+#header .header-search-bar input::-moz-placeholder {  /* Firefox 19+ */
+   color: #999;
+}
+
+#header .header-search-bar input:-ms-input-placeholder {
+   color: #999;
 }
 
 #header .header-search-bar form > .basic-form {
@@ -29,7 +50,7 @@
 }
 
 #header .header-search-bar .hsb-input-1 {
-  width: 35%;
+  width: 25%;
 }
 
 #header .header-search-bar .hsb-text-1 {
@@ -53,26 +74,46 @@
 }
 
 #header .header-search-bar .hsb-submit {
-  width: 10%;
+  width: 20%;
 }
 
+#header .header-search-bar .hsb-submit  input {
+  text-transform: capitalize;
+  color: #666;
+  height: 35px;
+  padding: 0;
+}
 #header .header-search-bar .toggle {
   position: absolute;
   top: 0;
   left: 9px;
   display: block;
   float: left;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   background: #ebebeb;
 }
 
+#header .header-search-bar .toggle:after {
+  content: "\f0c9";
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  color: #fff;
+}
+
 #header .header-search-bar .toggle:hover,
 #header .header-search-bar.active .toggle {
-  background: #2aadde;
+  background: #0099fe;
 }
+
+#header .header-search-bar.active .toggle:after {
+  content: "\f00d";
+}
+
 
 #header .header-search-bar .toggle span {
   position: absolute;
@@ -136,7 +177,7 @@
 
 #header .header-search-bar .advanced-form .row > label {
   margin: 0;
-  font-weight: light;
+  font-weight: normal;
   font-size: 14px;
   line-height: 30px;
   color: #333;
@@ -146,6 +187,8 @@
 #header .header-search-bar .advanced-form .row > label.filter-result {
   text-transform: capitalize;
   font-size: 16px;
+  font-weight: bold;
+
 }
 
 #header .header-search-bar .advanced-form .range-slider {
@@ -161,7 +204,7 @@
   padding: 0;
   width: 80px;
   text-align: left;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 16px;
   line-height: 30px;
 }
@@ -264,7 +307,7 @@
   display: block;
   width: 10px;
   height: 10px;
-  border: 1px solid #2aadde;
+  border: 1px solid #0099fe;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   content: '';
@@ -275,7 +318,7 @@
   z-index: 1;
   display: block;
   border: 0;
-  background: #2aadde;
+  background: #0099fe;
 }
 
 /* For IE8 - See #6727 */
@@ -435,7 +478,7 @@
   #header .header-nav-bar .primary-nav > li:hover > a,
   #header .header-nav-bar .primary-nav > li.hover > a {
     border-bottom-color: #1a1a1a;
-    background: #2aadde;
+    background: #0099fe;
     color: #ffffff;
   }
 
@@ -514,7 +557,7 @@
 
   #header .header-nav-bar .primary-nav > li.has-submenu > ul li:hover > a,
   #header .header-nav-bar .primary-nav > li.has-submenu > ul li.hover > a {
-    background: #2aadde;
+    background: #0099fe;
   }
 
   #header .header-nav-bar .primary-nav > li .submenu-arrow:before {
@@ -553,11 +596,15 @@
   }
 
   #header .header-search-bar .hsb-input-1 {
-    width: 30%;
+    width: 70%;
+  }
+
+  #header .header-search-bar .hsb-container {
+    display: none;
   }
 
   #header .header-search-bar .hsb-submit {
-    width: 15%;
+    width: 30%;
   }
 
   .our-partners-section ul > li {
@@ -657,7 +704,7 @@
   }
 
   #header .header-search-bar .hsb-input-1 {
-    width: 80%;
+    width: 60%;
   }
 
   #header .header-search-bar .hsb-text-1,
@@ -666,7 +713,7 @@
   }
 
   #header .header-search-bar .hsb-submit {
-    width: 20%;
+    width: 40%;
   }
 
   #mobile-menu-container .login-register {
@@ -920,11 +967,15 @@
 @media (max-width: 480px) {
 
   #header .header-search-bar .hsb-input-1 {
-    width: 70%;
+    width: 50%;
   }
 
   #header .header-search-bar .hsb-submit {
-    width: 30%;
+    width: 50%;
+  }
+
+  #header .header-search-bar .hsb-submit input {
+    font-size: 11px;
   }
 
   .our-partners-section ul > li {

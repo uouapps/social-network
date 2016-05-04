@@ -37,7 +37,7 @@ global $wpdb;
 						<div class="container">
 							<form>
 								<div class="basic-form clearfix">
-									<a href="#" class="toggle"><span></span></a>
+									<a href="#" class="toggle"></a>
 
 									<div class="hsb-input-1">
 										<input type="text" class="form-control" placeholder="Keyword">
@@ -55,7 +55,7 @@ global $wpdb;
 									</div>
 
 									<div class="hsb-submit">
-										<input type="submit" class="btn btn-default btn-block" value="Search">
+										<input type="submit" class="btn btn-default btn-block" value="Search Professionals">
 									</div>
 								</div>
 
@@ -72,7 +72,7 @@ global $wpdb;
 									</div>
 								</div>
 								<div class="row">
-									<label class="col-md-3">Distance</label>
+									<label class="col-md-3">Distance (in kilometers):</label>
 
 									<div class="col-md-9">
 										<div class="range-slider">
@@ -83,7 +83,7 @@ global $wpdb;
 								</div>
 
 								<div class="row">
-									<label class="col-md-3">Rating</label>
+									<label class="col-md-3">Rating:</label>
 
 									<div class="col-md-9">
 										<div class="range-slider">
@@ -94,7 +94,7 @@ global $wpdb;
 								</div>
 
 								<div class="row">
-									<label class="col-md-3">Location</label>
+									<label class="col-md-3">Location:</label>
 
 									<div class="col-md-9">
 										<input type="text" class="form-control" placeholder="Switzerland">
@@ -102,7 +102,7 @@ global $wpdb;
 								</div>
 
 								<div class="row">
-									<label class="col-md-3">Industry</label>
+									<label class="col-md-3">Industry:</label>
 
 									<div class="col-md-9">
 										<select class="form-control">
@@ -120,45 +120,32 @@ global $wpdb;
 					</div> <!-- end .header-search-bar -->
 				</div>
 
-
+				<div class="container">
 	        <div id="directory-temp" class="bootstrap-wrapper">
-	        	<div class="main clearfix directory-option row">
-	        	    <form class="pull-right dd col-md-6"   action="<?php echo the_permalink(); ?>" method="post"  >
-	        	        <div class="">
-	        	        <input type="text" name="search_user" id="search_user" class="search" placeholder="User Name" value="<?php echo $search_user; ?>">
-	        	        <button class="submit"><i class="fa fa-search"></i></button>
-						<input type="hidden" name="package_hidden" id="package_hidden" value="<?php echo $package; ?>">
-	        	    	</div>
-	        	    </form>
-        	 		<!--[if IE ]>
-					<![endif]-->
-        	 		 <form class="pull-right dd col-md-6"   action="<?php echo the_permalink(); ?>" method="post"  >
-        	 		 <span class="pull-left sort-by"><?php esc_html_e('Sort By:','tiger');	 ?>  </span>
-        	 		<div class="row">
-        	 		   <select id="package_sel" name="package_sel" class="" >
- 		     <?php
-					   $sql="SELECT * FROM $wpdb->posts WHERE post_type = 'iv_directories_pack'  and post_status='draft' ";
-					$membership_pack = $wpdb->get_results($sql);
-						echo'<option value="">All</option>';
-					foreach ( $membership_pack as $row ){
-						echo'<option value="'.$row->ID.'"  '.($package==$row->ID ? " selected" : " ") .' >'.$row->post_title.'</option>';
+	        	<div class="main clearfix directory-option">
+	        		<div class="row">
+								<div class="col-md-6 col-sm-6">
+									<h3>Professionals</h3>
+								</div>
+								<form class="col-md-6 col-sm-6"   action="<?php echo the_permalink(); ?>" method="post"  >
+									<div class="sort-by-select">
+									   <select id="package_sel" name="package_sel" class="" >
+								     <?php
+										   $sql="SELECT * FROM $wpdb->posts WHERE post_type = 'iv_directories_pack'  and post_status='draft' ";
+										$membership_pack = $wpdb->get_results($sql);
+											echo'<option value="">Sort by</option>';
+										foreach ( $membership_pack as $row ){
+											echo'<option value="'.$row->ID.'"  '.($package==$row->ID ? " selected" : " ") .' >'.$row->post_title.'</option>';
 
-					}
+										}
 
-					  ?>
-        	 		  </select >
+										  ?>
+										  </select >
 
-        	 		  <!-- <div class="arrow-user">
-        	 		  <i class="fa fa-angle-down"></i>
-        	 		  </div> -->
-        	 		  <!--[if IE ]>
-						<div class="arrow-user1">
-						<i class="fa fa-angle-down"></i>
-						</div>
-        	 		  <![endif]-->
-        	 		  </div>
-        	 		</form>
+								  </div>
+								</form>
 
+	        		</div>
 
 	        	</div>
 					<section class="main">
@@ -304,6 +291,8 @@ global $wpdb;
 					?>
 					</div>
 
+
+</div>
 
 
 
