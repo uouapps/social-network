@@ -129,6 +129,11 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 	}
 	?>
     <!-- SERVICES -->
+    <?php
+    $row2=(isset($tiger_option_data['tiger-show-page-row2'])? $tiger_option_data['tiger-show-page-row2']: '1' );
+    if($row2==1){
+    ?>
+    
     <section class="services">
 
       <!-- SERVICES ROW -->
@@ -137,52 +142,86 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
         <!-- SECTION -->
         <li class="col-md-4 matchHeight">
           <div class="ser-inn">
-            <h4>Stay in touch with your
-              colleagues</h4>
+            <h4>
+              <?php
+              echo (isset($tiger_option_data['tiger-home-row2-block1'])? $tiger_option_data['tiger-home-row2-block1']: esc_html__('Stay in touch with your colleagues','tiger'));
+              ?>
+              </h4>
             <i class="fa fa-globe"></i>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue conseqaut nibbhi ellit ipsum consectetur.</p>
+            <p>
+				<?php
+              echo (isset($tiger_option_data['tiger-home-row2-block1-sub'])? $tiger_option_data['tiger-home-row2-block1-sub']: esc_html__('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue conseqaut nibbhi ellit ipsum consectetur.','tiger') );
+              ?>
+				</p>
           </div>
         </li>
 
         <!-- SECTION -->
         <li class="col-md-4 matchHeight">
           <div class="ser-inn">
-            <h4>Get the latest news
-              in your industry</h4>
+            <h4>
+              <?php
+              echo (isset($tiger_option_data['tiger-home-row2-block2'])? $tiger_option_data['tiger-home-row2-block2']: esc_html__('Get the latest news in your industry','tiger'));
+              ?>
+              </h4>
             <i class="fa fa-book"></i>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue conseqaut nibbhi ellit ipsum consectetur.</p>
+            <p><?php
+              echo (isset($tiger_option_data['tiger-home-row2-block2-sub'])? $tiger_option_data['tiger-home-row2-block2-sub']: esc_html__('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue conseqaut nibbhi ellit ipsum consectetur.','tiger') );
+              ?>
+            
+            </p>
           </div>
         </li>
 
         <!-- SECTION  -->
         <li class="col-md-4 matchHeight">
           <div class="ser-inn">
-            <h4>Share what’s up
-              with you</h4>
+            <h4>
+             <?php
+              echo (isset($tiger_option_data['tiger-home-row2-block3'])? $tiger_option_data['tiger-home-row2-block3']: esc_html__('Share what’s up  with you','tiger'));
+              ?>
+            </h4>
             <i class="fa fa-picture-o"></i>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue conseqaut nibbhi ellit ipsum consectetur.</p>
+            <p><?php
+              echo (isset($tiger_option_data['tiger-home-row2-block3-sub'])? $tiger_option_data['tiger-home-row2-block3-sub']: esc_html__('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue conseqaut nibbhi ellit ipsum consectetur.','tiger') );
+              ?></p>
           </div>
         </li>
       </ul>
     </section>
-
+	
+	<?php
+	}	
+	?>
     <!-- PRO SECTION -->
+     <?php
+    $row3=(isset($tiger_option_data['tiger-show-page-row3'])? $tiger_option_data['tiger-show-page-row3']: '1' );
+    if($row3==1){
+		$top_banner_image3= tiger_IMAGE."pro-img-1.jpg";
+		 if(isset($tiger_option_data['tiger-home-row3-image']['url']) AND $tiger_option_data['tiger-home-row3-image']['url'] !=""){
+			$top_banner_image3=  $tiger_option_data['tiger-home-row3-image']['url'];
+		}
+    ?>
     <section class="pro-content">
       <div class="container-fluid">
         <div class="row">
 
           <!-- PRO IMAGE -->
-          <div class="col-md-6 pro-inside" style="background:url(<?php echo tiger_IMAGE;?>pro-img-1.jpg) center center no-repeat;"></div>
+          <div class="col-md-6 pro-inside" style="background:url(<?php echo $top_banner_image3;?>) center center no-repeat;"></div>
 
           <!-- PRO CONTENT -->
           <div class="col-md-6 pro-inside">
             <div class="position-center-center col-md-9">
-              <h1>Interact with other
-                professionals</h1>
-              <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam,
-                eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                beatae vitae dicta sunt explicabo. </p>
+              <h1>
+				<?php
+              echo (isset($tiger_option_data['tiger-home-row3-block'])? $tiger_option_data['tiger-home-row3-block']: esc_html__(' Interact with other professionals','tiger'));
+              ?>  
+				 </h1>
+              <p>
+				<?php
+              echo (isset($tiger_option_data['tiger-home-row3-block-sub'])? $tiger_option_data['tiger-home-row3-block-sub']: esc_html__(' Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.','tiger') );
+              ?>  
+				   </p>
             </div>
           </div>
         </div>
@@ -195,23 +234,41 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
           <!-- PRO TEXT -->
           <div class="col-md-6 pro-inside">
             <div class="position-center-center col-md-9">
-              <h1>Collaborate on a
-                project</h1>
-              <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam,
-                eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                beatae vitae dicta sunt explicabo. </p>
+              <h1>
+				<?php
+              echo (isset($tiger_option_data['tiger-home-row3-block2'])? $tiger_option_data['tiger-home-row3-block2']: esc_html__('Collaborate on a project','tiger'));
+              ?>    
+				  </h1>
+              <p> <?php
+              echo (isset($tiger_option_data['tiger-home-row3-block-sub2'])? $tiger_option_data['tiger-home-row3-block-sub2']: esc_html__(' Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.','tiger') );
+              ?>   </p>
             </div>
           </div>
-
+		<?php
+		$top_banner_image3_2= tiger_IMAGE."pro-img-2.jpg";
+		 if(isset($tiger_option_data['tiger-home-row3-image2']['url']) AND $tiger_option_data['tiger-home-row3-image2']['url'] !=""){
+			$top_banner_image3_2=  $tiger_option_data['tiger-home-row3-image2']['url'];
+		}
+		?>
           <!-- PRO BACKGROUND -->
-          <div class="col-md-6 pro-inside" style="background:url(<?php echo tiger_IMAGE;?>pro-img-2.jpg) center center no-repeat;"></div>
+          <div class="col-md-6 pro-inside" style="background:url(<?php echo $top_banner_image3_2;?>) center center no-repeat;"></div>
         </div>
       </div>
     </section>
-
+	
+	<?php
+	}
+	?>
+	 <?php
+    $row3=(isset($tiger_option_data['tiger-show-page-row4'])? $tiger_option_data['tiger-show-page-row4']: '1' );
+    if($row3==1){
+		$top_banner_image4= tiger_IMAGE."app-bg.jpg";
+		 if(isset($tiger_option_data['tiger-home-row4-image']['url']) AND $tiger_option_data['tiger-home-row4-image']['url'] !=""){
+			$top_banner_image4=  $tiger_option_data['tiger-home-row4-image']['url'];
+		}
+    ?>
     <!-- APP IMAGE -->
-    <section class="app-images">
+    <section class="app-images" style="background:url(<?php echo $top_banner_image4;?>) center center no-repeat; background-size: cover;">
       <div class="container">
         <div class="row">
 
@@ -223,14 +280,16 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
               accusantium doloremque laudantium, totam rem aperiam,
               eaque ipsa quae ab illo inventore veritatis et quasi architecto
               beatae vitae dicta sunt explicabo. </p>
-            <a href="#."><i class="fa fa-apple"></i> App Store</a> </div>
+            <a href="#."><i class="fa fa-apple"></i> <?php esc_html_e('App Store', 'tiger') ?></a> </div>
 
           <!-- APP IMAGE -->
           <div class="col-md-6 text-right"><img src="<?php echo tiger_IMAGE;?>app-img.png" alt="" > </div>
         </div>
       </div>
     </section>
-
+	<?php
+	}
+	?>
     <!-- TESTIMONIALS -->
     <section class="clients-says">
       <div class="container">
