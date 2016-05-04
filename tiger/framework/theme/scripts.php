@@ -59,6 +59,9 @@ if( !function_exists('tiger_add_theme_scripts') ){
 
     wp_enqueue_script( 'matchheight', tiger_JS.'jquery.matchHeight.js', array('jquery'), $ver = true, true );
 
+    wp_enqueue_script( 'jqueryui', tiger_JS.'jquery.ui.min.js', array('jquery'), $ver = true, true );
+
+
 
     wp_enqueue_script( 'scripts', tiger_JS.'scripts.js', array('jquery'), $ver = true, true );
 

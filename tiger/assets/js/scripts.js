@@ -9,6 +9,18 @@ var body = $('body');
 // var $head = $('head');
 // var $mainWrapper = $('#main-wrapper');
 
+
+
+// Mediaqueries
+// ---------------------------------------------------------
+var XS = window.matchMedia('(max-width:767px)');
+var SM = window.matchMedia('(min-width:768px) and (max-width:991px)');
+var MD = window.matchMedia('(min-width:992px) and (max-width:1199px)');
+var LG = window.matchMedia('(min-width:1200px)');
+var XXS = window.matchMedia('(max-width:480px)');
+var SM_XS = window.matchMedia('(max-width:991px)');
+var LG_MD = window.matchMedia('(min-width:992px)');
+
 $(function() {
     $('.matchHeight').matchHeight({
       byRow: true,
@@ -359,6 +371,28 @@ $advancedSearchBar.each(function () {
   XS.addListener(moveAdvancedBarSelect);
 
 });
+
+
+if ($.fn.slider) {
+  $('.header-search-bar .range-slider .slider, .header-search .range-slider .slider').each(function () {
+    var $this = $(this),
+      min = $this.data('min'),
+      max = $this.data('max'),
+      current = $this.data('current');
+
+    $this.slider({
+      range: 'min',
+      min: min,
+      max: max,
+      step: 1,
+      value: current,
+      slide: function (event, ui) {
+        $this.parent('.range-slider').find('.last-value > span').html(ui.value);
+      }
+    });
+  });
+}
+
 
 
 

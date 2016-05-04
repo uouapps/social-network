@@ -104,18 +104,20 @@ if(is_page_template('templates/creative-home.php' ))
  wp_enqueue_style('open-sans-style', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700', array(), $ver = false, $media = 'all');
 
 wp_enqueue_style('search-form-style', tiger_CSS.'search-form.css');
-wp_enqueue_style('iv_directories-style-11010', tiger_CSS . 'image_gallery.css');	
+wp_enqueue_style('iv_directories-style-11010', tiger_CSS . 'image_gallery.css');
 
-	  
- if (class_exists('wp_iv_directories')) { 
+
+ if (class_exists('wp_iv_directories')) {
 	//wp_enqueue_style('iv_directories-style64', wp_iv_directories_URLPATH . 'assets/cube/css/cubeportfolio.css',array(), $ver = false, $media = 'all');
-	
-}	
+
+}
 
 wp_enqueue_style('pricing-table-style', tiger_CSS.'price-table.css', array(), $ver = false, $media = 'all');
 
 
 wp_enqueue_style('iv_directories-style6', tiger_CSS . 'widget.css',array(), $ver = false, $media = 'all');
+
+wp_enqueue_style('advance-search', tiger_CSS . 'advanced-search-form.css',array(), $ver = false, $media = 'all');
 
  // End Base MasterSlider style sheet
 

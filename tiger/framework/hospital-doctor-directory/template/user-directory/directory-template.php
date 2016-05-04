@@ -34,7 +34,7 @@ global $wpdb;
 		?>
 				<div id="header">
 					<div class="header-search-bar">
-						<div class="">
+						<div class="container">
 							<form>
 								<div class="basic-form clearfix">
 									<a href="#" class="toggle"><span></span></a>
@@ -59,66 +59,63 @@ global $wpdb;
 									</div>
 								</div>
 
-								<div class="advanced-form">
-									<div class="container">
-										<div class="row">
-											<label class="col-md-3">Distance</label>
 
-											<div class="col-md-9">
-												<div class="range-slider">
-													<div class="slider" data-min="1" data-max="200" data-current="100"></div>
-													<div class="last-value"><span>100</span> km</div>
-												</div>
-											</div>
-										</div>
+							</form>
+						</div>
+						<div class="advanced-form">
 
-										<div class="row">
-											<label class="col-md-3">Rating</label>
+							<div class="container">
+								<div class="row">
+									<label class="col-md-3 filter-result">Filter Results</label>
 
-											<div class="col-md-9">
-												<div class="range-slider">
-													<div class="slider" data-min="1" data-max="100" data-current="20"></div>
-													<div class="last-value">&gt; <span>20</span> %</div>
-												</div>
-											</div>
-										</div>
+									<div class="col-md-9">
+									</div>
+								</div>
+								<div class="row">
+									<label class="col-md-3">Distance</label>
 
-										<div class="row">
-											<label class="col-md-3">Days Published</label>
-
-											<div class="col-md-9">
-												<div class="range-slider">
-													<div class="slider" data-min="1" data-max="60" data-current="30"></div>
-													<div class="last-value">&lt; <span>30</span></div>
-												</div>
-											</div>
-										</div>
-
-										<div class="row">
-											<label class="col-md-3">Location</label>
-
-											<div class="col-md-9">
-												<input type="text" class="form-control" placeholder="Switzerland">
-											</div>
-										</div>
-
-										<div class="row">
-											<label class="col-md-3">Industry</label>
-
-											<div class="col-md-9">
-												<select class="form-control">
-													<option value="">Select Industry</option>
-													<option value="">Option 1</option>
-													<option value="">Option 2</option>
-													<option value="">Option 3</option>
-													<option value="">Option 4</option>
-													<option value="">Option 5</option>
-												</select>
-											</div>
+									<div class="col-md-9">
+										<div class="range-slider">
+											<div class="slider" data-min="1" data-max="200" data-current="100"></div>
+											<div class="last-value"><span>100</span> km</div>
 										</div>
 									</div>
 								</div>
-							</form>
+
+								<div class="row">
+									<label class="col-md-3">Rating</label>
+
+									<div class="col-md-9">
+										<div class="range-slider">
+											<div class="slider" data-min="1" data-max="100" data-current="20"></div>
+											<div class="last-value">&gt; <span>20</span> %</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<label class="col-md-3">Location</label>
+
+									<div class="col-md-9">
+										<input type="text" class="form-control" placeholder="Switzerland">
+									</div>
+								</div>
+
+								<div class="row">
+									<label class="col-md-3">Industry</label>
+
+									<div class="col-md-9">
+										<select class="form-control">
+											<option value="">Select Industry</option>
+											<option value="">Option 1</option>
+											<option value="">Option 2</option>
+											<option value="">Option 3</option>
+											<option value="">Option 4</option>
+											<option value="">Option 5</option>
+										</select>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div> <!-- end .header-search-bar -->
 				</div>
