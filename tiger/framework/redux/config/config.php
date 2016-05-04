@@ -263,52 +263,21 @@ if (!class_exists('tiger_admin_config')) {
                           ),  
                         
                     ),
-                    array(
-                        'id'        => 'tiger-home-banner-button1',
-                        'type'      => 'textarea',
-                        'title'     => esc_html__('Banner Button text left', 'tiger'), 
-						'compiler'  => 'true',
-						'validate' => 'html',
-                        'default' => esc_html__('FIND A HOSPITAL',"tiger" ),
-                        'allowed_html' => array(
-                            'a' => array(
-                                'href' => array(),
-                                'title' => array(),
-                                'desc' => array()
-                            ),
-                            'br' => array(),
-                            'em' => array(),
-                            'strong' => array()
-                          ),  
-                        
+                   array(
+                        'id'        => 'tiger-show-page-row2',
+                        'type'      => 'switch',
+                        'title'     => esc_html__('Row #2 Hide/show (3 Blocks)  ', 'tiger'),
+                        'default'   => true,
                     ),
-                      array(
-                        'id'        => 'tiger-home-banner-button2',
-                        'type'      => 'textarea',
-                        'title'     => esc_html__('Banner Button text right', 'tiger'), 
-						'compiler'  => 'true',
-						'validate' => 'html',
-                        'default' => esc_html__('FIND A DOCTOR',"tiger"),
-                        'allowed_html' => array(
-                            'a' => array(
-                                'href' => array(),
-                                'title' => array(),
-                                'desc' => array()
-                            ),
-                            'br' => array(),
-                            'em' => array(),
-                            'strong' => array()
-                          ),  
-                        
-                    ),
+				 
                      array(
-                        'id'        => 'tiger-home-top-block1',
+                        'id'        => 'tiger-home-row2-block1',
                         'type'      => 'textarea',
-                        'title'     => esc_html__('Top Block-1 Content ', 'tiger'), 
+                        'title'     => esc_html__('Row #2 Block-1 Content ', 'tiger'), 
                         'subtitle'      => esc_html__('Home Page 1st top block content.', 'tiger'),
 						'compiler'  => 'true',
 						'validate' => 'html',
-                        'default' => esc_html__('With Over 300 hospitals across 20 countries medical directory is the right place to find your closest healthcare center',"tiger"),
+                        'default' => esc_html__('Stay in touch with your colleagues',"tiger"),
                         'allowed_html' => array(
                             'a' => array(
                                 'href' => array(),
@@ -322,13 +291,33 @@ if (!class_exists('tiger_admin_config')) {
                         
                     ),
                      array(
-                        'id'        => 'tiger-home-top-block2',
+                        'id'        => 'tiger-home-row2-block1-sub',
                         'type'      => 'textarea',
-                        'title'     => esc_html__('Top Block-2 Content ', 'tiger'), 
+                        'title'     => esc_html__('Row #2 Block-1 Sub Content ', 'tiger'), 
+                        'subtitle'      => esc_html__('Home Page 1st top block sub content', 'tiger'),
+						'compiler'  => 'true',
+						'validate' => 'html',
+                        'default' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue conseqaut nibbhi ellit ipsum consectetur.',"tiger"),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array(),
+                                'desc' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                          ),  
+                        
+                    ),
+                     array(
+                        'id'        => 'tiger-home-row2-block2',
+                        'type'      => 'textarea',
+                        'title'     => esc_html__('Row #2 Block-2 Content ', 'tiger'), 
                         'subtitle'      => esc_html__('Home Page 2nd top block content.', 'tiger'),
 						'compiler'  => 'true',
 						'validate' => 'html',
-                        'default' => esc_html__('Find the right doctor within the closest hospital across a wide range of medical fields including neurosurgery',"tiger"),
+                        'default' => esc_html__('Get the latest news in your industry',"tiger"),
                         'allowed_html' => array(
                             'a' => array(
                                 'href' => array(),
@@ -342,13 +331,13 @@ if (!class_exists('tiger_admin_config')) {
                         
                     ),
                      array(
-                        'id'        => 'tiger-home-top-block3',
+                        'id'        => 'tiger-home-row2-block2-sub',
                         'type'      => 'textarea',
-                        'title'     => esc_html__('Top Block-3 Content ', 'tiger'), 
-                        'subtitle'      => esc_html__('Home Page 3rd top block content.', 'tiger'),
+                        'title'     => esc_html__('Row #2 Block-2 Sub Content ', 'tiger'), 
+                        'subtitle'      => esc_html__('Home Page 2nd top block sub content', 'tiger'),
 						'compiler'  => 'true',
 						'validate' => 'html',
-                        'default' => esc_html__("You're a medical center with hospitals and doctors worldwide, medical directory is the right place to list your hospitals and doctors, join us now","tiger"),
+                        'default' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue conseqaut nibbhi ellit ipsum consectetur.',"tiger"),
                         'allowed_html' => array(
                             'a' => array(
                                 'href' => array(),
@@ -361,6 +350,158 @@ if (!class_exists('tiger_admin_config')) {
                           ),  
                         
                     ),
+                     array(
+                        'id'        => 'tiger-home-row2-block3',
+                        'type'      => 'textarea',
+                        'title'     => esc_html__('Row #2 Block-3 Content ', 'tiger'), 
+                        'subtitle'      => esc_html__('Home Page 3rd top block content.', 'tiger'),
+						'compiler'  => 'true',
+						'validate' => 'html',
+                        'default' => esc_html__('Share what’s up  with you',"tiger"),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array(),
+                                'desc' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                          ),  
+                        
+                    ),
+                     array(
+                        'id'        => 'tiger-home-row2-block3-sub',
+                        'type'      => 'textarea',
+                        'title'     => esc_html__('Row #2 Block-3 Sub Content ', 'tiger'), 
+                        'subtitle'      => esc_html__('Home Page 3rd top block sub content', 'tiger'),
+						'compiler'  => 'true',
+						'validate' => 'html',
+                        'default' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue conseqaut nibbhi ellit ipsum consectetur.',"tiger"),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array(),
+                                'desc' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                          ),  
+                        
+                    ),
+                    // Fow3 Start******************
+                    	
+					array(
+							'id'        => 'tiger-show-page-row3',
+							'type'      => 'switch',
+							'title'     => esc_html__('Home page Row 3 Show/Hide', 'tiger'),
+							'subtitle'      => esc_html__('Home page Row 3 Show/Hide (include 2 rows, 1st left image+ content  & 2nd right image +content ).', 'tiger'),
+							'default'   => true,
+						),
+					 
+						
+					 array(
+							'id'        => 'tiger-home-row3-image',
+							'type'      => 'media',
+							'url'       => true,
+							'title'     => esc_html__('Home Row 3 left image', 'tiger'),
+							//'subtitle'      => esc_html__('Best fit 1349 X 420 px.', 'tiger'),
+							'compiler'  => 'true',
+							'desc'      => esc_html__('Upload Home Image.', 'tiger'),
+						),
+                     array(
+                        'id'        => 'tiger-home-row3-block',
+                        'type'      => 'textarea',
+                        'title'     => esc_html__('Row #2 Block-3 Content ', 'tiger'), 
+                        'subtitle'      => esc_html__('Home Page 3rd top block content.', 'tiger'),
+						'compiler'  => 'true',
+						'validate' => 'html',
+                        'default' => esc_html__('Interact with other professionals',"tiger"),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array(),
+                                'desc' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                          ),  
+                        
+                    ),
+                     array(
+                        'id'        => 'tiger-home-row3-block-sub',
+                        'type'      => 'textarea',
+                        'title'     => esc_html__('Row #3 Sub Content ', 'tiger'), 
+                        'subtitle'      => esc_html__('Home Page Row #3 sub content', 'tiger'),
+						'compiler'  => 'true',
+						'validate' => 'html',
+                        'default' => esc_html__(' Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',"tiger"),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array(),
+                                'desc' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                          ),  
+                        
+                    ),
+                    
+                     array(
+							'id'        => 'tiger-home-row3-image2',
+							'type'      => 'media',
+							'url'       => true,
+							'title'     => esc_html__('Home Row 3 left image 2', 'tiger'),
+							//'subtitle'      => esc_html__('Best fit 1349 X 420 px.', 'tiger'),
+							'compiler'  => 'true',
+							'desc'      => esc_html__('Upload Home Image.', 'tiger'),
+						),
+                     array(
+                        'id'        => 'tiger-home-row3-block2',
+                        'type'      => 'textarea',
+                        'title'     => esc_html__('Row #2 Block-3 Content 2 ', 'tiger'), 
+                        'subtitle'      => esc_html__('Home Page 3rd top block content.', 'tiger'),
+						'compiler'  => 'true',
+						'validate' => 'html',
+                        'default' => esc_html__('Collaborate on a project',"tiger"),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array(),
+                                'desc' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                          ),  
+                        
+                    ),
+                     array(
+                        'id'        => 'tiger-home-row3-block-sub2',
+                        'type'      => 'textarea',
+                        'title'     => esc_html__('Row #3 Sub Content 2 ', 'tiger'), 
+                        'subtitle'      => esc_html__('Home Page Row #3 sub content 2', 'tiger'),
+						'compiler'  => 'true',
+						'validate' => 'html',
+                        'default' => esc_html__(' Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',"tiger"),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array(),
+                                'desc' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                          ),  
+                        
+                    ),
+                    //end Row 3**
+                     
                     /*
                     array(
                         'id'        => 'tiger-favicon',
