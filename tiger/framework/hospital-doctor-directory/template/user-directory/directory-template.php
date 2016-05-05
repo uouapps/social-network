@@ -149,7 +149,7 @@ global $wpdb;
 
 	        	</div>
 					<section class="main">
-								<ul class="ch-grid">
+								<ul class="ch-grid row">
 				        <?php
 
 				        if(isset($atts['per_page'])){
@@ -208,7 +208,7 @@ global $wpdb;
 								}
 
 								?>
-									<li>
+									<li class="col-md-3 col-sm-4">
 
 										<div class="ch-item">
 										<a href="<?php echo $reg_page_user.'?&id='.$user->user_login; ?>">
@@ -223,52 +223,57 @@ global $wpdb;
 											</div>
 											</a>
 										</div>
-				<p class="para text-center">
-						  <?php
-						  if(get_user_meta($user->ID,'twitter',true)!=''){
-						  ?>
-						  <a href="http://www.twitter.com/<?php  echo get_user_meta($user->ID,'twitter',true);  ?>/">
-				          <i class="fa fa-twitter"></i>
-				          </a>
-						  <?php
-						  }
-						  if(get_user_meta($user->ID,'linkedin',true)!=''){
-						  ?>
-				          <a href="http://www.linkedin.com/<?php  echo get_user_meta($user->ID,'linkedin',true);  ?>/">
-				          <i class="fa fa-linkedin"></i>
-				          </a>
-						  <?php
-						  }
-						  if(get_user_meta($user->ID,'facebook',true)!=''){
-						  ?>
-				          <a href="http://www.facebook.com/<?php  echo get_user_meta($user->ID,'facebook',true);  ?>/">
-				          <i class="fa fa-facebook"></i>
-				          </a>
-						  <?php
-						  }
-						   if(get_user_meta($user->ID,'gplus',true)!=''){
-						  ?>
-				          <a href="http://www.plus.google.com/<?php  echo get_user_meta($user->ID,'gplus',true);  ?>/">
-				          <i class="fa fa-google-plus"></i>
-				          </a>
-						  <?php
-						  }
-						  ?>
-				</p>
-				<a href="<?php echo $reg_page_user.'?&id='.$user->user_login; ?>">
-				<h5 class="text-center"><?php echo $user->display_name; ?></h5>
-				</a>
-				<p class="para1 text-center">
-				<?php  	if(get_user_meta($user->ID,'occupation',true)==!""){
-							echo get_user_meta($user->ID,'occupation',true);
-						}
-				}
-			  }
-		} else {
-				     echo 'No users found.';
-		 }
+										<div class="user-details">
+																	<p class="para text-center">
+																			  <?php
+																			  if(get_user_meta($user->ID,'twitter',true)!=''){
+																			  ?>
+																			  <a href="http://www.twitter.com/<?php  echo get_user_meta($user->ID,'twitter',true);  ?>/">
+																	          <i class="fa fa-twitter"></i>
+																	          </a>
+																			  <?php
+																			  }
+																			  if(get_user_meta($user->ID,'linkedin',true)!=''){
+																			  ?>
+																	          <a href="http://www.linkedin.com/<?php  echo get_user_meta($user->ID,'linkedin',true);  ?>/">
+																	          <i class="fa fa-linkedin"></i>
+																	          </a>
+																			  <?php
+																			  }
+																			  if(get_user_meta($user->ID,'facebook',true)!=''){
+																			  ?>
+																	          <a href="http://www.facebook.com/<?php  echo get_user_meta($user->ID,'facebook',true);  ?>/">
+																	          <i class="fa fa-facebook"></i>
+																	          </a>
+																			  <?php
+																			  }
+																			   if(get_user_meta($user->ID,'gplus',true)!=''){
+																			  ?>
+																	          <a href="http://www.plus.google.com/<?php  echo get_user_meta($user->ID,'gplus',true);  ?>/">
+																	          <i class="fa fa-google-plus"></i>
+																	          </a>
+																			  <?php
+																			  }
+																			  ?>
+																	</p>
+																	<a href="<?php echo $reg_page_user.'?&id='.$user->user_login; ?>">
+																	<h5 class="text-center"><?php echo $user->display_name; ?></h5>
+																	</a>
+																	<p class="para1 text-center">
+																	<?php  	if(get_user_meta($user->ID,'occupation',true)==!""){
+																				echo get_user_meta($user->ID,'occupation',true);
+																			}
+																	}
+												  }
+											} else {
+													     echo 'No users found.';
+											 }
 
-		?>
+											?>
+
+										</div>
+										</li>
+
 						</ul>
 				</section>
 				<div class="text-center">
