@@ -32,7 +32,7 @@ global $wpdb;
 		}
 
 		?>
-	<div id="main-wrapper">	
+	<div id="main-wrapper">
 		<div id="header">
 					<div class="header-search-bar">
 						<div class="container">
@@ -120,14 +120,14 @@ global $wpdb;
 						</div>
 					</div> <!-- end .header-search-bar -->
 				</div>
-		
+
 		  <!-- Members -->
     <section class="pro-mem">
       <div class="container pb30">
         <h3><?php esc_html_e('Professionals','tiger'); ?>  </h3>
         <div class="row">
 			 <?php
-				       
+
 				        if(isset($atts['per_page'])){
 							 $no=$atts['per_page'];
 						}else{
@@ -136,7 +136,7 @@ global $wpdb;
 
 						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 						if($paged==1){
-						  $offset=0;  
+						  $offset=0;
 						}else {
 						   $offset= ($paged-1)*$no;
 						}
@@ -144,21 +144,21 @@ global $wpdb;
 				        $args['number']=$no;
 				        $args['offset']=$offset;
 				        $args['orderby']='registered';
-				        $args['order']='DESC'; 
-				        //$args['search']='12';				       
+				        $args['order']='DESC';
+				        //$args['search']='12';
 				        //$args['search_columns']=array( 'user_login', 'user_email' );
-				        if($package!=''){	
-							$role_package= get_post_meta( $package,'iv_directories_package_user_role',true); 	
+				        if($package!=''){
+							$role_package= get_post_meta( $package,'iv_directories_package_user_role',true);
 							$args['role']=$role_package;
 						}
-						  if($search_user!=''){							
+						  if($search_user!=''){
 							$args['search']='*'.$search_user.'*';
 						}
-						
-						
-						
+
+
+
 						$reg_page_user='';
-				        
+
 						if(isset($atts['role'])){
 							 $args['role']=$atts['role'];
 						}
@@ -167,44 +167,51 @@ global $wpdb;
 				        // User Loop
 				        if ( ! empty( $user_query->results ) ) {
 				        	foreach ( $user_query->results as $user ) {
-								
-								if (isset($user->wp_capabilities['administrator'])!=1 ){ 
-									
+
+								if (isset($user->wp_capabilities['administrator'])!=1 ){
+
 								$iv_profile_pic_url=get_user_meta($user->ID, 'iv_profile_pic_url',true);
 								$reg_page_u=$reg_page_user.'?&id='.$user->user_login; //$reg_page ;
 								$reg_page_user='';
 								$user_type= get_user_meta($user->ID,'iv_member_type',true);
 								if($iv_profile_pic_url==''){
 								 $iv_profile_pic_url=wp_iv_directories_URLPATH.'assets/images/Blank-Profile.jpg';
-								}	 
+								}
 								if($user_type=='corporate'){
 									$iv_redirect_user = get_option( '_iv_corporate_profile_public_page');
 								    $reg_page_user= get_permalink( $iv_redirect_user) ;
 								}else{
-									
+
 									$iv_redirect_user = get_option( '_iv_personal_profile_public_page');
 								    $reg_page_user= get_permalink( $iv_redirect_user) ;
 								}
 								?>
 								<div class="col-sm-3">
-								   <div class="uou-block-6a "> <img src="<?php echo $iv_profile_pic_url; ?>" alt="">
-									  <a href="<?php echo $reg_page_user.'?&id='.$user->user_login; ?>"><h6><?php echo get_user_meta($user->ID,'profile_name',true); ?> <span><?php echo get_user_meta($user->ID,'designation',true);   ?></span></h6></a>
-									  <p><i class="fa fa-map-marker"></i> <?php echo get_user_meta($user->ID,'address',true); ?></p>
+								   <div class="uou-block-6a uer-directory-single">
+								   		<div class="uer-image" style="background: url('<?php echo $iv_profile_pic_url; ?>') center center no-repeat; background-size: cover;">
+								   			<!-- <img src="<?php echo $iv_profile_pic_url; ?>" alt=""> -->
+								   		</div>
+
+								   	<div class="user-details">
+								   		<a href="<?php echo $reg_page_user.'?&id='.$user->user_login; ?>"><h6><?php echo get_user_meta($user->ID,'profile_name',true); ?> <span><?php echo get_user_meta($user->ID,'designation',true);   ?></span></h6></a>
+								   		<p><i class="fa fa-map-marker"></i> <?php echo get_user_meta($user->ID,'address',true); ?></p>
+								   	</div>
+
 									</div>
-									<!-- end .uou-block-6a --> 
+									<!-- end .uou-block-6a -->
 								</div>
-								
-							
-							<?php	
-								
+
+
+							<?php
+
 							}
 						}
 					}
-			
+
 			?>
         </div>
       </div>
     </section>
-  
-	
-	</div>	
+
+
+	</div>

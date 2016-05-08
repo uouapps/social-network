@@ -1154,6 +1154,11 @@ iframe {
 	text-align: center;
 	font-size: 12px;
 }
+.similar .inn-simi a.profile-img {
+	margin-top: 0;
+	padding: 0;
+	border-radius: 4px;
+}
 .user-profile .nav-tabs li {
 	float: left;
 }

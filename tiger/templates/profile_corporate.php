@@ -385,7 +385,7 @@ $user_id=1;
    </div>
 
     <!-- Profile Company Content -->
-    <div class="profile-company-content has-bg-image" data-bg-color="f5f5f5">
+    <div class="profile-company-content has-bg-image">
       <div class="container">
         <div class="row">
 
