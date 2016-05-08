@@ -320,6 +320,7 @@
 }
 
 
+
 .uer-directory-single {
 	position: relative;
 	transition: all .3s ease;
@@ -336,3 +337,12 @@
 	width: 100%;
 	height: 220px;
 }
+
+.pro-mem .uou-block-6a p{
+	font-size:13px;
+}
+.pro-mem .uou-block-6a{
+	background:#fff;
+	padding-bottom:0px;
+}
+

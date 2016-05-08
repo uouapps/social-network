@@ -39,11 +39,8 @@ if( isset($_REQUEST['iv-submit-listing']) && isset($_REQUEST['payment_gateway'])
 				$package_id=$_POST['package_id'];
 				//create user here******	
 				
-					//parse_str($_POST['form_data'], $_POST);					
-				//print_r($_POST);	
-					//echo'<br/>============='. $_POST['iv_member_user_name']; // iv_member_email // iv_member_password // iv_member_fname // iv_member_lname
+				
 					
-					$return_page_url= $_POST['return_page'];
 					
 					$userdata = array();
 					$user_name='';
@@ -72,6 +69,10 @@ if( isset($_REQUEST['iv-submit-listing']) && isset($_REQUEST['payment_gateway'])
 							 $user_id = wp_insert_user( $userdata ) ;
 							 $user = new WP_User( $user_id );
 							 $member_type= $_POST['iv_member_type'];
+							 if($member_type==''){
+								$member_type='professional';
+							 }
+							
 							 $user->set_role($member_type);
 							 $userId=$user_id;
 							 
@@ -339,7 +340,7 @@ if( isset($_REQUEST['iv-submit-listing']) && isset($_REQUEST['payment_gateway'])
 								 $role_package='Basic';
 							 }
 							 if($package_id!=''){
-								$user->set_role($role_package);
+								//$user->set_role($role_package);
 							 }							 
 							 update_user_meta($userId, 'iv_directories_package_id',$package_id);
 				 
