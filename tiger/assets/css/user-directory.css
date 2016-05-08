@@ -15,9 +15,9 @@
 				.entry-content img,
 		.home-img
 		{
-			border-radius: 4px;
+			border-radius: 3px 3px 0 0;
 			width:100%;
-			border: 3px solid rgba(0,0,0,0) !important;
+			display: block;
 			-webkit-transition: all .5s ease-in-out;
 			-moz-transition: all .5s ease-in-out;
 			-o-transition: all .5s ease-in-out;
@@ -89,7 +89,7 @@
 			font-family: 'Open Sans', Arial, sans-serif;
 		}
 		#directory-temp .ch-grid {
-			margin: 20px 0 0 0;
+			margin-top: 30px;
 			padding: 0;
 			list-style: none;
 			display: block;
@@ -111,20 +111,18 @@
 		}
 
 		#directory-temp .ch-grid li {
-			width: 150px;
-			display: inline-block;
-			margin: 20px;
+			margin: 0 ;
 			vertical-align: top;
 			margin-bottom: 0;
 		}
-		#directory-temp .ch-grid li:hover .home-img{
+		/* #directory-temp .ch-grid li:hover .home-img{
 			border: 3px solid #0099fe !important;
 			-webkit-transition: all .5s ease-in-out;
 			-moz-transition: all .5s ease-in-out;
 			-o-transition: all .5s ease-in-out;
 			transition: all .5s ease-in-out;
 
-		}
+		} */
 		#directory-temp .ch-grid li:hover h5{
 			color: #0099fe;
 		}
@@ -296,10 +294,16 @@
     font-weight: bold;
 }
 
-.pro-mem .uou-block-6a p{
-	font-size:14px;
+
+
+.user-details {
+	position: relative;
+	background: #fff;
+	padding: 25px 20px;
+	border-radius: 0 0 3px 3px;
 }
-.pro-mem .uou-block-6a{
-	background:#fff;
-	padding-bottom:0px;
+
+.user-details .para,
+.user-details .para1 {
+	margin: 0 !important;
 }
