@@ -56,8 +56,8 @@ global $current_user;
             <h5 class="main-title">Mike Tomlinson</h5>
             <div class="sidebar-thumbnail" id="profile_image_main">
 
-				<?php
-				  	$iv_profile_pic_url=get_user_meta($current_user->ID, 'iv_profile_pic_thum',true);
+				<?php					
+				  	$iv_profile_pic_url=get_user_meta($current_user->ID, 'iv_profile_pic_url',true);
 				  	if($iv_profile_pic_url!=''){ ?>
 					 <img src="<?php echo $iv_profile_pic_url; ?>">
 					<?php
@@ -270,6 +270,7 @@ jQuery(document).ready(function($) {
 								"action": 	"iv_directories_update_profile_pic",
 								"attachment_thum": attachment.sizes.thumbnail.url,
 								"profile_pic_url_1": attachment.url,
+								"profile_pic_url_id": attachment.id,
 							};
                              jQuery.ajax({
 										url: ajaxurl,
@@ -279,7 +280,7 @@ jQuery(document).ready(function($) {
 										success: function(response) {
 											if(response=='success'){
 
-												jQuery('#'+profile_image_id).html('<img  class="img-circle img-responsive"  src="'+attachment.sizes.thumbnail.url+'">');
+												jQuery('#'+profile_image_id).html('<img  class="sidebar-thumbnail"  src="'+attachment.sizes.thumbnail.url+'">');
 
 
 											}

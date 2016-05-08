@@ -250,7 +250,7 @@ if (!class_exists('tiger_admin_config')) {
                         'title'     => esc_html__('Banner Image sub title', 'tiger'), 
 						'compiler'  => 'true',
 						'validate' 	=> 'html',
-                        'default' 	=>esc_html__( "This is Photoshop's version of Lorem Ipsum proin venin consequat veniam.","tiger"),
+                        'default' 	=>esc_html__( "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue conseqaut nibbhi ellit ipsum consectetur.","tiger"),
                         'allowed_html' => array(
                             'a' => array(
                                 'href' => array(),
@@ -501,7 +501,172 @@ if (!class_exists('tiger_admin_config')) {
                         
                     ),
                     //end Row 3**
-                     
+                    
+                    // App Store**********
+                    
+                    array(
+							'id'        => 'tiger-show-page-row4',
+							'type'      => 'switch',
+							'title'     => esc_html__('Home page Row 4 Show/Hide', 'tiger'),
+							'subtitle'      => esc_html__('Home page Row 4 Show/Hide App Store.', 'tiger'),
+							'default'   => true,
+						),
+					 
+						
+					 array(
+							'id'        => 'tiger-home-row4-image',
+							'type'      => 'media',
+							'url'       => true,
+							'title'     => esc_html__('Home Row 4  background image', 'tiger'),
+							//'subtitle'      => esc_html__('Best fit 1349 X 420 px.', 'tiger'),
+							'compiler'  => 'true',
+							'desc'      => esc_html__('Upload Background Image.', 'tiger'),
+						),
+					 array(
+						'id'        => 'tiger-home-row4-image2',
+						'type'      => 'media',
+						'url'       => true,
+						'title'     => esc_html__('Home Row 4  Mobile image', 'tiger'),
+						//'subtitle'      => esc_html__('Best fit 1349 X 420 px.', 'tiger'),
+						'compiler'  => 'true',
+						'desc'      => esc_html__('Upload Mobile Image.', 'tiger'),
+					),
+
+                     array(
+                        'id'        => 'tiger-home-row4-header',
+                        'type'      => 'textarea',
+                        'title'     => esc_html__('Row #4 Content ', 'tiger'), 
+                        'subtitle'      => esc_html__('Home Page 3rd top block content.', 'tiger'),
+						'compiler'  => 'true',
+						'validate' => 'html',
+                        'default' => esc_html__('SocialMe for your Smartphone',"tiger"),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array(),
+                                'desc' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                          ),  
+                        
+                    ),
+                     array(
+                        'id'        => 'tiger-home-row4-sub',
+                        'type'      => 'textarea',
+                        'title'     => esc_html__('Row #4 Sub Content ', 'tiger'), 
+                        'subtitle'      => esc_html__('Home Page Row #4 sub content', 'tiger'),
+						'compiler'  => 'true',
+						'validate' => 'html',
+                        'default' => esc_html__(' Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',"tiger"),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array(),
+                                'desc' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                          ),  
+                        
+                    ),
+                     array(
+                        'id'        => 'tiger-appstore-link',
+                        'type'      => 'text',
+                        'title'     => esc_html__('Row #4 Appstore Link', 'tiger'), 
+                        'subtitle'      => esc_html__('Home Page Row 4 App Store Link.', 'tiger'),
+						'compiler'  => 'true',
+						'validate' => 'html',
+                        'default' => esc_html__('',"tiger"),
+                        'allowed_html' => array(
+                            'a' => array(
+                                'href' => array(),
+                                'title' => array(),
+                                'desc' => array()
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'strong' => array()
+                          ),  
+                        
+                    ),
+                    
+                    
+                    // End App Strope
+                  
+                  
+                    //Testimonial----------------
+                    array(
+                        'id'        => 'tiger-testimonial-switch',
+                        'type'      => 'switch',                   
+                        'title'     => esc_html__('Our Testimonial show/hide', 'tiger'),                       
+                        'default'   => true,
+                    ),
+					 array(
+                        'id'        => 'tiger-testimonial-head',
+                        'type'      => 'text',
+                        'url'       => true,
+                        'title'     => esc_html__('Header of Our Testimonials', 'tiger'),
+                         'default' => esc_html__('What our users say',"tiger"),
+
+                    ),
+
+
+                    array(
+                        'id'          => 'tiger-our-testimonials',
+                        'type'        => 'slides',
+                        'title'       => esc_html__('Our Testimonials', 'tiger'),
+                        'subtitle'    => esc_html__('Unlimited slides with drag and drop sortings.', 'tiger'),
+                        'placeholder' => array(
+                            'title'           => esc_html__('Name...', 'tiger'),
+                            'description'     => esc_html__('Description Here', 'tiger'),
+                            'url'             => esc_html__('User Email', 'tiger'),
+                        ),
+                    ),
+                    
+                    //Testimonial End
+                    
+                     //sponsors
+                    array(
+                        'id'        => 'tiger-sponsors-switch',
+                        'type'      => 'switch',                   
+                        'title'     => esc_html__('Our Sponsors show/hide', 'tiger'),                       
+                        'default'   => true,
+                    ),
+                     array(
+							'id'        => 'tiger-home-sponsors-image',
+							'type'      => 'media',
+							'url'       => true,
+							'title'     => esc_html__('Home sponsors background image', 'tiger'),
+							//'subtitle'      => esc_html__('Best fit 1349 X 420 px.', 'tiger'),
+							'compiler'  => 'true',
+							'desc'      => esc_html__('Upload Background Image.', 'tiger'),
+						),
+					 array(
+                        'id'        => 'tiger-sponsors-head',
+                        'type'      => 'text',
+                        'url'       => true,
+                        'title'     => esc_html__('Header of Our Sponsors', 'tiger'),
+                         'default' => esc_html__('Our Sponsors',"tiger"),
+
+                    ),
+
+
+                    array(
+                        'id'          => 'tiger-our-sponsors',
+                        'type'        => 'slides',
+                        'title'       => esc_html__('Our Sponsors', 'tiger'),
+                        'subtitle'    => esc_html__('Unlimited slides with drag and drop sortings.', 'tiger'),
+                        'placeholder' => array(
+                            //'title'           => esc_html__('This is a title', 'tiger'),
+                            'description'     => esc_html__('Description Here', 'tiger'),
+                           // 'url'             => esc_html__('Give us a link!', 'tiger'),
+                        ),
+                    ),
+                    
+                    //sponsors End
                     /*
                     array(
                         'id'        => 'tiger-favicon',

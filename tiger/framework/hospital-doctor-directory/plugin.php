@@ -2000,8 +2000,10 @@
 						$attachment_thum='';
 					
 					}
+					
 					update_user_meta($current_user->ID, 'iv_profile_pic_thum', $attachment_thum);					
 					update_user_meta($current_user->ID, 'iv_profile_pic_url', $iv_profile_pic_url);
+					update_user_meta($current_user->ID, 'iv_profile_pic_id', $_REQUEST['profile_pic_url_id']);
 					echo json_encode('success');
 					exit(0);
 				}

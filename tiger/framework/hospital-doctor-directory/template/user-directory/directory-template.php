@@ -32,7 +32,8 @@ global $wpdb;
 		}
 
 		?>
-				<div id="header">
+	<div id="main-wrapper">	
+		<div id="header">
 					<div class="header-search-bar">
 						<div class="container">
 							<form>
@@ -119,39 +120,14 @@ global $wpdb;
 						</div>
 					</div> <!-- end .header-search-bar -->
 				</div>
-
-				<div class="container">
-	        <div id="directory-temp" class="bootstrap-wrapper">
-	        	<div class="main clearfix directory-option">
-	        		<div class="row">
-								<div class="col-md-6 col-sm-6">
-									<h3>Professionals</h3>
-								</div>
-								<form class="col-md-6 col-sm-6"   action="<?php echo the_permalink(); ?>" method="post"  >
-									<div class="sort-by-select">
-									   <select id="package_sel" name="package_sel" class="" >
-								     <?php
-										   $sql="SELECT * FROM $wpdb->posts WHERE post_type = 'iv_directories_pack'  and post_status='draft' ";
-										$membership_pack = $wpdb->get_results($sql);
-											echo'<option value="">Sort by</option>';
-										foreach ( $membership_pack as $row ){
-											echo'<option value="'.$row->ID.'"  '.($package==$row->ID ? " selected" : " ") .' >'.$row->post_title.'</option>';
-
-										}
-
-										  ?>
-										  </select >
-
-								  </div>
-								</form>
-
-	        		</div>
-
-	        	</div>
-					<section class="main">
-								<ul class="ch-grid">
-				        <?php
-
+		
+		  <!-- Members -->
+    <section class="pro-mem">
+      <div class="container pb30">
+        <h3><?php esc_html_e('Professionals','tiger'); ?>  </h3>
+        <div class="row">
+			 <?php
+				       
 				        if(isset($atts['per_page'])){
 							 $no=$atts['per_page'];
 						}else{
@@ -160,7 +136,7 @@ global $wpdb;
 
 						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 						if($paged==1){
-						  $offset=0;
+						  $offset=0;  
 						}else {
 						   $offset= ($paged-1)*$no;
 						}
@@ -168,21 +144,21 @@ global $wpdb;
 				        $args['number']=$no;
 				        $args['offset']=$offset;
 				        $args['orderby']='registered';
-				        $args['order']='DESC';
-				        //$args['search']='12';
+				        $args['order']='DESC'; 
+				        //$args['search']='12';				       
 				        //$args['search_columns']=array( 'user_login', 'user_email' );
-				        if($package!=''){
-							$role_package= get_post_meta( $package,'iv_directories_package_user_role',true);
+				        if($package!=''){	
+							$role_package= get_post_meta( $package,'iv_directories_package_user_role',true); 	
 							$args['role']=$role_package;
 						}
-						  if($search_user!=''){
+						  if($search_user!=''){							
 							$args['search']='*'.$search_user.'*';
 						}
-
-
-
+						
+						
+						
 						$reg_page_user='';
-
+				        
 						if(isset($atts['role'])){
 							 $args['role']=$atts['role'];
 						}
@@ -191,108 +167,44 @@ global $wpdb;
 				        // User Loop
 				        if ( ! empty( $user_query->results ) ) {
 				        	foreach ( $user_query->results as $user ) {
-
-								if (isset($user->wp_capabilities['administrator'])!=1 ){
-
-								$iv_profile_pic_url=get_user_meta($user->ID, 'iv_profile_pic_thum',true);
+								
+								if (isset($user->wp_capabilities['administrator'])!=1 ){ 
+									
+								$iv_profile_pic_url=get_user_meta($user->ID, 'iv_profile_pic_url',true);
 								$reg_page_u=$reg_page_user.'?&id='.$user->user_login; //$reg_page ;
 								$reg_page_user='';
 								$user_type= get_user_meta($user->ID,'iv_member_type',true);
+								if($iv_profile_pic_url==''){
+								 $iv_profile_pic_url=wp_iv_directories_URLPATH.'assets/images/Blank-Profile.jpg';
+								}	 
 								if($user_type=='corporate'){
 									$iv_redirect_user = get_option( '_iv_corporate_profile_public_page');
 								    $reg_page_user= get_permalink( $iv_redirect_user) ;
 								}else{
-
+									
 									$iv_redirect_user = get_option( '_iv_personal_profile_public_page');
 								    $reg_page_user= get_permalink( $iv_redirect_user) ;
 								}
-
 								?>
-									<li>
-
-										<div class="ch-item">
-										<a href="<?php echo $reg_page_user.'?&id='.$user->user_login; ?>">
-						                    <?php
-						                    if($iv_profile_pic_url!=''){ ?>
-								        	 <img src="<?php echo $iv_profile_pic_url; ?>" class="home-img wide tall">
-								        	<?php
-								        	}else{
-								        	 echo'	 <img src="'. wp_iv_directories_URLPATH.'assets/images/Blank-Profile.jpg" class="home-img wide tall">';
-								   		} ?>
-											<div class="ch-info">
-											</div>
-											</a>
-										</div>
-				<p class="para text-center">
-						  <?php
-						  if(get_user_meta($user->ID,'twitter',true)!=''){
-						  ?>
-						  <a href="http://www.twitter.com/<?php  echo get_user_meta($user->ID,'twitter',true);  ?>/">
-				          <i class="fa fa-twitter"></i>
-				          </a>
-						  <?php
-						  }
-						  if(get_user_meta($user->ID,'linkedin',true)!=''){
-						  ?>
-				          <a href="http://www.linkedin.com/<?php  echo get_user_meta($user->ID,'linkedin',true);  ?>/">
-				          <i class="fa fa-linkedin"></i>
-				          </a>
-						  <?php
-						  }
-						  if(get_user_meta($user->ID,'facebook',true)!=''){
-						  ?>
-				          <a href="http://www.facebook.com/<?php  echo get_user_meta($user->ID,'facebook',true);  ?>/">
-				          <i class="fa fa-facebook"></i>
-				          </a>
-						  <?php
-						  }
-						   if(get_user_meta($user->ID,'gplus',true)!=''){
-						  ?>
-				          <a href="http://www.plus.google.com/<?php  echo get_user_meta($user->ID,'gplus',true);  ?>/">
-				          <i class="fa fa-google-plus"></i>
-				          </a>
-						  <?php
-						  }
-						  ?>
-				</p>
-				<a href="<?php echo $reg_page_user.'?&id='.$user->user_login; ?>">
-				<h5 class="text-center"><?php echo $user->display_name; ?></h5>
-				</a>
-				<p class="para1 text-center">
-				<?php  	if(get_user_meta($user->ID,'occupation',true)==!""){
-							echo get_user_meta($user->ID,'occupation',true);
+								<div class="col-sm-3">
+								   <div class="uou-block-6a "> <img src="<?php echo $iv_profile_pic_url; ?>" alt="">
+									  <a href="<?php echo $reg_page_user.'?&id='.$user->user_login; ?>"><h6><?php echo get_user_meta($user->ID,'profile_name',true); ?> <span><?php echo get_user_meta($user->ID,'designation',true);   ?></span></h6></a>
+									  <p><i class="fa fa-map-marker"></i> <?php echo get_user_meta($user->ID,'address',true); ?></p>
+									</div>
+									<!-- end .uou-block-6a --> 
+								</div>
+								
+							
+							<?php	
+								
+							}
 						}
-				}
-			  }
-		} else {
-				     echo 'No users found.';
-		 }
-
-		?>
-						</ul>
-				</section>
-				<div class="text-center">
-				<?php
-					$total_user = $user_query->total_users;
-					$total_pages=ceil($total_user/$no);
-					echo '<div id="iv-pagination" class="iv-pagination">';
-
-						echo paginate_links( array(
-							'base' =>  '%_%'.'?&package='.$package, // the base URL, including query arg
-							'format' => '?&paged=%#%', // this defines the query parameter that will be used, in this case "p"
-							'prev_text' => __('&laquo; Previous','tiger'), // text for previous page
-							'next_text' => __('Next &raquo;','tiger'), // text for next page
-							'total' => $total_pages, // the total number of pages we have
-							'current' => $paged, // the current page
-							'end_size' => 1,
-							'mid_size' => 5,
-						));
-					echo '</div></div>';
-					?>
-					</div>
-
-
-</div>
-
-
-
+					}
+			
+			?>
+        </div>
+      </div>
+    </section>
+  
+	
+	</div>	

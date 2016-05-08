@@ -114,7 +114,7 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
                 </a> <a href="#."><i class="fa fa-google"></i></a>
                 <a href="#."><i class="fa fa-linkedin"></i></a> -->
 						   </div>
-						  <div class="forget">Forgot your password? <a href="#."> Click Here</a></div>
+						  <div class="forget"><?php esc_html_e('Forgot your password?', 'tiger');?>  <a href="#."> <?php esc_html_e('Click Here', 'tiger');?></a></div>
 						</form>
                   </div>
                 </div>
@@ -266,6 +266,11 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 		 if(isset($tiger_option_data['tiger-home-row4-image']['url']) AND $tiger_option_data['tiger-home-row4-image']['url'] !=""){
 			$top_banner_image4=  $tiger_option_data['tiger-home-row4-image']['url'];
 		}
+		$top_mobile_image4= tiger_IMAGE."app-img.png";
+		 if(isset($tiger_option_data['tiger-home-row4-image2']['url']) AND $tiger_option_data['tiger-home-row4-image2']['url'] !=""){
+			$top_mobile_image4=  $tiger_option_data['tiger-home-row4-image2']['url'];
+		}
+		
     ?>
     <!-- APP IMAGE -->
     <section class="app-images" style="background:url(<?php echo $top_banner_image4;?>) center center no-repeat; background-size: cover;">
@@ -274,16 +279,23 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 
           <!-- TEXT -->
           <div class="col-md-6 text-center text-area">
-            <h1>SocialMe for your
-              Smartphone</h1>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            <h1><?php
+              echo (isset($tiger_option_data['tiger-home-row4-header'])? $tiger_option_data['tiger-home-row4-header']: esc_html__('SocialMe for your Smartphone','tiger'));
+              ?> 				
+				</h1>
+            <p>
+				
+				<?php
+              echo (isset($tiger_option_data['tiger-home-row4-sub'])? $tiger_option_data['tiger-home-row4-sub']: esc_html__('Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam,
               eaque ipsa quae ab illo inventore veritatis et quasi architecto
-              beatae vitae dicta sunt explicabo. </p>
-            <a href="#."><i class="fa fa-apple"></i> <?php esc_html_e('App Store', 'tiger') ?></a> </div>
+              beatae vitae dicta sunt explicabo.','tiger'));
+              ?> 
+				 </p>
+            <a href="<?php  echo (isset($tiger_option_data['tiger-appstore-link'])? $tiger_option_data['tiger-appstore-link']: '');?>"><i class="fa fa-apple"></i> <?php esc_html_e('App Store', 'tiger') ?></a> </div>
 
           <!-- APP IMAGE -->
-          <div class="col-md-6 text-right"><img src="<?php echo tiger_IMAGE;?>app-img.png" alt="" > </div>
+          <div class="col-md-6 text-right"><img src="<?php echo $top_mobile_image4;?>" alt="<?php esc_html_e('Image.', 'tiger');?>" > </div>
         </div>
       </div>
     </section>
@@ -291,74 +303,117 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 	}
 	?>
     <!-- TESTIMONIALS -->
+    <?php
+   
+         $row5=(isset($tiger_option_data['tiger-testimonial-switch'])? $tiger_option_data['tiger-testimonial-switch']: '1' );
+    if($row5==1){
+	
+		
+		  
+		if(isset($tiger_option_data['tiger-our-testimonials'][0]['title']) AND $tiger_option_data['tiger-our-testimonials'][0]['title']==''){
+			
+			$tiger_option_data['tiger-our-testimonials']=array(
+					array( 'title'=>'John Kevin Mara',
+							'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue.',
+							'url'=>'smashingmagazine.com',
+							'image'=> tiger_IMAGE.'avatar-1.jpg',
+				),
+				array( 'title'=>'John Kevin Mara',
+							'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue.',
+							'url'=>'smashingmagazine.com',
+							'image'=> tiger_IMAGE.'member-2.png',
+				),
+				array( 'title'=>'John Kevin Mara',
+							'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue.',
+							'url'=>'smashingmagazine.com',
+							'image'=> tiger_IMAGE.'clients-avatar-1.jpg',
+				),
+			);
+		
+		}
+		
+    ?>
+    
     <section class="clients-says">
       <div class="container">
-        <h3 class="section-title">what our users say </h3>
+        <h3 class="section-title"><?php
+              echo (isset($tiger_option_data['tiger-testimonial-head'])? $tiger_option_data['tiger-testimonial-head']: esc_html__('What our users say','tiger'));
+              ?>  </h3>
         <div class="testi">
           <div class="texti-slide">
-            <!-- SLide -->
-            <div class="clints-text">
-              <div class="text-in">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue.</p>
-              </div>
-              <div class="avatar">
-                <div class=""> <a href="#"> <img src="<?php echo tiger_IMAGE;?>clients-avatar-1.jpg" alt=""> </a> </div>
-                <div class="media-body">
-                  <h6>John Kevin Mara</h6>
-                  <span>smashingmagazine.com</span> </div>
-              </div>
-            </div>
+			  <?php
+			  
+			   foreach($tiger_option_data['tiger-our-testimonials'] as $t_slider){?>				   
+				   
+				      <!-- SLide -->
+						<div class="clints-text">
+						  <div class="text-in">
+							<p>
+							<?php echo (isset($t_slider['description'])?$t_slider['description'] :''); ?>
+							</p>
+						  </div>
+						  <div class="avatar">
+							<div class=""> <a href="#"> <img src="<?php echo (isset($t_slider['image'])?$t_slider['image'] :''); ?>" alt="<?php esc_html_e('Image.', 'tiger');?>"> </a> </div>
+							<div class="media-body">
+							  <h6><?php echo (isset($t_slider['title'])?$t_slider['title'] :''); ?></h6>
+							  <span><?php echo (isset($t_slider['url'])?$t_slider['url'] :''); ?></span> </div>
+						  </div>
+						</div>
 
-            <!-- SLide -->
-            <div class="clints-text">
-              <div class="text-in">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue.</p>
-              </div>
-              <div class="avatar">
-                <div class=""> <a href="#"> <img src="<?php echo tiger_IMAGE;?>clients-avatar-1.jpg" alt=""> </a> </div>
-                <div class="media-body">
-                  <h6>John Kevin Mara</h6>
-                  <span>smashingmagazine.com</span> </div>
-              </div>
-            </div>
-
-            <!-- SLide -->
-            <div class="clints-text">
-              <div class="text-in">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue.</p>
-              </div>
-              <div class="avatar">
-                <div class=""> <a href="#"> <img src="<?php echo tiger_IMAGE;?>clients-avatar-1.jpg" alt=""> </a> </div>
-                <div class="media-body">
-                  <h6>John Kevin Mara</h6>
-                  <span>smashingmagazine.com</span> </div>
-              </div>
-            </div>
+					<!-- SLide -->
+				   
+			<?php	
+			  }   
+			  ?>
+      
           </div>
         </div>
       </div>
     </section>
-
+	
+	<?php
+	}
+	?>
+	<?php
+	
+	   $sponsor=(isset($tiger_option_data['tiger-sponsors-switch'])? $tiger_option_data['tiger-sponsors-switch']: '1' );
+    if($sponsor==1){
+		$top_banner_sponsor= tiger_IMAGE."sponsor.png";
+		 if(isset($tiger_option_data['tiger-home-sponsors-image']['url']) AND $tiger_option_data['tiger-home-sponsors-image']['url'] !=""){
+			$top_banner_sponsor=  $tiger_option_data['tiger-home-sponsors-image']['url'];
+		}
+		?>
+		
     <!-- sponsors -->
-    <div class="sponsors" style="background: url('<?php echo tiger_IMAGE;?>sponsor.png') top center no-repeat; background-size: cover;">
+    <div class="sponsors" style="background: url('<?php echo $top_banner_sponsor;?>') top center no-repeat; background-size: cover;">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h3 class="section-title">Our Sponsors</h3>
+            <h3 class="section-title"> <?php
+              echo (isset($tiger_option_data['tiger-sponsors-head'])? $tiger_option_data['tiger-sponsors-head']: esc_html__('Our Sponsors','tiger'));
+              ?></h3>
             <div class="sponsors-slider">
-              <div class="item"><img src="<?php echo tiger_IMAGE;?>sponsor_logo1.png" alt="" class="img-responsive"></div>
-              <div class="item"><img src="<?php echo tiger_IMAGE;?>sponsor_logo2.png" alt="" class="img-responsive"></div>
-              <div class="item"><img src="<?php echo tiger_IMAGE;?>sponsor_logo3.png" alt="" class="img-responsive"></div>
-              <div class="item"><img src="<?php echo tiger_IMAGE;?>sponsor_logo4.png" alt="" class="img-responsive"></div>
-              <div class="item"><img src="<?php echo tiger_IMAGE;?>sponsor_logo5.png" alt="" class="img-responsive"></div>
-              <div class="item"><img src="<?php echo tiger_IMAGE;?>sponsor_logo6.png" alt="" class="img-responsive"></div>
-              <div class="item"><img src="<?php echo tiger_IMAGE;?>sponsor_logo4.png" alt="" class="img-responsive"></div>
+				<?php
+				  foreach($tiger_option_data['tiger-our-sponsors'] as $t_slider){?>
+					  
+					   <div class="item"><img src="<?php echo (isset($t_slider['image'])?$t_slider['image'] :''); ?>" alt="" style="height:90px"></div>
+				<?php
+					}
+				?>	  
+             
+            
             </div>
           </div>
         </div>
       </div>
     </div>
+  
+  <?php
+	}
+  ?>
+  
+  
   </div>
 </div>
  <?php
