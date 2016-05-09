@@ -54,7 +54,11 @@ if( isset($_POST['iv-submit-stripe']) && $_POST['payment_gateway']=='stripe' && 
 							
 							 $user_id = wp_insert_user( $userdata ) ;
 							 $user = new WP_User( $user_id );
-							 $user->set_role('basic');
+							 $member_type= $_POST['iv_member_type'];
+							 if($member_type==''){
+								$member_type='professional';
+							 }
+							 $user->set_role($member_type);
 							 $userId=$user_id;
 							 
 							 if(isset($_POST['country_select'])){
@@ -387,7 +391,7 @@ if( isset($_POST['iv-submit-stripe']) && $_POST['payment_gateway']=='stripe' && 
 							 if($role_package==""){
 								 $role_package='Basic';
 							 }
-							 $user->set_role($role_package);
+							 //$user->set_role($role_package);
 							 update_user_meta($userId, 'iv_directories_package_id',$package_id);
 				 
 				// success Page

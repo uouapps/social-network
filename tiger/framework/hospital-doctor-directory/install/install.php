@@ -180,8 +180,8 @@ update_option('_bid_start_amount','.01');
 	/// **** Create Page for User public Profile****** 
 
 
-	$page_title='Personal Public';
-	$page_name='personal-public';
+	$page_title='Professional Profile';
+	$page_name='professional-profile';
 	$page_content='';
 	$my_post_form = array(
 		'post_title'    => wp_strip_all_tags( $page_title),
@@ -192,13 +192,13 @@ update_option('_bid_start_amount','.01');
 		'post_type'		=> 'page',
 		);
 	$newpost_id= wp_insert_post( $my_post_form );	
-	update_post_meta( $newpost_id, '_wp_page_template', 'templates/profile_personal.php' );
+	update_post_meta( $newpost_id, '_wp_page_template', 'templates/profile_professional.php' );
 	update_option('_iv_directories_profile_public_page', $newpost_id);
 	
 	//company Profile
 	
 	$page_title='Company Profile';
-	$page_name='company-public';
+	$page_name='company-profile';
 	$page_content='';
 	$my_post_form = array(
 		'post_title'    => wp_strip_all_tags( $page_title),

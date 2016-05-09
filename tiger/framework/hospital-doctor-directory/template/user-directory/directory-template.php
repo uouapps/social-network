@@ -188,13 +188,15 @@ global $wpdb;
 								?>
 								<div class="col-sm-3">
 								   <div class="uou-block-6a uer-directory-single">
+									   <a href="<?php echo $reg_page_user.'?&id='.$user->user_login; ?>">
 								   		<div class="uer-image" style="background: url('<?php echo $iv_profile_pic_url; ?>') center center no-repeat; background-size: cover;">
 								   			<!-- <img src="<?php echo $iv_profile_pic_url; ?>" alt=""> -->
 								   		</div>
+								   		</a>
 
 								   	<div class="user-details">
-								   		<a href="<?php echo $reg_page_user.'?&id='.$user->user_login; ?>"><h6><?php echo get_user_meta($user->ID,'profile_name',true); ?> <span><?php echo get_user_meta($user->ID,'designation',true);   ?></span></h6></a>
-								   		<p><i class="fa fa-map-marker"></i> <?php echo get_user_meta($user->ID,'address',true); ?></p>
+								   		<a href="<?php echo $reg_page_user.'?&id='.$user->user_login; ?>"><h6><?php echo get_user_meta($user->ID,'profile_name',true); ?> &nbsp;<span><?php echo get_user_meta($user->ID,'designation',true);   ?>&nbsp;</span></h6></a>
+								   		<p><i class="fa fa-map-marker"></i> <?php echo get_user_meta($user->ID,'address',true); ?>&nbsp;</p>
 								   	</div>
 
 									</div>
