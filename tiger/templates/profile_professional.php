@@ -236,10 +236,10 @@ $user_id=1;
 				 </div>
                   <div class="col-xs-12 col-md-6">
 				   <div class="social-links">
-						<a class="col-md-3 " href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink().'&id='.$author_name;  ?>"><i class="fa fa-facebook"></i> Facebook</a>
-						<a class="col-md-3 " href="#."><i class="fa fa-twitter"></i> Twitter</a>
-					    <a class="col-md-3 " href="#."><i class="fa fa-google"></i> Google+</a>
-						<a class="col-md-3 "  href="#."><i class="fa fa-linkedin"></i> Linkedin</a>
+						<a class="col-md-3 " href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink().'&id='.$author_name;  ?>"><i class="fa fa-facebook"></i> <?php  esc_html_e('Facebook','tiger');?></a>
+						<a class="col-md-3 " href="#."><i class="fa fa-twitter"></i> <?php  esc_html_e('Twitter','tiger');?></a>
+					    <a class="col-md-3 " href="#."><i class="fa fa-google"></i> <?php  esc_html_e('Google+','tiger');?></a>
+						<a class="col-md-3 "  href="#."><i class="fa fa-linkedin"></i> <?php  esc_html_e('Linkedin','tiger');?></a>
 					</div>
                   </div>
 				  <div class="col-xs-12 col-md-3">
@@ -650,8 +650,8 @@ $user_id=1;
 <?php
 wp_enqueue_script('iv_directories-ar-script-23', wp_iv_directories_URLPATH . 'assets/cube/js/jquery.cubeportfolio.min.js');
 wp_enqueue_script('iv_directories-ar-script-102', wp_iv_directories_URLPATH . 'assets/cube/js/meet-team.js');
-wp_enqueue_script('single-hospital-js', tiger_JS.'single-hospital.js', array('jquery'), $ver = true, true );
-wp_localize_script('single-hospital-js', 'tiger_data', array( 			'ajaxurl' 			=> admin_url( 'admin-ajax.php' ),
+wp_enqueue_script('single-profile-js', tiger_JS.'single-profile.js', array('jquery'), $ver = true, true );
+wp_localize_script('single-profile-js', 'tiger_data', array( 			'ajaxurl' 			=> admin_url( 'admin-ajax.php' ),
 'loading_image'		=> '<img src="'.tiger_IMAGE.'loader2.gif">',
 'current_user_id'	=>get_current_user_id(),
 'login_message'		=> esc_html__('Please login to remove favorite','tiger'),
