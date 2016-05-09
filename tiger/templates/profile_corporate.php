@@ -30,7 +30,7 @@ $user_id=1;
 		$user_id=1;
 	  }
   }
-  $iv_profile_pic_url=get_user_meta($user_id, 'iv_profile_pic_thum',true);
+  $iv_profile_pic_url=get_user_meta($user_id, 'iv_profile_pic_url',true);
    $iv_post = get_option( '_iv_directories_profile_post');
 	if($iv_post!=''){
 		$post_type=  $iv_post;

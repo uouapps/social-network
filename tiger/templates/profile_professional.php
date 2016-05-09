@@ -30,7 +30,7 @@ $user_id=1;
 		$user_id=1;
 	  }
   }
-   $iv_profile_pic_url=get_user_meta($user_id, 'iv_profile_pic_thum',true);
+   $iv_profile_pic_url=get_user_meta($user_id, 'iv_profile_pic_url',true);
 
 	$lat=get_user_meta($user_id,'latitude',true);
 	$lng=get_user_meta($user_id,'longitude',true);
