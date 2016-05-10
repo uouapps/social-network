@@ -9255,6 +9255,8 @@ div.mejs-speed-button {
   line-height: 30px;
   margin-bottom: 29px;
   width: 135;
+  height: 50px;
+  width: 135;
 }
 .secondary.uou-block-4e .logo {
   color: #ffffff;
@@ -10548,7 +10550,7 @@ div.mejs-speed-button {
   color: #0099fe;
 }
 .uou-block-7f .meta span:after {
-  content: '\2022';
+  content: '' !important;
   margin: 0 10px;
 }
 .uou-block-7f .meta span:last-child:after {
@@ -14980,7 +14982,17 @@ padding-right: 0  !important;
   display: none !important;
 }
 
+.menu-testing-menu-container {
+  position: relative;
+}
 
+.menu-testing-menu-container .menu {
+  padding-left: 15px;
+}
+
+.menu-testing-menu-container .menu .sub-menu .sub-menu .sub-menu .sub-menu {
+  padding-left: 0;
+}
 
 
 
