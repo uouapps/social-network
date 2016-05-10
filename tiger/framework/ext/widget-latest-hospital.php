@@ -1,8 +1,8 @@
 <?php
 global $post,$wpdb,$tag;
 
-//wp_enqueue_style('iv_directories-style-64', wp_iv_directories_URLPATH . 'assets/cube/css/cubeportfolio.css');
-//wp_enqueue_style('iv_directories-style-66', tiger_CSS . 'widget.css');
+//wp_enqueue_style('uou_tigerp-style-64', wp_uou_tigerp_URLPATH . 'assets/cube/css/cubeportfolio.css');
+//wp_enqueue_style('uou_tigerp-style-66', tiger_CSS . 'widget.css');
 
 
 		$display_option ='list';// (isset($instance['display_option'])? $instance['display_option']:'list');
@@ -72,7 +72,7 @@ if(	$display_option=='list'){
 						<?php
 						}else{	?>
 
-							<img  class="image-80"  src="<?php echo  wp_iv_directories_URLPATH."/assets/images/default-directory.jpg";?>" alt="<?php esc_html_e( 'image', 'tiger' ); ?>">
+							<img  class="image-80"  src="<?php echo  wp_uou_tigerp_URLPATH."/assets/images/default-directory.jpg";?>" alt="<?php esc_html_e( 'image', 'tiger' ); ?>">
 
 						<?php
 						}

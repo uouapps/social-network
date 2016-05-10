@@ -6,10 +6,10 @@
  ?>
 <?php get_header(); ?>
 <?php
-wp_enqueue_style('iv_directories-owlcarousel', tiger_CSS . 'owl.carousel.css');
-wp_enqueue_style('iv_directories-copywriter', tiger_CSS . 'copywriter-style.css');
-wp_enqueue_style('iv_directories-creative', tiger_CSS . 'creative-style.css');
-wp_enqueue_style('iv_directories-profile', tiger_CSS . 'user-public-profile.css');
+wp_enqueue_style('uou_tigerp-owlcarousel', tiger_CSS . 'owl.carousel.css');
+wp_enqueue_style('uou_tigerp-copywriter', tiger_CSS . 'copywriter-style.css');
+wp_enqueue_style('uou_tigerp-creative', tiger_CSS . 'creative-style.css');
+wp_enqueue_style('uou_tigerp-profile', tiger_CSS . 'user-public-profile.css');
 
 
 $iv_gateway='paypal-express';
@@ -94,7 +94,7 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
                       <input type="password" name="iv_member_password"  data-validation="required" class="form-control ctrl-textbox" placeholder="<?php esc_html_e('Enter Password','tiger');?>" data-validation="strength"
 		 data-validation-strength="2">
 					</div>
-                      <button type="submit" id="submit_iv_directories_payment" name="submit_iv_directories_payment"><?php  esc_html_e('Register','tiger');?> </button>
+                      <button type="submit" id="submit_uou_tigerp_payment" name="submit_uou_tigerp_payment"><?php  esc_html_e('Register','tiger');?> </button>
                       <div class="login-with"> <span><?php echo do_action('oa_social_login'); ?> </span>
 
                       </div>
@@ -417,21 +417,21 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
   </div>
 </div>
  <?php
- wp_enqueue_script('iv_directories-script-signup-2-15', wp_iv_directories_URLPATH . 'admin/files/js/jquery.form-validator.js');
+ wp_enqueue_script('uou_tigerp-script-signup-2-15', wp_uou_tigerp_URLPATH . 'admin/files/js/jquery.form-validator.js');
 
  wp_enqueue_script( 'profile-login-js', tiger_JS.'profile-login.js', array('jquery'), $ver = true, true );
- wp_localize_script( 'profile-login-js', 'tiger_data', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ),'loading_image'=> wp_iv_directories_URLPATH. 'admin/files/images/loader.gif' ) );
+ wp_localize_script( 'profile-login-js', 'tiger_data', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ),'loading_image'=> wp_uou_tigerp_URLPATH. 'admin/files/images/loader.gif' ) );
 
  wp_enqueue_script( 'home-registration-js', tiger_JS.'home-registration.js', array('jquery'), $ver = true, true );
  wp_localize_script( 'home-registration-js', 'tiger_data', array( 	'ajaxurl' 			=> admin_url( 'admin-ajax.php' ),
-																		'loading_image'		=> wp_iv_directories_URLPATH.'admin/files/images/loader.gif',
-																		'old_loader'		=> wp_iv_directories_URLPATH.'admin/files/images/old-loader.gif',
+																		'loading_image'		=> wp_uou_tigerp_URLPATH.'admin/files/images/loader.gif',
+																		'old_loader'		=> wp_uou_tigerp_URLPATH.'admin/files/images/old-loader.gif',
 																		'iv_gateway'		=>$iv_gateway,
 																		'stripe_publishable'=>$stripe_publishable,
 																		'package_amount'	=> $package_amount,
 																		'api_currency'		=>$api_currency ,
-																		'right_icon'		=> wp_iv_directories_URLPATH. 'admin/files/images/right_icon.png' ,
-																		'wrong_icon'		=> wp_iv_directories_URLPATH. 'admin/files/images/wrong_16x16.png' ,
+																		'right_icon'		=> wp_uou_tigerp_URLPATH. 'admin/files/images/right_icon.png' ,
+																		'wrong_icon'		=> wp_uou_tigerp_URLPATH. 'admin/files/images/wrong_16x16.png' ,
 																		'Hide_Coupon'=> __('Hide Coupon','tiger'),
 																		'have_Coupon'=> __('Have a coupon?','tiger'),
 

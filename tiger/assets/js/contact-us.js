@@ -26,7 +26,7 @@ var ajaxurl = tiger_data.ajaxurl;
 var loader_image =  tiger_data.loading_image;
 	jQuery('#update_message').html('<img src="'+loader_image+'">'); 
 	var search_params={
-		"action"  : 	"iv_directories_message_contact",	
+		"action"  : 	"uou_tigerp_message_contact",	
 		"form_data":	jQuery("#tiger_contact").serialize(), 					
 	};				
 	jQuery.ajax({					

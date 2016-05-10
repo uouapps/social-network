@@ -19,9 +19,9 @@ function tiger_theme_register_required_plugins() {
     $plugins = array(
 
     array(
-            'name'               => 'Hospital Doctor Directory', // The plugin name.
-            'slug'               => 'hospital-doctor-directory', // The plugin slug (typically the folder name).
-            'source'             => get_stylesheet_directory() . '/framework/ext/plugins/hospital-doctor-directory.zip', // The plugin source.
+            'name'               => 'Tiger Profile', // The plugin name.
+            'slug'               => 'tiger-profile', // The plugin slug (typically the folder name).
+            'source'             => get_stylesheet_directory() . '/framework/ext/plugins/tiger-profile.zip', // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
             'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.

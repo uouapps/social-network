@@ -40,13 +40,13 @@ require_once(  get_template_directory(). '/framework/admin/tiger-nav-menu-walker
 require_once(  get_template_directory(). '/framework/admin/tiger-image.php' );
 
 
-if (defined('wp_iv_directories_URLPATH') && wp_iv_directories_URLPATH!='') { 
+if (defined('wp_uou_tigerp_URLPATH') && wp_uou_tigerp_URLPATH!='') { 
 	//require_once(  get_template_directory(). '/framework/ext/tiger-hospital.php' ); 
 	//require_once(  get_template_directory(). '/framework/ext/tiger-doctor.php' ); 
 }
 
 
-require_once(  get_template_directory(). '/framework/hospital-doctor-directory/plugin.php' );
+//require_once(  get_template_directory(). '/framework/tiger-profile/plugin.php' );
 //require_once(  get_template_directory(). '/framework/visual-composer/shortcodes.php' );
 /*-------------------------------------------------------------------------
   END INITIALIZE FILE LINK

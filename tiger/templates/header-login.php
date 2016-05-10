@@ -1,7 +1,7 @@
 <?php
  $tiger_option_data =get_option('tiger_option_data'); 
- $my_profile= get_option('_iv_directories_profile_page');
- $register= get_option('_iv_directories_registration'); 
+ $my_profile= get_option('_uou_tigerp_profile_page');
+ $register= get_option('_uou_tigerp_registration'); 
  
   if(isset($tiger_option_data['tiger-login-option']) && $tiger_option_data['tiger-login-option'] == 1) : ?>
   <?php $current_user = wp_get_current_user(); ?> 
@@ -39,7 +39,7 @@
         </div>
       </li>
 		<?php
-		 if (class_exists('wp_iv_directories')) { ?>
+		 if (class_exists('wp_uou_tigerp')) { ?>
 		   <li><a href="<?php echo esc_url( get_permalink($register)); ?>" ><?php esc_html_e('Register','tiger');?></a>
 		<?php
 		 }else{ ?>

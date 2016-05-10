@@ -8,7 +8,7 @@ function modal_send_message_iv(){
 			var loader_image =  tiger_data.loading_image;
 				jQuery('#update_message_modal').html(loader_image); 
 				var search_params={
-					"action"  : 	"iv_directories_message_send",	
+					"action"  : 	"uou_tigerp_message_send",	
 					"form_data":	jQuery("#message-modal").serialize(), 					
 				};				
 				jQuery.ajax({					
@@ -32,7 +32,7 @@ function send_message_iv(){
 			var loader_image =  tiger_data.loading_image;
 				jQuery('#update_message_popup').html(loader_image); 
 				var search_params={
-					"action"  : 	"iv_directories_message_send",	
+					"action"  : 	"uou_tigerp_message_send",	
 					"form_data":	jQuery("#message-pop").serialize(), 					
 				};				
 				jQuery.ajax({					
@@ -62,7 +62,7 @@ function send_message_claim(){
 				var loader_image =  tiger_data.loading_image;
 				jQuery('#update_message_claim').html(loader_image); 
 				var search_params={
-					"action"  : 	"iv_directories_claim_send",	
+					"action"  : 	"uou_tigerp_claim_send",	
 					"form_data":	jQuery("#message-claim").serialize(), 					
 				};				
 				jQuery.ajax({					
@@ -92,7 +92,7 @@ function save_follow(id) {
 						
 						var ajaxurl = tiger_data.ajaxurl;
 						var search_params={
-							"action"  : 	"iv_directories_save_follow",	
+							"action"  : 	"uou_tigerp_save_follow",	
 							"data": "id=" + id,
 						};
 						
@@ -122,7 +122,7 @@ function save_unfollow(id,spanid) {
 						
 						var ajaxurl = tiger_data.ajaxurl;								
 						var search_params={
-							"action"  : 	"iv_directories_save_un_follow",	
+							"action"  : 	"uou_tigerp_save_un_follow",	
 							"data": "id=" + id,
 						};
 						
@@ -151,7 +151,7 @@ function save_connect(id) {
 						
 						var ajaxurl = tiger_data.ajaxurl;
 						var search_params={
-							"action"  : 	"iv_directories_save_connect",	
+							"action"  : 	"uou_tigerp_save_connect",	
 							"data": "id=" + id,
 						};
 						
@@ -180,7 +180,7 @@ function save_connect(id) {
 						
 						var ajaxurl = tiger_data.ajaxurl;
 						var search_params={
-							"action"  : 	"iv_directories_save_deleteconnect",	
+							"action"  : 	"uou_tigerp_save_deleteconnect",	
 							"data": "id=" + id,
 						};
 						
@@ -209,7 +209,7 @@ function save_connect(id) {
 						
 						var ajaxurl = tiger_data.ajaxurl;
 						var search_params={
-							"action"  : 	"iv_directories_save_bookmark",	
+							"action"  : 	"uou_tigerp_save_bookmark",	
 							"data": "id=" + id,
 						};
 						
@@ -238,7 +238,7 @@ function save_connect(id) {
 						
 						var ajaxurl = tiger_data.ajaxurl;								
 						var search_params={
-							"action"  : 	"iv_directories_save_deletebookmark",	
+							"action"  : 	"uou_tigerp_save_deletebookmark",	
 							"data": "id=" + id,
 						};
 						
@@ -267,7 +267,7 @@ function save_connect(id) {
 						
 						var ajaxurl = tiger_data.ajaxurl;								
 						var search_params={
-							"action"  : 	"iv_directories_save_rating",	
+							"action"  : 	"uou_tigerp_save_rating",	
 							"data": "id=" + user_id+"&rating_text="+rating_text+"&rating_value="+rating_value,
 						};
 						
@@ -379,7 +379,7 @@ function save_connect(id) {
 						
 						var ajaxurl = tiger_data.ajaxurl;
 						var search_params={
-							"action"  : 	"iv_directories_save_bookmark",	
+							"action"  : 	"uou_tigerp_save_bookmark",	
 							"data": "id=" + id,
 						};
 						
@@ -408,7 +408,7 @@ function save_connect(id) {
 						
 						var ajaxurl = tiger_data.ajaxurl;								
 						var search_params={
-							"action"  : 	"iv_directories_save_deletebookmark",	
+							"action"  : 	"uou_tigerp_save_deletebookmark",	
 							"data": "id=" + id,
 						};
 						
@@ -439,7 +439,7 @@ function similar_save_follow(id) {
 						
 						var ajaxurl = tiger_data.ajaxurl;
 						var search_params={
-							"action"  : 	"iv_directories_save_follow",	
+							"action"  : 	"uou_tigerp_save_follow",	
 							"data": "id=" + id,
 						};
 						
@@ -469,7 +469,7 @@ function similar_save_unfollow(id) {
 						
 						var ajaxurl = tiger_data.ajaxurl;								
 						var search_params={
-							"action"  : 	"iv_directories_save_un_follow",	
+							"action"  : 	"uou_tigerp_save_un_follow",	
 							"data": "id=" + id,
 						};
 						
@@ -498,7 +498,7 @@ function similar_save_connect(id) {
 						
 						var ajaxurl = tiger_data.ajaxurl;
 						var search_params={
-							"action"  : 	"iv_directories_save_connect",	
+							"action"  : 	"uou_tigerp_save_connect",	
 							"data": "id=" + id,
 						};
 						
@@ -527,7 +527,7 @@ function similar_save_connect(id) {
 						
 						var ajaxurl = tiger_data.ajaxurl;
 						var search_params={
-							"action"  : 	"iv_directories_save_deleteconnect",	
+							"action"  : 	"uou_tigerp_save_deleteconnect",	
 							"data": "id=" + id,
 						};
 						

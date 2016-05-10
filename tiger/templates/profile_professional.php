@@ -5,7 +5,7 @@
  */
  ?>
 <?php get_header();
-wp_enqueue_style('iv_directories-style-71', wp_iv_directories_URLPATH . 'assets/cube/css/cubeportfolio.css');
+wp_enqueue_style('uou_tigerp-style-71', wp_uou_tigerp_URLPATH . 'assets/cube/css/cubeportfolio.css');
 wp_enqueue_style('Company-Profile-style', tiger_CSS.'user-public-profile.css', array(), $ver = false, $media = 'all');
 $display_name='';
 $email='';
@@ -648,8 +648,8 @@ $user_id=1;
 
 
 <?php
-wp_enqueue_script('iv_directories-ar-script-23', wp_iv_directories_URLPATH . 'assets/cube/js/jquery.cubeportfolio.min.js');
-wp_enqueue_script('iv_directories-ar-script-102', wp_iv_directories_URLPATH . 'assets/cube/js/meet-team.js');
+wp_enqueue_script('uou_tigerp-ar-script-23', wp_uou_tigerp_URLPATH . 'assets/cube/js/jquery.cubeportfolio.min.js');
+wp_enqueue_script('uou_tigerp-ar-script-102', wp_uou_tigerp_URLPATH . 'assets/cube/js/meet-team.js');
 wp_enqueue_script('single-profile-js', tiger_JS.'single-profile.js', array('jquery'), $ver = true, true );
 wp_localize_script('single-profile-js', 'tiger_data', array( 			'ajaxurl' 			=> admin_url( 'admin-ajax.php' ),
 'loading_image'		=> '<img src="'.tiger_IMAGE.'loader2.gif">',

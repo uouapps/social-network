@@ -7,7 +7,7 @@ var ajaxurl = tiger_data.ajaxurl;
 	jQuery(document).ready(function($) {
 			
 						jQuery.validate({
-							form : '#iv_directories_registration',
+							form : '#uou_tigerp_registration',
 							modules : 'security',		
 												
 							onSuccess : function() {
@@ -53,7 +53,7 @@ var ajaxurl = tiger_data.ajaxurl;
 					jQuery("#payment-errors").html('<div class="alert alert-info alert-dismissable"><a class="panel-close close" data-dismiss="alert">x</a>'+response.error.message +'.</div> ');
 				
 				} else {
-					var form$ = jQuery("#iv_directories_registration");
+					var form$ = jQuery("#uou_tigerp_registration");
 					// token contains id, last4, and card type
 					var token = response['id'];
 					// insert the token into the form so it gets submitted to the server
@@ -73,12 +73,12 @@ jQuery(document).ready(function() {
 						
 		var ajaxurl = tiger_data.ajaxurl;		
 		var search_params={
-			"action"  			: "iv_directories_check_coupon",	
+			"action"  			: "uou_tigerp_check_coupon",	
 			"coupon_code" 		:jQuery("#coupon_name").val(),
 			"package_id" 		:jQuery("#package_id").val(),
 			"package_amount" 	:tiger_data.package_amount,
 			"api_currency" 		:tiger_data.api_currency,
-			"form_data"			:jQuery("#iv_directories_registration").serialize(),
+			"form_data"			:jQuery("#uou_tigerp_registration").serialize(),
 			
 		};
 		jQuery('#coupon-result').html('<img src="'+tiger_data.old_loader+'">');
@@ -108,10 +108,10 @@ jQuery(function(){
 										
 		var ajaxurl = tiger_data.ajaxurl;		
 		var search_params={
-		"action"  			: "iv_directories_check_package_type",	
+		"action"  			: "uou_tigerp_check_package_type",	
 		"coupon_code" 		:jQuery("#coupon_name").val(),		
 		"api_currency" 		:tiger_data.api_currency,
-		"form_data"			:jQuery("#iv_directories_registration").serialize(),
+		"form_data"			:jQuery("#uou_tigerp_registration").serialize(),
 		};
 		jQuery.ajax({					
 			url : ajaxurl,					 
@@ -142,12 +142,12 @@ jQuery(function(){
 								
 		var ajaxurl = tiger_data.ajaxurl;		
 		var search_params={
-		"action"  			: "iv_directories_check_package_amount",	
+		"action"  			: "uou_tigerp_check_package_amount",	
 		"coupon_code" 		:jQuery("#coupon_name").val(),
 		"package_id" 		: pack_id,
 		"package_amount" 	:tiger_data.package_amount,
 		"api_currency" 		:tiger_data.api_currency,
-		"form_data"			:jQuery("#iv_directories_registration").serialize(),
+		"form_data"			:jQuery("#uou_tigerp_registration").serialize(),
 		};
 		jQuery.ajax({					
 			url : ajaxurl,					 
@@ -176,12 +176,12 @@ jQuery('#country_select').on('change', function (e) {
 								
 		var ajaxurl = tiger_data.ajaxurl;		
 		var search_params={
-		"action"  			: "iv_directories_check_package_amount",	
+		"action"  			: "uou_tigerp_check_package_amount",	
 		"coupon_code" 		:jQuery("#coupon_name").val(),
 		"package_id" 		: pack_id,
 		"package_amount" 	:tiger_data.package_amount,
 		"api_currency" 		:tiger_data.api_currency,
-		"form_data"			:jQuery("#iv_directories_registration").serialize(),
+		"form_data"			:jQuery("#uou_tigerp_registration").serialize(),
 		};
 		jQuery.ajax({					
 			url : ajaxurl,					 
@@ -210,12 +210,12 @@ function select_change_ajax(p){
 								
 		var ajaxurl = tiger_data.ajaxurl;	
 		var search_params={
-		"action"  			: "iv_directories_check_package_amount",	
+		"action"  			: "uou_tigerp_check_package_amount",	
 		"coupon_code" 		:jQuery("#coupon_name").val(),
 		"package_id" 		: pack_id,
 		"package_amount" 	:tiger_data.package_amount,
 		"api_currency" 		:tiger_data.api_currency,
-		"form_data"			:jQuery("#iv_directories_registration").serialize(),
+		"form_data"			:jQuery("#uou_tigerp_registration").serialize(),
 		};
 		jQuery.ajax({					
 			url : ajaxurl,					 

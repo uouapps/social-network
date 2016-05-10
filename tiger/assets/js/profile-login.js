@@ -5,7 +5,7 @@ function  forget_pass(){
 			
 				jQuery('#forget_message').html(loader_image);
 				var search_params={
-					"action"  : 	"iv_directories_forget_password",	
+					"action"  : 	"uou_tigerp_forget_password",	
 					"form_data":	jQuery("#forget-password").serialize(), 
 				};
 				var femail = jQuery('#forget_email').val();
@@ -38,7 +38,7 @@ function  forget_pass(){
 			var loader_image = "<img src='"+tiger_data.loading_image+"'/>";
 				jQuery('#error_message').html(loader_image);
 				var search_params={
-					"action"  : 	"iv_directories_check_login",	
+					"action"  : 	"uou_tigerp_check_login",	
 					"form_data":	jQuery("#login_form").serialize(), 
 				};
 				var username = jQuery('#username').val();
