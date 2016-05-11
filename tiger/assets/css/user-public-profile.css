@@ -526,12 +526,17 @@ iframe {
 	padding: 30px;
 	padding-top: 40px;
 	padding-bottom: 0px;
-	max-width: 360px;
+	width: 360px;
 	margin: 70px 0;
 	margin-bottom: 98px;
 	display: inline-block;
 	position: relative;
 	overflow: hidden;
+}
+@media(max-width: 400px) {
+	.compny-profile .user-info {
+		width: 100%;
+	}
 }
 .compny-profile .user-info h1 {
 	font-size: 30px;
@@ -1551,8 +1556,31 @@ iframe {
 
 
 
+.login-with p {
+	color: #fff;
+	font-size: 13px;
+}
 
+.login-with {
+	position: absolute;
+    left: 160px;
+}
 
+.login-with .social-login-plugin {
+	position: absolute;
+	left: 100px;
+	top: 0;
+	width: 300px;
+}
+
+.login-with .social-login-plugin iframe {
+	height: 53px;
+}
+
+.login-with .social-login-plugin #branding {
+	position: absolute;
+
+}
 
 
 

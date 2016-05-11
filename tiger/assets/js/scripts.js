@@ -34,8 +34,10 @@ var contact = $(body).find('.contact-button');
 var contactWindow = $(contact).find('.contact-details');
 
 $('.sponsors-slider').owlCarousel({
-  items: 6
+  items: 6,
+  center: true,
 });
+
 $('.texti-slide').owlCarousel({
     loop:true,
     nav:true,

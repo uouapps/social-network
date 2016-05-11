@@ -44,9 +44,9 @@ $package_id=0;
 					<?php
 					echo esc_attr($tiger_option_data['tiger-home-banner-text']);
 					?>
-					
-					 
-					
+
+
+
 					</h1>
                 <h6>
 					<?php
@@ -95,7 +95,7 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 		 data-validation-strength="2">
 					</div>
                       <button type="submit" id="submit_uou_tigerp_payment" name="submit_uou_tigerp_payment"><?php  esc_html_e('Register','tiger');?> </button>
-                      <div class="login-with"> <span><?php echo do_action('oa_social_login'); ?> </span>
+                      <div class="login-with"><p>Or login with:</p> <span class="social-login-plugin"><?php echo do_action('oa_social_login'); ?> </span>
 
                       </div>
                     </form>
@@ -109,7 +109,7 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 						  <input type="text" name="username" id="username"  placeholder="<?php  esc_html_e('User Name','tiger');?>" >
 						  <input type="password" placeholder="<?php  esc_html_e('Password','tiger');?>" name="password" id="password">
 						  <button type="button" onclick="return chack_login();"><?php  esc_html_e('Login','tiger');?> </button>
-						  <div class="login-with"> <span><?php echo do_action('oa_social_login'); ?>Or login with:</span>
+						  <div class="login-with"><p>Or login with:</p> <span class="social-login-plugin"><?php echo do_action('oa_social_login'); ?></span>
   						  <!-- <a href="#."><i class="fa fa-facebook"></i>
                 </a> <a href="#."><i class="fa fa-google"></i></a>
                 <a href="#."><i class="fa fa-linkedin"></i></a> -->
@@ -124,7 +124,7 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
         </div>
       </div>
     </div>
-	
+
 	<?php
 	}
 	?>
@@ -133,7 +133,7 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
     $row2=(isset($tiger_option_data['tiger-show-page-row2'])? $tiger_option_data['tiger-show-page-row2']: '1' );
     if($row2==1){
     ?>
-    
+
     <section class="services">
 
       <!-- SERVICES ROW -->
@@ -168,7 +168,7 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
             <p><?php
               echo (isset($tiger_option_data['tiger-home-row2-block2-sub'])? $tiger_option_data['tiger-home-row2-block2-sub']: esc_html__('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue conseqaut nibbhi ellit ipsum consectetur.','tiger') );
               ?>
-            
+
             </p>
           </div>
         </li>
@@ -189,9 +189,9 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
         </li>
       </ul>
     </section>
-	
+
 	<?php
-	}	
+	}
 	?>
     <!-- PRO SECTION -->
      <?php
@@ -215,12 +215,12 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
               <h1>
 				<?php
               echo (isset($tiger_option_data['tiger-home-row3-block'])? $tiger_option_data['tiger-home-row3-block']: esc_html__(' Interact with other professionals','tiger'));
-              ?>  
+              ?>
 				 </h1>
               <p>
 				<?php
               echo (isset($tiger_option_data['tiger-home-row3-block-sub'])? $tiger_option_data['tiger-home-row3-block-sub']: esc_html__(' Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.','tiger') );
-              ?>  
+              ?>
 				   </p>
             </div>
           </div>
@@ -237,7 +237,7 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
               <h1>
 				<?php
               echo (isset($tiger_option_data['tiger-home-row3-block2'])? $tiger_option_data['tiger-home-row3-block2']: esc_html__('Collaborate on a project','tiger'));
-              ?>    
+              ?>
 				  </h1>
               <p> <?php
               echo (isset($tiger_option_data['tiger-home-row3-block-sub2'])? $tiger_option_data['tiger-home-row3-block-sub2']: esc_html__(' Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.','tiger') );
@@ -255,7 +255,7 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
         </div>
       </div>
     </section>
-	
+
 	<?php
 	}
 	?>
@@ -270,7 +270,7 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 		 if(isset($tiger_option_data['tiger-home-row4-image2']['url']) AND $tiger_option_data['tiger-home-row4-image2']['url'] !=""){
 			$top_mobile_image4=  $tiger_option_data['tiger-home-row4-image2']['url'];
 		}
-		
+
     ?>
     <!-- APP IMAGE -->
     <section class="app-images" style="background:url(<?php echo $top_banner_image4;?>) center center no-repeat; background-size: cover;">
@@ -281,16 +281,16 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
           <div class="col-md-6 text-center text-area">
             <h1><?php
               echo (isset($tiger_option_data['tiger-home-row4-header'])? $tiger_option_data['tiger-home-row4-header']: esc_html__('SocialMe for your Smartphone','tiger'));
-              ?> 				
+              ?>
 				</h1>
             <p>
-				
+
 				<?php
               echo (isset($tiger_option_data['tiger-home-row4-sub'])? $tiger_option_data['tiger-home-row4-sub']: esc_html__('Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam,
               eaque ipsa quae ab illo inventore veritatis et quasi architecto
               beatae vitae dicta sunt explicabo.','tiger'));
-              ?> 
+              ?>
 				 </p>
             <a href="<?php  echo (isset($tiger_option_data['tiger-appstore-link'])? $tiger_option_data['tiger-appstore-link']: '');?>"><i class="fa fa-apple"></i> <?php esc_html_e('App Store', 'tiger') ?></a> </div>
 
@@ -304,14 +304,14 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 	?>
     <!-- TESTIMONIALS -->
     <?php
-   
+
          $row5=(isset($tiger_option_data['tiger-testimonial-switch'])? $tiger_option_data['tiger-testimonial-switch']: '1' );
     if($row5==1){
-	
-		
-		  
+
+
+
 		if(isset($tiger_option_data['tiger-our-testimonials'][0]['title']) AND $tiger_option_data['tiger-our-testimonials'][0]['title']==''){
-			
+
 			$tiger_option_data['tiger-our-testimonials']=array(
 					array( 'title'=>'John Kevin Mara',
 							'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue.',
@@ -329,11 +329,11 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 							'image'=> tiger_IMAGE.'clients-avatar-1.jpg',
 				),
 			);
-		
+
 		}
-		
+
     ?>
-    
+
     <section class="clients-says">
       <div class="container">
         <h3 class="section-title"><?php
@@ -342,9 +342,9 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
         <div class="testi">
           <div class="texti-slide">
 			  <?php
-			  
-			   foreach($tiger_option_data['tiger-our-testimonials'] as $t_slider){?>				   
-				   
+
+			   foreach($tiger_option_data['tiger-our-testimonials'] as $t_slider){?>
+
 				      <!-- SLide -->
 						<div class="clints-text">
 						  <div class="text-in">
@@ -361,21 +361,21 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 						</div>
 
 					<!-- SLide -->
-				   
-			<?php	
-			  }   
+
+			<?php
+			  }
 			  ?>
-      
+
           </div>
         </div>
       </div>
     </section>
-	
+
 	<?php
 	}
 	?>
 	<?php
-	
+
 	   $sponsor=(isset($tiger_option_data['tiger-sponsors-switch'])? $tiger_option_data['tiger-sponsors-switch']: '1' );
     if($sponsor==1){
 		$top_banner_sponsor= tiger_IMAGE."sponsor.png";
@@ -383,7 +383,7 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 			$top_banner_sponsor=  $tiger_option_data['tiger-home-sponsors-image']['url'];
 		}
 		?>
-		
+
     <!-- sponsors -->
     <div class="sponsors" style="background: url('<?php echo $top_banner_sponsor;?>') top center no-repeat; background-size: cover;">
       <div class="overlay"></div>
@@ -396,24 +396,24 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
             <div class="sponsors-slider">
 				<?php
 				  foreach($tiger_option_data['tiger-our-sponsors'] as $t_slider){?>
-					  
+
 					   <div class="item"><img src="<?php echo (isset($t_slider['image'])?$t_slider['image'] :''); ?>" alt="" style="height:90px"></div>
 				<?php
 					}
-				?>	  
-             
-            
+				?>
+
+
             </div>
           </div>
         </div>
       </div>
     </div>
-  
+
   <?php
 	}
   ?>
-  
-  
+
+
   </div>
 </div>
  <?php
