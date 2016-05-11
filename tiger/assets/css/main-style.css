@@ -14077,7 +14077,7 @@ a:hover, a:focus, a:active, a.active {
 	color: #0099ff;
 }
 .blog-post-content .meta span:after {
-	content: '\2022';
+	content: ' ';
 	margin: 0 10px;
 }
 .blog-post-content .meta span:last-child:after {
