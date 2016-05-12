@@ -1256,11 +1256,14 @@ iframe {
 	display: none;
 }
 .banr-head .login-sec .login-with {
-	float: right;
 	margin-top: 5px;
 }
+
+.banr-head .login-sec .login-with p {
+	margin-bottom: 10px;
+	padding-top: 15px;
+}
 .banr-head .login-sec .login-with span {
-	margin-right: 10px;
 	color: #fff;
 	font-size: 14px;
 }
@@ -1299,7 +1302,6 @@ iframe {
 	border-radius: 30px;
 	padding: 8px 30px;
 	color: #fff;
-	float: left;
 	font-size: 14px;
 	transition: all 0.3s;
 }
@@ -1318,9 +1320,7 @@ iframe {
 .banr-head .uou-tabs .content {
 	border: none;
 }
-.banr-head input[type="email"], input[type="text"], input[type="password"] {
-	color: #fff;
-}
+
 .home-pro .services ul {
 	margin: 0px;
 	padding: 0px;
@@ -1562,25 +1562,10 @@ iframe {
 }
 
 .login-with {
-	position: absolute;
-    left: 160px;
-}
-
-.login-with .social-login-plugin {
-	position: absolute;
-	left: 100px;
-	top: 0;
-	width: 300px;
-}
-
-.login-with .social-login-plugin iframe {
-	height: 53px;
-}
-
-.login-with .social-login-plugin #branding {
-	position: absolute;
 
 }
+
+
 
 
 

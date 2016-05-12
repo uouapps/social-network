@@ -95,7 +95,7 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 		 data-validation-strength="2">
 					</div>
                       <button type="submit" id="submit_uou_tigerp_payment" name="submit_uou_tigerp_payment"><?php  esc_html_e('Register','tiger');?> </button>
-                      <div class="login-with"><p>Or login with:</p> <span class="social-login-plugin"><?php echo do_action('oa_social_login'); ?> </span>
+                      <div class="login-with"><p>Or Register with:</p> <span class="social-login-plugin"><?php echo do_action('oa_social_login'); ?> </span>
 
                       </div>
                     </form>
