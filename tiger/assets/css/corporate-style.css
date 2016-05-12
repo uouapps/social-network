@@ -15073,11 +15073,13 @@ padding-right: 0  !important;
 
 
 
-.uou-block-1a .search-form input[type="submit"] {
-  display: none;
-}
+
 
 .uou-block-1a .search-form input[type="text"] {
   color: #333;
 }
 
+.searchsubmit {
+
+  font-family: 'FontAwesome';
+}
