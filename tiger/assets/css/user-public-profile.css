@@ -1566,7 +1566,9 @@ iframe {
 }
 
 
-
+.banr-head input[type="email"], .banr-head input[type="text"], .banr-head input[type="password"] {
+ 	color: #fff;
+}
 
 
 
