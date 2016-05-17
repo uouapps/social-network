@@ -12,11 +12,11 @@ wp_enqueue_style('uou_tigerp-creative', tiger_CSS . 'creative-style.css');
 wp_enqueue_style('uou_tigerp-profile', tiger_CSS . 'user-public-profile.css');
 
 
-$iv_gateway='paypal-express';
+$iv_gateway=esc_html__('paypal-express','tiger') ;
 $stripe_publishable='';
-$package_amount=0;
-$api_currency='USD';
-$package_id=0;
+$package_amount=esc_html__('0','tiger');
+$api_currency=esc_html__('USD','tiger');
+$package_id=esc_html__('0','tiger');
 ?>
 
 <div id="">
@@ -94,10 +94,16 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
                       <input type="password" name="iv_member_password"  data-validation="required" class="form-control ctrl-textbox" placeholder="<?php esc_html_e('Enter Password','tiger');?>" data-validation="strength"
 		 data-validation-strength="2">
 					</div>
+					
                       <button type="submit" id="submit_uou_tigerp_payment" name="submit_uou_tigerp_payment"><?php  esc_html_e('Register','tiger');?> </button>
-                      <div class="login-with"><p>Or Register with:</p> <span class="social-login-plugin"><?php echo do_action('oa_social_login'); ?> </span>
-
+                     <?php
+                     if(has_action('oa_social_login')) {
+                     ?>
+                       <div class="login-with"><p><?php  esc_html_e('Or Register with:','tiger');?> </p> <span class="social-login-plugin"><?php echo do_action('oa_social_login'); ?></span>
                       </div>
+                     <?php
+						}
+                     ?> 
                     </form>
                   </div>
 
@@ -109,11 +115,13 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 						  <input type="text" name="username" id="username"  placeholder="<?php  esc_html_e('User Name','tiger');?>" >
 						  <input type="password" placeholder="<?php  esc_html_e('Password','tiger');?>" name="password" id="password">
 						  <button type="button" onclick="return chack_login();"><?php  esc_html_e('Login','tiger');?> </button>
-						  <div class="login-with"><p>Or login with:</p> <span class="social-login-plugin"><?php echo do_action('oa_social_login'); ?></span>
-  						  <!-- <a href="#."><i class="fa fa-facebook"></i>
-                </a> <a href="#."><i class="fa fa-google"></i></a>
-                <a href="#."><i class="fa fa-linkedin"></i></a> -->
-						   </div>
+						   <?php
+							 if(has_action('oa_social_login')) {
+							 ?>
+						  <div class="login-with"><p><?php  esc_html_e('Or login with:','tiger');?> </p> <span class="social-login-plugin"><?php echo do_action('oa_social_login'); ?></span> </div>
+						  <?php
+							}
+						  ?>
 						  <div class="forget"><?php esc_html_e('Forgot your password?', 'tiger');?>  <a href="#."> <?php esc_html_e('Click Here', 'tiger');?></a></div>
 						</form>
                   </div>
@@ -306,11 +314,11 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
     <?php
 
          $row5=(isset($tiger_option_data['tiger-testimonial-switch'])? $tiger_option_data['tiger-testimonial-switch']: '1' );
-    if($row5==1){
-
-
-
-		if(isset($tiger_option_data['tiger-our-testimonials'][0]['title']) AND $tiger_option_data['tiger-our-testimonials'][0]['title']==''){
+		if($row5==1){
+		$testimonials_data= (isset($tiger_option_data['tiger-our-testimonials'][0]['title'])? $tiger_option_data['tiger-our-testimonials'][0]['title']: '' );
+		
+		if($testimonials_data==''){
+			
 
 			$tiger_option_data['tiger-our-testimonials']=array(
 					array( 'title'=>'John Kevin Mara',
@@ -395,11 +403,16 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
               ?></h3>
             <div class="sponsors-slider">
 				<?php
+				
+				if(isset($tiger_option_data['tiger-our-sponsors'])){
+					if(sizeof($tiger_option_data['tiger-our-sponsors'] )>0){
 				  foreach($tiger_option_data['tiger-our-sponsors'] as $t_slider){?>
 
 					   <div class="item"><img src="<?php echo (isset($t_slider['image'])?$t_slider['image'] :''); ?>" alt="" style="height:90px"></div>
 				<?php
 					}
+				  }	
+				}	
 				?>
 
 
@@ -417,6 +430,7 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
   </div>
 </div>
  <?php
+ if(defined('wp_uou_tigerp_URLPATH')){
  wp_enqueue_script('uou_tigerp-script-signup-2-15', wp_uou_tigerp_URLPATH . 'admin/files/js/jquery.form-validator.js');
 
  wp_enqueue_script( 'profile-login-js', tiger_JS.'profile-login.js', array('jquery'), $ver = true, true );
@@ -426,16 +440,15 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
  wp_localize_script( 'home-registration-js', 'tiger_data', array( 	'ajaxurl' 			=> admin_url( 'admin-ajax.php' ),
 																		'loading_image'		=> wp_uou_tigerp_URLPATH.'admin/files/images/loader.gif',
 																		'old_loader'		=> wp_uou_tigerp_URLPATH.'admin/files/images/old-loader.gif',
-																		'iv_gateway'		=>$iv_gateway,
-																		'stripe_publishable'=>$stripe_publishable,
-																		'package_amount'	=> $package_amount,
-																		'api_currency'		=>$api_currency ,
+																		'iv_gateway'		=> esc_html__('paypal-express','tiger') ,
+																		'stripe_publishable'=>'',
+																		'package_amount'	=> esc_html__('0','tiger') ,
+																		'api_currency'		=> esc_html__('USD','tiger') ,
 																		'right_icon'		=> wp_uou_tigerp_URLPATH. 'admin/files/images/right_icon.png' ,
-																		'wrong_icon'		=> wp_uou_tigerp_URLPATH. 'admin/files/images/wrong_16x16.png' ,
-																		'Hide_Coupon'=> __('Hide Coupon','tiger'),
-																		'have_Coupon'=> __('Have a coupon?','tiger'),
+																		'wrong_icon'		=> wp_uou_tigerp_URLPATH. 'admin/files/images/wrong_16x16.png' ,																	
 
 																		) );
+}																		
 
 
  ?>

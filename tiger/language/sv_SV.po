@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tiger\n"
-"POT-Creation-Date: 2016-03-30 18:38+0600\n"
-"PO-Revision-Date: 2016-03-30 18:38+0600\n"
+"POT-Creation-Date: 2016-05-13 14:38+0600\n"
+"PO-Revision-Date: 2016-05-13 14:38+0600\n"
 "Last-Translator: \n"
 "Language-Team: tiger <aktar567@gmail.com>\n"
 "Language: sv\n"
@@ -16,18 +16,22 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;esc_html_e\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: category.php:25 archive-doctor.php:375 tag.php:22 single.php:21
-#: search.php:22 page-grid.php:26 archive.php:30 archive-hospital.php:393
-#: templates/page/content-page.php:10 templates/topS/header-top12.php:4
-#: templates/topS/header-top10.php:4 templates/topS/header-top8.php:4
-#: templates/topS/header-top13.php:9 templates/topS/header-top3.php:3
-#: templates/topS/header-top7.php:4 templates/topS/header-top11.php:4
-#: templates/topS/header-top11.php:8 templates/topS/header-top9.php:4
-#: templates/blog/content-gridNS.php:19 templates/blog/content-listNS.php:23
-#: templates/blog/content-list.php:21 templates/blog/content-grid.php:19
-#: templates/headerS/header-four.php:10 templates/headerS/header-six.php:10
+#: category.php:25 tag.php:22 single.php:21 footer.php:55 search.php:22
+#: page-grid.php:26 archive.php:30 templates/page/content-page.php:10
+#: templates/topS/header-top12.php:4 templates/topS/header-top10.php:4
+#: templates/topS/header-top8.php:4 templates/topS/header-top13.php:9
+#: templates/topS/header-top3.php:3 templates/topS/header-top7.php:4
+#: templates/topS/header-top11.php:4 templates/topS/header-top11.php:8
+#: templates/topS/header-top9.php:4 templates/blog/content-gridNS.php:19
+#: templates/blog/content-listNS.php:23 templates/blog/content-list.php:21
+#: templates/blog/content-grid.php:19 templates/headerS/header-four.php:10
+#: templates/headerS/header-six.php:10 templates/headerS/header-two.php:10
 #: templates/headerS/header-five.php:10 templates/headerS/header-three.php:10
 #: templates/headerS/header-one.php:10
+#: framework/ext/widget-latest-hospital.php:71
+#: framework/ext/widget-latest-hospital.php:75
+#: framework/ext/widget-latest-doctor.php:71
+#: framework/ext/widget-latest-doctor.php:75
 #: framework/ext/widget-contact-info.php:53
 #: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:180
 #: framework/redux/ReduxCore/inc/fields/media/field_media.php:190
@@ -44,181 +48,6 @@ msgstr ""
 #: page.php:70 archive.php:82 templates/blog/content-blogChoose.php:42
 #: templates/blog/content-blogChoose.php:97
 msgid "Please activate some Widgets"
-msgstr ""
-
-#: archive-doctor.php:99 single-hospital.php:10 single-doctor.php:17
-#: archive-hospital.php:103 templates/contact-us-template.php:10
-#: templates/about-us.php:10 templates/full-width-page.php:10
-msgid "banner"
-msgstr ""
-
-#: archive-doctor.php:103
-msgid "Doctors Directory"
-msgstr ""
-
-#: archive-doctor.php:125 archive-hospital.php:126
-msgid "Keyword"
-msgstr ""
-
-#: archive-doctor.php:208 single-hospital.php:485 single-doctor.php:357
-#: archive-hospital.php:208
-msgid "Location"
-msgstr ""
-
-#: archive-doctor.php:217 archive-doctor.php:241 archive-hospital.php:234
-#: archive-hospital.php:255
-msgid "Search"
-msgstr ""
-
-#: archive-doctor.php:242 archive-hospital.php:256
-msgid "Show Map"
-msgstr ""
-
-#: archive-doctor.php:251 archive-doctor.php:282 archive-hospital.php:267
-#: archive-hospital.php:300
-msgid "Show All"
-msgstr ""
-
-#: archive-doctor.php:419
-msgid "Sorry, no doctor matched your criteria."
-msgstr ""
-
-#: single-hospital.php:107
-msgid "About Us"
-msgstr ""
-
-#: single-hospital.php:117 single-doctor.php:81
-msgid "Added to Favorites"
-msgstr ""
-
-#: single-hospital.php:121 single-hospital.php:127 single-hospital.php:682
-#: single-doctor.php:85 single-doctor.php:91
-msgid "Add to Favorites"
-msgstr ""
-
-#: single-hospital.php:200
-msgid "Specialties"
-msgstr ""
-
-#: single-hospital.php:230
-msgid "Awards"
-msgstr ""
-
-#: single-hospital.php:286 single-doctor.php:262
-msgid "Video"
-msgstr ""
-
-#: single-hospital.php:323
-msgid "Event"
-msgstr ""
-
-#: single-hospital.php:373
-msgid "Our Doctors"
-msgstr ""
-
-#: single-hospital.php:400
-msgid "View Profile"
-msgstr ""
-
-#: single-hospital.php:478 single-doctor.php:351
-msgid "Contact Info"
-msgstr ""
-
-#: single-hospital.php:490 single-doctor.php:362
-msgid "Phone"
-msgstr ""
-
-#: single-hospital.php:493 single-doctor.php:365
-msgid "Fax"
-msgstr ""
-
-#: single-hospital.php:495 single-doctor.php:367
-msgid "Email"
-msgstr ""
-
-#: single-hospital.php:497 single-doctor.php:369
-msgid "Web Site"
-msgstr ""
-
-#: single-hospital.php:500 single-doctor.php:373
-msgid "Social Profile"
-msgstr ""
-
-#: single-hospital.php:509 single-doctor.php:382
-msgid "Facebook Profile"
-msgstr ""
-
-#: single-hospital.php:515 single-doctor.php:388
-msgid "Twitter Profile"
-msgstr ""
-
-#: single-hospital.php:521 single-doctor.php:394
-msgid "linkedin Profile"
-msgstr ""
-
-#: single-hospital.php:527 single-doctor.php:400
-msgid "google+ Profile"
-msgstr ""
-
-#: single-hospital.php:534 single-doctor.php:408
-msgid "Share"
-msgstr ""
-
-#: single-hospital.php:535 single-doctor.php:409
-msgid "Share On Facebook"
-msgstr ""
-
-#: single-hospital.php:537 single-doctor.php:411
-msgid "Share On Twitter"
-msgstr ""
-
-#: single-hospital.php:539 single-doctor.php:413
-msgid "Share On linkedin"
-msgstr ""
-
-#: single-hospital.php:541 single-doctor.php:415
-msgid "Share On google+"
-msgstr ""
-
-#: single-hospital.php:567 single-doctor.php:477
-msgid "Working Time"
-msgstr ""
-
-#: single-hospital.php:587
-msgid "Contact Us"
-msgstr ""
-
-#: single-hospital.php:599 single-hospital.php:631 single-doctor.php:509
-#: single-doctor.php:546
-msgid "Enter Message"
-msgstr ""
-
-#: single-hospital.php:602 single-doctor.php:512
-msgid "Send Message"
-msgstr ""
-
-#: single-hospital.php:625
-msgid "Claim"
-msgstr ""
-
-#: single-hospital.php:628 single-doctor.php:539 single-doctor.php:543
-msgid "Claim The Listing"
-msgstr ""
-
-#: single-hospital.php:634 single-doctor.php:549
-msgid "Submit Claim"
-msgstr ""
-
-#: single-hospital.php:681
-msgid "Please login to remove favorite"
-msgstr ""
-
-#: single-hospital.php:683
-msgid "Please login to Claim The Listing"
-msgstr ""
-
-#: single-hospital.php:684
-msgid "Please login to add favorite"
 msgstr ""
 
 #: comments.php:24
@@ -261,20 +90,8 @@ msgstr ""
 msgid "times"
 msgstr ""
 
-#: single-doctor.php:73
-msgid "Profile Description"
-msgstr ""
-
-#: single-doctor.php:202
-msgid "Awards & Certificates"
-msgstr ""
-
-#: single-doctor.php:302
-msgid "Appointment"
-msgstr ""
-
-#: single-doctor.php:496
-msgid "Contact Me"
+#: searchform.php:2
+msgid "Search"
 msgstr ""
 
 #: page.php:44
@@ -285,32 +102,237 @@ msgstr ""
 msgid "Archives"
 msgstr ""
 
-#: archive-hospital.php:106
-msgid "Hospital Directory"
+#: templates/contact-us-template.php:10 templates/about-us.php:10
+#: templates/full-width-page.php:10
+msgid "banner"
 msgstr ""
 
-#: archive-hospital.php:221
-msgid "Radius"
+#: templates/home.php:68
+msgid "Register Now"
 msgstr ""
 
-#: archive-hospital.php:398
-msgid "VIEW DETAIL"
+#: templates/home.php:69
+msgid "Member Login"
 msgstr ""
 
-#: archive-hospital.php:432
-msgid "Sorry, no hospital matched your criteria."
+#: templates/home.php:77 templates/home.php:80
+msgid " Select user Type"
+msgstr ""
+
+#: templates/home.php:77
+msgid "Corporate"
+msgstr ""
+
+#: templates/home.php:80
+msgid "Professional"
+msgstr ""
+
+#: templates/home.php:84
+msgid "Display Name"
+msgstr ""
+
+#: templates/home.php:84
+msgid "Please enter Name"
 msgstr ""
 
 #: templates/home.php:87
-msgid "Hospitals"
+msgid "Enter email address"
 msgstr ""
 
-#: templates/home.php:101
-msgid "Doctors"
+#: templates/home.php:87
+msgid "Please enter a valid email address"
 msgstr ""
 
-#: templates/home.php:116
-msgid "Register Now"
+#: templates/home.php:91
+msgid " The user name has to be an alphanumeric value between 4-12 characters"
+msgstr ""
+
+#: templates/home.php:91
+msgid "Enter User Name"
+msgstr ""
+
+#: templates/home.php:94
+msgid "Enter Password"
+msgstr ""
+
+#: templates/home.php:98 templates/header-login.php:43
+#: templates/header-login.php:46
+msgid "Register"
+msgstr ""
+
+#: templates/home.php:102
+msgid "Or Register with:"
+msgstr ""
+
+#: templates/home.php:115
+msgid "User Name"
+msgstr ""
+
+#: templates/home.php:116 templates/header-login.php:30
+msgid "Password"
+msgstr ""
+
+#: templates/home.php:117 templates/header-login.php:25
+msgid "Login"
+msgstr ""
+
+#: templates/home.php:121
+msgid "Or login with:"
+msgstr ""
+
+#: templates/home.php:125
+msgid "Forgot your password?"
+msgstr ""
+
+#: templates/home.php:125
+msgid "Click Here"
+msgstr ""
+
+#: templates/home.php:303
+msgid "App Store"
+msgstr ""
+
+#: templates/home.php:306 templates/home.php:364
+msgid "Image."
+msgstr ""
+
+#: templates/profile_professional.php:68
+#: templates/profile_professional.php:444 templates/profile_corporate.php:200
+msgid "Added to Connection"
+msgstr ""
+
+#: templates/profile_professional.php:68 templates/profile_corporate.php:200
+msgid "Connected"
+msgstr ""
+
+#: templates/profile_professional.php:71 templates/profile_professional.php:75
+#: templates/profile_professional.php:448
+#: templates/profile_professional.php:454 templates/profile_corporate.php:203
+#: templates/profile_corporate.php:207
+msgid "Add to Connection"
+msgstr ""
+
+#: templates/profile_professional.php:71 templates/profile_professional.php:75
+#: templates/profile_corporate.php:203 templates/profile_corporate.php:207
+msgid "Connect"
+msgstr ""
+
+#: templates/profile_professional.php:82 templates/profile_corporate.php:214
+msgid "Share"
+msgstr ""
+
+#: templates/profile_professional.php:94
+#: templates/profile_professional.php:397 templates/profile_corporate.php:174
+#: templates/profile_corporate.php:226
+msgid "Following"
+msgstr ""
+
+#: templates/profile_professional.php:97
+#: templates/profile_professional.php:102
+#: templates/profile_professional.php:400
+#: templates/profile_professional.php:405 templates/profile_corporate.php:229
+#: templates/profile_corporate.php:234
+msgid "Add to Follow"
+msgstr ""
+
+#: templates/profile_professional.php:117
+#: templates/profile_professional.php:419 templates/profile_corporate.php:249
+msgid "Added to Bookmark"
+msgstr ""
+
+#: templates/profile_professional.php:121
+#: templates/profile_professional.php:127
+#: templates/profile_professional.php:423
+#: templates/profile_professional.php:429 templates/profile_corporate.php:253
+#: templates/profile_corporate.php:259
+msgid "Add to Bookmark"
+msgstr ""
+
+#: templates/profile_professional.php:134 templates/profile_corporate.php:266
+msgid "Report the profile"
+msgstr ""
+
+#: templates/profile_professional.php:147 templates/profile_corporate.php:278
+msgid "Send Message"
+msgstr ""
+
+#: templates/profile_professional.php:153 templates/profile_corporate.php:284
+#: templates/profile_corporate.php:499
+msgid "Name & Surname"
+msgstr ""
+
+#: templates/profile_professional.php:157
+#: templates/profile_professional.php:189 templates/profile_corporate.php:288
+#: templates/profile_corporate.php:320 templates/profile_corporate.php:500
+msgid "E-mail address"
+msgstr ""
+
+#: templates/profile_professional.php:160
+#: templates/profile_professional.php:192 templates/profile_corporate.php:291
+#: templates/profile_corporate.php:323 templates/profile_corporate.php:501
+msgid "Your Message"
+msgstr ""
+
+#: templates/profile_professional.php:164
+#: templates/profile_professional.php:195 templates/profile_corporate.php:295
+#: templates/profile_corporate.php:326 templates/profile_corporate.php:504
+msgid "Send message"
+msgstr ""
+
+#: templates/profile_professional.php:179 templates/profile_corporate.php:310
+msgid "Claim/Report"
+msgstr ""
+
+#: templates/profile_professional.php:185 templates/profile_corporate.php:316
+msgid "Claim The Listing"
+msgstr ""
+
+#: templates/profile_professional.php:210 templates/profile_corporate.php:341
+msgid "Share the profile"
+msgstr ""
+
+#: templates/profile_professional.php:219 templates/profile_corporate.php:350
+msgid "Facebook"
+msgstr ""
+
+#: templates/profile_professional.php:220 templates/profile_corporate.php:351
+msgid "Twitter"
+msgstr ""
+
+#: templates/profile_professional.php:221
+msgid "Google+"
+msgstr ""
+
+#: templates/profile_professional.php:222 templates/profile_corporate.php:353
+msgid "Linkedin"
+msgstr ""
+
+#: templates/profile_professional.php:252
+msgid "About"
+msgstr ""
+
+#: templates/profile_professional.php:277
+msgid "Skills"
+msgstr ""
+
+#: templates/profile_professional.php:311
+msgid "Similar Professionals"
+msgstr ""
+
+#: templates/profile_professional.php:371 templates/profile_corporate.php:377
+msgid "Profile"
+msgstr ""
+
+#: templates/profile_professional.php:481
+msgid "Professional Details"
+msgstr ""
+
+#: templates/profile_professional.php:528
+msgid "Rating"
+msgstr ""
+
+#: templates/profile_professional.php:587
+msgid "Social Profiles"
 msgstr ""
 
 #: templates/header-login.php:14
@@ -321,16 +343,72 @@ msgstr ""
 msgid "Logout"
 msgstr ""
 
-#: templates/header-login.php:25
-msgid "Login"
+#: templates/header-login.php:29
+msgid "User name"
 msgstr ""
 
 #: templates/header-login.php:36
 msgid "Remember Me"
 msgstr ""
 
-#: templates/header-login.php:43 templates/header-login.php:46
-msgid "Register"
+#: templates/header-login.php:49
+msgid "username"
+msgstr ""
+
+#: templates/header-login.php:50
+msgid "email"
+msgstr ""
+
+#: templates/header-login.php:51
+msgid "password"
+msgstr ""
+
+#: templates/header-login.php:52
+msgid "Register Here"
+msgstr ""
+
+#: templates/profile_corporate.php:77
+msgid "map"
+msgstr ""
+
+#: templates/profile_corporate.php:154
+msgid "Bookmarks"
+msgstr ""
+
+#: templates/profile_corporate.php:163
+msgid "Followers"
+msgstr ""
+
+#: templates/profile_corporate.php:352
+msgid "Google"
+msgstr ""
+
+#: templates/profile_corporate.php:378
+msgid "Jobs"
+msgstr ""
+
+#: templates/profile_corporate.php:379 templates/profile_corporate.php:496
+msgid "Contact"
+msgstr ""
+
+#: templates/profile_corporate.php:388
+msgid " Information"
+msgstr ""
+
+#: templates/profile_corporate.php:437
+msgid " Rating"
+msgstr ""
+
+#: templates/profile_corporate.php:518
+msgid "About the "
+msgstr ""
+
+#: templates/profile_corporate.php:558
+msgid "Services"
+msgstr ""
+
+#: templates/profile_corporate.php:560
+msgid "Here an overview of the services we provide."
 msgstr ""
 
 #: templates/topS/header-top8.php:8
@@ -351,9 +429,10 @@ msgstr ""
 #: framework/ext/widget-tag.php:77
 #: framework/ext/widget-newsletter-subscription.php:113
 #: framework/ext/widget-social.php:135 framework/ext/widget-categories.php:93
-#: framework/ext/widget-logo.php:70 framework/ext/tiger-doctor.php:79
+#: framework/ext/tiger-company.php:79 framework/ext/widget-logo.php:70
+#: framework/ext/tiger-professional.php:79
 #: framework/ext/widget-catagories_one.php:91
-#: framework/ext/widget-legal.php:113 framework/ext/tiger-hospital.php:79
+#: framework/ext/widget-legal.php:113
 #: framework/ext/widget-contact-info.php:129
 #: framework/ext/widget-archives.php:116
 msgid "Title:"
@@ -371,6 +450,10 @@ msgstr ""
 msgid ""
 " Subscribe to our newsletter to receive our latest news and updates. We do "
 "not spam."
+msgstr ""
+
+#: framework/ext/widget-newsletter-subscription.php:66
+msgid "Enter your email address"
 msgstr ""
 
 #: framework/ext/widget-newsletter-subscription.php:118
@@ -428,19 +511,19 @@ msgstr ""
 msgid "Show hierarchy"
 msgstr ""
 
-#: framework/ext/tiger-doctor.php:84 framework/ext/tiger-hospital.php:84
+#: framework/ext/tiger-company.php:84 framework/ext/tiger-professional.php:84
 msgid "Number of posts to show:"
 msgstr ""
 
-#: framework/ext/tiger-doctor.php:89 framework/ext/tiger-hospital.php:89
+#: framework/ext/tiger-company.php:89 framework/ext/tiger-professional.php:89
 msgid "Words of words to be displayed:"
 msgstr ""
 
-#: framework/ext/tiger-doctor.php:94 framework/ext/tiger-hospital.php:94
+#: framework/ext/tiger-company.php:94 framework/ext/tiger-professional.php:94
 msgid "Only Display Ids "
 msgstr ""
 
-#: framework/ext/tiger-doctor.php:95 framework/ext/tiger-hospital.php:95
+#: framework/ext/tiger-company.php:95 framework/ext/tiger-professional.php:95
 msgid "Enter IDs by , [# of post will not work]"
 msgstr ""
 
@@ -476,25 +559,25 @@ msgstr ""
 msgid "Your comment is awaiting to approve"
 msgstr ""
 
-#: framework/redux/class.redux-plugin.php:307
+#: framework/redux/class.redux-plugin.php:298
 msgid "Redux Framework has an embedded demo."
 msgstr ""
 
-#: framework/redux/class.redux-plugin.php:307
+#: framework/redux/class.redux-plugin.php:298
 msgid "Click here to activate the sample config file."
 msgstr ""
 
-#: framework/redux/ReduxCore/framework.php:228
+#: framework/redux/ReduxCore/framework.php:209
 #, php-format
 msgid "Options panel created using %1$s"
 msgstr ""
 
-#: framework/redux/ReduxCore/framework.php:228
+#: framework/redux/ReduxCore/framework.php:209
 msgid "Redux Framework"
 msgstr ""
 
-#: framework/redux/ReduxCore/framework.php:232
-#: framework/redux/ReduxCore/framework.php:236
+#: framework/redux/ReduxCore/framework.php:213
+#: framework/redux/ReduxCore/framework.php:217
 msgid "Options"
 msgstr ""
 
@@ -559,11 +642,13 @@ msgstr ""
 
 #: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:126
 #: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:188
+#: framework/redux/ReduxCore/inc/fields/background/field_background.php:314
 msgid "Upload"
 msgstr ""
 
 #: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:133
 #: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:190
+#: framework/redux/ReduxCore/inc/fields/background/field_background.php:321
 msgid "Remove"
 msgstr ""
 
@@ -599,18 +684,6 @@ msgstr ""
 
 #: framework/redux/ReduxCore/inc/fields/color/field_color.php:73
 msgid "Transparent"
-msgstr ""
-
-#: framework/redux/ReduxCore/inc/fields/spacing/field_spacing.php:191
-msgid "All"
-msgstr ""
-
-#: framework/redux/ReduxCore/inc/fields/spacing/field_spacing.php:215
-msgid "Top"
-msgstr ""
-
-#: framework/redux/ReduxCore/inc/fields/spacing/field_spacing.php:222
-msgid "Right"
 msgstr ""
 
 #: framework/redux/ReduxCore/inc/fields/select/field_select.php:83

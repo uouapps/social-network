@@ -29,12 +29,7 @@
   <div class="toolbar">
         <?php get_template_part('templates/topS/header','topbarChoose'); ?>
         <?php get_template_part('templates/headerS/header','choose'); ?>
-        <?php
-        if ( !is_front_page() ) {
-			get_template_part('templates/breadcrumbs/header','crumbChoose');
-		}
-         ?>
-
+       
     </div>
 
 

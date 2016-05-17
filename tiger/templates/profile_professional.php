@@ -5,7 +5,9 @@
  */
  ?>
 <?php get_header();
-wp_enqueue_style('uou_tigerp-style-71', wp_uou_tigerp_URLPATH . 'assets/cube/css/cubeportfolio.css');
+ if(defined('wp_uou_tigerp_URLPATH')){
+	wp_enqueue_style('uou_tigerp-style-71', wp_uou_tigerp_URLPATH . 'assets/cube/css/cubeportfolio.css');
+ }
 wp_enqueue_style('Company-Profile-style', tiger_CSS.'user-public-profile.css', array(), $ver = false, $media = 'all');
 $display_name='';
 $email='';
@@ -39,29 +41,7 @@ $user_id=1;
 	$dir_lat=$lat;
 	$dir_lng=$lng;
 	$address = get_user_meta($user_id,'address',true);
-	if($address!=''){
-			if($dir_lat=='' || $dir_lng==''){
-				$latitude='';$longitude='';
-
-				$prepAddr = str_replace(' ','+',$address);
-				$geocode=wp_remote_fopen('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
-				$output= json_decode($geocode);
-				if(isset( $output->results[0]->geometry->location->lat)){
-					$latitude = $output->results[0]->geometry->location->lat;
-				}
-				if(isset($output->results[0]->geometry->location->lng)){
-					$longitude = $output->results[0]->geometry->location->lng;
-				}
-				if($latitude!=''){
-					update_user_meta($user_id,'latitude',$latitude);
-				}
-				if($longitude!=''){
-					update_user_meta($user_id,'longitude',$longitude);
-				}
-				$lat=$latitude;
-				$lng=$longitude;
-			}
-	}
+	
 ?>
 
 <div id="">
@@ -647,26 +627,27 @@ $user_id=1;
 
 
 
-<?php
-wp_enqueue_script('uou_tigerp-ar-script-23', wp_uou_tigerp_URLPATH . 'assets/cube/js/jquery.cubeportfolio.min.js');
-wp_enqueue_script('uou_tigerp-ar-script-102', wp_uou_tigerp_URLPATH . 'assets/cube/js/meet-team.js');
-wp_enqueue_script('single-profile-js', tiger_JS.'single-profile.js', array('jquery'), $ver = true, true );
-wp_localize_script('single-profile-js', 'tiger_data', array( 			'ajaxurl' 			=> admin_url( 'admin-ajax.php' ),
-'loading_image'		=> '<img src="'.tiger_IMAGE.'loader2.gif">',
-'current_user_id'	=>get_current_user_id(),
-'login_message'		=> esc_html__('Please login to remove favorite','tiger'),
-'Add_to_Follow'		=> esc_html__('Add to Follow','tiger'),
-'Add_to_Connect'		=> esc_html__('Add to Connect','tiger'),
-'Add_to_Bookmark'		=> esc_html__('Add to Bookmark','tiger'),
-'Login_claim'		=> esc_html__('Please login to Report/Claim The Profile','tiger'),
-'login_connect'	=> esc_html__("Please login to add connection",'tiger'),
-'login_bookmark'	=> esc_html__("Please login to add bookmark",'tiger'),
-'login_follw'	=> esc_html__("Please login to add follow",'tiger'),
-'Connected'=> esc_html__("Connected",'tiger'),
-'Connect'=> esc_html__("Connect",'tiger'),
-'following'=> esc_html__("following",'tiger'),
-) );
-
+<?php 
+if(defined('wp_uou_tigerp_URLPATH')){
+	wp_enqueue_script('uou_tigerp-ar-script-23', wp_uou_tigerp_URLPATH . 'assets/cube/js/jquery.cubeportfolio.min.js');
+	wp_enqueue_script('uou_tigerp-ar-script-102', wp_uou_tigerp_URLPATH . 'assets/cube/js/meet-team.js');
+	wp_enqueue_script('single-profile-js', tiger_JS.'single-profile.js', array('jquery'), $ver = true, true );
+	wp_localize_script('single-profile-js', 'tiger_data', array( 			'ajaxurl' 			=> admin_url( 'admin-ajax.php' ),
+	'loading_image'		=> '<img src="'.tiger_IMAGE.'loader2.gif">',
+	'current_user_id'	=>get_current_user_id(),
+	'login_message'		=> esc_html__('Please login to remove favorite','tiger'),
+	'Add_to_Follow'		=> esc_html__('Add to Follow','tiger'),
+	'Add_to_Connect'		=> esc_html__('Add to Connect','tiger'),
+	'Add_to_Bookmark'		=> esc_html__('Add to Bookmark','tiger'),
+	'Login_claim'		=> esc_html__('Please login to Report/Claim The Profile','tiger'),
+	'login_connect'	=> esc_html__("Please login to add connection",'tiger'),
+	'login_bookmark'	=> esc_html__("Please login to add bookmark",'tiger'),
+	'login_follw'	=> esc_html__("Please login to add follow",'tiger'),
+	'Connected'=> esc_html__("Connected",'tiger'),
+	'Connect'=> esc_html__("Connect",'tiger'),
+	'following'=> esc_html__("following",'tiger'),
+	) );
+}
 ?>
 
 <?php get_footer();
