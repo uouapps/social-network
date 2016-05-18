@@ -70,15 +70,6 @@
 				<?php
 				wp_nav_menu( $defaults );
 
-					/*
-					 wp_nav_menu( array(
-						'theme_location' => 'primary_navigation_right',
-						'container'       => true,
-						'menu_class'      => 'menu',
-						'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-						) );
-						*/
-
 					?>
 				</nav>
 				<?php
