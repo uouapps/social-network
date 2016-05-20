@@ -68,7 +68,17 @@ $user_id=1;
 
         <!-- User Iinfo -->
         <div class="user-info">
-          <h1><?php echo get_user_meta($user_id,'profile_name',true); ?> <a data-toggle="tooltip" data-placement="top" title="Verified Member"><img src="<?php echo tiger_IMAGE."icon-ver.png";?>" alt="icon" ></a> </h1>
+          <h1><?php echo get_user_meta($user_id,'profile_name',true); ?> 
+			  <?php
+			  if(get_user_meta($user->ID,'verified',true)=='Yes'){
+				?>  
+				<a data-toggle="tooltip" data-placement="top" title="<?php  esc_html_e('Verified Member','tiger');?>  ">
+					<img src="<?php echo tiger_IMAGE."icon-ver.png";?>" alt="icon" >
+				</a> 
+			<?php
+				}
+			?>	
+			</h1>
 
           <h6><?php echo get_user_meta($user_id,'company_type',true); ?> </h6>
           <?php
@@ -453,9 +463,13 @@ $user_id=1;
 
 						<?php
 						foreach ( $default_fields as $field_key => $field_value ) {
+							
+							
 							$field_value_trim=trim($field_value);
-
 							$old_rating= get_user_meta($user_id,$field_key.'_rating',true);
+							$key_total_count= get_user_meta($user_id,$field_key.'_count',true);	
+							if($key_total_count<1){$key_total_count=1;}
+							$old_rating=$old_rating/$key_total_count;
 							?>
 							<li class="row">
 							<h6 class="title col-xs-6"><?php echo $field_value_trim; ?></h6>

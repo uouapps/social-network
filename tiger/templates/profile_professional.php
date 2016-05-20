@@ -544,9 +544,12 @@ $user_id=1;
 
 						<?php
 						foreach ( $default_fields as $field_key => $field_value ) {
+								
 							$field_value_trim=trim($field_value);
-
 							$old_rating= get_user_meta($user_id,$field_key.'_rating',true);
+							$key_total_count= get_user_meta($user_id,$field_key.'_count',true);	
+							if($key_total_count<1){$key_total_count=1;}
+							$old_rating=$old_rating/$key_total_count;
 							?>
 							<li class="row">
 							<h6 class="title col-xs-6"><?php echo $field_value_trim; ?></h6>
