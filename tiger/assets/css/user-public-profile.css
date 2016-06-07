@@ -1319,6 +1319,12 @@ iframe {
 }
 .banr-head .uou-tabs .content {
 	border: none;
+	position: relative;
+
+}
+
+.banr-head .uou-tabs .content .accordion-link + .accordion-link {
+	display: none !important;
 }
 
 .home-pro .services ul {
