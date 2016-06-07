@@ -13799,6 +13799,140 @@ padding: 0 !important;*/
 .language ul {
 	z-index: 9999;
 }
+
+/* Demo Styles */
+/* ======================== */
+.demo-section {
+	margin: 0;
+}
+.demo-section:last-child {
+	border-bottom: 0;
+	padding-bottom: 20px;
+}
+.demo-section .demo-section-title {
+	display: block;
+	color: #cccccc;
+	font-size: 18px;
+	margin-top: 0;
+	padding: 60px 0 40px;
+	margin-bottom: 0;
+}
+.demo-section .demo-section-title.container {
+	padding-left: 15px;
+}
+.demo-section .demo-section-subtitle {
+	display: block;
+	color: #cccccc;
+	font-size: 18px;
+}
+/* ----------------------------------------------------------------------  */
+
+/*
+==================================================
+CANVAS PAGE STYLE
+=====================================================
+ */
+.uou-block-canvas.uou-block-2a.secondary {
+	background: #34495e;
+	padding: 0;
+}
+.uou-block-canvas.uou-block-2a.secondary .logo {
+	color: #ffffff;
+	padding-top: 10px;
+	margin-right: 24px;
+}
+.uou-block-canvas.uou-block-2a.secondary .add-content-block, .uou-block-canvas.uou-block-2a.secondary .add-element-block {
+	float: left;
+	border-left: 1px solid #808080;
+}
+.uou-block-canvas.uou-block-2a.secondary .add-content-block a, .uou-block-canvas.uou-block-2a.secondary .add-element-block a {
+	display: block;
+	padding: 20px 15px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	color: #cccccc;
+}
+.uou-block-canvas.uou-block-2a.secondary .add-content-block a i, .uou-block-canvas.uou-block-2a.secondary .add-element-block a i {
+	padding-right: 5px;
+}
+.uou-block-canvas.uou-block-2a.secondary .add-content-block a:hover, .uou-block-canvas.uou-block-2a.secondary .add-element-block a:hover, .uou-block-canvas.uou-block-2a.secondary .add-content-block a:focus, .uou-block-canvas.uou-block-2a.secondary .add-element-block a:focus, .uou-block-canvas.uou-block-2a.secondary .add-content-block a:active, .uou-block-canvas.uou-block-2a.secondary .add-element-block a:active {
+	color: #ffffff;
+	outline: 0;
+}
+.uou-block-canvas.uou-block-2a.secondary .add-element-block {
+	border-right: 1px solid #808080;
+}
+.uou-block-canvas.uou-block-2a.secondary .save-preview-button {
+	float: right;
+	padding-top: 17px;
+}
+.uou-block-canvas.uou-block-2a.secondary .save-preview-button button {
+	margin-left: 6px;
+}
+.uou-block-canvas.uou-block-2a.secondary .save-preview-button button.btn {
+	border-radius: 20px;
+}
+.modal {
+	background: rgba(52, 73, 94, 0.5);
+}
+.modal .modal-dialog {
+	margin-top: 64px;
+	border-radius: 0;
+	overflow: auto;
+}
+.modal .modal-content {
+	border-radius: 0;
+	border: 0;
+}
+.modal .modal-content .uou-block-3b {
+	padding: 4px 24px;
+}
+@media (min-width: 768px) {
+.modal-dialog {
+	width: 1170px;
+}
+}
+.modal-block-tabs {
+	position: relative;
+}
+.modal-block-tabs .tabs {
+	text-align: center;
+	padding: 10px 0;
+	background: #f4f4f4;
+}
+.modal-block-tabs .tabs li {
+	float: none;
+	display: inline-block;
+}
+.modal-block-tabs .tabs li a {
+	font-size: 14px;
+	font-weight: 300;
+	border-radius: 20px;
+	padding: 6px 24px;
+}
+.modal-block-tabs .tabs li.active a {
+	background-color: #5dade0;
+}
+.modal-block-tabs .uou-tabs .content {
+	border-top: 0;
+	max-height: 300px;
+	overflow: auto;
+}
+.modal-block-tabs .uou-tabs .content > div {
+	background-color: #ffffff;
+}
+.header-block-content, .toolbar-content-block, .footer-content-block {
+	position: relative;
+}
+.header-block-content .block-preview-image, .toolbar-content-block .block-preview-image, .footer-content-block .block-preview-image {
+	position: relative;
+	width: 100%;
+	height: auto;
+	padding: 4px;
+	border: 1px solid #ddd;
+	margin-bottom: 10px;
+}
 /*
 ======================================================
  Start Tag Cloud Widget Fix
