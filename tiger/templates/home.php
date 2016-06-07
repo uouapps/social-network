@@ -74,56 +74,56 @@ $package_id=esc_html__('0','tiger');
                   <div id="register">
                    	<form id="iv_home_registration" name="iv_home_registration"  action="<?php  the_permalink() ?>?package_id=<?php echo $package_id; ?>&payment_gateway=paypal&iv-submit-listing=register" method="post" >
 
-							<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="corporate" checked data-validation-error-msg="<?php  esc_html_e(' Select user Type','tiger');?>" class="form-control ctrl-textbox"   data-validation="required" > <span><?php esc_html_e('Corporate','tiger');?> </span> </label>
+      							<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="corporate" checked data-validation-error-msg="<?php  esc_html_e(' Select user Type','tiger');?>" class="form-control ctrl-textbox"   data-validation="required" > <span><?php esc_html_e('Corporate','tiger');?> </span> </label>
 
 
-							<label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="professional"  data-validation-error-msg="<?php  esc_html_e(' Select user Type','tiger');?>" class="form-control ctrl-textbox"   data-validation="required"> <span><?php  esc_html_e('Professional','tiger');?></span>  </label>
+							     <label><input type="radio"  name="iv_member_type"  id="iv_member_type" value="professional"  data-validation-error-msg="<?php  esc_html_e(' Select user Type','tiger');?>" class="form-control ctrl-textbox"   data-validation="required"> <span><?php  esc_html_e('Professional','tiger');?></span>  </label>
 
 
-                       <div>
+                    <div>
                       <input type="text" id="full_name"  name="full_name"  data-validation="required"  placeholder="<?php esc_html_e('Display Name','tiger');?>"  data-validation-error-msg="<?php  esc_html_e('Please enter Name','tiger');?> ">
-                      </div>
-                      <div>
+                    </div>
+                    <div>
                       <input type="email" name="iv_member_email" data-validation="email"  data-validation="required" placeholder="<?php esc_html_e('Enter email address','tiger');?>" data-validation-error-msg="<?php  esc_html_e('Please enter a valid email address','tiger');?> ">
-                      </div>
-                      <div>
+                    </div>
+                    <div>
                       <input type="text"  name="iv_member_user_name"  data-validation="length alphanumeric"
-data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The user name has to be an alphanumeric value between 4-12 characters','tiger');?>" class="form-control ctrl-textbox" placeholder="<?php esc_html_e('Enter User Name','tiger');?>"  >
-					</div>
-					 <div>
-                      <input type="password" name="iv_member_password"  data-validation="required" class="form-control ctrl-textbox" placeholder="<?php esc_html_e('Enter Password','tiger');?>" data-validation="strength"
-		 data-validation-strength="2">
-					</div>
-					
+                      data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The user name has to be an alphanumeric value between 4-12 characters','tiger');?>" class="form-control ctrl-textbox" placeholder="<?php esc_html_e('Enter User Name','tiger');?>"  >
+					         </div>
+					         <div>
+                      <input type="password" name="iv_member_password"  data-validation="required" class="form-control ctrl-textbox" placeholder="<?php esc_html_e('Enter Password','tiger');?>"
+                      data-validation="strength"
+		                  data-validation-strength="2">
+					         </div>
+
                       <button type="submit" id="submit_uou_tigerp_payment" name="submit_uou_tigerp_payment"><?php  esc_html_e('Register','tiger');?> </button>
-                     <?php
-                     if(has_action('oa_social_login')) {
-                     ?>
-                       <div class="login-with"><p><?php  esc_html_e('Or Register with:','tiger');?> </p> <span class="social-login-plugin"><?php echo do_action('oa_social_login'); ?></span>
-                      </div>
-                     <?php
-						}
-                     ?> 
+                       <?php
+                       if(has_action('oa_social_login')) {
+                       ?>
+                         <div class="login-with"><p><?php  esc_html_e('Or Register with:','tiger');?> </p> <span class="social-login-plugin"><?php echo do_action('oa_social_login'); ?></span>
+                        </div>
+                       <?php
+  						          }
+                       ?>
                     </form>
                   </div>
 
                   <!-- LOGIN -->
                   <div id="log-in"  class="active">
-
-						<form id="login_form"  action="" method="post">
-							<div class="display-hide" id="error_message">  </div>
-						  <input type="text" name="username" id="username"  placeholder="<?php  esc_html_e('User Name','tiger');?>" >
-						  <input type="password" placeholder="<?php  esc_html_e('Password','tiger');?>" name="password" id="password">
-						  <button type="button" onclick="return chack_login();"><?php  esc_html_e('Login','tiger');?> </button>
-						   <?php
-							 if(has_action('oa_social_login')) {
-							 ?>
-						  <div class="login-with"><p><?php  esc_html_e('Or login with:','tiger');?> </p> <span class="social-login-plugin"><?php echo do_action('oa_social_login'); ?></span> </div>
-						  <?php
-							}
-						  ?>
-						  <div class="forget"><?php esc_html_e('Forgot your password?', 'tiger');?>  <a href="#."> <?php esc_html_e('Click Here', 'tiger');?></a></div>
-						</form>
+        						<form id="login_form"  action="" method="post">
+        							<div class="display-hide" id="error_message">  </div>
+        						  <input type="text" name="username" id="username"  placeholder="<?php  esc_html_e('User Name','tiger');?>" >
+        						  <input type="password" placeholder="<?php  esc_html_e('Password','tiger');?>" name="password" id="password">
+        						  <button type="button" onclick="return chack_login();"><?php  esc_html_e('Login','tiger');?> </button>
+        						   <?php
+        							 if(has_action('oa_social_login')) {
+        							 ?>
+        						  <div class="login-with"><p><?php  esc_html_e('Or login with:','tiger');?> </p> <span class="social-login-plugin"><?php echo do_action('oa_social_login'); ?></span> </div>
+        						  <?php
+        							}
+        						  ?>
+        						  <div class="forget"><?php esc_html_e('Forgot your password?', 'tiger');?>  <a href="#."> <?php esc_html_e('Click Here', 'tiger');?></a></div>
+        						</form>
                   </div>
                 </div>
               </div>
@@ -316,9 +316,9 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
          $row5=(isset($tiger_option_data['tiger-testimonial-switch'])? $tiger_option_data['tiger-testimonial-switch']: '1' );
 		if($row5==1){
 		$testimonials_data= (isset($tiger_option_data['tiger-our-testimonials'][0]['title'])? $tiger_option_data['tiger-our-testimonials'][0]['title']: '' );
-		
+
 		if($testimonials_data==''){
-			
+
 
 			$tiger_option_data['tiger-our-testimonials']=array(
 					array( 'title'=>'John Kevin Mara',
@@ -403,7 +403,7 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
               ?></h3>
             <div class="sponsors-slider">
 				<?php
-				
+
 				if(isset($tiger_option_data['tiger-our-sponsors'])){
 					if(sizeof($tiger_option_data['tiger-our-sponsors'] )>0){
 				  foreach($tiger_option_data['tiger-our-sponsors'] as $t_slider){?>
@@ -411,8 +411,8 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 					   <div class="item"><img src="<?php echo (isset($t_slider['image'])?$t_slider['image'] :''); ?>" alt="" style="height:90px"></div>
 				<?php
 					}
-				  }	
-				}	
+				  }
+				}
 				?>
 
 
@@ -445,10 +445,10 @@ data-validation-length="4-12" data-validation-error-msg="<?php  esc_html_e(' The
 																		'package_amount'	=> esc_html__('0','tiger') ,
 																		'api_currency'		=> esc_html__('USD','tiger') ,
 																		'right_icon'		=> wp_uou_tigerp_URLPATH. 'admin/files/images/right_icon.png' ,
-																		'wrong_icon'		=> wp_uou_tigerp_URLPATH. 'admin/files/images/wrong_16x16.png' ,																	
+																		'wrong_icon'		=> wp_uou_tigerp_URLPATH. 'admin/files/images/wrong_16x16.png' ,
 
 																		) );
-}																		
+}
 
 
  ?>
