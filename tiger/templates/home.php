@@ -100,7 +100,7 @@ $package_id=esc_html__('0','tiger');
                        <?php
                        if(has_action('oa_social_login')) {
                        ?>
-                         <div class="login-with"><p><?php  esc_html_e('Or Register with:','tiger');?> </p> <span class="social-login-plugin"><?php echo do_action('oa_social_login'); ?></span>
+                         <div class="login-with"><p><?php  esc_html_e('Or Register with:','tiger');?> </p><div class="social-login-plugin"><div style="overflow:hidden;width:100%;height:37px;"><?php echo do_action('oa_social_login'); ?></div></div>
                         </div>
                        <?php
   						          }
@@ -118,7 +118,7 @@ $package_id=esc_html__('0','tiger');
         						   <?php
         							 if(has_action('oa_social_login')) {
         							 ?>
-        						  <div class="login-with"><p><?php  esc_html_e('Or login with:','tiger');?> </p> <span class="social-login-plugin"><?php echo do_action('oa_social_login'); ?></span> </div>
+        						  <div class="login-with"><p><?php  esc_html_e('Or login with:','tiger');?> </p> <div class="social-login-plugin"><div style="overflow:hidden;width:100%;height:37px;"><?php echo do_action('oa_social_login'); ?></div></div> </div>
         						  <?php
         							}
         						  ?>
