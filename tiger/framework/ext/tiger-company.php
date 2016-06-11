@@ -2,11 +2,11 @@
 
 
 
-class doctor_listing extends WP_Widget {
+class company_listing extends WP_Widget {
 
     function __construct() {
-        $widget_ops = array('classname' => 'tiger_widget_recent_entries', 'description' => esc_html__( "Doctor Listing",'tiger' ) );
-        parent::__construct('doctor_latest', esc_html__('Doctor Listing','tiger' ), $widget_ops);
+        $widget_ops = array('classname' => 'tiger_widget_recent_entries', 'description' => esc_html__( "Recent Company",'tiger' ) );
+        parent::__construct('company_latest', esc_html__('Recent Company','tiger' ), $widget_ops);
         $this->alt_option_name = 'xxl_widget_recent_entries';
 
       
@@ -14,7 +14,7 @@ class doctor_listing extends WP_Widget {
 
     public function widget($args, $instance) {
 
-         $cache = wp_cache_get('doctor_listing_widget', 'widget');
+         $cache = wp_cache_get('company_listing_widget', 'widget');
 
         if ( !is_array($cache) )
             $cache = array();
@@ -30,13 +30,13 @@ class doctor_listing extends WP_Widget {
         ob_start();
         extract($args);
 
-        echo apply_filters( 'Social_before',  $args['before_widget'] );
+        //echo apply_filters( 'Social_before',  $args['before_widget'] );
        
-		include(  get_template_directory(). '/framework/ext/widget-latest-doctor.php' ); 
+		include(  get_template_directory(). '/framework/ext/widget-latest-company.php' ); 
 		
-		echo apply_filters( 'Social_before',  $args['after_widget'] );  
+		//echo apply_filters( 'Social_before',  $args['after_widget'] );  
 
-        $cache[$args['widget_id']] = ob_get_flush();
+       // $cache[$args['widget_id']] = ob_get_flush();
         wp_cache_set('hospital_listing_widget', $cache, 'widget');
 
     }
@@ -63,13 +63,13 @@ class doctor_listing extends WP_Widget {
 
     function flush_widget_cache_tiger() {
 
-        wp_cache_delete('doctor_listing_widget', 'widget');
+        wp_cache_delete('company_listing_widget', 'widget');
 
     }
 
     public function form( $instance ) {
 
-        $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : 'Recently joined';
+        $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : esc_html__('Recent Company','tiger'  );
         $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 3;
         $words    = isset( $instance['words'] ) ? absint( $instance['words'] ) : 15;
         
@@ -98,10 +98,10 @@ class doctor_listing extends WP_Widget {
     }
 }
 
-add_action('widgets_init', 'doctor_listing');
+add_action('widgets_init', 'company_listing');
 
-function doctor_listing(){
+function company_listing(){
 
-    register_widget('doctor_listing');
+    register_widget('company_listing');
 
 }

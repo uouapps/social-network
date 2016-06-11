@@ -258,7 +258,7 @@ $user_id=1;
 						 <img class="media-object"  src="<?php echo $iv_profile_pic_url; ?>">
 						<?php
 						}else{
-						 echo'	 <img class="media-object"  src="'. tiger_IMAGE.'avatar-profile.jpg" >';
+						 echo'	 <img class="media-object"  src="'. tiger_IMAGE.'Blank-Profile.jpg" >';
 						}
 						?>
 
@@ -363,7 +363,7 @@ $user_id=1;
 												 <img class="media-object"  src="<?php echo $iv_profile_pic_url; ?>">
 												<?php
 												}else{
-												 echo'	 <img class="media-object" src="'. tiger_IMAGE.'avatar-profile.jpg" >';
+												 echo'	 <img class="media-object" src="'. tiger_IMAGE.'Blank-Profile.jpg" >';
 												}
 												?>
 											</a>

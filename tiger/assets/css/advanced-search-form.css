@@ -37,7 +37,7 @@
 #header .header-search-bar form > .basic-form {
   position: relative;
   margin-left: -15px;
-  padding-left: 45px;
+  /*padding-left: 45px; */
 }
 
 #header .header-search-bar form > .basic-form input {

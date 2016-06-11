@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tiger\n"
-"POT-Creation-Date: 2016-05-13 14:41+0600\n"
-"PO-Revision-Date: 2016-05-13 14:41+0600\n"
+"POT-Creation-Date: 2016-06-08 22:31+0600\n"
+"PO-Revision-Date: 2016-06-08 22:32+0600\n"
 "Last-Translator: \n"
 "Language-Team: tiger <aktar567@gmail.com>\n"
 "Language: ar\n"
@@ -29,11 +29,9 @@ msgstr ""
 #: templates/headerS/header-six.php:10 templates/headerS/header-two.php:10
 #: templates/headerS/header-five.php:10 templates/headerS/header-three.php:10
 #: templates/headerS/header-one.php:10
-#: framework/ext/widget-latest-hospital.php:71
-#: framework/ext/widget-latest-hospital.php:75
-#: framework/ext/widget-latest-doctor.php:71
-#: framework/ext/widget-latest-doctor.php:75
+#: framework/ext/widget-latest-professional.php:66
 #: framework/ext/widget-contact-info.php:53
+#: framework/ext/widget-latest-company.php:78
 #: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:180
 #: framework/redux/ReduxCore/inc/fields/media/field_media.php:190
 #: framework/redux/ReduxCore/inc/fields/gallery/field_gallery.php:67
@@ -156,12 +154,12 @@ msgstr ""
 msgid "Enter Password"
 msgstr ""
 
-#: templates/home.php:98 templates/header-login.php:43
+#: templates/home.php:99 templates/header-login.php:43
 #: templates/header-login.php:46
 msgid "Register"
 msgstr ""
 
-#: templates/home.php:102
+#: templates/home.php:103
 msgid "Or Register with:"
 msgstr ""
 
@@ -198,105 +196,105 @@ msgid "Image."
 msgstr ""
 
 #: templates/profile_professional.php:68
-#: templates/profile_professional.php:444 templates/profile_corporate.php:200
+#: templates/profile_professional.php:444 templates/profile_corporate.php:210
 msgid "Added to Connection"
 msgstr ""
 
-#: templates/profile_professional.php:68 templates/profile_corporate.php:200
+#: templates/profile_professional.php:68 templates/profile_corporate.php:210
 msgid "Connected"
 msgstr ""
 
 #: templates/profile_professional.php:71 templates/profile_professional.php:75
 #: templates/profile_professional.php:448
-#: templates/profile_professional.php:454 templates/profile_corporate.php:203
-#: templates/profile_corporate.php:207
+#: templates/profile_professional.php:454 templates/profile_corporate.php:213
+#: templates/profile_corporate.php:217
 msgid "Add to Connection"
 msgstr ""
 
 #: templates/profile_professional.php:71 templates/profile_professional.php:75
-#: templates/profile_corporate.php:203 templates/profile_corporate.php:207
+#: templates/profile_corporate.php:213 templates/profile_corporate.php:217
 msgid "Connect"
 msgstr ""
 
-#: templates/profile_professional.php:82 templates/profile_corporate.php:214
+#: templates/profile_professional.php:82 templates/profile_corporate.php:224
 msgid "Share"
 msgstr ""
 
 #: templates/profile_professional.php:94
-#: templates/profile_professional.php:397 templates/profile_corporate.php:174
-#: templates/profile_corporate.php:226
+#: templates/profile_professional.php:397 templates/profile_corporate.php:184
+#: templates/profile_corporate.php:236
 msgid "Following"
 msgstr ""
 
 #: templates/profile_professional.php:97
 #: templates/profile_professional.php:102
 #: templates/profile_professional.php:400
-#: templates/profile_professional.php:405 templates/profile_corporate.php:229
-#: templates/profile_corporate.php:234
+#: templates/profile_professional.php:405 templates/profile_corporate.php:239
+#: templates/profile_corporate.php:244
 msgid "Add to Follow"
 msgstr ""
 
 #: templates/profile_professional.php:117
-#: templates/profile_professional.php:419 templates/profile_corporate.php:249
+#: templates/profile_professional.php:419 templates/profile_corporate.php:259
 msgid "Added to Bookmark"
 msgstr ""
 
 #: templates/profile_professional.php:121
 #: templates/profile_professional.php:127
 #: templates/profile_professional.php:423
-#: templates/profile_professional.php:429 templates/profile_corporate.php:253
-#: templates/profile_corporate.php:259
+#: templates/profile_professional.php:429 templates/profile_corporate.php:263
+#: templates/profile_corporate.php:269
 msgid "Add to Bookmark"
 msgstr ""
 
-#: templates/profile_professional.php:134 templates/profile_corporate.php:266
+#: templates/profile_professional.php:134 templates/profile_corporate.php:276
 msgid "Report the profile"
 msgstr ""
 
-#: templates/profile_professional.php:147 templates/profile_corporate.php:278
+#: templates/profile_professional.php:147 templates/profile_corporate.php:288
 msgid "Send Message"
 msgstr ""
 
-#: templates/profile_professional.php:153 templates/profile_corporate.php:284
-#: templates/profile_corporate.php:499
+#: templates/profile_professional.php:153 templates/profile_corporate.php:294
+#: templates/profile_corporate.php:513
 msgid "Name & Surname"
 msgstr ""
 
 #: templates/profile_professional.php:157
-#: templates/profile_professional.php:189 templates/profile_corporate.php:288
-#: templates/profile_corporate.php:320 templates/profile_corporate.php:500
+#: templates/profile_professional.php:189 templates/profile_corporate.php:298
+#: templates/profile_corporate.php:330 templates/profile_corporate.php:514
 msgid "E-mail address"
 msgstr ""
 
 #: templates/profile_professional.php:160
-#: templates/profile_professional.php:192 templates/profile_corporate.php:291
-#: templates/profile_corporate.php:323 templates/profile_corporate.php:501
+#: templates/profile_professional.php:192 templates/profile_corporate.php:301
+#: templates/profile_corporate.php:333 templates/profile_corporate.php:515
 msgid "Your Message"
 msgstr ""
 
 #: templates/profile_professional.php:164
-#: templates/profile_professional.php:195 templates/profile_corporate.php:295
-#: templates/profile_corporate.php:326 templates/profile_corporate.php:504
+#: templates/profile_professional.php:195 templates/profile_corporate.php:305
+#: templates/profile_corporate.php:336 templates/profile_corporate.php:518
 msgid "Send message"
 msgstr ""
 
-#: templates/profile_professional.php:179 templates/profile_corporate.php:310
+#: templates/profile_professional.php:179 templates/profile_corporate.php:320
 msgid "Claim/Report"
 msgstr ""
 
-#: templates/profile_professional.php:185 templates/profile_corporate.php:316
+#: templates/profile_professional.php:185 templates/profile_corporate.php:326
 msgid "Claim The Listing"
 msgstr ""
 
-#: templates/profile_professional.php:210 templates/profile_corporate.php:341
+#: templates/profile_professional.php:210 templates/profile_corporate.php:351
 msgid "Share the profile"
 msgstr ""
 
-#: templates/profile_professional.php:219 templates/profile_corporate.php:350
+#: templates/profile_professional.php:219 templates/profile_corporate.php:360
 msgid "Facebook"
 msgstr ""
 
-#: templates/profile_professional.php:220 templates/profile_corporate.php:351
+#: templates/profile_professional.php:220 templates/profile_corporate.php:361
 msgid "Twitter"
 msgstr ""
 
@@ -304,7 +302,7 @@ msgstr ""
 msgid "Google+"
 msgstr ""
 
-#: templates/profile_professional.php:222 templates/profile_corporate.php:353
+#: templates/profile_professional.php:222 templates/profile_corporate.php:363
 msgid "Linkedin"
 msgstr ""
 
@@ -320,7 +318,7 @@ msgstr ""
 msgid "Similar Professionals"
 msgstr ""
 
-#: templates/profile_professional.php:371 templates/profile_corporate.php:377
+#: templates/profile_professional.php:371 templates/profile_corporate.php:387
 msgid "Profile"
 msgstr ""
 
@@ -332,7 +330,7 @@ msgstr ""
 msgid "Rating"
 msgstr ""
 
-#: templates/profile_professional.php:587
+#: templates/profile_professional.php:590
 msgid "Social Profiles"
 msgstr ""
 
@@ -368,47 +366,51 @@ msgstr ""
 msgid "Register Here"
 msgstr ""
 
-#: templates/profile_corporate.php:77
+#: templates/profile_corporate.php:75
+msgid "Verified Member"
+msgstr ""
+
+#: templates/profile_corporate.php:87
 msgid "map"
 msgstr ""
 
-#: templates/profile_corporate.php:154
+#: templates/profile_corporate.php:164
 msgid "Bookmarks"
 msgstr ""
 
-#: templates/profile_corporate.php:163
+#: templates/profile_corporate.php:173
 msgid "Followers"
 msgstr ""
 
-#: templates/profile_corporate.php:352
+#: templates/profile_corporate.php:362
 msgid "Google"
 msgstr ""
 
-#: templates/profile_corporate.php:378
+#: templates/profile_corporate.php:388
 msgid "Jobs"
 msgstr ""
 
-#: templates/profile_corporate.php:379 templates/profile_corporate.php:496
+#: templates/profile_corporate.php:389 templates/profile_corporate.php:510
 msgid "Contact"
 msgstr ""
 
-#: templates/profile_corporate.php:388
+#: templates/profile_corporate.php:398
 msgid " Information"
 msgstr ""
 
-#: templates/profile_corporate.php:437
+#: templates/profile_corporate.php:447
 msgid " Rating"
 msgstr ""
 
-#: templates/profile_corporate.php:518
+#: templates/profile_corporate.php:532
 msgid "About the "
 msgstr ""
 
-#: templates/profile_corporate.php:558
+#: templates/profile_corporate.php:572
 msgid "Services"
 msgstr ""
 
-#: templates/profile_corporate.php:560
+#: templates/profile_corporate.php:574
 msgid "Here an overview of the services we provide."
 msgstr ""
 
@@ -428,10 +430,10 @@ msgid "Sorry ! no blog post found "
 msgstr ""
 
 #: framework/ext/widget-tag.php:77
-#: framework/ext/widget-newsletter-subscription.php:113
+#: framework/ext/widget-newsletter-subscription.php:107
 #: framework/ext/widget-social.php:135 framework/ext/widget-categories.php:93
 #: framework/ext/tiger-company.php:79 framework/ext/widget-logo.php:70
-#: framework/ext/tiger-professional.php:79
+#: framework/ext/tiger-professional.php:75
 #: framework/ext/widget-catagories_one.php:91
 #: framework/ext/widget-legal.php:113
 #: framework/ext/widget-contact-info.php:129
@@ -443,29 +445,29 @@ msgstr ""
 msgid "Taxonomy:"
 msgstr ""
 
-#: framework/ext/widget-newsletter-subscription.php:59
+#: framework/ext/widget-newsletter-subscription.php:56
 msgid "Newsletter"
 msgstr ""
 
-#: framework/ext/widget-newsletter-subscription.php:62
+#: framework/ext/widget-newsletter-subscription.php:59
 msgid ""
 " Subscribe to our newsletter to receive our latest news and updates. We do "
 "not spam."
 msgstr ""
 
-#: framework/ext/widget-newsletter-subscription.php:66
+#: framework/ext/widget-newsletter-subscription.php:63
 msgid "Enter your email address"
 msgstr ""
 
-#: framework/ext/widget-newsletter-subscription.php:118
+#: framework/ext/widget-newsletter-subscription.php:112
 msgid "Google/Feedburner ID:"
 msgstr ""
 
-#: framework/ext/widget-newsletter-subscription.php:123
+#: framework/ext/widget-newsletter-subscription.php:117
 msgid "Input Text:"
 msgstr ""
 
-#: framework/ext/widget-newsletter-subscription.php:127
+#: framework/ext/widget-newsletter-subscription.php:121
 msgid "Submit Text:"
 msgstr ""
 
@@ -512,19 +514,19 @@ msgstr ""
 msgid "Show hierarchy"
 msgstr ""
 
-#: framework/ext/tiger-company.php:84 framework/ext/tiger-professional.php:84
+#: framework/ext/tiger-company.php:84 framework/ext/tiger-professional.php:80
 msgid "Number of posts to show:"
 msgstr ""
 
-#: framework/ext/tiger-company.php:89 framework/ext/tiger-professional.php:89
+#: framework/ext/tiger-company.php:89 framework/ext/tiger-professional.php:85
 msgid "Words of words to be displayed:"
 msgstr ""
 
-#: framework/ext/tiger-company.php:94 framework/ext/tiger-professional.php:94
+#: framework/ext/tiger-company.php:94 framework/ext/tiger-professional.php:90
 msgid "Only Display Ids "
 msgstr ""
 
-#: framework/ext/tiger-company.php:95 framework/ext/tiger-professional.php:95
+#: framework/ext/tiger-company.php:95 framework/ext/tiger-professional.php:91
 msgid "Enter IDs by , [# of post will not work]"
 msgstr ""
 

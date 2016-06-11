@@ -13,7 +13,6 @@ require_once(  get_template_directory(). '/framework/ext/widget-catagories_one.p
 require_once(  get_template_directory() . '/framework/ext/widget-newsletter-subscription.php' );
 require_once(  get_template_directory(). '/framework/ext/widget-contact-info.php' );
 require_once(  get_template_directory(). '/framework/ext/widget-social.php' );
-require_once(  get_template_directory(). '/framework/ext/widget-company.php' );
 require_once(  get_template_directory(). '/framework/ext/widget-legal.php' );
 require_once(  get_template_directory(). '/framework/ext/widget-logo.php' );
 
@@ -41,8 +40,8 @@ require_once(  get_template_directory(). '/framework/admin/tiger-image.php' );
 
 
 if (defined('wp_uou_tigerp_URLPATH') && wp_uou_tigerp_URLPATH!='') { 
-	//require_once(  get_template_directory(). '/framework/ext/tiger-hospital.php' ); 
-	//require_once(  get_template_directory(). '/framework/ext/tiger-doctor.php' ); 
+	require_once(  get_template_directory(). '/framework/ext/tiger-company.php' ); 
+	require_once(  get_template_directory(). '/framework/ext/tiger-professional.php' ); 
 }
 
 

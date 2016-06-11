@@ -70,7 +70,7 @@ $user_id=1;
         <div class="user-info">
           <h1><?php echo get_user_meta($user_id,'profile_name',true); ?> 
 			  <?php
-			  if(get_user_meta($user->ID,'verified',true)=='Yes'){
+			  if(get_user_meta($user_id,'verified',true)=='Yes'){
 				?>  
 				<a data-toggle="tooltip" data-placement="top" title="<?php  esc_html_e('Verified Member','tiger');?>  ">
 					<img src="<?php echo tiger_IMAGE."icon-ver.png";?>" alt="icon" >

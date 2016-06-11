@@ -51,10 +51,7 @@ class tiger_Widget_Newsletter extends WP_Widget {
 		$tiger_multi_footer_image = (isset($tiger_option_data['sb-multi-footer-image'])?$tiger_option_data['sb-multi-footer-image']:'' );
  ?>
 
-<?php if(($tiger_multi_footer_image==5)||($tiger_multi_footer_image==6)){?>
-<?php } else {?>
 <div class="col-md-3 col-sm-6">
-<?php } ?>
 
           <h5><?php esc_html_e('Newsletter','tiger'); ?></h5>
 <?php if(($tiger_multi_footer_image==5)||($tiger_multi_footer_image==6)){?>
@@ -70,10 +67,7 @@ class tiger_Widget_Newsletter extends WP_Widget {
 		</p>
 		</form>
 
-<?php if(($tiger_multi_footer_image==5)||($tiger_multi_footer_image==6)){?>
-<?php } else {?>
 </div>
-<?php } ?>
 
 <?php
 		$after_widget= (isset($args['after_widget'])?$args['after_widget']:'');

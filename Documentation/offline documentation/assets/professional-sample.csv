@@ -1,5 +1,5 @@
-Username,Email,Password,profile_name,iv_member_type,designation,wp_user_level,about_us,address,latitude,longitude,city,postcode,country,web_site,_service_title_1,_service_description_1,_service_value_1,_service_title_2,_service_description_2,_service_value_2,_service_title_3,_service_description_3,_service_value_3,_service_title_4,_service_description_4,_service_value_4,company_type,Age,Location,Experiance,Dgree,Career Lavel,Phone,Fax,E-mail,web_site,twitter,facebook,gplus,linkedin
-RobertCarras,info22@sample.com,test123,Robert Carras,professional,Web Developer,0,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae.
+Username,Email,Password,profile_name,iv_member_type,iv_profile_pic_url,designation,wp_user_level,about_us,address,latitude,longitude,city,postcode,country,web_site,_service_title_1,_service_description_1,_service_value_1,_service_title_2,_service_description_2,_service_value_2,_service_title_3,_service_description_3,_service_value_3,_service_title_4,_service_description_4,_service_value_4,company_type,Age,Location,Experiance,Dgree,Career Lavel,Phone,Fax,E-mail,web_site,twitter,facebook,gplus,linkedin
+RobertCarras,info22@sample.com,test123,Robert Carras,professional,http://www.tiger.uou.ch/wp-content/uploads/2016/05/concierge-doctor701.jpg,Web Developer,0,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nihil, dolores, culpa ullam vero ipsum placeat accusamus nemo itate id molestiae consectetur quae pariatur repudi andae vel ex quaerat nam iusto aliquid laborum quia adipisci aut ut imcati nisi deleniti tempore maxime sequi fugit reiciendis libero quo. Rerum, assumenda. 
 
@@ -8,7 +8,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing ",80,HTML5 and Css3,"Good,
 Lorem ipsum dolor sit amet, consectetur adipisicing ",51,Web Design,"Good,	
 Lorem ipsum dolor sit amet, consectetur adipisicing ",70,Logo Design,"Good,	
 Lorem ipsum dolor sit amet, consectetur adipisicing ",90,,38 Years Old,New York,15 Years,MBA,Mid-Level,(800) 123-4567,(800) 123-4568,info@example.com,example.com,#,#,#,#
-ModestoFontanez,info33@sample.com,test123,Modesto Fontanez,professional,Web Developer,0,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae.
+ModestoFontanez,info33@sample.com,test123,Modesto Fontanez,professional,http://www.tiger.uou.ch/wp-content/uploads/2016/05/default-doctor-category-1.jpg,Web Developer,0,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nihil, dolores, culpa ullam vero ipsum placeat accusamus nemo itate id molestiae consectetur quae pariatur repudi andae vel ex quaerat nam iusto aliquid laborum quia adipisci aut ut imcati nisi deleniti tempore maxime sequi fugit reiciendis libero quo. Rerum, assumenda. 
 
@@ -17,7 +17,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing ",81,HTML5 and Css3,"Good,
 Lorem ipsum dolor sit amet, consectetur adipisicing ",52,Web Design,"Good,	
 Lorem ipsum dolor sit amet, consectetur adipisicing ",71,Logo Design,"Good,	
 Lorem ipsum dolor sit amet, consectetur adipisicing ",91,,39 Years Old,New York,16 Years,MBA,Mid-Level,(800) 123-4566,(800) 123-4567,info@example.com,example.com,#,#,#,#
-RaphaelDavis,info44@sample.com,test123,Raphael Davis,professional,Web Developer,0,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae.
+RaphaelDavis,info44@sample.com,test123,Raphael Davis,professional,http://www.tiger.uou.ch/wp-content/uploads/2016/05/feature-doctor3.jpg,Web Developer,0,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nihil, dolores, culpa ullam vero ipsum placeat accusamus nemo itate id molestiae consectetur quae pariatur repudi andae vel ex quaerat nam iusto aliquid laborum quia adipisci aut ut imcati nisi deleniti tempore maxime sequi fugit reiciendis libero quo. Rerum, assumenda. 
 
@@ -26,7 +26,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing ",82,HTML5 and Css3,"Good,
 Lorem ipsum dolor sit amet, consectetur adipisicing ",53,Web Design,"Good,	
 Lorem ipsum dolor sit amet, consectetur adipisicing ",72,Logo Design,"Good,	
 Lorem ipsum dolor sit amet, consectetur adipisicing ",92,,40 Years Old,New York,17 Years,MBA,Mid-Level,(800) 123-4565,(800) 123-4566,info@example.com,example.com,#,#,#,#
-BorimirJDarakchiev,info55@sample.com,test123,Borimir J Darakchiev,professional,Web Developer,0,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae.
+BorimirJDarakchiev,info55@sample.com,test123,Borimir J Darakchiev,professional,http://www.tiger.uou.ch/wp-content/uploads/2016/05/default-doctor-category.jpg,Web Developer,0,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nihil, dolores, culpa ullam vero ipsum placeat accusamus nemo itate id molestiae consectetur quae pariatur repudi andae vel ex quaerat nam iusto aliquid laborum quia adipisci aut ut imcati nisi deleniti tempore maxime sequi fugit reiciendis libero quo. Rerum, assumenda. 
 
@@ -35,7 +35,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing ",83,HTML5 and Css3,"Good,
 Lorem ipsum dolor sit amet, consectetur adipisicing ",54,Web Design,"Good,	
 Lorem ipsum dolor sit amet, consectetur adipisicing ",73,Logo Design,"Good,	
 Lorem ipsum dolor sit amet, consectetur adipisicing ",93,,41 Years Old,New York,18 Years,MBA,Mid-Level,(800) 123-4564,(800) 123-4565,info@example.com,example.com,#,#,#,#
-MagdyShawkyShady,info66@sample.com,test123,Magdy Shawky Shady,professional,Web Developer,0,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae.
+MagdyShawkyShady,info66@sample.com,test123,Magdy Shawky Shady,professional,http://www.tiger.uou.ch/wp-content/uploads/2016/05/home-new-f-doctor.jpg,Web Developer,0,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nihil, dolores, culpa ullam vero ipsum placeat accusamus nemo itate id molestiae consectetur quae pariatur repudi andae vel ex quaerat nam iusto aliquid laborum quia adipisci aut ut imcati nisi deleniti tempore maxime sequi fugit reiciendis libero quo. Rerum, assumenda. 
 
@@ -44,7 +44,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing ",84,HTML5 and Css3,"Good,
 Lorem ipsum dolor sit amet, consectetur adipisicing ",55,Web Design,"Good,	
 Lorem ipsum dolor sit amet, consectetur adipisicing ",74,Logo Design,"Good,	
 Lorem ipsum dolor sit amet, consectetur adipisicing ",94,,42 Years Old,New York,19 Years,MBA,Mid-Level,(800) 123-4563,(800) 123-4564,info@example.com,example.com,#,#,#,#
-KeriPeterson,info77@sample.com,test123,Keri Peterson,professional,Web Developer,0,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae.
+KeriPeterson,info77@sample.com,test123,Keri Peterson,professional,http://www.tiger.uou.ch/wp-content/uploads/2016/05/home-new-f-doctor2.jpg,Web Developer,0,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nihil, dolores, culpa ullam vero ipsum placeat accusamus nemo itate id molestiae consectetur quae pariatur repudi andae vel ex quaerat nam iusto aliquid laborum quia adipisci aut ut imcati nisi deleniti tempore maxime sequi fugit reiciendis libero quo. Rerum, assumenda. 
 
@@ -53,7 +53,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing ",85,HTML5 and Css3,"Good,
 Lorem ipsum dolor sit amet, consectetur adipisicing ",56,Web Design,"Good,	
 Lorem ipsum dolor sit amet, consectetur adipisicing ",75,Logo Design,"Good,	
 Lorem ipsum dolor sit amet, consectetur adipisicing ",95,,43 Years Old,New York,20 Years,MBA,Mid-Level,(800) 123-4562,(800) 123-4563,info@example.com,example.com,#,#,#,#
-RaminRak,info88@sample.com,test123,Ramin Rak,professional,Web Developer,0,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae.
+RaminRak,info88@sample.com,test123,Ramin Rak,professional,http://www.tiger.uou.ch/wp-content/uploads/2016/05/img6.jpg,Web Developer,0,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nihil, dolores, culpa ullam vero ipsum placeat accusamus nemo itate id molestiae consectetur quae pariatur repudi andae vel ex quaerat nam iusto aliquid laborum quia adipisci aut ut imcati nisi deleniti tempore maxime sequi fugit reiciendis libero quo. Rerum, assumenda. 
 
@@ -62,7 +62,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing ",86,HTML5 and Css3,"Good,
 Lorem ipsum dolor sit amet, consectetur adipisicing ",57,Web Design,"Good,	
 Lorem ipsum dolor sit amet, consectetur adipisicing ",76,Logo Design,"Good,	
 Lorem ipsum dolor sit amet, consectetur adipisicing ",96,,44 Years Old,New York,21 Years,MBA,Mid-Level,(800) 123-4561,(800) 123-4562,info@example.com,example.com,#,#,#,#
-Smith,info98@sample.com,test123,Jhon Smith,professional,Web Developer,0,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae.
+Smith,info98@sample.com,test123,Jhon Smith,professional,http://www.tiger.uou.ch/wp-content/uploads/2016/05/avatar-1.jpg,Web Developer,0,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nihil, dolores, culpa ullam vero ipsum placeat accusamus nemo itate id molestiae consectetur quae pariatur repudi andae vel ex quaerat nam iusto aliquid laborum quia adipisci aut ut imcati nisi deleniti tempore maxime sequi fugit reiciendis libero quo. Rerum, assumenda. 
 

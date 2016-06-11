@@ -1,12 +1,10 @@
 <?php
 
-
-
-class hospital_listing extends WP_Widget {
+class professional_latest extends WP_Widget {
 
     function __construct() {
-        $widget_ops = array('classname' => 'tiger_widget_recent_entries', 'description' => esc_html__( "Hospital Listing",'tiger' ) );
-        parent::__construct('hospital_latest', esc_html__('Hospital Listing','tiger' ), $widget_ops);
+        $widget_ops = array('classname' => 'tiger_widget_recent_entries', 'description' => esc_html__( "Recent Professional",'tiger' ) );
+        parent::__construct('professional_latest', esc_html__('Recent Professional','tiger' ), $widget_ops);
         $this->alt_option_name = 'xxl_widget_recent_entries';
 
       
@@ -14,7 +12,7 @@ class hospital_listing extends WP_Widget {
 
     public function widget($args, $instance) {
 
-        $cache = wp_cache_get('hospital_listing_widget', 'widget');
+        $cache = wp_cache_get('professional_latest_widget', 'widget');
 
         if ( !is_array($cache) )
             $cache = array();
@@ -30,14 +28,12 @@ class hospital_listing extends WP_Widget {
         ob_start();
         extract($args);
 
-        echo apply_filters( 'Social_before',  $args['before_widget'] );
+        //echo apply_filters( 'Social_before',  $args['before_widget'] );
        
-		include( get_template_directory(). '/framework/ext/widget-latest-hospital.php' ); 
+		include( get_template_directory(). '/framework/ext/widget-latest-professional.php' ); 
 		
-		echo apply_filters( 'Social_before',  $args['after_widget'] );  
-
-        $cache[$args['widget_id']] = ob_get_flush();
-        wp_cache_set('hospital_listing_widget', $cache, 'widget');
+		
+        wp_cache_set('professional_latest_widget', $cache, 'widget');
 
     }
 
@@ -63,14 +59,14 @@ class hospital_listing extends WP_Widget {
 
     function flush_widget_cache_tiger() {
 
-        wp_cache_delete('hospital_listing_widget', 'widget');
+        wp_cache_delete('professional_latest_widget', 'widget');
 
     }
 
     public function form( $instance ) {
 
-        $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : 'Latest Hospital';
-        $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
+        $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : esc_html__('Recent Professional','tiger'  ); 
+        $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 3;
         $words    = isset( $instance['words'] ) ? absint( $instance['words'] ) : 15;
         
 
@@ -98,10 +94,10 @@ class hospital_listing extends WP_Widget {
     }
 }
 
-add_action('widgets_init', 'hospital_listing');
+add_action('widgets_init', 'professional_latest');
 
-function hospital_listing(){
+function professional_latest(){
 
-    register_widget('hospital_listing');
+    register_widget('professional_latest');
 
 }
