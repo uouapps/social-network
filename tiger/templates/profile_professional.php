@@ -176,13 +176,13 @@ $user_id=1;
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="container">
-              <h6><a class="close" href="#." data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a> <?php  esc_html_e('Claim/Report','tiger');?></h6>
+              <h6><a class="close" href="#." data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a> <?php  esc_html_e('Report','tiger');?></h6>
 
               <!-- Forms -->
               <form id="message-claim" name="message-claim"  method="POST">
                 <ul class="row">
                   <li class="col-xs-6">
-					<input id="subject" name ="subject" type="text" placeholder="Enter Subject" Value="<?php _e('Claim The Listing', 'ivproperty' ); ?>" >
+					<input id="subject" name ="subject" type="text" placeholder="Enter Subject" Value="<?php esc_html_e('Report The Listing', 'ivproperty' ); ?>" >
                   </li>
 
                   <li class="col-xs-6">
