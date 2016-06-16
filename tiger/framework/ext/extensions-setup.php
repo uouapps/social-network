@@ -38,7 +38,12 @@ function tiger_theme_register_required_plugins() {
          //   'force_deactivation' => true, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
             'external_url'       => '', // If set, overrides default API URL and points to an external URL.
         ),
-        
+       array(
+            'name'      => 'oa-social-login',
+            'slug'      => 'oa-social-login',
+            'required'  => false,
+
+        ),
 		
        array(
             'name'      => 'import-users-from-csv-with-meta',

@@ -103,7 +103,7 @@ $package_id=esc_html__('0','tiger');
                          <div class="login-with"><p><?php  esc_html_e('Or Register with:','tiger');?> </p><div class="social-login-plugin"><div style="overflow:hidden;width:100%;height:37px;"><?php echo do_action('oa_social_login'); ?></div></div>
                         </div>
                        <?php
-  						          }
+  						 }
                        ?>
                     </form>
                   </div>
