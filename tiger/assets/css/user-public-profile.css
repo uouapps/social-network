@@ -462,6 +462,7 @@ iframe {
 .profile-company-content .sidebar .sidebar-information .single-category .subtitle {
 	font-size: 13px;
 	font-weight: normal;
+	word-wrap: break-word;
 }
 .profile-company-content .sidebar .sidebar-information .single-category .title {
 	font-size: 13px;
