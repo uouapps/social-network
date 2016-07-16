@@ -491,13 +491,14 @@ $user_id=1;
 										$default_fields['Location']=esc_html__('Location','tiger');
 										$default_fields['Experiance']=esc_html__('Experiance','tiger');
 										$default_fields['Dgree']=esc_html__('Dgree','tiger');
-										$default_fields['Career Lavel']=esc_html__('Career Lavel','tiger');
-										$default_fields['Phone']=esc_html__('Phone','tiger');
-										$default_fields['Fax']=esc_html__('Fax','tiger');
+										$default_fields['Career-Lavel']=esc_html__('Career Lavel','tiger');
+										$default_fields['Phone']=esc_html__('Phone','tiger');								
+										$default_fields['Fax']=esc_html__('Fax','tiger');	
 										$default_fields['E-mail']=esc_html__('E-mail','tiger');
 										$default_fields['web_site']=esc_html__('Website Url','tiger');
 								}
-								if(sizeof($default_fields)>0){ 	?>
+								if(sizeof($default_fields)>0){ 								
+										?>
 									<ul class="single-category">
 											<li class="row">
 											<h6 class="title col-xs-6"><?php echo 'Name'; ?></h6>
@@ -505,7 +506,7 @@ $user_id=1;
 											</li>
 									<?php
 									foreach ( $default_fields as $field_key => $field_value ) {
-										$field_value_trim=trim($field_value);
+										$field_value_trim=trim($field_value);											
 										?>
 										<li class="row">
 										<h6 class="title col-xs-6"><?php echo $field_value_trim; ?></h6>
