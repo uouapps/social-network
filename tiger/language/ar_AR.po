@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tiger\n"
-"POT-Creation-Date: 2016-06-08 22:31+0600\n"
-"PO-Revision-Date: 2016-06-08 22:32+0600\n"
+"POT-Creation-Date: 2016-07-19 13:04+0600\n"
+"PO-Revision-Date: 2016-07-19 13:04+0600\n"
 "Last-Translator: \n"
 "Language-Team: tiger <aktar567@gmail.com>\n"
 "Language: ar\n"
@@ -35,7 +35,6 @@ msgstr ""
 #: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:180
 #: framework/redux/ReduxCore/inc/fields/media/field_media.php:190
 #: framework/redux/ReduxCore/inc/fields/gallery/field_gallery.php:67
-#: framework/uoulib/class-tgm-plugin-activation.php:2322
 msgid "image"
 msgstr ""
 
@@ -81,11 +80,11 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
-#: header.php:18
+#: header.php:17
 msgid "Menu"
 msgstr ""
 
-#: header.php:19
+#: header.php:18
 msgid "times"
 msgstr ""
 
@@ -154,8 +153,8 @@ msgstr ""
 msgid "Enter Password"
 msgstr ""
 
-#: templates/home.php:99 templates/header-login.php:43
-#: templates/header-login.php:46
+#: templates/home.php:99 templates/header-login.php:44
+#: templates/header-login.php:47
 msgid "Register"
 msgstr ""
 
@@ -279,11 +278,11 @@ msgid "Send message"
 msgstr ""
 
 #: templates/profile_professional.php:179 templates/profile_corporate.php:320
-msgid "Claim/Report"
+msgid "Report"
 msgstr ""
 
 #: templates/profile_professional.php:185 templates/profile_corporate.php:326
-msgid "Claim The Listing"
+msgid "Report The Listing"
 msgstr ""
 
 #: templates/profile_professional.php:210 templates/profile_corporate.php:351
@@ -326,11 +325,11 @@ msgstr ""
 msgid "Professional Details"
 msgstr ""
 
-#: templates/profile_professional.php:528
+#: templates/profile_professional.php:529
 msgid "Rating"
 msgstr ""
 
-#: templates/profile_professional.php:590
+#: templates/profile_professional.php:591
 msgid "Social Profiles"
 msgstr ""
 
@@ -350,19 +349,19 @@ msgstr ""
 msgid "Remember Me"
 msgstr ""
 
-#: templates/header-login.php:49
+#: templates/header-login.php:50
 msgid "username"
 msgstr ""
 
-#: templates/header-login.php:50
+#: templates/header-login.php:51
 msgid "email"
 msgstr ""
 
-#: templates/header-login.php:51
+#: templates/header-login.php:52
 msgid "password"
 msgstr ""
 
-#: templates/header-login.php:52
+#: templates/header-login.php:53
 msgid "Register Here"
 msgstr ""
 
@@ -755,4 +754,252 @@ msgstr ""
 
 #: framework/redux/ReduxCore/inc/validation/css/validation_css.php:39
 msgid "Unsafe strings were found in your CSS and have been filtered out."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:393
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:394
+#: framework/uoulib/class-tgm-plugin-activation.php:3244
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:395
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2067
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2358
+msgid "Required"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2361
+msgid "Recommended"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2377
+msgid "WordPress Repository"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2380
+msgid "External Source"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2383
+msgid "Pre-Packaged"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2400
+msgid "Not Installed"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2404
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2406
+msgid "Active"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2412
+msgid "Required Update not Available"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2415
+msgid "Requires Update"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2418
+msgid "Update recommended"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2575
+msgid "Installed version:"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2583
+msgid "Minimum required version:"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2595
+msgid "Available version:"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2632
+msgid "Plugin"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2633
+msgid "Source"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2634
+msgid "Type"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2638
+msgid "Version"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2639
+msgid "Status"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2688
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2693
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2699
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2802
+msgid "Install"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2808
+msgid "Update"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2811
+msgid "Activate"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2842
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2844
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2885
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2887
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3243
+msgid "Plugin activation failed."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3583
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3586
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3588
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3592
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3595
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3597
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3603
+msgid "All installations have been completed."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""

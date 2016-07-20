@@ -52,7 +52,10 @@ if( !function_exists('tiger_add_theme_scripts') ){
     wp_enqueue_script( 'swipebox', tiger_JS.'jquery.swipebox.min.js', array('jquery'), $ver = true, true );
 
     //wp_enqueue_script('maps.google', 'http://maps.google.com/maps/api/js?sensor=false', array('jquery'), false, true);
-    wp_enqueue_script('maps.google', 'http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places', array('jquery'), false, true);
+     $dir_map_api=get_option('_dir_map_api');	
+	if($dir_map_api==""){$dir_map_api='AIzaSyCIqlk2NLa535ojmnA7wsDh0AS8qp0-SdE';}	
+    
+    wp_enqueue_script('maps.google', 'https://maps.googleapis.com/maps/api/js?key='.$dir_map_api.'&libraries=places', array('jquery'), false, true);
 
 
     wp_enqueue_script( 'maplace-0.1.3', tiger_JS.'maplace-0.1.3.js', array('jquery'), $ver = true, true );

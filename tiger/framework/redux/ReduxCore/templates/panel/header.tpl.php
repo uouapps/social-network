@@ -5,7 +5,7 @@
      *
      * @author      Redux Framework
      * @package     ReduxFramework/Templates
-     * @version:    3.5.9.8
+     * @version:    3.6.0.10
      */
 
     $tip_title = esc_html__( 'Developer Mode Enabled', 'redux-framework' );

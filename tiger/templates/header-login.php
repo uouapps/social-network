@@ -36,6 +36,7 @@
                 <input name="rememberme" type="checkbox" id="rememberme" value="forever"> <?php esc_html_e( 'Remember Me' , 'tiger' ); ?> 
                </label> 
           </form>
+          <?php echo do_action('oa_social_login'); ?>
         </div>
       </li>
 		<?php

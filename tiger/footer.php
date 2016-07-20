@@ -37,7 +37,7 @@ $tiger_option_data['tiger-multi-bottom-image']=1;
 
 						$bg_image_default = tiger_IMAGE.'footer-map-bg.png';
 						$title = 	(isset($tiger_option_data['tiger-title-contact']) ? $tiger_option_data['tiger-title-contact'] :'');
-						$logo = 	(isset($tiger_option_data['tiger-footer-icon']) ? $tiger_option_data['tiger-footer-icon']['url'] : '' );
+						$logo = 	(isset($tiger_option_data['tiger-footer-icon']['url']) ? $tiger_option_data['tiger-footer-icon']['url'] : '' );
 						$address = (isset($tiger_option_data['tiger-address-contact']) ? $tiger_option_data['tiger-address-contact'] :'');
 						$phone_no = (isset($tiger_option_data['tiger-phone-contact']) ? $tiger_option_data['tiger-phone-contact'] :'' );
 						$email = 	(isset($tiger_option_data['tiger-email-contact']) ? $tiger_option_data['tiger-email-contact']:'' );

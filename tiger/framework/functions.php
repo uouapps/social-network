@@ -1,8 +1,6 @@
 <?php
 
 
-
-
 /*-------------------------------------------------------------------------
   START INITIALIZE FILE LINK
 ------------------------------------------------------------------------- */
@@ -16,14 +14,10 @@ require_once(  get_template_directory(). '/framework/ext/widget-social.php' );
 require_once(  get_template_directory(). '/framework/ext/widget-legal.php' );
 require_once(  get_template_directory(). '/framework/ext/widget-logo.php' );
 
-
-
 require_once(  get_template_directory(). '/framework/ext/widget-archives.php' );
 require_once(  get_template_directory(). '/framework/ext/widget-tag.php' );
 require_once(  get_template_directory(). '/framework/ext/widget-social.php' );
 require_once(  get_template_directory(). '/framework/ext/widget-categories.php' );
-
-
 
 require_once(  get_template_directory(). '/framework/theme/style.php' );
 require_once(  get_template_directory(). '/framework/theme/scripts.php' );
@@ -32,8 +26,6 @@ require_once(  get_template_directory(). '/framework/theme/tiger-wpml.php' );
 
 require_once(  get_template_directory(). '/framework/admin/functions.php' );
 require_once(  get_template_directory(). '/framework/admin/theme-functions.php' );
-//require_once(  get_template_directory(). '/framework/admin/breadcrumbs.php' );
-//require_once(  get_template_directory(). '/framework/admin/allBreadcrumbs/arrowcrumbs.php' );
 require_once(  get_template_directory() . '/framework/admin/tiger-menu-walker.php' );
 require_once(  get_template_directory(). '/framework/admin/tiger-nav-menu-walker-two.php' );
 require_once(  get_template_directory(). '/framework/admin/tiger-image.php' );
@@ -44,12 +36,6 @@ if (defined('wp_uou_tigerp_URLPATH') && wp_uou_tigerp_URLPATH!='') {
 	require_once(  get_template_directory(). '/framework/ext/tiger-professional.php' ); 
 }
 
-
-//require_once(  get_template_directory(). '/framework/tiger-profile/plugin.php' );
-//require_once(  get_template_directory(). '/framework/visual-composer/shortcodes.php' );
-/*-------------------------------------------------------------------------
-  END INITIALIZE FILE LINK
-------------------------------------------------------------------------- */
 
 
 /*-------------------------------------------------------------------------
@@ -62,7 +48,6 @@ if (defined('wp_uou_tigerp_URLPATH') && wp_uou_tigerp_URLPATH!='') {
 	if ( !isset( $tiger_option_data ) && file_exists( get_template_directory() . '/framework/redux/config/config.php' ) ) {
 	    require_once( get_template_directory() . '/framework/redux/config/config.php' );
 	}
-
 
 
 

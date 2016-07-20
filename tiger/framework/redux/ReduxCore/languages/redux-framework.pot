@@ -2,7 +2,7 @@
 # This file is distributed under the GPL3+.
 msgid ""
 msgstr ""
-"Project-Id-Version: Redux Framework 3.5.9.8\n"
+"Project-Id-Version: Redux Framework 3.6.0.10\n"
 "Report-Msgid-Bugs-To: "
 "https://github.com/ReduxFramework/ReduxFramework/issues\n"
 "POT-Creation-Date: 2015-04-15 23:15:00+00:00\n"

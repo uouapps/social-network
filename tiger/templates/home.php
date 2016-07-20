@@ -121,8 +121,9 @@ $package_id=esc_html__('0','tiger');
         						  <div class="login-with"><p><?php  esc_html_e('Or login with:','tiger');?> </p> <div class="social-login-plugin"><div style="overflow:hidden;width:100%;height:37px;"><?php echo do_action('oa_social_login'); ?></div></div> </div>
         						  <?php
         							}
+        						 $login_page=get_option('_uou_tigerp_login_page'); 
         						  ?>
-        						  <div class="forget"><?php esc_html_e('Forgot your password?', 'tiger');?>  <a href="#."> <?php esc_html_e('Click Here', 'tiger');?></a></div>
+        						  <div class="forget"><?php esc_html_e('Forgot your password?', 'tiger');?>  <a href="<?php echo get_permalink( $login_page) ; ?>"> <?php esc_html_e('Click Here', 'tiger');?></a></div>
         						</form>
                   </div>
                 </div>
@@ -148,8 +149,8 @@ $package_id=esc_html__('0','tiger');
       <ul class="row">
 
         <!-- SECTION -->
-        <li class="col-md-4 matchHeight">
-          <div class="ser-inn">
+        <li class="col-md-4 matchHeight" style="background: <?php echo (isset($tiger_option_data['tiger-home-row2-block1-color']['color'])? $tiger_option_data['tiger-home-row2-block1-color']['color']:'#43b9f6');?>;">
+          <div class="ser-inn" > 
             <h4>
               <?php
               echo (isset($tiger_option_data['tiger-home-row2-block1'])? $tiger_option_data['tiger-home-row2-block1']: esc_html__('Stay in touch with your colleagues','tiger'));
@@ -165,7 +166,7 @@ $package_id=esc_html__('0','tiger');
         </li>
 
         <!-- SECTION -->
-        <li class="col-md-4 matchHeight">
+        <li class="col-md-4 matchHeight"  style="background: <?php echo (isset($tiger_option_data['tiger-home-row2-block2-color']['color'])? $tiger_option_data['tiger-home-row2-block2-color']['color']:'#6686ff');?>;">
           <div class="ser-inn">
             <h4>
               <?php
@@ -182,8 +183,8 @@ $package_id=esc_html__('0','tiger');
         </li>
 
         <!-- SECTION  -->
-        <li class="col-md-4 matchHeight">
-          <div class="ser-inn">
+        <li class="col-md-4 matchHeight"  style="background: <?php echo (isset($tiger_option_data['tiger-home-row2-block3-color']['color'])? $tiger_option_data['tiger-home-row2-block3-color']['color']:'#87D37C');?>;">
+          <div class="ser-inn" >
             <h4>
              <?php
               echo (isset($tiger_option_data['tiger-home-row2-block3'])? $tiger_option_data['tiger-home-row2-block3']: esc_html__('Share what’s up  with you','tiger'));

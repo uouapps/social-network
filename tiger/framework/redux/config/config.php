@@ -291,6 +291,35 @@ if (!class_exists('tiger_admin_config')) {
                         
                     ),
                      array(
+                        'id'        => 'tiger-home-row2-block1-color',
+                        'type'      => 'color_rgba',
+                        'title'     => esc_html__('Select Block Background Color ', 'tiger'),
+						'compiler'  => 'true',
+						'validate' => 'html',
+                        'default' => array(
+							'color'     => '#43b9f6',
+							'alpha'     => 1
+							),
+						  'options'       => array(
+							'show_input'                => true,
+							'show_initial'              => true,
+							'show_alpha'                => true,
+							'show_palette'              => true,
+							'show_palette_only'         => false,
+							'show_selection_palette'    => true,
+							'max_palette_size'          => 10,
+							'allow_empty'               => true,
+							'clickout_fires_change'     => false,
+							'choose_text'               => 'Choose',
+							'cancel_text'               => 'Cancel',
+							'show_buttons'              => true,
+							'use_extended_classes'      => true,
+							'palette'                   => null,  // show default
+							'input_text'                => 'Select Color'
+						), 
+                        
+                    ),
+                     array(
                         'id'        => 'tiger-home-row2-block1-sub',
                         'type'      => 'textarea',
                         'title'     => esc_html__('Row #2 Block-1 Sub Content ', 'tiger'), 
@@ -328,6 +357,35 @@ if (!class_exists('tiger_admin_config')) {
                             'em' => array(),
                             'strong' => array()
                           ),  
+                        
+                    ),
+                    array(
+                        'id'        => 'tiger-home-row2-block2-color',
+                        'type'      => 'color_rgba',
+                        'title'     => esc_html__('Select Block Background Color ', 'tiger'),
+						'compiler'  => 'true',
+						'validate' => 'html',
+                        'default' => array(
+							'color'     => '#6686ff',
+							'alpha'     => 1
+							),
+						  'options'       => array(
+							'show_input'                => true,
+							'show_initial'              => true,
+							'show_alpha'                => true,
+							'show_palette'              => true,
+							'show_palette_only'         => false,
+							'show_selection_palette'    => true,
+							'max_palette_size'          => 10,
+							'allow_empty'               => true,
+							'clickout_fires_change'     => false,
+							'choose_text'               => 'Choose',
+							'cancel_text'               => 'Cancel',
+							'show_buttons'              => true,
+							'use_extended_classes'      => true,
+							'palette'                   => null,  // show default
+							'input_text'                => 'Select Color'
+						), 
                         
                     ),
                      array(
@@ -368,6 +426,35 @@ if (!class_exists('tiger_admin_config')) {
                             'em' => array(),
                             'strong' => array()
                           ),  
+                        
+                    ),
+                      array(
+                        'id'        => 'tiger-home-row2-block3-color',
+                        'type'      => 'color_rgba',
+                        'title'     => esc_html__('Select Block Background Color ', 'tiger'),
+						'compiler'  => 'true',
+						'validate' => 'html',
+                        'default' => array(
+							'color'     => '#87D37C',
+							'alpha'     => 1
+							),
+						  'options'       => array(
+							'show_input'                => true,
+							'show_initial'              => true,
+							'show_alpha'                => true,
+							'show_palette'              => true,
+							'show_palette_only'         => false,
+							'show_selection_palette'    => true,
+							'max_palette_size'          => 10,
+							'allow_empty'               => true,
+							'clickout_fires_change'     => false,
+							'choose_text'               => 'Choose',
+							'cancel_text'               => 'Cancel',
+							'show_buttons'              => true,
+							'use_extended_classes'      => true,
+							'palette'                   => null,  // show default
+							'input_text'                => 'Select Color'
+						), 
                         
                     ),
                      array(
@@ -667,40 +754,7 @@ if (!class_exists('tiger_admin_config')) {
                     ),
                     
                     //sponsors End
-                    /*
-                    array(
-                        'id'        => 'tiger-favicon',
-                        'type'      => 'media',
-                        'url'       => true,
-                        'title'     => esc_html__('Custom Favicon', 'tiger'),
-                        'compiler'  => 'true',
-                        'desc'      => esc_html__('Upload custom favicon.', 'tiger'),
-                    ),
-
-
-                    array(
-                        'id'        => 'tiger-favicon-iphone',
-                        'type'      => 'media',
-                        'url'       => true,
-                        'title'     => esc_html__('Custom Favicon For iphone', 'tiger'),
-                        'compiler'  => 'true',
-                        'desc'      => esc_html__('Upload custom favicon for iphone.', 'tiger'),
-
-                    ),
-
-
-                    array(
-                        'id'        => 'tiger-favicon-ipad',
-                        'type'      => 'media',
-                        'url'       => true,
-                        'title'     => esc_html__('Custom Favicon For ipad', 'tiger'),
-                        'compiler'  => 'true',
-                        'desc'      => esc_html__('Upload custom favicon for ipad', 'tiger'),
-
-                    ),
-
-                    */
-
+                   
 
                     array(
                         'id'        => 'tiger-show-page-sidebar',
@@ -791,7 +845,7 @@ if (!class_exists('tiger_admin_config')) {
                         'id'        => 'tiger-share-button',
                         'type'      => 'switch',
                         'title'     => esc_html__('Share button', 'tiger'),
-                        'default'   => true,
+                        'default'   => false,
                     ),
 
 
@@ -842,7 +896,7 @@ if (!class_exists('tiger_admin_config')) {
                         'id'        => 'tiger-top-language',
                         'type'      => 'switch',
                         'title'     => esc_html__('Show Language ', 'tiger'),
-                        'default'   => true,
+                        'default'   => false,
                     ),
 
                     array(
@@ -1592,37 +1646,8 @@ if (!class_exists('tiger_admin_config')) {
             $theme_info .= '</div>';
 
            
-            /*
+         
 
-            $this->sections[] = array(
-                'title'     => esc_html__('Import / Export', 'tiger'),
-                'desc'      => esc_html__('Import and Export your Redux Framework settings from file, text or URL.', 'tiger'),
-                'icon'      => 'el-icon-refresh',
-                'fields'    => array(
-                    array(
-                        'id'            => 'opt-import-export',
-                        'type'          => 'import_export',
-                        'title'         => 'Import Export',
-                        'subtitle'      => 'Save and restore your Redux options',
-                        'full_width'    => false,
-                    ),
-                ),
-            );
-            */
-
-//
-//            $this->sections[] = array(
-//                'icon'      => 'el-icon-info-sign',
-//                'title'     => esc_html__('Theme Information', 'tiger'),
-//                'desc'      => esc_html__('<p class="description">This is the Description. Again HTML is allowed</p>', 'tiger'),
-//                'fields'    => array(
-//                    array(
-//                        'id'        => 'opt-raw-info',
-//                        'type'      => 'raw',
-//                        'content'   => $item_info,
-//                    )
-//                ),
-//            );
 
             
         }
@@ -1699,35 +1724,7 @@ if (!class_exists('tiger_admin_config')) {
                 'database'              => '', // possible: options, theme_mods, theme_mods_expanded, transient. Not fully functional, warning!
                 'system_info'           => false, // REMOVE
 
-                // HINTS
-                // 'hints' => array(
-                //     'icon'          => 'icon-question-sign',
-                //     'icon_position' => 'right',
-                //     'icon_color'    => 'lightgray',
-                //     'icon_size'     => 'normal',
-                //     'tip_style'     => array(
-                //         'color'         => 'light',
-                //         'shadow'        => true,
-                //         'rounded'       => false,
-                //         'style'         => '',
-                //     ),
-                //     'tip_position'  => array(
-                //         'my' => 'top left',
-                //         'at' => 'bottom right',
-                //     ),
-                //     'tip_effect'    => array(
-                //         'show'          => array(
-                //             'effect'        => 'slide',
-                //             'duration'      => '500',
-                //             'event'         => 'mouseover',
-                //         ),
-                //         'hide'      => array(
-                //             'effect'    => 'slide',
-                //             'duration'  => '500',
-                //             'event'     => 'click mouseleave',
-                //         ),
-                //     ),
-                // )
+               
             );
 
 
