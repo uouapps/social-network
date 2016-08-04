@@ -15,6 +15,8 @@ $user_id=1;
  global $current_user;
 
 
+
+
  if(isset($_REQUEST['id'])){
 	   $author_name= $_REQUEST['id'];
 		$user = get_user_by( 'slug', $author_name );
@@ -32,6 +34,16 @@ $user_id=1;
 		$user_id=1;
 	  }
   }
+	$tigerp_user_status = get_user_meta($user_id, 'uou_tigerp_user_status', true);
+	if($tigerp_user_status!='active'){ 
+		if($user_id!=$current_user->ID ){
+			 include( get_query_template( '404' ) );
+			 header('HTTP/1.0 404 Not Found');
+            exit; 
+		}
+
+	}
+  
    $iv_profile_pic_url=get_user_meta($user_id, 'iv_profile_pic_url',true);
 
 	$lat=get_user_meta($user_id,'latitude',true);
@@ -216,10 +228,11 @@ $user_id=1;
 				 </div>
                   <div class="col-xs-12 col-md-6">
 				   <div class="social-links">
-						<a class="col-md-3 " href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink().'&id='.$author_name;  ?>"><i class="fa fa-facebook"></i> <?php  esc_html_e('Facebook','tiger');?></a>
-						<a class="col-md-3 " href="#."><i class="fa fa-twitter"></i> <?php  esc_html_e('Twitter','tiger');?></a>
-					    <a class="col-md-3 " href="#."><i class="fa fa-google"></i> <?php  esc_html_e('Google+','tiger');?></a>
-						<a class="col-md-3 "  href="#."><i class="fa fa-linkedin"></i> <?php  esc_html_e('Linkedin','tiger');?></a>
+					   
+						<a class="col-md-3 " href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?><?php echo '&id='.$author_name;  ?>"><i class="fa fa-facebook"></i> <?php  esc_html_e('Facebook','tiger');?></a>
+						<a class="col-md-3 " href="https://twitter.com/home?status=<?php the_permalink(); ?><?php echo '&id='.$author_name;  ?>"><i class="fa fa-twitter"></i> <?php  esc_html_e('Twitter','tiger');?></a>
+					    <a class="col-md-3 " href="https://plus.google.com/share?url=<?php the_permalink(); ?><?php echo '&id='.$author_name;  ?>"><i class="fa fa-google"></i> <?php  esc_html_e('Google+','tiger');?></a>
+						<a class="col-md-3 "  href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?><?php echo '&id='.$author_name;  ?>"><i class="fa fa-linkedin"></i> <?php  esc_html_e('Linkedin','tiger');?></a>
 					</div>
                   </div>
 				  <div class="col-xs-12 col-md-3">
@@ -322,6 +335,12 @@ $user_id=1;
 												'key'     => 'iv_member_type',
 												'value'   => 'professional',
 												'compare' => '='
+											),
+											array(
+												'key' => 'uou_tigerp_user_status',
+												'value' => 'active',
+												'compare' => '=',
+												
 											)
 
 									);
@@ -332,6 +351,12 @@ $user_id=1;
 												'key'     => 'iv_member_type',
 												'value'   => 'corporate',
 												'compare' => '='
+											),
+											array(
+												'key' => 'uou_tigerp_user_status',
+												'value' => 'active',
+												'compare' => '=',
+												
 											)
 
 									);

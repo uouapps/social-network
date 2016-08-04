@@ -33,7 +33,13 @@
 				'key'     => 'iv_member_type',
 				'value'   => 'corporate',
 				'compare' => 'LIKE'
-			),						
+			),
+			array(
+				'key' => 'uou_tigerp_user_status',
+				'value' => 'active',
+				'compare' => '=',
+				
+			)						
 		);
 
 		 $user_query_c = new WP_User_Query( $args_c );

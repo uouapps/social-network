@@ -17,7 +17,7 @@ function tiger_theme_register_required_plugins() {
      * If the source is NOT from the .org repo, then source is also required.
      */
     $plugins = array(
-
+	/*
     array(
             'name'               => 'Tiger Profile', // The plugin name.
             'slug'               => 'tiger-profile', // The plugin slug (typically the folder name).
@@ -28,6 +28,7 @@ function tiger_theme_register_required_plugins() {
          //   'force_deactivation' => true, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
             'external_url'       => '', // If set, overrides default API URL and points to an external URL.
         ),
+        */
         array(
             'name'               => 'Visual Composer', // The plugin name.
             'slug'               => 'js_composer', // The plugin slug (typically the folder name).

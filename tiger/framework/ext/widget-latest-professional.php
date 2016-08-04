@@ -26,7 +26,13 @@
 				'key'     => 'iv_member_type',
 				'value'   => 'professional',
 				'compare' => 'LIKE'
-			),						
+			),
+			array(
+					'key' => 'uou_tigerp_user_status',
+					'value' => 'active',
+					'compare' => '=',
+					
+				)						
 		);
 		 $user_query = new WP_User_Query( $args_p );
 ?>
@@ -58,7 +64,7 @@
 							 </p>
 						</div>
 						<span class="cbp-l-grid-projects-desc">
-							<?php //echo esc_attr(get_the_date('F j, Y')); ?>
+							<?php echo substr(get_user_meta($user->ID,'designation',true), 0, 25 );  ?>
 						</span>
 					</div>
 					 <div class="widget_left"  >

@@ -11,37 +11,39 @@
                   </header>
 
                 <?php while(have_posts()) : the_post(); ?>
+					 
+					   <div class="col-md-12">
+								<article <?php post_class( 'uou-block-7f blog-post-content'); ?> id="post-<?php the_ID(); ?>" >
+								  <?php 
+								  if ( has_post_thumbnail() ) {
+									$image_id =  get_post_thumbnail_id( get_the_ID() );
+									$large_image = wp_get_attachment_url( $image_id ,'full');  
+									$resize = tiger_aq_resize( $large_image, true );
+								   ?>
+								  <img src="<?php echo esc_url($resize); ?>" alt="<?php esc_html_e( 'image', 'tiger' ); ?>">
+								  <?php } ?>
 
-                    <article <?php post_class( 'uou-block-7f blog-post-content'); ?> id="post-<?php the_ID(); ?>" >
-                      <?php 
-                      if ( has_post_thumbnail() ) {
-                        $image_id =  get_post_thumbnail_id( get_the_ID() );
-                        $large_image = wp_get_attachment_url( $image_id ,'full');  
-                        $resize = tiger_aq_resize( $large_image, true );
-                       ?>
-                      <img src="<?php echo esc_url($resize); ?>" alt="<?php esc_html_e( 'image', 'tiger' ); ?>">
-                      <?php } ?>
 
+								  <div class="meta">
+									 <span class="time-ago"> <a href="<?php the_permalink(); ?>"><?php echo esc_attr(human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'); ?></a></span>
+									<?php if(has_category()): ?>
+									  <span class="category">
+										<?php the_category('&nbsp;,&nbsp;'); ?>
+									  </span>
+									<?php endif; ?>
+									<span class="comments">
+									  <?php 
+										if(comments_open() && !post_password_required()){
+										  comments_popup_link( 'No comment', '1 comment', '% comments', 'article-post-meta' );
+										}
+									  ?>            
+									</span>
+								  </div>
 
-                      <div class="meta">
-                         <span class="time-ago"> <?php echo esc_attr(human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'); ?></span>
-                        <?php if(has_category()): ?>
-                          <span class="category">
-                            <?php the_category('&nbsp;,&nbsp;'); ?>
-                          </span>
-                        <?php endif; ?>
-                        <span class="comments">
-                          <?php 
-                            if(comments_open() && !post_password_required()){
-                              comments_popup_link( 'No comment', '1 comment', '% comments', 'article-post-meta' );
-                            }
-                          ?>            
-                        </span>
-                      </div>
-
-                     <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?> </a></h1>
-                      <p> <?php the_content(); ?> </p> 
-
+								 <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?> </a></h1>
+								  <p> <?php the_content(); ?> </p> 
+					
+						</div>
                       <?php endwhile; else : ?>
                         <h2><?php esc_html_e('No post have found!', 'tiger'); ?></h2> 
                       <?php endif; ?>

@@ -31,6 +31,9 @@ require_once(  get_template_directory(). '/framework/admin/tiger-nav-menu-walker
 require_once(  get_template_directory(). '/framework/admin/tiger-image.php' );
 
 
+require_once(  get_template_directory(). '/framework/tiger-profile/plugin.php' );
+
+
 if (defined('wp_uou_tigerp_URLPATH') && wp_uou_tigerp_URLPATH!='') { 
 	require_once(  get_template_directory(). '/framework/ext/tiger-company.php' ); 
 	require_once(  get_template_directory(). '/framework/ext/tiger-professional.php' ); 

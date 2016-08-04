@@ -73,7 +73,7 @@
 			<li><a class="current" href="#documenter_cover">Start</a></li>
 				
 			<li><a href="#installation" title="INSTALLATION">Inslatallation</a></li>	
-			<li><a href="#installation-after" title="INSTALLATION">Plugin Inslatallation</a></li>
+		
 			
 			<li><a href="#my-account" title="my account">Update User Info</a></li>
 			<li><a href="#membership-user">Demo User Import </a></li>	
@@ -83,8 +83,13 @@
 			<li><a href="#blog" title="BLOG">Blog</a></li>			
 			<li><a href="#top_bar" title="Top Bar">Top Menu Bar</a></li>
 			<li><a href="#header" title="Header">Header</a></li>
-			<li><a href="#sidebar" title="SIDEBAR">Sidebar</a></li>
-			
+			<li><a href="#package">Package</a></li>	
+			<li><a href="#Coupon">Coupon</a></li>
+			<li><a href="#Payment-Gateways">Payment Gateways</a></li>	
+			<li><a href="#tax">Tax</a></li>
+			<li><a href="#report">Report</a></li>		
+			<li><a href="#reminder-email"> Reminder Email Setting & Template</a></li>
+				
 			<li><a href="#professionals-Fields">Professionals Fields </a></li>	
 			<li><a href="#company-Fields">Company Fields </a></li>	
 			<li><a href="#user-setting">User Setting </a></li>	
@@ -174,20 +179,7 @@
 	&nbsp;</div>
 </section>
 
-<section id="installation-after">
-		<div class="page-header"><h3>Plugin Inslatallation</h3><hr class="notop"></div>
-	<p>Installing the plugins.</p>
-	<p>
-	<img alt="" src="assets/images/plugin-install-1.png" style=" height: 330px;"></p>
-	
-			
-	<p>Go front-end "My Account" and edit your settings </p>	
-	
-	<img alt="" src="assets/images/my-account.jpg" style=" width: 765px;"></p>
-	<p>
-		
-		
-</section>	
+
 <section id="my-account">
 	<div class="page-header"><h3>My Account User info</h3><hr class="notop"></div>
 		<img alt="" src="assets/images/My-Account – Tiger.png" style=" width: 965px;"></p>
@@ -221,6 +213,52 @@
 	
 	<br/>		
 		<br/>
+		
+		<p>	
+			<br/>						
+			<b>Professionals Listing </b>	
+		<br/>		
+		
+		Short Code : [uou_tigerp_professionals_directory]<br/>
+		PHP Code : &lt;?php
+						echo do_shortcode('[uou_tigerp_professionals_directory] ');
+					?&gt; 
+		</p>
+		<br/>
+		
+		<p>	
+			<br/>						
+			<b>Companis Listing </b>	
+		<br/>		
+		
+		Short Code : [uou_tigerp_company_directory]<br/>
+		PHP Code : &lt;?php
+						echo do_shortcode('[uou_tigerp_company_directory] ');
+					?&gt; 
+		</p>
+		
+		
+		
+		<p>	
+			<br/>						
+			<b>Pricing Tabble </b>	
+		<br/>		
+		
+		Short Code : [uou_tigerp_price_table_company]<br/>
+		Short Code : [uou_tigerp_price_table_professional]<br/>
+		
+		PHP Code : &lt;?php
+						echo do_shortcode('[uou_tigerp_price_table_company ]');
+					?&gt; 
+					<br/>
+		PHP Code : &lt;?php
+						echo do_shortcode('[uou_tigerp_price_table_professional ]');
+					?&gt; 			
+		</p>
+		
+		
+		
+		
 		
 		<p>	
 			<br/>						
@@ -332,6 +370,76 @@
 <div>
 	<img alt="" src="assets/images/image_header.png" style="width: 800px;"></div>
 </section>
+<section id="package">
+		<div class="page-header"><h3>Package</h3><hr class="notop"></div>
+	<p>Admin can create unlimited package. <br/>
+	User role "Basic" will create on the plugin activation. <br/>
+			 The "Basic" role has only file upoload privilege.<br/>
+			 For under the package user will get the package role [upload pic, add post, edit post]. <br/>After cancel or unsuccesful payment it will convert to "Basic" Role. 
+	</p>
+	<img alt="" src="assets/images/package.png" style="width: 800px;"></p>
+	</p>
+	<img alt="" src="assets/images/create-package.png" style="width: 850px;"></p>
+	
+</section>	
+<section id="Coupon">
+	<div class="page-header"><h3>Coupon</h3><hr class="notop"></div>
+	<p>
+	<img alt="" src="assets/images/coupon.png" style="width: 800px;"></p>
+	</p>	
+	
+</section>	
+<section id="Payment-Gateways">
+	<div class="page-header"><h3>Payment Gateways</h3><hr class="notop"></div>
+	<p>
+	<img alt="" src="assets/images/payment1.png" style="width: 800px;"></p>
+	</p>	
+	<p>
+	<img alt="" src="assets/images/payment2.png" style="width: 800px;"></p>
+	</p>
+	
+</section>
+
+
+<section id="reminder-email">
+	<div class="page-header"><h3>Reminder Email Setting & Template</h3><hr class="notop"></div>
+	<p>
+	<img alt="" src="assets/images/Reminder-email.png" style="width: 900px;"></p>
+	</p>
+	<p>
+	<img alt="" src="assets/images/Reminder-email2.png" style="width: 600px;"></p>
+	</p>
+
+</section>	
+
+<section id="tax">
+	<div class="page-header"><h3>Tax</h3><hr class="notop"></div>
+	<p>
+	You can add tax on signup and upgrade section. If you select "Tax By Country" then user will see Country Section option on Signup Form.	
+	</p>	
+	<p>
+	<img alt="" src="assets/images/tax.png" style="width: 800px;"></p>
+	</p>
+</section>	
+
+<section id="report">
+	<div class="page-header"><h3>Report</h3><hr class="notop"></div>
+	<p>
+		
+	</p>	
+	<p>
+	<img alt="" src="assets/images/report.png" style="width: 800px;"></p>
+	</p>
+</section>
+
+
+
+
+
+
+
+
+
 
 
 <section id="front_page_image_info">
@@ -371,7 +479,7 @@
 	<div class="page-header"><h3>User Setting</h3><hr class="notop"></div>
 	
 	<p>
-	<img alt="" src="assets/images/user-setting.png" style="width: 800px;"></p>
+	<img alt="" src="assets/images/user-setting.png" style="width: 1000px;"></p>
 	</p>
 	<p>
 	<img alt="" src="assets/images/user-setting2.png" style="width: 800px;"></p>

@@ -14,7 +14,7 @@
 	<li><a class="fa fa-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo esc_url( home_url( '/' ) );?>"></a></li>
 	<?php endif; ?>
 	
-	<?php if(isset($tiger_option_data['tiger-share-button-linkedin']) && $tiger_option_data['tiger-share-button-linkedin'] == 1) : ?>	
+	<?php if(isset($tiger_option_data['tiger-share-button-google']) && $tiger_option_data['tiger-share-button-google'] == 1) : ?>	
 	<li><a class="fa fa-google-plus" href="https://plus.google.com/share?url=<?php echo esc_url( home_url( '/' ) );?>"></a></li>
 	<?php endif; ?>
 	

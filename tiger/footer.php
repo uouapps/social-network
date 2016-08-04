@@ -154,10 +154,11 @@ $tiger_option_data['tiger-multi-bottom-image']=1;
         <?php if(isset($tiger_option_data['tiger-after-copyright-text'])&&!empty($tiger_option_data['tiger-after-copyright-text'])) {?>
         <?php echo esc_html($tiger_option_data['tiger-after-copyright-text']); ?>
         <?php } ?>
-        <?php if(isset($tiger_option_data['tiger-show-footer-credits'])) {?>
+         <?php if(isset($tiger_option_data['tiger-show-footer-credits']) && $tiger_option_data['tiger-show-footer-credits']==1) {				
+			?>
         <?php echo '<a href="http://themeforest.net/user/uouapps">UOUAPPS</a>'; ?>
         <?php } ?>
-
+     
       </p>
       <?php } ?>
 

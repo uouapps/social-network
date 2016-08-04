@@ -54,14 +54,35 @@ $tiger_option_data =get_option('tiger_option_data');
                             <i class="fa fa-tags"></i>
                             <?php the_tags( 'Tags: &nbsp; ', ', ', '<br />' ); ?>
                           </span>
-                        <?php } else { ?> <i class="fa fa-tags"></i> <?php esc_html_e('No Tag have Found!', 'tiger'); } ?>
+                        <?php } else { ?> <i class="fa fa-tags"></i> <?php esc_html_e('No Tag have Found!', 'tiger'); } ?>	
                       </div>
-
+												
+						
+						
+						<?php
+						if ( is_singular( 'post' ) ) {							
+								?>
+								<nav class="navigation post-navigation" role="navigation">
+								<h4 class="screen-reader-text"> <?php esc_html_e( 'Post navigation', 'tiger' ) ?></h4>
+								<div class="nav-links">
+								<div class="nav-previous">
+								<?php previous_post_link('%link', '%title', TRUE); ?>
+								</div>
+								<div class="nav-next">
+								<?php next_post_link( '%link', '%title', TRUE ); ?>
+								</div>
+									</div>
+								</nav>
+							<?php	
+							}
+						  ?> 
+									
                       <?php endwhile; else : ?>
                         <?php esc_html_e('No post have found!', 'tiger'); ?>
                       <?php endif; ?>
 
-
+						
+					
                       <div class="uou-share-story clearfix">
                         <div class="row">
                           <div class="col-sm-3">

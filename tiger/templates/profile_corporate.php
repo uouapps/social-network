@@ -33,6 +33,19 @@ $user_id=1;
 		$user_id=1;
 	  }
   }
+  
+  $tigerp_user_status = get_user_meta($user_id, 'uou_tigerp_user_status', true);
+	if($tigerp_user_status!='active'){ 
+		if($user_id!=$current_user->ID ){
+			 include( get_query_template( '404' ) );
+			 header('HTTP/1.0 404 Not Found');
+            exit; 
+			
+		}
+
+	}
+  
+  
   $iv_profile_pic_url=get_user_meta($user_id, 'iv_profile_pic_url',true);
    $iv_post = get_option( '_uou_tigerp_profile_post');
 	if($iv_post!=''){
@@ -357,10 +370,10 @@ $user_id=1;
 				 </div>
                   <div class="col-xs-12 col-md-6">
 				   <div class="social-links">
-						<a class="col-md-3 " href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink().'&id='.$author_name;  ?>"><i class="fa fa-facebook"></i> <?php  esc_html_e('Facebook','tiger');?></a>
-						<a class="col-md-3 " href="#."><i class="fa fa-twitter"></i> <?php  esc_html_e('Twitter','tiger');?></a>
-					    <a class="col-md-3 " href="#."><i class="fa fa-google"></i> <?php  esc_html_e('Google','tiger');?>+</a>
-						<a class="col-md-3 "  href="#."><i class="fa fa-linkedin"></i> <?php  esc_html_e('Linkedin','tiger');?></a>
+						<a class="col-md-3 " href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?><?php echo '&id='.$author_name;  ?>"><i class="fa fa-facebook"></i> <?php  esc_html_e('Facebook','tiger');?></a>
+						<a class="col-md-3 " href="https://twitter.com/home?status=<?php the_permalink(); ?><?php echo '&id='.$author_name;  ?>"><i class="fa fa-twitter"></i> <?php  esc_html_e('Twitter','tiger');?></a>
+					    <a class="col-md-3 " href="https://plus.google.com/share?url=<?php the_permalink(); ?><?php echo '&id='.$author_name;  ?>"><i class="fa fa-google"></i> <?php  esc_html_e('Google','tiger');?>+</a>
+						<a class="col-md-3 "  href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?><?php echo '&id='.$author_name;  ?>"><i class="fa fa-linkedin"></i> <?php  esc_html_e('Linkedin','tiger');?></a>
 					</div>
                   </div>
 				  <div class="col-xs-12 col-md-3">
