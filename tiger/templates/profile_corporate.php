@@ -126,7 +126,20 @@ $user_id=1;
 			   <a href="<?php echo get_user_meta($user_id,'linkedin',true); ?>"><i class="fa fa-linkedin"></i></a>
 			   <?php
 				}
+			   ?>			   
+			     <?php
+				if(get_user_meta($user_id,'instagram',true)!=""){ ?>
+			   <a href="<?php echo get_user_meta($user_id,'instagram',true); ?>"><i class="fa fa-instagram"></i></a>
+			   <?php
+				}
+			   ?>		   
+			     <?php
+				if(get_user_meta($user_id,'pinterest',true)!=""){ ?>
+			   <a href="<?php echo get_user_meta($user_id,'pinterest',true); ?>"><i class="fa fa-pinterest"></i></a>
+			   <?php
+				}
 			   ?>
+			   
            </div>
 
           <!-- Stars -->
@@ -579,6 +592,11 @@ $user_id=1;
 
                   </div>
                 </div>
+                <style>
+				.img-circle {
+						border-radius: 50%!important;
+					}
+				</style>	
 
                 <!-- Services -->
                 <div class="profile-main">
@@ -596,7 +614,7 @@ $user_id=1;
 							<div class="icon">
 								<?php
 									if(get_user_meta($user_id,'_service_image_id_'.$i,true)!=''){?>
-										<img width="100px" src="<?php echo wp_get_attachment_url( get_user_meta($user_id,'_service_image_id_'.$i,true) ); ?> " >
+										<img class="img-circle" src="<?php echo wp_get_attachment_url( get_user_meta($user_id,'_service_image_id_'.$i,true) ); ?>" alt="icon">
 									<?php
 									}else{?>
 										<img src="<?php echo tiger_IMAGE."icon-prifile-3.png";?>" alt="icon" >

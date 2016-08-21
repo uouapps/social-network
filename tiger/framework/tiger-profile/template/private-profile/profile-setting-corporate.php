@@ -355,6 +355,14 @@
 													<label class="control-label">Google+ </label>
 													<input type="text" name="gplus" id="gplus" value="<?php echo get_user_meta($current_user->ID,'gplus',true); ?>"  class=""/>
 												  </div>
+												   <div class="form-group">
+													<label class="control-label">Instagram </label>
+													<input type="text" name="instagram" id="instagram" value="<?php echo get_user_meta($current_user->ID,'instagram',true); ?>"  class=""/>
+												  </div>
+												   <div class="form-group">
+													<label class="control-label">Pinterest </label>
+													<input type="text" name="pinterest" id="pinterest" value="<?php echo get_user_meta($current_user->ID,'pinterest',true); ?>"  class=""/>
+												  </div>
 									</div>  
 								</div>	  
 						</div>	
@@ -437,10 +445,23 @@
 															<div class="  "> 
 																<input type="text" class="" name="service_title[]" id="service_title[]" value="" placeholder="<?php esc_html_e('Enter services title *required','tiger'); ?>">
 															</div>																
-														</div>														
+														</div>	
+														<div class=" form-group " style="margin-top:10px">
+																	<label for="text" class=" col-md-2 control-label"><?php esc_html_e('Service Image','tiger'); ?>  </label>
+																	
+																		<a  href="javascript:void(0);" onclick ="service_post_image(this);"  >									
+																			<?php  echo '<img width="100px" src="'. wp_uou_tigerp_URLPATH.'assets/images/image-add-icon.png">'; ?>			
+																		</a>											
+																		<div class="col-md-4" id="service_image_div" >																	
+																		</div>	
+																		<input type="hidden" name="service_image_id[]" id="service_image_id[]" >	
+																						
+														</div>
+																														
 														<div class=" form-group">
 															<label for="text" class=" control-label"><?php esc_html_e('Service Detail','tiger'); ?></label>
-														</div>		
+														</div>	
+															
 															<div class="form-group">	
 																<textarea rows="5"  id="service_description[]" name="service_description[]"> </textarea>									
 																									
@@ -471,10 +492,11 @@
 																			<input type="text" class="" name="service_title[]" id="service_title[]" value="<?php echo get_user_meta($current_user->ID,'_service_title_'.$i,true); ?>" placeholder="<?php esc_html_e('Enter service title *required','tiger'); ?>">
 																		</div>																
 																	</div>	
-																   <!--
+																   
 																   <div class=" form-group " style="margin-top:10px">
-																		<label for="text" class=" col-md-2 control-label"><?php esc_html_e('Service Icon','tiger'); ?>  </label>
+																		<label for="text" class=" col-md-2 control-label"><?php esc_html_e('Service Image','tiger'); ?>  </label>
 																		<?php 
+																					
 																				if(get_user_meta($current_user->ID,'_service_image_id_'.$i,true)!=''){?>
 																					<a  href="javascript:void(0);" onclick="service_post_image(this);"  >		
 																					<img width="100px" src="<?php echo wp_get_attachment_url( get_user_meta($current_user->ID,'_service_image_id_'.$i,true) ); ?> " >
@@ -492,7 +514,7 @@
 																							
 																		</div>						
 																	</div>
-																	-->
+																	
 																	
 																	
 																	<div class="form-group">
@@ -522,9 +544,9 @@
 																			<input type="text" class="" name="service_title[]" id="service_title[]" value="" placeholder="<?php esc_html_e('Enter services title *required','tiger'); ?>">
 																		</div>																
 																	</div>
-																	<!--
+																	
 																	<div class=" form-group " style="margin-top:10px">
-																	<label for="text" class=" col-md-2 control-label"><?php esc_html_e('Service Icon','tiger'); ?>  </label>
+																	<label for="text" class=" col-md-2 control-label"><?php esc_html_e('Service Image','tiger'); ?>  </label>
 																	
 																		<a  href="javascript:void(0);" onclick ="service_post_image(this);"  >									
 																			<?php  echo '<img width="100px" src="'. wp_uou_tigerp_URLPATH.'assets/images/image-add-icon.png">'; ?>			
@@ -532,22 +554,13 @@
 																		<div class="col-md-4" id="service_image_div" >																	
 																		</div>						
 																	</div>
-																	-->
+																	
 																	<div class=" form-group">
 																		<label for="text" class=" control-label"><?php esc_html_e('Service Detail','tiger'); ?></label>
 																	</div>		
-																		<div class="form-group">										
-																				<div class=" ">
-																				<?php
-																					$settings_a = array(															
-																						'textarea_rows' =>5,
-																						'editor_class' => 'form-control'															 
-																						);																					
-																					$editor_id = 'service_description[]';
-																					wp_editor( '', $editor_id,$settings_a );										
-																					?>
-																			
-																			</div>									
+																		<div class="form-group">	
+																												
+																				<textarea rows="5"  id="service_description[]" name="service_description[]"> </textarea>								
 																		</div>
 															</div>	
 													

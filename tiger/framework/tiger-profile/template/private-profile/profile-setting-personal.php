@@ -295,6 +295,17 @@
 													<label class="control-label">Google+ </label>
 													<input type="text" name="gplus" id="gplus" value="<?php echo get_user_meta($current_user->ID,'gplus',true); ?>"  class=""/>
 												  </div>
+												   <div class="form-group">
+													<label class="control-label">Instagram </label>
+													<input type="text" name="instagram" id="instagram" value="<?php echo get_user_meta($current_user->ID,'instagram',true); ?>"  class=""/>
+												  </div>
+												   <div class="form-group">
+													<label class="control-label">Pinterest </label>
+													<input type="text" name="pinterest" id="pinterest" value="<?php echo get_user_meta($current_user->ID,'pinterest',true); ?>"  class=""/>
+												  </div>
+												  
+												  
+												  
 									</div>  
 								</div>	  
 						</div>	

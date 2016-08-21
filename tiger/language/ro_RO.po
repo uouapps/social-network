@@ -1,0 +1,4711 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: tiger\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-06 16:58+0600\n"
+"PO-Revision-Date: 2016-08-06 17:18+0600\n"
+"Last-Translator: Business ON <contact@fiberit.ro>\n"
+"Language-Team: tiger <aktar567@gmail.com>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 :(((n%100>19)||(( n%100==0)&&(n!"
+"=0)))? 2 : 1));\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Loco-Target-Locale: ro_RO\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: category.php:11
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: category.php:25 tag.php:22 single.php:21 footer.php:55 search.php:23
+#: page-grid.php:26 archive.php:30 templates/page/content-page.php:10
+#: templates/topS/header-top12.php:4 templates/topS/header-top10.php:4
+#: templates/topS/header-top8.php:4 templates/topS/header-top13.php:9
+#: templates/topS/header-top3.php:3 templates/topS/header-top7.php:4
+#: templates/topS/header-top11.php:4 templates/topS/header-top11.php:8
+#: templates/topS/header-top9.php:4 templates/blog/content-gridNS.php:19
+#: templates/blog/content-listNS.php:23 templates/blog/content-list.php:21
+#: templates/blog/content-grid.php:19 templates/headerS/header-four.php:10
+#: templates/headerS/header-six.php:10 templates/headerS/header-two.php:10
+#: templates/headerS/header-five.php:10 templates/headerS/header-three.php:10
+#: templates/headerS/header-one.php:10
+#: framework/ext/widget-latest-professional.php:72
+#: framework/ext/widget-contact-info.php:53
+#: framework/ext/widget-latest-company.php:84
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:180
+#: framework/redux/ReduxCore/inc/fields/media/field_media.php:190
+#: framework/redux/ReduxCore/inc/fields/background/field_background.php:306
+#: framework/redux/ReduxCore/inc/fields/gallery/field_gallery.php:67
+msgid "image"
+msgstr ""
+
+#: category.php:49 tag.php:46 single.php:81 search.php:48 archive.php:54
+msgid "No post have found!"
+msgstr ""
+
+#: category.php:76 tag.php:72 single.php:168 search.php:74 page-grid.php:94
+#: page.php:70 archive.php:82 templates/blog/content-blogChoose.php:42
+#: templates/blog/content-blogChoose.php:97
+msgid "Please activate some Widgets"
+msgstr ""
+
+#: tag.php:9
+#, php-format
+msgid "Tags Archives: %s"
+msgstr ""
+
+#: comments.php:17
+msgid "You can not access this file directly"
+msgstr ""
+
+#: comments.php:24
+msgid "The post is password protected ! Enter password to see the post"
+msgstr ""
+
+#: comments.php:85
+msgid "comments are closed ."
+msgstr ""
+
+#: single.php:57
+msgid "No Tag have Found!"
+msgstr ""
+
+#: single.php:66
+msgid "Post navigation"
+msgstr ""
+
+#: single.php:89
+msgid "Share This Story"
+msgstr ""
+
+#: single.php:124
+msgid "Back To Home"
+msgstr ""
+
+#: single.php:134 templates/full-width-page.php:34
+msgid "Comments"
+msgstr ""
+
+#: image.php:35
+msgid "Edit This"
+msgstr ""
+
+#: image.php:64
+msgid "Pages:"
+msgstr ""
+
+#: image.php:68 framework/tiger-profile/admin/pages/settings.php:46
+msgid "Page"
+msgstr ""
+
+#: 404.php:19
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:23
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: search.php:10
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: header.php:17
+msgid "Menu"
+msgstr ""
+
+#: header.php:18
+msgid "times"
+msgstr ""
+
+#: searchform.php:2
+#: framework/tiger-profile/template/private-profile/bookmark.php:70
+#: framework/tiger-profile/template/private-profile/my-network.php:85
+#: framework/tiger-profile/template/private-profile/my-follower.php:45
+#: framework/tiger-profile/template/private-profile/bookmarker.php:45
+#: framework/tiger-profile/template/private-profile/following.php:44
+msgid "Search"
+msgstr ""
+
+#: page.php:44
+msgid "are closed from Admin-Pannel"
+msgstr ""
+
+#: archive.php:11
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: archive.php:13
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:13
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:15
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: archive.php:15
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: archive.php:17 framework/ext/widget-archives.php:20
+msgid "Archives"
+msgstr ""
+
+#: templates/contact-us-template.php:10 templates/about-us.php:10
+#: templates/full-width-page.php:10
+msgid "banner"
+msgstr ""
+
+#: templates/home.php:15 templates/home.php:444
+msgid "paypal-express"
+msgstr ""
+
+#: templates/home.php:17 templates/home.php:19 templates/home.php:446
+msgid "0"
+msgstr ""
+
+#: templates/home.php:18 templates/home.php:447
+msgid "USD"
+msgstr ""
+
+#: templates/home.php:68
+msgid "Register Now"
+msgstr "Înregistrează-te acum"
+
+#: templates/home.php:69
+msgid "Member Login"
+msgstr "Autentificare membru"
+
+#: templates/home.php:77 templates/home.php:80
+#: framework/tiger-profile/template/signup/wizard-style-2.php:149
+#: framework/tiger-profile/template/signup/wizard-style-2.php:153
+msgid " Select user Type"
+msgstr ""
+
+#: templates/home.php:77
+#: framework/tiger-profile/admin/pages/package_update.php:103
+#: framework/tiger-profile/admin/pages/package_create.php:105
+#: framework/tiger-profile/template/signup/wizard-style-2.php:149
+msgid "Corporate"
+msgstr ""
+
+#: templates/home.php:80
+#: framework/tiger-profile/template/signup/wizard-style-2.php:153
+msgid "Professional"
+msgstr ""
+
+#: templates/home.php:84
+#: framework/tiger-profile/template/signup/wizard-style-2.php:163
+msgid "Display Name"
+msgstr ""
+
+#: templates/home.php:84
+#: framework/tiger-profile/template/signup/wizard-style-2.php:165
+msgid "Please enter Name"
+msgstr ""
+
+#: templates/home.php:87
+msgid "Enter email address"
+msgstr ""
+
+#: templates/home.php:87
+#: framework/tiger-profile/template/signup/wizard-style-2.php:173
+#: framework/tiger-profile/template/contact/contact-us.php:13
+msgid "Please enter a valid email address"
+msgstr ""
+
+#: templates/home.php:91
+#: framework/tiger-profile/template/signup/wizard-style-2.php:181
+msgid " The user name has to be an alphanumeric value between 4-12 characters"
+msgstr ""
+
+#: templates/home.php:91
+msgid "Enter User Name"
+msgstr ""
+
+#: templates/home.php:94
+msgid "Enter Password"
+msgstr ""
+
+#: templates/home.php:99 templates/header-login.php:44
+#: templates/header-login.php:47
+msgid "Register"
+msgstr "Inregistreaza-te"
+
+#: templates/home.php:103
+#, fuzzy
+msgid "Or Register with:"
+msgstr "sau folositi:"
+
+#: templates/home.php:115
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:153
+#: framework/tiger-profile/template/signup/wizard-style-2.php:178
+msgid "User Name"
+msgstr ""
+
+#: templates/home.php:116 templates/header-login.php:30
+#: framework/redux/ReduxCore/inc/fields/password/field_password.php:62
+#: framework/tiger-profile/template/private-profile/profile-login.php:36
+#: framework/tiger-profile/template/signup/wizard-style-2.php:188
+msgid "Password"
+msgstr ""
+
+#: templates/home.php:117 templates/header-login.php:25
+#: framework/tiger-profile/plugin.php:470
+msgid "Login"
+msgstr ""
+
+#: templates/home.php:121
+msgid "Or login with:"
+msgstr ""
+
+#: templates/home.php:126
+msgid "Forgot your password?"
+msgstr ""
+
+#: templates/home.php:126
+msgid "Click Here"
+msgstr ""
+
+#: templates/home.php:156 framework/redux/config/config.php:280
+msgid "Stay in touch with your colleagues"
+msgstr ""
+
+#: templates/home.php:162 templates/home.php:178 templates/home.php:195
+#: framework/redux/config/config.php:253 framework/redux/config/config.php:329
+#: framework/redux/config/config.php:398 framework/redux/config/config.php:467
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue "
+"conseqaut nibbhi ellit ipsum consectetur."
+msgstr ""
+
+#: templates/home.php:173 framework/redux/config/config.php:349
+msgid "Get the latest news in your industry"
+msgstr ""
+
+#: templates/home.php:190 framework/redux/config/config.php:418
+msgid "Share what’s up  with you"
+msgstr ""
+
+#: templates/home.php:226
+msgid " Interact with other professionals"
+msgstr ""
+
+#: templates/home.php:231 templates/home.php:252
+#: framework/redux/config/config.php:527 framework/redux/config/config.php:577
+#: framework/redux/config/config.php:649
+msgid ""
+" Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+"doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore "
+"veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+msgstr ""
+
+#: templates/home.php:248 framework/redux/config/config.php:557
+msgid "Collaborate on a project"
+msgstr ""
+
+#: templates/home.php:292 framework/redux/config/config.php:629
+msgid "SocialMe for your Smartphone"
+msgstr ""
+
+#: templates/home.php:298
+msgid ""
+"Sed ut perspiciatis unde omnis iste natus error sit voluptatem\r\n"
+"              accusantium doloremque laudantium, totam rem aperiam,\r\n"
+"              eaque ipsa quae ab illo inventore veritatis et quasi architecto"
+"\r\n"
+"              beatae vitae dicta sunt explicabo."
+msgstr ""
+
+#: templates/home.php:304
+msgid "App Store"
+msgstr ""
+
+#: templates/home.php:307 templates/home.php:365
+msgid "Image."
+msgstr ""
+
+#: templates/home.php:349 framework/redux/config/config.php:699
+msgid "What our users say"
+msgstr ""
+
+#: templates/home.php:403 framework/redux/config/config.php:739
+#: framework/redux/config/config.php:747
+msgid "Our Sponsors"
+msgstr ""
+
+#: templates/profile_professional.php:80
+#: templates/profile_professional.php:469 templates/profile_corporate.php:223
+msgid "Added to Connection"
+msgstr "Adaugă în conexiune"
+
+#: templates/profile_professional.php:80
+#: templates/profile_professional.php:675 templates/profile_corporate.php:223
+#: templates/profile_corporate.php:651
+msgid "Connected"
+msgstr ""
+
+#: templates/profile_professional.php:83 templates/profile_professional.php:87
+#: templates/profile_professional.php:473
+#: templates/profile_professional.php:479 templates/profile_corporate.php:226
+#: templates/profile_corporate.php:230
+msgid "Add to Connection"
+msgstr "Adaugă în conexiune"
+
+#: templates/profile_professional.php:83 templates/profile_professional.php:87
+#: templates/profile_professional.php:676 templates/profile_corporate.php:226
+#: templates/profile_corporate.php:230 templates/profile_corporate.php:652
+#: framework/tiger-profile/template/private-profile/following.php:40
+msgid "Connect"
+msgstr ""
+
+#: templates/profile_professional.php:94 templates/profile_corporate.php:237
+msgid "Share"
+msgstr ""
+
+#: templates/profile_professional.php:106
+#: templates/profile_professional.php:422 templates/profile_corporate.php:197
+#: templates/profile_corporate.php:249 framework/tiger-profile/plugin.php:3384
+#: framework/tiger-profile/plugin.php:3495
+#: framework/tiger-profile/plugin.php:3606
+#: framework/tiger-profile/plugin.php:3717
+#: framework/tiger-profile/plugin.php:3828
+#: framework/tiger-profile/template/private-profile/bookmark.php:209
+#: framework/tiger-profile/template/private-profile/my-network.php:26
+#: framework/tiger-profile/template/private-profile/my-network.php:224
+#: framework/tiger-profile/template/private-profile/my-follower.php:185
+#: framework/tiger-profile/template/private-profile/bookmarker.php:185
+#: framework/tiger-profile/template/private-profile/following.php:183
+msgid "Following"
+msgstr "ca urmare a"
+
+#: templates/profile_professional.php:109
+#: templates/profile_professional.php:114
+#: templates/profile_professional.php:425
+#: templates/profile_professional.php:430
+#: templates/profile_professional.php:668 templates/profile_corporate.php:252
+#: templates/profile_corporate.php:257 templates/profile_corporate.php:644
+msgid "Add to Follow"
+msgstr ""
+
+#: templates/profile_professional.php:129
+#: templates/profile_professional.php:444 templates/profile_corporate.php:272
+msgid "Added to Bookmark"
+msgstr ""
+
+#: templates/profile_professional.php:133
+#: templates/profile_professional.php:139
+#: templates/profile_professional.php:448
+#: templates/profile_professional.php:454
+#: templates/profile_professional.php:670 templates/profile_corporate.php:276
+#: templates/profile_corporate.php:282 templates/profile_corporate.php:646
+msgid "Add to Bookmark"
+msgstr ""
+
+#: templates/profile_professional.php:146 templates/profile_corporate.php:289
+msgid "Report the profile"
+msgstr ""
+
+#: templates/profile_professional.php:159 templates/profile_corporate.php:301
+msgid "Send Message"
+msgstr ""
+
+#: templates/profile_professional.php:165 templates/profile_corporate.php:307
+#: templates/profile_corporate.php:526
+msgid "Name & Surname"
+msgstr ""
+
+#: templates/profile_professional.php:169
+#: templates/profile_professional.php:201 templates/profile_corporate.php:311
+#: templates/profile_corporate.php:343 templates/profile_corporate.php:527
+msgid "E-mail address"
+msgstr ""
+
+#: templates/profile_professional.php:172
+#: templates/profile_professional.php:204 templates/profile_corporate.php:314
+#: templates/profile_corporate.php:346 templates/profile_corporate.php:528
+msgid "Your Message"
+msgstr ""
+
+#: templates/profile_professional.php:176
+#: templates/profile_professional.php:207 templates/profile_corporate.php:318
+#: templates/profile_corporate.php:349 templates/profile_corporate.php:531
+msgid "Send message"
+msgstr ""
+
+#: templates/profile_professional.php:191 templates/profile_corporate.php:333
+msgid "Report"
+msgstr ""
+
+#: templates/profile_professional.php:197 templates/profile_corporate.php:339
+msgid "Report The Listing"
+msgstr ""
+
+#: templates/profile_professional.php:222 templates/profile_corporate.php:364
+msgid "Share the profile"
+msgstr ""
+
+#: templates/profile_professional.php:232 templates/profile_corporate.php:373
+#: framework/redux/config/config.php:1327
+msgid "Facebook"
+msgstr ""
+
+#: templates/profile_professional.php:233 templates/profile_corporate.php:374
+#: framework/redux/config/config.php:1334
+msgid "Twitter"
+msgstr ""
+
+#: templates/profile_professional.php:234
+msgid "Google+"
+msgstr ""
+
+#: templates/profile_professional.php:235 templates/profile_corporate.php:376
+#: framework/redux/config/config.php:1347
+msgid "Linkedin"
+msgstr ""
+
+#: templates/profile_professional.php:265
+#: framework/tiger-profile/template/profile-public/profile-template.php:86
+#: framework/tiger-profile/template/profile-public/profile-template.php:121
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:36
+msgid "About"
+msgstr ""
+
+#: templates/profile_professional.php:290
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:366
+msgid "Skills"
+msgstr ""
+
+#: templates/profile_professional.php:324
+msgid "Similar Professionals"
+msgstr ""
+
+#: templates/profile_professional.php:396 templates/profile_corporate.php:400
+msgid "Profile"
+msgstr ""
+
+#: templates/profile_professional.php:506
+msgid "Professional Details"
+msgstr ""
+
+#: templates/profile_professional.php:515
+#: framework/tiger-profile/plugin.php:1828
+#: framework/tiger-profile/admin/pages/profile_fields.php:68
+#: framework/tiger-profile/admin/pages/profile_fields.php:80
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:323
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:335
+msgid "Age"
+msgstr ""
+
+#: templates/profile_professional.php:516
+#: framework/tiger-profile/plugin.php:1829
+#: framework/tiger-profile/admin/pages/profile_fields.php:69
+#: framework/tiger-profile/admin/pages/profile_fields.php:81
+#: framework/tiger-profile/template/private-profile/bookmark.php:81
+#: framework/tiger-profile/template/private-profile/my-network.php:96
+#: framework/tiger-profile/template/private-profile/my-follower.php:56
+#: framework/tiger-profile/template/private-profile/bookmarker.php:56
+#: framework/tiger-profile/template/private-profile/following.php:55
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:324
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:336
+msgid "Location"
+msgstr ""
+
+#: templates/profile_professional.php:517
+#: framework/tiger-profile/plugin.php:1830
+#: framework/tiger-profile/admin/pages/profile_fields.php:70
+#: framework/tiger-profile/admin/pages/profile_fields.php:82
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:325
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:337
+msgid "Experiance"
+msgstr ""
+
+#: templates/profile_professional.php:518
+#: framework/tiger-profile/plugin.php:1831
+#: framework/tiger-profile/admin/pages/profile_fields.php:71
+#: framework/tiger-profile/admin/pages/profile_fields.php:83
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:326
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:338
+msgid "Dgree"
+msgstr ""
+
+#: templates/profile_professional.php:519
+#: framework/tiger-profile/plugin.php:1832
+#: framework/tiger-profile/admin/pages/profile_fields.php:72
+#: framework/tiger-profile/admin/pages/profile_fields.php:84
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:327
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:339
+msgid "Career Lavel"
+msgstr ""
+
+#: templates/profile_professional.php:520
+#: framework/tiger-profile/plugin.php:1833
+#: framework/tiger-profile/admin/pages/profile_fields.php:73
+#: framework/tiger-profile/admin/pages/profile_fields.php:85
+#: framework/tiger-profile/template/profile-public/profile-template.php:97
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:328
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:340
+msgid "Phone"
+msgstr ""
+
+#: templates/profile_professional.php:521
+#: framework/tiger-profile/plugin.php:1834
+#: framework/tiger-profile/admin/pages/profile_fields.php:74
+#: framework/tiger-profile/admin/pages/profile_fields.php:86
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:329
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:341
+msgid "Fax"
+msgstr ""
+
+#: templates/profile_professional.php:522
+#: framework/tiger-profile/plugin.php:1835
+#: framework/tiger-profile/admin/pages/profile_fields.php:75
+#: framework/tiger-profile/admin/pages/profile_fields.php:87
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:330
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:342
+msgid "E-mail"
+msgstr ""
+
+#: templates/profile_professional.php:523 templates/profile_corporate.php:436
+#: framework/tiger-profile/plugin.php:1836
+#: framework/tiger-profile/admin/pages/profile_fields.php:76
+#: framework/tiger-profile/admin/pages/profile_fields.php:88
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:331
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:343
+msgid "Website Url"
+msgstr ""
+
+#: templates/profile_professional.php:554
+#: framework/tiger-profile/template/user-directory/directory-template-professionals.php:102
+#: framework/tiger-profile/template/user-directory/directory-template-company.php:118
+msgid "Rating"
+msgstr ""
+
+#: templates/profile_professional.php:563 templates/profile_corporate.php:143
+#: templates/profile_corporate.php:469
+msgid "Expertise"
+msgstr ""
+
+#: templates/profile_professional.php:564 templates/profile_corporate.php:144
+#: templates/profile_corporate.php:470
+msgid "Knowledge"
+msgstr ""
+
+#: templates/profile_professional.php:565 templates/profile_corporate.php:145
+#: templates/profile_corporate.php:471
+msgid "Quality"
+msgstr ""
+
+#: templates/profile_professional.php:566 templates/profile_corporate.php:146
+#: templates/profile_corporate.php:472
+msgid "Price"
+msgstr ""
+
+#: templates/profile_professional.php:567 templates/profile_corporate.php:147
+#: templates/profile_corporate.php:473 templates/profile_corporate.php:585
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:420
+msgid "Services"
+msgstr ""
+
+#: templates/profile_professional.php:616
+msgid "Social Profiles"
+msgstr ""
+
+#: templates/profile_professional.php:667 templates/profile_corporate.php:643
+msgid "Please login to remove favorite"
+msgstr ""
+
+#: templates/profile_professional.php:669 templates/profile_corporate.php:645
+msgid "Add to Connect"
+msgstr ""
+
+#: templates/profile_professional.php:671 templates/profile_corporate.php:647
+msgid "Please login to Report/Claim The Profile"
+msgstr ""
+
+#: templates/profile_professional.php:672 templates/profile_corporate.php:648
+msgid "Please login to add connection"
+msgstr ""
+
+#: templates/profile_professional.php:673 templates/profile_corporate.php:649
+msgid "Please login to add bookmark"
+msgstr ""
+
+#: templates/profile_professional.php:674 templates/profile_corporate.php:650
+msgid "Please login to add follow"
+msgstr ""
+
+#: templates/profile_professional.php:677 templates/profile_corporate.php:653
+msgid "following"
+msgstr ""
+
+#: templates/header-login.php:14
+msgid "&nbsp;Profile &nbsp;"
+msgstr ""
+
+#: templates/header-login.php:15
+msgid "Logout"
+msgstr ""
+
+#: templates/header-login.php:29
+msgid "User name"
+msgstr ""
+
+#: templates/header-login.php:36
+msgid "Remember Me"
+msgstr ""
+
+#: templates/header-login.php:50
+msgid "username"
+msgstr "utilizator"
+
+#: templates/header-login.php:51
+msgid "email"
+msgstr ""
+
+#: templates/header-login.php:52
+msgid "password"
+msgstr ""
+
+#: templates/header-login.php:53
+#, fuzzy
+msgid "Register Here"
+msgstr "Inregistrare aici"
+
+#: templates/profile_corporate.php:88
+msgid "Verified Member"
+msgstr ""
+
+#: templates/profile_corporate.php:100
+msgid "map"
+msgstr ""
+
+#: templates/profile_corporate.php:177
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:167
+#: framework/tiger-profile/template/private-profile/bookmark.php:6
+msgid "Bookmarks"
+msgstr "Semne de carte"
+
+#: templates/profile_corporate.php:186 framework/tiger-profile/plugin.php:3384
+#: framework/tiger-profile/plugin.php:3495
+#: framework/tiger-profile/plugin.php:3606
+#: framework/tiger-profile/plugin.php:3717
+#: framework/tiger-profile/plugin.php:3828
+#: framework/tiger-profile/template/private-profile/bookmark.php:201
+#: framework/tiger-profile/template/private-profile/my-network.php:17
+#: framework/tiger-profile/template/private-profile/my-network.php:216
+#: framework/tiger-profile/template/private-profile/my-follower.php:177
+#: framework/tiger-profile/template/private-profile/bookmarker.php:177
+#: framework/tiger-profile/template/private-profile/following.php:175
+msgid "Followers"
+msgstr "adepți"
+
+#: templates/profile_corporate.php:375 framework/redux/config/config.php:1340
+msgid "Google"
+msgstr ""
+
+#: templates/profile_corporate.php:401
+msgid "Jobs"
+msgstr ""
+
+#: templates/profile_corporate.php:402 templates/profile_corporate.php:523
+msgid "Contact"
+msgstr ""
+
+#: templates/profile_corporate.php:411
+msgid " Information"
+msgstr ""
+
+#: templates/profile_corporate.php:430
+msgid "Number of Employees"
+msgstr ""
+
+#: templates/profile_corporate.php:431
+msgid "Legal Entity"
+msgstr ""
+
+#: templates/profile_corporate.php:432
+#, fuzzy
+msgid "Company Registration"
+msgstr "Inregistrare companie"
+
+#: templates/profile_corporate.php:433
+msgid "Operating Hours"
+msgstr ""
+
+#: templates/profile_corporate.php:434
+msgid "Contacts"
+msgstr ""
+
+#: templates/profile_corporate.php:435
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:154
+#: framework/tiger-profile/admin/pages/settings.php:54
+#: framework/tiger-profile/template/profile-public/profile-template.php:111
+msgid "Email"
+msgstr ""
+
+#: templates/profile_corporate.php:460
+msgid " Rating"
+msgstr ""
+
+#: templates/profile_corporate.php:545
+msgid "About the "
+msgstr ""
+
+#: templates/profile_corporate.php:587
+msgid "Here an overview of the services we provide."
+msgstr ""
+
+#: templates/topS/header-top8.php:8
+msgid "Call Us:"
+msgstr ""
+
+#: templates/topS/header-top13.php:12 templates/topS/header-top9.php:7
+msgid "Shopping Cart"
+msgstr ""
+
+#: templates/blog/content-blogChoose.php:18
+#: templates/blog/content-blogChoose.php:74
+#: templates/blog/content-blogChoose.php:122
+#: templates/blog/content-blogChoose.php:153
+msgid "Sorry ! no blog post found "
+msgstr ""
+
+#: framework/ext/widget-tag.php:11
+msgid "A cloud of your most used tags."
+msgstr ""
+
+#: framework/ext/widget-tag.php:12
+msgid "tiger Tag Cloud"
+msgstr ""
+
+#: framework/ext/widget-tag.php:21 framework/redux/config/config.php:165
+msgid "Tags"
+msgstr ""
+
+#: framework/ext/widget-tag.php:77
+#: framework/ext/widget-newsletter-subscription.php:107
+#: framework/ext/widget-social.php:135 framework/ext/widget-categories.php:93
+#: framework/ext/tiger-company.php:79 framework/ext/widget-logo.php:70
+#: framework/ext/tiger-professional.php:75
+#: framework/ext/widget-catagories_one.php:91
+#: framework/ext/widget-legal.php:113
+#: framework/ext/widget-contact-info.php:129
+#: framework/ext/widget-archives.php:116
+msgid "Title:"
+msgstr ""
+
+#: framework/ext/widget-tag.php:79
+msgid "Taxonomy:"
+msgstr ""
+
+#: framework/ext/widget-newsletter-subscription.php:18
+msgid "Displays a subscription form for your Google/Feedburner account."
+msgstr ""
+
+#: framework/ext/widget-newsletter-subscription.php:28
+msgid "tiger Newsletter"
+msgstr ""
+
+#: framework/ext/widget-newsletter-subscription.php:56
+#: framework/ext/widget-newsletter-subscription.php:98
+msgid "Newsletter"
+msgstr ""
+
+#: framework/ext/widget-newsletter-subscription.php:59
+msgid ""
+" Subscribe to our newsletter to receive our latest news and updates. We do "
+"not spam."
+msgstr ""
+
+#: framework/ext/widget-newsletter-subscription.php:63
+msgid "Enter your email address"
+msgstr ""
+
+#: framework/ext/widget-newsletter-subscription.php:99
+msgid "info@example.com"
+msgstr ""
+
+#: framework/ext/widget-newsletter-subscription.php:100
+msgid "Subscribe"
+msgstr ""
+
+#: framework/ext/widget-newsletter-subscription.php:112
+msgid "Google/Feedburner ID:"
+msgstr ""
+
+#: framework/ext/widget-newsletter-subscription.php:117
+msgid "Input Text:"
+msgstr ""
+
+#: framework/ext/widget-newsletter-subscription.php:121
+msgid "Submit Text:"
+msgstr ""
+
+#: framework/ext/widget-social.php:12 framework/ext/widget-logo.php:12
+#: framework/ext/widget-legal.php:12
+msgid "Arbitrary text or HTML."
+msgstr ""
+
+#: framework/ext/widget-social.php:14
+msgid "tiger Social "
+msgstr ""
+
+#: framework/ext/widget-social.php:138
+msgid "Facebook Profile Link:"
+msgstr ""
+
+#: framework/ext/widget-social.php:141
+msgid "Twitter Profile Link:"
+msgstr ""
+
+#: framework/ext/widget-social.php:144
+msgid "Linkedin Profile Link:"
+msgstr ""
+
+#: framework/ext/widget-social.php:147
+msgid "GooglePlus Profile Link:"
+msgstr ""
+
+#: framework/ext/widget-social.php:150
+msgid "Pinterest Profile Link:"
+msgstr ""
+
+#: framework/ext/widget-social.php:155 framework/ext/widget-logo.php:73
+#: framework/ext/widget-legal.php:127
+#: framework/ext/widget-contact-info.php:144
+msgid "Automatically add paragraphs"
+msgstr ""
+
+#: framework/ext/widget-categories.php:6
+#: framework/ext/widget-catagories_one.php:6
+msgid "Styled list  of categories."
+msgstr ""
+
+#: framework/ext/widget-categories.php:7
+msgid "tiger Categories"
+msgstr ""
+
+#: framework/ext/widget-categories.php:13
+#: framework/ext/widget-catagories_one.php:13
+msgid "SB Categories"
+msgstr ""
+
+#: framework/ext/widget-categories.php:39
+#: framework/ext/widget-catagories_one.php:39
+msgid "Select Category"
+msgstr ""
+
+#: framework/ext/widget-categories.php:97
+#: framework/ext/widget-catagories_one.php:95
+#: framework/ext/widget-archives.php:118
+msgid "Display as dropdown"
+msgstr ""
+
+#: framework/ext/widget-categories.php:100
+#: framework/ext/widget-catagories_one.php:98
+#: framework/ext/widget-archives.php:120
+msgid "Show post counts"
+msgstr ""
+
+#: framework/ext/widget-categories.php:103
+#: framework/ext/widget-catagories_one.php:101
+msgid "Show hierarchy"
+msgstr ""
+
+#: framework/ext/tiger-company.php:8 framework/ext/tiger-company.php:9
+#: framework/ext/tiger-company.php:72
+#: framework/ext/widget-latest-company.php:9
+msgid "Recent Company"
+msgstr ""
+
+#: framework/ext/tiger-company.php:84 framework/ext/tiger-professional.php:80
+msgid "Number of posts to show:"
+msgstr ""
+
+#: framework/ext/tiger-company.php:89 framework/ext/tiger-professional.php:85
+msgid "Words of words to be displayed:"
+msgstr ""
+
+#: framework/ext/tiger-company.php:94 framework/ext/tiger-professional.php:90
+msgid "Only Display Ids "
+msgstr ""
+
+#: framework/ext/tiger-company.php:95 framework/ext/tiger-professional.php:91
+msgid "Enter IDs by , [# of post will not work]"
+msgstr ""
+
+#: framework/ext/extensions-setup.php:70
+#: framework/uoulib/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: framework/ext/extensions-setup.php:71
+#: framework/uoulib/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: framework/ext/extensions-setup.php:72
+#: framework/uoulib/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: framework/ext/extensions-setup.php:73
+#: framework/uoulib/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: framework/ext/extensions-setup.php:74
+#: framework/uoulib/class-tgm-plugin-activation.php:343
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: framework/ext/extensions-setup.php:75
+#: framework/uoulib/class-tgm-plugin-activation.php:349
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: framework/ext/extensions-setup.php:76
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins installed."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: framework/ext/extensions-setup.php:77
+#: framework/uoulib/class-tgm-plugin-activation.php:367
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: framework/ext/extensions-setup.php:78
+#: framework/uoulib/class-tgm-plugin-activation.php:373
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: framework/ext/extensions-setup.php:79
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: framework/ext/extensions-setup.php:80
+#: framework/uoulib/class-tgm-plugin-activation.php:355
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: framework/ext/extensions-setup.php:81
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: framework/ext/extensions-setup.php:82
+#: framework/uoulib/class-tgm-plugin-activation.php:378
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: framework/ext/extensions-setup.php:83
+#: framework/uoulib/class-tgm-plugin-activation.php:388
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: framework/ext/extensions-setup.php:84
+#: framework/uoulib/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: framework/ext/extensions-setup.php:85
+#: framework/uoulib/class-tgm-plugin-activation.php:394
+#: framework/uoulib/class-tgm-plugin-activation.php:3244
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: framework/ext/extensions-setup.php:86
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: framework/ext/widget-logo.php:14
+msgid "tiger Logo "
+msgstr ""
+
+#: framework/ext/tiger-professional.php:6
+#: framework/ext/tiger-professional.php:7
+#: framework/ext/tiger-professional.php:68
+#: framework/ext/widget-latest-professional.php:3
+msgid "Recent Professional"
+msgstr ""
+
+#: framework/ext/widget-catagories_one.php:7
+msgid "Blog Categories Footer"
+msgstr ""
+
+#: framework/ext/widget-legal.php:14
+msgid "tiger Legal "
+msgstr ""
+
+#: framework/ext/widget-legal.php:116
+msgid "Our Privacy & Policy Link:"
+msgstr ""
+
+#: framework/ext/widget-legal.php:119
+msgid "Terms & Conditions Link:"
+msgstr ""
+
+#: framework/ext/widget-legal.php:122
+msgid "Secure Payments Link:"
+msgstr ""
+
+#: framework/ext/widget-contact-info.php:12
+msgid "sb Contact Info widgets"
+msgstr ""
+
+#: framework/ext/widget-contact-info.php:14
+msgid "tiger Contact Info"
+msgstr ""
+
+#: framework/ext/widget-contact-info.php:132
+msgid "Background Image:"
+msgstr ""
+
+#: framework/ext/widget-contact-info.php:135
+msgid "Address:"
+msgstr ""
+
+#: framework/ext/widget-contact-info.php:138
+msgid "Phone No:"
+msgstr ""
+
+#: framework/ext/widget-contact-info.php:141
+msgid "Email :"
+msgstr ""
+
+#: framework/ext/widget-archives.php:11
+msgid "A monthly archive of your site&#8217;s Posts."
+msgstr ""
+
+#: framework/ext/widget-archives.php:12
+msgid "tiger Archives"
+msgstr ""
+
+#: framework/ext/widget-archives.php:51
+msgid "Select Year"
+msgstr ""
+
+#: framework/ext/widget-archives.php:54
+msgid "Select Month"
+msgstr ""
+
+#: framework/ext/widget-archives.php:57
+msgid "Select Day"
+msgstr ""
+
+#: framework/ext/widget-archives.php:60
+msgid "Select Week"
+msgstr ""
+
+#: framework/ext/widget-archives.php:63
+msgid "Select Post"
+msgstr ""
+
+#: framework/admin/functions.php:21
+msgid "Page Sidebar"
+msgstr ""
+
+#: framework/admin/functions.php:22
+msgid "Put your main sidebar widgets here"
+msgstr ""
+
+#: framework/admin/functions.php:34
+msgid "Footer"
+msgstr ""
+
+#: framework/admin/functions.php:35
+msgid "Put your widgets here that show on footer side area"
+msgstr ""
+
+#: framework/admin/functions.php:48
+msgid "Footer Middle Sidebar"
+msgstr ""
+
+#: framework/admin/functions.php:49
+msgid "Put your widgets here that show on footer middle area"
+msgstr ""
+
+#: framework/admin/functions.php:62
+msgid "Footer Right Sidebar"
+msgstr ""
+
+#: framework/admin/functions.php:63
+msgid ""
+"Put your widgets here that show on footer right side area example(newsletter)"
+msgstr ""
+
+#: framework/admin/functions.php:74
+msgid "Footer Down Sidebar"
+msgstr ""
+
+#: framework/admin/functions.php:75
+msgid ""
+"Put your widgets here that show on footer down side area example(contact "
+"info)"
+msgstr ""
+
+#: framework/admin/functions.php:86
+msgid "Footer Extra Middle Sidebar"
+msgstr ""
+
+#: framework/admin/functions.php:87
+msgid "Put your widgets here that show on footer extra middle side area"
+msgstr ""
+
+#: framework/admin/functions.php:116
+msgid "Primary Menu"
+msgstr ""
+
+#: framework/admin/theme-functions.php:72
+msgid "Read More"
+msgstr ""
+
+#: framework/admin/theme-functions.php:200
+msgid "Your comment is awaiting to approve"
+msgstr ""
+
+#: framework/admin/theme-functions.php:226
+msgid "Join Conversation"
+msgstr ""
+
+#: framework/admin/theme-functions.php:229
+msgid "Your Comment"
+msgstr ""
+
+#: framework/admin/theme-functions.php:259
+msgid "Name*"
+msgstr ""
+
+#: framework/admin/theme-functions.php:262
+msgid "Email*"
+msgstr "Email*"
+
+#: framework/admin/theme-functions.php:265
+msgid "Website"
+msgstr ""
+
+#: framework/redux/class.redux-plugin.php:298
+msgid "Redux Framework has an embedded demo."
+msgstr ""
+
+#: framework/redux/class.redux-plugin.php:298
+msgid "Click here to activate the sample config file."
+msgstr ""
+
+#: framework/redux/class.redux-plugin.php:407
+msgid "Deactivate Demo Mode"
+msgstr ""
+
+#: framework/redux/class.redux-plugin.php:409
+msgid "Activate Demo Mode"
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:50
+#: framework/redux/config/config.php:203
+msgid "Home Settings"
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:51
+msgid ""
+"These fields can be fully translated by WPML (WordPress Multi-Language). "
+"This serves as an example for you to implement. For extra details look at "
+"our <a href=\"http://docs.reduxframework.com/core/advanced/wpml-integration/"
+"\" target=\"_blank\">WPML Implementation</a> documentation."
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:59
+#: framework/redux/config/barebones-config.php:247
+msgid "Example Text"
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:62
+#: framework/redux/config/barebones-config.php:248
+msgid "Example description."
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:63
+#: framework/redux/config/barebones-config.php:249
+msgid "Example subtitle."
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:73
+msgid "WPML Example"
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:74
+msgid ""
+"These fields can be fully translated by WPML (WordPress Multi-Language). "
+"This serves as an example for you to implement."
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:81
+msgid "WPML Text"
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:82
+msgid "This string can be translated via WPML."
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:87
+msgid "WPML Multi Checkbox"
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:88
+msgid "You can literally translate the values via key."
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:105
+#: framework/redux/config/barebones-config.php:204
+#: framework/redux/config/config.php:1660
+msgid "Theme Information 1"
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:106
+#: framework/redux/config/barebones-config.php:205
+#: framework/redux/config/barebones-config.php:210
+#: framework/redux/config/config.php:1661
+#: framework/redux/config/config.php:1667
+msgid "<p>This is the tab content, HTML is allowed.</p>"
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:111
+#: framework/redux/config/barebones-config.php:209
+#: framework/redux/config/config.php:1666
+msgid "Theme Information 2"
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:112
+msgid "This is the tab content, HTML is allowed"
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:116
+msgid "This is the sidebar content, HTML is allowed."
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:139
+#: framework/redux/config/barebones-config-legacy.php:140
+#: framework/redux/config/barebones-config.php:35
+#: framework/redux/config/barebones-config.php:36
+msgid "Sample Options"
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:257
+#, php-format
+msgid ""
+"Did you know that Redux sets a global variable for you? To access any of "
+"your saved options from within your code you can use your global variable: "
+"<strong>$%1$s</strong>"
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:259
+msgid ""
+"This text is displayed above the options panel. It isn't required, but more "
+"info is always better! The intro_text field accepts all HTML."
+msgstr ""
+
+#: framework/redux/config/barebones-config-legacy.php:263
+msgid ""
+"This text is displayed below the options panel. It isn't required, but more "
+"info is always better! The footer_text field accepts all HTML."
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:138
+msgid "Documentation"
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:144
+msgid "Support"
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:150
+msgid "Extensions"
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:183
+#, php-format
+msgid ""
+"<p>Did you know that Redux sets a global variable for you? To access any of "
+"your saved options from within your code you can use your global variable: "
+"<strong>$%1$s</strong></p>"
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:185
+msgid ""
+"<p>This text is displayed above the options panel. It isn't required, but "
+"more info is always better! The intro_text field accepts all HTML.</p>"
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:189
+msgid ""
+"<p>This text is displayed below the options panel. It isn't required, but "
+"more info is always better! The footer_text field accepts all HTML.</p>"
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:216
+#: framework/redux/config/config.php:1671
+msgid "<p>This is the sidebar content, HTML is allowed.</p>"
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:240
+msgid "Basic Field"
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:242
+msgid "Basic field with no subsections."
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:257
+msgid "Basic Fields"
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:259
+msgid "Basic fields as subsections."
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:264
+msgid "Text"
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:265
+#: framework/redux/config/barebones-config.php:282
+msgid "For full documentation on this field, visit: "
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:272
+msgid "Text Field"
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:273
+#: framework/redux/config/barebones-config.php:290
+msgid "Subtitle"
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:274
+#: framework/redux/config/barebones-config.php:291
+msgid "Field Description"
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:281
+msgid "Text Area"
+msgstr ""
+
+#: framework/redux/config/barebones-config.php:289
+msgid "Text Area Field"
+msgstr ""
+
+#: framework/redux/config/config.php:67
+msgid "Section via hook"
+msgstr ""
+
+#: framework/redux/config/config.php:68
+msgid ""
+"<p class=\"description\">This is a section created by adding a filter to the "
+"sections array. Can be used by child themes to add/remove sections from the "
+"options.</p>"
+msgstr ""
+
+#: framework/redux/config/config.php:146
+#, php-format
+msgid "Customize &#8220;%s&#8221;"
+msgstr ""
+
+#: framework/redux/config/config.php:153 framework/redux/config/config.php:156
+msgid "Current theme preview"
+msgstr ""
+
+#: framework/redux/config/config.php:163
+#, php-format
+msgid "By %s"
+msgstr ""
+
+#: framework/redux/config/config.php:164
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: framework/redux/config/config.php:170
+#, php-format
+msgid "This <a href=\"%1$s\">child theme</a> requires its parent theme, %2$s."
+msgstr ""
+
+#: framework/redux/config/config.php:170
+msgid "http://codex.wordpress.org/Child_Themes"
+msgstr ""
+
+#: framework/redux/config/config.php:212
+msgid "Top banner image with text"
+msgstr ""
+
+#: framework/redux/config/config.php:221
+msgid "Home Top Banner image"
+msgstr ""
+
+#: framework/redux/config/config.php:222
+msgid "Best fit 1349 X 420 px."
+msgstr ""
+
+#: framework/redux/config/config.php:224 framework/redux/config/config.php:498
+#: framework/redux/config/config.php:548
+msgid "Upload Home Image."
+msgstr ""
+
+#: framework/redux/config/config.php:231
+msgid "Banner Image Title"
+msgstr ""
+
+#: framework/redux/config/config.php:234
+msgid "Here comes the social networking platform that you’ve been waiting"
+msgstr ""
+
+#: framework/redux/config/config.php:250
+msgid "Banner Image sub title"
+msgstr ""
+
+#: framework/redux/config/config.php:269
+msgid "Row #2 Hide/show (3 Blocks)  "
+msgstr ""
+
+#: framework/redux/config/config.php:276
+msgid "Row #2 Block-1 Content "
+msgstr ""
+
+#: framework/redux/config/config.php:277
+msgid "Home Page 1st top block content."
+msgstr ""
+
+#: framework/redux/config/config.php:296 framework/redux/config/config.php:365
+#: framework/redux/config/config.php:434
+msgid "Select Block Background Color "
+msgstr ""
+
+#: framework/redux/config/config.php:325
+msgid "Row #2 Block-1 Sub Content "
+msgstr ""
+
+#: framework/redux/config/config.php:326
+msgid "Home Page 1st top block sub content"
+msgstr ""
+
+#: framework/redux/config/config.php:345
+msgid "Row #2 Block-2 Content "
+msgstr ""
+
+#: framework/redux/config/config.php:346
+msgid "Home Page 2nd top block content."
+msgstr ""
+
+#: framework/redux/config/config.php:394
+msgid "Row #2 Block-2 Sub Content "
+msgstr ""
+
+#: framework/redux/config/config.php:395
+msgid "Home Page 2nd top block sub content"
+msgstr ""
+
+#: framework/redux/config/config.php:414 framework/redux/config/config.php:503
+msgid "Row #2 Block-3 Content "
+msgstr ""
+
+#: framework/redux/config/config.php:415 framework/redux/config/config.php:504
+#: framework/redux/config/config.php:554 framework/redux/config/config.php:626
+msgid "Home Page 3rd top block content."
+msgstr ""
+
+#: framework/redux/config/config.php:463
+msgid "Row #2 Block-3 Sub Content "
+msgstr ""
+
+#: framework/redux/config/config.php:464
+msgid "Home Page 3rd top block sub content"
+msgstr ""
+
+#: framework/redux/config/config.php:485
+msgid "Home page Row 3 Show/Hide"
+msgstr ""
+
+#: framework/redux/config/config.php:486
+msgid ""
+"Home page Row 3 Show/Hide (include 2 rows, 1st left image+ content  & 2nd "
+"right image +content )."
+msgstr ""
+
+#: framework/redux/config/config.php:495
+msgid "Home Row 3 left image"
+msgstr ""
+
+#: framework/redux/config/config.php:507
+msgid "Interact with other professionals"
+msgstr ""
+
+#: framework/redux/config/config.php:523
+msgid "Row #3 Sub Content "
+msgstr ""
+
+#: framework/redux/config/config.php:524
+msgid "Home Page Row #3 sub content"
+msgstr ""
+
+#: framework/redux/config/config.php:545
+msgid "Home Row 3 left image 2"
+msgstr ""
+
+#: framework/redux/config/config.php:553
+msgid "Row #2 Block-3 Content 2 "
+msgstr ""
+
+#: framework/redux/config/config.php:573
+msgid "Row #3 Sub Content 2 "
+msgstr ""
+
+#: framework/redux/config/config.php:574
+msgid "Home Page Row #3 sub content 2"
+msgstr ""
+
+#: framework/redux/config/config.php:597
+msgid "Home page Row 4 Show/Hide"
+msgstr ""
+
+#: framework/redux/config/config.php:598
+msgid "Home page Row 4 Show/Hide App Store."
+msgstr ""
+
+#: framework/redux/config/config.php:607
+msgid "Home Row 4  background image"
+msgstr ""
+
+#: framework/redux/config/config.php:610 framework/redux/config/config.php:732
+msgid "Upload Background Image."
+msgstr ""
+
+#: framework/redux/config/config.php:616
+msgid "Home Row 4  Mobile image"
+msgstr ""
+
+#: framework/redux/config/config.php:619
+msgid "Upload Mobile Image."
+msgstr ""
+
+#: framework/redux/config/config.php:625
+msgid "Row #4 Content "
+msgstr ""
+
+#: framework/redux/config/config.php:645
+msgid "Row #4 Sub Content "
+msgstr ""
+
+#: framework/redux/config/config.php:646
+msgid "Home Page Row #4 sub content"
+msgstr ""
+
+#: framework/redux/config/config.php:665
+msgid "Row #4 Appstore Link"
+msgstr ""
+
+#: framework/redux/config/config.php:666
+msgid "Home Page Row 4 App Store Link."
+msgstr ""
+
+#: framework/redux/config/config.php:691
+msgid "Our Testimonial show/hide"
+msgstr ""
+
+#: framework/redux/config/config.php:698
+msgid "Header of Our Testimonials"
+msgstr ""
+
+#: framework/redux/config/config.php:707
+msgid "Our Testimonials"
+msgstr ""
+
+#: framework/redux/config/config.php:708 framework/redux/config/config.php:748
+msgid "Unlimited slides with drag and drop sortings."
+msgstr ""
+
+#: framework/redux/config/config.php:710
+msgid "Name..."
+msgstr ""
+
+#: framework/redux/config/config.php:711 framework/redux/config/config.php:751
+msgid "Description Here"
+msgstr ""
+
+#: framework/redux/config/config.php:712
+msgid "User Email"
+msgstr ""
+
+#: framework/redux/config/config.php:722
+msgid "Our Sponsors show/hide"
+msgstr ""
+
+#: framework/redux/config/config.php:729
+msgid "Home sponsors background image"
+msgstr ""
+
+#: framework/redux/config/config.php:738
+msgid "Header of Our Sponsors"
+msgstr ""
+
+#: framework/redux/config/config.php:762
+msgid "Page Templates With Sidebar"
+msgstr ""
+
+#: framework/redux/config/config.php:772
+msgid "Custom CSS "
+msgstr ""
+
+#: framework/redux/config/config.php:773
+msgid "Paste your custom CSS code here."
+msgstr ""
+
+#: framework/redux/config/config.php:782
+msgid "Custom JS"
+msgstr ""
+
+#: framework/redux/config/config.php:783
+msgid "Paste your JS code here."
+msgstr ""
+
+#: framework/redux/config/config.php:814
+msgid "Header Settings"
+msgstr ""
+
+#: framework/redux/config/config.php:822
+msgid "Header Logo"
+msgstr ""
+
+#: framework/redux/config/config.php:824
+msgid "Upload header logo."
+msgstr ""
+
+#: framework/redux/config/config.php:834
+msgid "Footer Logo"
+msgstr ""
+
+#: framework/redux/config/config.php:836
+msgid "Upload footer logo."
+msgstr ""
+
+#: framework/redux/config/config.php:847
+msgid "Share button"
+msgstr ""
+
+#: framework/redux/config/config.php:855
+msgid " Facebook Share button"
+msgstr ""
+
+#: framework/redux/config/config.php:862
+msgid " Twitter Share button"
+msgstr ""
+
+#: framework/redux/config/config.php:869
+msgid " Google Plus Share button"
+msgstr ""
+
+#: framework/redux/config/config.php:876
+msgid " LinkedIn Share button"
+msgstr ""
+
+#: framework/redux/config/config.php:883
+msgid " Envelope Share button"
+msgstr ""
+
+#: framework/redux/config/config.php:890
+msgid " Pinterest Share button"
+msgstr ""
+
+#: framework/redux/config/config.php:898
+msgid "Show Language "
+msgstr ""
+
+#: framework/redux/config/config.php:905
+msgid "Language"
+msgstr ""
+
+#: framework/redux/config/config.php:919
+msgid "Login option"
+msgstr ""
+
+#: framework/redux/config/config.php:927
+msgid "WPML language show type"
+msgstr ""
+
+#: framework/redux/config/config.php:928
+msgid "Select the type how you want to show language selector"
+msgstr ""
+
+#: framework/redux/config/config.php:929
+msgid "This select type will only work if WPML activated in your theme"
+msgstr ""
+
+#: framework/redux/config/config.php:966
+msgid "Multi Header Options"
+msgstr ""
+
+#: framework/redux/config/config.php:972
+msgid "Show Header"
+msgstr ""
+
+#: framework/redux/config/config.php:973
+msgid "Decide to show Header or Not"
+msgstr ""
+
+#: framework/redux/config/config.php:980
+msgid "tiger Header images"
+msgstr ""
+
+#: framework/redux/config/config.php:981
+msgid "Select Which Header Image to show"
+msgstr ""
+
+#: framework/redux/config/config.php:1090
+msgid "Tiger Multi TopBar Options"
+msgstr ""
+
+#: framework/redux/config/config.php:1096
+#: framework/redux/config/config.php:1201
+msgid "Show Tob Bar"
+msgstr ""
+
+#: framework/redux/config/config.php:1097
+#: framework/redux/config/config.php:1202
+msgid "Decide to show Tob Bar or Not"
+msgstr ""
+
+#: framework/redux/config/config.php:1104
+msgid "tiger Top Bar images"
+msgstr ""
+
+#: framework/redux/config/config.php:1105
+msgid "Select Which topBar Image to show"
+msgstr ""
+
+#: framework/redux/config/config.php:1195
+msgid "Tiger Multi Blog Options"
+msgstr ""
+
+#: framework/redux/config/config.php:1209
+msgid "tiger Blog images"
+msgstr ""
+
+#: framework/redux/config/config.php:1210
+msgid "Select Which Blog Image to show"
+msgstr ""
+
+#: framework/redux/config/config.php:1264
+msgid "Tiger Template"
+msgstr ""
+
+#: framework/redux/config/config.php:1271
+msgid "tiger Slider Imeges"
+msgstr ""
+
+#: framework/redux/config/config.php:1272
+msgid "tiger Unlimited slides with drag and drop sortings."
+msgstr ""
+
+#: framework/redux/config/config.php:1280
+msgid "tiger testimonial Image"
+msgstr ""
+
+#: framework/redux/config/config.php:1282
+msgid "change your testimonial footer banner image"
+msgstr ""
+
+#: framework/redux/config/config.php:1306
+msgid "Social Profile Link"
+msgstr ""
+
+#: framework/redux/config/config.php:1313
+#: framework/tiger-profile/template/profile-public/profile-template.php:125
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:270
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:330
+msgid "Social Profile"
+msgstr ""
+
+#: framework/redux/config/config.php:1320
+msgid "Social Profile Title"
+msgstr ""
+
+#: framework/redux/config/config.php:1354
+msgid "Pinterest"
+msgstr ""
+
+#: framework/redux/config/config.php:1391
+msgid "Footer Options"
+msgstr ""
+
+#: framework/redux/config/config.php:1397
+msgid "Show Footer Widgets"
+msgstr ""
+
+#: framework/redux/config/config.php:1398
+msgid "Decide show tiger Footer Widgets or Not"
+msgstr ""
+
+#: framework/redux/config/config.php:1404
+msgid "Show Footer Menu"
+msgstr ""
+
+#: framework/redux/config/config.php:1405
+msgid "Decide to show Footer Menu or Not"
+msgstr ""
+
+#: framework/redux/config/config.php:1412
+msgid "Show Footer"
+msgstr ""
+
+#: framework/redux/config/config.php:1413
+msgid "Decide to show Footer or Not"
+msgstr ""
+
+#: framework/redux/config/config.php:1420
+msgid "Show Footer Copyrights"
+msgstr ""
+
+#: framework/redux/config/config.php:1421
+msgid "Decide show Footer copyrights or Not"
+msgstr ""
+
+#: framework/redux/config/config.php:1427
+msgid "Show Footer Credits of uouapps"
+msgstr ""
+
+#: framework/redux/config/config.php:1428
+msgid "Decide show Footer Credits of uouapp or Not"
+msgstr ""
+
+#: framework/redux/config/config.php:1436
+msgid "Contact address"
+msgstr ""
+
+#: framework/redux/config/config.php:1437
+#: framework/redux/config/config.php:1438
+msgid "Enter address"
+msgstr ""
+
+#: framework/redux/config/config.php:1439
+msgid "350 Fifth Avenue, 34th floor, New York, NY 10118-3299 USA"
+msgstr ""
+
+#: framework/redux/config/config.php:1447
+msgid "Contact Background Image"
+msgstr ""
+
+#: framework/redux/config/config.php:1448
+#: framework/redux/config/config.php:1449
+msgid "Select Background Image"
+msgstr ""
+
+#: framework/redux/config/config.php:1454
+msgid "Contact email"
+msgstr ""
+
+#: framework/redux/config/config.php:1455
+#: framework/redux/config/config.php:1456
+msgid "Enter email"
+msgstr ""
+
+#: framework/redux/config/config.php:1462
+msgid "Contact phone"
+msgstr ""
+
+#: framework/redux/config/config.php:1463
+#: framework/redux/config/config.php:1464
+msgid "Enter phone"
+msgstr ""
+
+#: framework/redux/config/config.php:1465
+msgid "+4534435345"
+msgstr ""
+
+#: framework/redux/config/config.php:1472
+msgid "Copyright Text"
+msgstr ""
+
+#: framework/redux/config/config.php:1473
+msgid "Enter your copyright text"
+msgstr ""
+
+#: framework/redux/config/config.php:1474
+#: framework/redux/config/config.php:1475
+msgid "&copy; Copyright 2016 "
+msgstr ""
+
+#: framework/redux/config/config.php:1481
+msgid "Copyright link"
+msgstr ""
+
+#: framework/redux/config/config.php:1482
+msgid "Enter your copyright link"
+msgstr ""
+
+#: framework/redux/config/config.php:1483
+msgid "www.example.com "
+msgstr ""
+
+#: framework/redux/config/config.php:1490
+msgid "After Copyright Text"
+msgstr ""
+
+#: framework/redux/config/config.php:1491
+msgid "Enter your After copyright text"
+msgstr ""
+
+#: framework/redux/config/config.php:1492
+msgid "All rights reserved."
+msgstr ""
+
+#: framework/redux/config/config.php:1493
+msgid " All rights reserved. "
+msgstr ""
+
+#: framework/redux/config/config.php:1499
+msgid "Privacy Policy"
+msgstr ""
+
+#: framework/redux/config/config.php:1500
+msgid "Enter your company Privacy Policy link"
+msgstr ""
+
+#: framework/redux/config/config.php:1501
+#: framework/redux/config/config.php:1510
+msgid "www.example.com"
+msgstr ""
+
+#: framework/redux/config/config.php:1508
+msgid "Terms & Conditions"
+msgstr ""
+
+#: framework/redux/config/config.php:1509
+msgid "Enter your Terms & Conditions link"
+msgstr ""
+
+#: framework/redux/config/config.php:1542
+msgid "Styling Options"
+msgstr ""
+
+#: framework/redux/config/config.php:1549
+msgid "Theme Stylesheet"
+msgstr ""
+
+#: framework/redux/config/config.php:1550
+msgid "Select your themes alternative color scheme."
+msgstr ""
+
+#: framework/redux/config/config.php:1562
+msgid "Body"
+msgstr ""
+
+#: framework/redux/config/config.php:1580
+msgid "Header"
+msgstr ""
+
+#: framework/redux/config/config.php:1638
+msgid "<strong>Theme URL:</strong> "
+msgstr ""
+
+#: framework/redux/config/config.php:1639
+msgid "<strong>Author:</strong> "
+msgstr ""
+
+#: framework/redux/config/config.php:1640
+msgid "<strong>Version:</strong> "
+msgstr ""
+
+#: framework/redux/config/config.php:1644
+msgid "<strong>Tags:</strong> "
+msgstr ""
+
+#: framework/redux/config/config.php:1691
+msgid "Tiger Theme Options"
+msgstr ""
+
+#: framework/redux/config/config.php:1692
+msgid "tiger"
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:209
+#, php-format
+msgid "Options panel created using %1$s"
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:209
+msgid "Redux Framework"
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:213
+#: framework/redux/ReduxCore/framework.php:217
+msgid "Options"
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:1728
+msgid "Enable"
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:1733
+msgid "Disable"
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:1739
+msgid "moving the mouse over"
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:1741
+msgid "clicking"
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:1745
+#, php-format
+msgid ""
+"Hints are tooltips that popup when %d the hint icon, offering addition "
+"information about the field in which they appear.  They can be %d d by using "
+"the link below."
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:1750
+msgid "Hints"
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:1877
+#: framework/tiger-profile/plugin.php:378
+#: framework/tiger-profile/plugin.php:399
+#: framework/tiger-profile/plugin.php:420
+#: framework/tiger-profile/plugin.php:441
+#: framework/tiger-profile/plugin.php:483
+msgid "Default"
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:2757
+msgid "Invalid security credential.  Please reload the page and try again."
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:2766
+msgid "Invalid user capability.  Please reload the page and try again."
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:2842
+msgid "Your panel has no fields. Nothing to save."
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:3939
+msgid ""
+"<strong>Redux Framework Notice: </strong>There are references to the Redux "
+"Framework support site in your config's <code>admin_bar_links</code> "
+"argument.  This is sample data.  Please change or remove this data before "
+"shipping your product."
+msgstr ""
+
+#: framework/redux/ReduxCore/framework.php:3954
+msgid ""
+"<strong>Redux Framework Notice: </strong>There are references to the Redux "
+"Framework support site in your config's <code>share_icons</code> argument.  "
+"This is sample data.  Please change or remove this data before shipping your "
+"product."
+msgstr ""
+
+#: framework/redux/ReduxCore/templates/panel/header.tpl.php:11
+#: framework/redux/ReduxCore/templates/panel/header.tpl.php:49
+msgid "Developer Mode Enabled"
+msgstr ""
+
+#: framework/redux/ReduxCore/templates/panel/header.tpl.php:20
+msgid "WP_DEBUG is enabled"
+msgstr ""
+
+#: framework/redux/ReduxCore/templates/panel/header.tpl.php:26
+msgid "you are working in a localhost environment"
+msgstr ""
+
+#: framework/redux/ReduxCore/templates/panel/header.tpl.php:31
+msgid "and"
+msgstr ""
+
+#: framework/redux/ReduxCore/templates/panel/header.tpl.php:34
+msgid "This has been automatically enabled because"
+msgstr ""
+
+#: framework/redux/ReduxCore/templates/panel/header.tpl.php:36
+msgid ""
+"If you are not a developer, your theme/plugin author shipped with developer "
+"mode enabled. Contact them directly to fix it."
+msgstr ""
+
+#: framework/redux/ReduxCore/templates/panel/header.tpl.php:58
+msgid "FORCED DEV MODE OFF ENABLED"
+msgstr ""
+
+#: framework/redux/ReduxCore/templates/panel/header_stickybar.tpl.php:15
+msgid "Expand"
+msgstr ""
+
+#: framework/redux/ReduxCore/templates/panel/header_stickybar.tpl.php:21
+#: framework/redux/ReduxCore/templates/panel/footer.tpl.php:57
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:504
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:570
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:582
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:647
+msgid "Save Changes"
+msgstr ""
+
+#: framework/redux/ReduxCore/templates/panel/header_stickybar.tpl.php:25
+#: framework/redux/ReduxCore/templates/panel/footer.tpl.php:61
+msgid "Reset Section"
+msgstr ""
+
+#: framework/redux/ReduxCore/templates/panel/header_stickybar.tpl.php:26
+#: framework/redux/ReduxCore/templates/panel/footer.tpl.php:62
+msgid "Reset All"
+msgstr ""
+
+#: framework/redux/ReduxCore/templates/panel/header_stickybar.tpl.php:29
+#: framework/redux/ReduxCore/templates/panel/footer.tpl.php:67
+msgid "Working..."
+msgstr ""
+
+#: framework/redux/ReduxCore/core/enqueue.php:453
+#: framework/redux/ReduxCore/inc/extensions/customizer/extension_customizer.php:687
+msgid "You have changes that are not saved. Would you like to save them now?"
+msgstr ""
+
+#: framework/redux/ReduxCore/core/enqueue.php:461
+#: framework/redux/ReduxCore/inc/extensions/customizer/extension_customizer.php:688
+msgid "Are you sure? Resetting will lose all custom values."
+msgstr ""
+
+#: framework/redux/ReduxCore/core/enqueue.php:469
+msgid "Are you sure? Resetting will lose all custom values in this section."
+msgstr ""
+
+#: framework/redux/ReduxCore/core/enqueue.php:477
+#: framework/redux/ReduxCore/inc/extensions/customizer/extension_customizer.php:689
+msgid ""
+"Your current options will be replaced with the values of this preset. Would "
+"you like to proceed?"
+msgstr ""
+
+#: framework/redux/ReduxCore/core/enqueue.php:484
+msgid "Please Wait"
+msgstr ""
+
+#: framework/redux/ReduxCore/core/enqueue.php:495
+msgid "There was an error saving. Here is the result of your action:"
+msgstr ""
+
+#: framework/redux/ReduxCore/core/enqueue.php:496
+msgid ""
+"There was a problem with your action. Please try again or reload the page."
+msgstr ""
+
+#: framework/redux/ReduxCore/core/panel.php:65
+msgid "Warning- This options panel will not work properly without javascript!"
+msgstr ""
+
+#: framework/redux/ReduxCore/core/panel.php:141
+msgid "Settings Imported!"
+msgstr ""
+
+#: framework/redux/ReduxCore/core/panel.php:156
+msgid "All Defaults Restored!"
+msgstr ""
+
+#: framework/redux/ReduxCore/core/panel.php:170
+msgid "Section Defaults Restored!"
+msgstr ""
+
+#: framework/redux/ReduxCore/core/panel.php:184
+msgid "Settings Saved!"
+msgstr ""
+
+#: framework/redux/ReduxCore/core/panel.php:204
+msgid "Settings have changed, you should save them!"
+msgstr ""
+
+#: framework/redux/ReduxCore/core/panel.php:212
+msgid "error(s) were found!"
+msgstr ""
+
+#: framework/redux/ReduxCore/core/panel.php:220
+msgid "warning(s) were found!"
+msgstr ""
+
+#: framework/redux/ReduxCore/core/panel.php:312
+msgid ""
+"Your panel has bundled outdated copies of Redux Framework template files. if "
+"you encounter functionality issues this could be the reason. Ensure you "
+"update or remove them."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/class.redux_helpers.php:604
+#, php-format
+msgid ""
+"<code>%s</code> version <strong style=\"color:red\">%s</strong> is out of "
+"date. The core version is %s"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/class.redux_filesystem.php:31
+#: framework/redux/ReduxCore/inc/class.redux_filesystem.php:60
+#: framework/redux/ReduxCore/inc/class.redux_filesystem.php:270
+msgid "File Permission Issues"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/class.redux_filesystem.php:31
+#, php-format
+msgid ""
+"We were unable to modify required files. Please check your permissions, or "
+"modify your wp-config.php file to contain your FTP login credentials as <a "
+"href=\"%s\" target=\"_blank\">outlined here</a>."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/class.redux_filesystem.php:60
+#: framework/redux/ReduxCore/inc/class.redux_filesystem.php:270
+#, php-format
+msgid ""
+"We were unable to modify required files. Please ensure that <code>%1s</code> "
+"has the proper read-write permissions, or modify your wp-config.php file to "
+"contain your FTP login credentials as <a href=\"%2s\" target=\"_blank"
+"\">outlined here</a>."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/class.redux_cdn.php:74
+msgid ""
+"Please wait a few minutes, then try refreshing the page. Unable to load some "
+"remotely hosted scripts."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/class.redux_cdn.php:76
+#, php-format
+msgid ""
+"If you are developing offline, please download and install the <a href=\"%s"
+"\" target=\"_blank\">Redux Vendor Support</a> plugin/extension to bypass the "
+"our CDN and avoid this warning"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/class.redux_cdn.php:81
+msgid "Redux Framework Warning"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/class.redux_cdn.php:81
+#, php-format
+msgid "%s CDN unavailable.  Some controls may not render properly."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/class.redux_cdn.php:113
+#, php-format
+msgid ""
+"The is either not installed or not activated and thus, some controls may not "
+"render properly.  Please ensure that it is installed and <a href=\"%s"
+"\">activated</a>"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:68
+msgid "Slide"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:73
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:174
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:126
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:188
+#: framework/redux/ReduxCore/inc/fields/media/field_media.php:198
+#: framework/redux/ReduxCore/inc/fields/background/field_background.php:314
+msgid "Upload"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:133
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:190
+#: framework/redux/ReduxCore/inc/fields/media/field_media.php:205
+#: framework/redux/ReduxCore/inc/fields/multi_text/field_multi_text.php:69
+#: framework/redux/ReduxCore/inc/fields/multi_text/field_multi_text.php:73
+#: framework/redux/ReduxCore/inc/fields/multi_text/field_multi_text.php:76
+#: framework/redux/ReduxCore/inc/fields/background/field_background.php:321
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:80
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:140
+msgid "Remove"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:145
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:200
+#: framework/tiger-profile/template/private-profile/bookmark.php:80
+#: framework/tiger-profile/template/private-profile/my-network.php:95
+#: framework/tiger-profile/template/private-profile/my-follower.php:55
+#: framework/tiger-profile/template/private-profile/bookmarker.php:55
+#: framework/tiger-profile/template/private-profile/following.php:54
+msgid "Title"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:149
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:204
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:28
+msgid "Description"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:153
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:207
+msgid "URL"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:167
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:220
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:234
+#: framework/tiger-profile/admin/pages/my-account-menu.php:197
+#: framework/tiger-profile/admin/pages/my-account-menu.php:212
+#: framework/tiger-profile/admin/pages/corporate_fields.php:107
+#: framework/tiger-profile/admin/pages/corporate_fields.php:198
+#: framework/tiger-profile/admin/pages/profile_fields.php:102
+#: framework/tiger-profile/admin/pages/profile_fields.php:193
+#: framework/tiger-profile/template/private-profile/bookmark.php:66
+#: framework/tiger-profile/template/private-profile/my-network.php:81
+#: framework/tiger-profile/template/private-profile/my-follower.php:41
+#: framework/tiger-profile/template/private-profile/bookmarker.php:41
+msgid "Delete"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:223
+#, php-format
+msgid "Add %s"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/media/field_media.php:149
+#: framework/redux/ReduxCore/inc/fields/background/field_background.php:277
+msgid "No media selected"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/color/field_color.php:73
+#: framework/redux/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:79
+#: framework/redux/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:91
+#: framework/redux/ReduxCore/inc/fields/background/field_background.php:124
+msgid "Transparent"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:68
+msgid "From "
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/color_gradient/field_color_gradient.php:82
+msgid "To "
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/switch/field_switch.php:41
+msgid "On"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/switch/field_switch.php:44
+msgid "Off"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/multi_text/field_multi_text.php:61
+#: framework/tiger-profile/admin/pages/my-account-menu.php:224
+#: framework/tiger-profile/admin/pages/corporate_fields.php:119
+#: framework/tiger-profile/admin/pages/corporate_fields.php:210
+#: framework/tiger-profile/admin/pages/profile_fields.php:114
+#: framework/tiger-profile/admin/pages/profile_fields.php:205
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:487
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:565
+msgid "Add More"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/password/field_password.php:63
+#: framework/tiger-profile/template/private-profile/profile-login.php:25
+msgid "Username"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/border/field_border.php:125
+#: framework/redux/ReduxCore/inc/fields/spacing/field_spacing.php:191
+msgid "All"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/border/field_border.php:138
+#: framework/redux/ReduxCore/inc/fields/spacing/field_spacing.php:215
+msgid "Top"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/border/field_border.php:145
+#: framework/redux/ReduxCore/inc/fields/spacing/field_spacing.php:222
+msgid "Right"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/border/field_border.php:152
+#: framework/redux/ReduxCore/inc/fields/spacing/field_spacing.php:229
+msgid "Bottom"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/border/field_border.php:159
+#: framework/redux/ReduxCore/inc/fields/spacing/field_spacing.php:236
+msgid "Left"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/border/field_border.php:174
+msgid "Border style"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/background/field_background.php:141
+msgid "Background Repeat"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/background/field_background.php:157
+msgid "Background Clip"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/background/field_background.php:173
+msgid "Background Origin"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/background/field_background.php:188
+msgid "Background Size"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/background/field_background.php:203
+msgid "Background Attachment"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/background/field_background.php:223
+msgid "Background Position"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/spacing/field_spacing.php:245
+#: framework/redux/ReduxCore/inc/fields/spacing/field_spacing.php:246
+#: framework/redux/ReduxCore/inc/fields/dimensions/field_dimensions.php:189
+#: framework/redux/ReduxCore/inc/fields/dimensions/field_dimensions.php:190
+msgid "Units"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/select/field_select.php:83
+#: framework/redux/ReduxCore/inc/fields/select_image/field_select_image.php:63
+msgid "Select an item"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/select/field_select.php:134
+#: framework/redux/ReduxCore/inc/fields/select_image/field_select_image.php:144
+msgid "No items of this type were found."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/link_color/field_link_color.php:88
+msgid "Regular"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/link_color/field_link_color.php:92
+msgid "Hover"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/link_color/field_link_color.php:96
+msgid "Visited"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/link_color/field_link_color.php:100
+#: framework/uoulib/class-tgm-plugin-activation.php:2406
+msgid "Active"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:231
+msgid "Font Family"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:232
+msgid "Font family"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:258
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:259
+msgid "Backup Font Family"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:273
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:281
+msgid "Font style"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:274
+msgid "Font Weight &amp; Style"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:281
+msgid "Style"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:321
+msgid "Font subsets"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:323
+msgid "Font Subsets"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:325
+msgid "Subsets"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:325
+msgid "Font script"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:342
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:343
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:344
+msgid "Text Align"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:365
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:366
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:367
+msgid "Text Transform"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:388
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:389
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:390
+msgid "Font Variant"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:408
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:409
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:410
+msgid "Text Decoration"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:432
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:433
+msgid "Font Size"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:433
+msgid "Size"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:441
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:442
+msgid "Line Height"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:442
+#: framework/redux/ReduxCore/inc/fields/dimensions/field_dimensions.php:178
+msgid "Height"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:450
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:451
+msgid "Word Spacing"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:459
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:460
+msgid "Letter Spacing"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:478
+msgid "Font Color"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:480
+msgid "Font color"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:890
+msgid "Standard Fonts"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/typography/field_typography.php:992
+msgid "Google Webfonts"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/gallery/field_gallery.php:73
+msgid "Add/Edit Gallery"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/gallery/field_gallery.php:74
+msgid "Clear Gallery"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/fields/dimensions/field_dimensions.php:162
+msgid "Width"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/options_object/extension_options_object.php:82
+#: framework/redux/ReduxCore/inc/extensions/options_object/options_object/field_options_object.php:104
+msgid "Options Object"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/options_object/options_object/field_options_object.php:107
+msgid "Show Object in Javascript Console Object"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/customizer/extension_customizer.php:722
+msgid "You have changes that are not saved.  Would you like to save them now?"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/customizer/extension_customizer.php:723
+msgid "Are you sure?  Resetting will lose all custom values."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/customizer/extension_customizer.php:724
+msgid ""
+"Your current options will be replaced with the values of this preset.  Would "
+"you like to proceed?"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/customizer/inc/customizer_section.php:72
+msgid "Press return or enter to open"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/customizer/inc/customizer_section.php:79
+#: framework/redux/ReduxCore/inc/extensions/customizer/inc/customizer_panel.php:138
+#: framework/tiger-profile/template/private-profile/profile-login.php:91
+msgid "Back"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/customizer/inc/customizer_section.php:122
+msgid "Press return or enter to expand"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/customizer/inc/customizer_panel.php:89
+msgid "Press return or enter to open this panel"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/customizer/inc/customizer_panel.php:114
+#: framework/redux/ReduxCore/inc/extensions/customizer/inc/customizer_panel.php:142
+#, php-format
+msgid "You are customizing %s"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/customizer/inc/customizer_panel.php:146
+msgid "Help"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/extension_import_export.php:120
+msgid "Import / Export"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:91
+msgid "Import Options"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:95
+msgid "Import from File"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:98
+msgid "Import from URL"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:104
+msgid ""
+"Input your backup file below and hit Import to restore your sites options "
+"from a backup."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:111
+msgid ""
+"Input the URL to another sites options set and hit Import to load the "
+"options from that site."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:116
+msgid "Import"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:116
+msgid ""
+"WARNING! This will overwrite all existing option values, please proceed with "
+"caution!"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:120
+msgid "Export Options"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:124
+msgid ""
+"Here you can copy/download your current option settings. Keep this safe as "
+"you can use it as a backup should anything go wrong, or you can use it to "
+"restore your settings on this site (or any other site)."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:132
+msgid "Copy Data"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:133
+msgid "Download Data File"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:134
+msgid "Copy Export URL"
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/validation/unique_slug/validation_unique_slug.php:16
+#, php-format
+msgid ""
+"That URL slug is in use, please choose another. <code>%s</code> is open for "
+"use."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/validation/color/validation_color.php:15
+#: framework/redux/ReduxCore/inc/validation/colorrgba/validation_colorrgba.php:16
+#: framework/redux/ReduxCore/inc/validation/color_rgba/validation_color_rgba.php:14
+msgid "This field must be a valid color value."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/validation/not_empty/validation_not_empty.php:16
+msgid "This field cannot be empty. Please provide a value."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/validation/date/validation_date.php:16
+msgid "This field must be a valid date."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/validation/numeric_not_empty/validation_numeric_not_empty.php:16
+#: framework/redux/ReduxCore/inc/validation/numeric/validation_numeric.php:16
+msgid "You must provide a numerical value for this option."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/validation/url/validation_url.php:16
+msgid "You must provide a valid URL for this option."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/validation/css/validation_css.php:39
+msgid "Unsafe strings were found in your CSS and have been filtered out."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/validation/no_special_chars/validation_no_special_chars.php:16
+msgid ""
+"You must not enter any special characters in this field, all special "
+"characters have been removed."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/validation/comma_numeric/validation_comma_numeric.php:16
+msgid ""
+"You must provide a comma separated list of numerical values for this option."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/validation/no_html/validation_no_html.php:15
+msgid ""
+"You must not enter any HTML in this field, all HTML tags have been removed."
+msgstr ""
+
+#: framework/redux/ReduxCore/inc/validation/email/validation_email.php:16
+#: framework/redux/ReduxCore/inc/validation/email_not_empty/validation_email_not_empty.php:16
+msgid "You must provide a valid email for this option."
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:365
+msgid "Pricing Table"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:368
+#: framework/tiger-profile/plugin.php:389
+#: framework/tiger-profile/plugin.php:410
+#: framework/tiger-profile/plugin.php:431
+#: framework/tiger-profile/plugin.php:452
+#: framework/tiger-profile/plugin.php:473
+msgid "Content"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:376
+#: framework/tiger-profile/plugin.php:397
+#: framework/tiger-profile/plugin.php:418
+#: framework/tiger-profile/plugin.php:439
+msgid "Style Name"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:379
+msgid "You can select the style from wp-admin e.g : style-1."
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:386
+msgid "Signup "
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:400
+#: framework/tiger-profile/plugin.php:421
+msgid "."
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:407
+msgid "My Acount "
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:428
+msgid "Public Profile "
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:442
+msgid "You can select the style from wp-admin e.g : style-1 , style-2 "
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:449
+msgid "User Directory "
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:460
+msgid "Show  number of user / Page"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:462
+msgid "12"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:463
+msgid "You can set the number : 10,20 "
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:481
+msgid " Login"
+msgstr "Logare"
+
+#: framework/tiger-profile/plugin.php:484
+msgid "Default "
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:543
+msgid "Invalid Username & Password"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:1963
+#: framework/tiger-profile/plugin.php:1966
+msgid "Claim Approve "
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:2215
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:411
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:414
+msgid "None"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:3385
+#: framework/tiger-profile/plugin.php:3496
+#: framework/tiger-profile/plugin.php:3607
+#: framework/tiger-profile/plugin.php:3718
+#: framework/tiger-profile/plugin.php:3829
+#: framework/tiger-profile/template/private-profile/bookmark.php:83
+#: framework/tiger-profile/template/private-profile/bookmark.php:219
+#: framework/tiger-profile/template/private-profile/my-network.php:10
+#: framework/tiger-profile/template/private-profile/my-network.php:98
+#: framework/tiger-profile/template/private-profile/my-network.php:234
+#: framework/tiger-profile/template/private-profile/my-follower.php:58
+#: framework/tiger-profile/template/private-profile/my-follower.php:195
+#: framework/tiger-profile/template/private-profile/bookmarker.php:58
+#: framework/tiger-profile/template/private-profile/bookmarker.php:195
+#: framework/tiger-profile/template/private-profile/following.php:57
+#: framework/tiger-profile/template/private-profile/following.php:193
+msgid "Connections"
+msgstr "conexiuni"
+
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:10
+msgid "User Setting"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:20
+msgid "Company & Professional"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:29
+msgid " Don't publish without admin approval"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:34
+msgid " Auto approval for publishing"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:152
+msgid "Create Date"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:156
+msgid "User Type"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:157
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:493
+msgid "Payment Status"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:159
+msgid "Role"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:160
+msgid "Verified"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:161
+msgid "Expiry Date"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:162
+#: framework/tiger-profile/admin/pages/package_all.php:190
+#: framework/uoulib/class-tgm-plugin-activation.php:2639
+msgid "Status"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:163
+#: framework/tiger-profile/admin/pages/my-account-menu.php:48
+#: framework/tiger-profile/admin/pages/package_all.php:191
+#: framework/tiger-profile/admin/pages/corporate_fields.php:58
+#: framework/tiger-profile/admin/pages/corporate_fields.php:155
+#: framework/tiger-profile/admin/pages/profile_fields.php:49
+#: framework/tiger-profile/admin/pages/profile_fields.php:150
+msgid "Action"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:233
+msgid "Edit"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:259
+#: framework/tiger-profile/template/user-directory/directory-template-professionals.php:275
+#: framework/tiger-profile/template/user-directory/directory-template-company.php:309
+msgid "&laquo; Previous"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:260
+#: framework/tiger-profile/template/user-directory/directory-template-professionals.php:276
+#: framework/tiger-profile/template/user-directory/directory-template-company.php:310
+msgid "Next &raquo;"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/membership-profile-wizard.php:7
+msgid "My Account"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/membership-profile-wizard.php:18
+msgid "Short Code"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/membership-profile-wizard.php:26
+msgid "Php Code"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/membership-profile-wizard.php:35
+msgid "My Account Page"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/membership-profile-wizard.php:43
+#: framework/tiger-profile/admin/pages/package_all.php:321
+msgid "View Page"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/membership-profile-wizard.php:49
+msgid "Profile Fields Setting"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/membership-profile-wizard.php:51
+msgid "Add /Edit/ Remove Profile Fields"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/membership-profile-wizard.php:56
+#: framework/tiger-profile/admin/pages/my-account-menu.php:37
+msgid "My Account Menu"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/membership-profile-wizard.php:58
+msgid "Show/Hide/Add Menu"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/my-account-menu.php:25
+#: framework/tiger-profile/admin/pages/my-account-menu.php:239
+#: framework/tiger-profile/admin/pages/protected_page.php:155
+#: framework/tiger-profile/admin/pages/corporate_fields.php:127
+#: framework/tiger-profile/admin/pages/corporate_fields.php:218
+#: framework/tiger-profile/admin/pages/settings.php:127
+#: framework/tiger-profile/admin/pages/profile_fields.php:122
+#: framework/tiger-profile/admin/pages/profile_fields.php:213
+#: framework/uoulib/class-tgm-plugin-activation.php:2808
+msgid "Update"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/my-account-menu.php:30
+msgid "Update Profile Setting"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/my-account-menu.php:42
+msgid "Menu Title / Label"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/my-account-menu.php:45
+#: framework/tiger-profile/admin/pages/package_all.php:187
+msgid "Link"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/my-account-menu.php:59
+msgid "Hospital Home"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/my-account-menu.php:82
+msgid "Membership Level"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/my-account-menu.php:107
+msgid "Account Settings"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/my-account-menu.php:131
+msgid "My Favorites"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/my-account-menu.php:154
+msgid "Who is Interested"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dashboard.php:9
+msgid "uou_tigerp Affiliate Dashboard"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dashboard.php:10
+msgid "Your Dashboard, Summary, Status, Shortcuts to modules"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/metabox.php:21
+#: framework/tiger-profile/admin/pages/doctor-metabox.php:21
+msgid "User ID :"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/metabox.php:39
+#: framework/tiger-profile/admin/pages/doctor-metabox.php:39
+msgid "Approve"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:20
+msgid "Directory Setting"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:50
+msgid "Days #"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:57
+msgid "The new item badge will show for the days"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:62
+msgid "Listing Page toggle button[Search + Map] "
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:66
+msgid "Show"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:71
+msgid "Hide"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:76
+msgid "Listing Page Top Map"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:80
+msgid "Show  Top Map"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:85
+msgid "Hide Top Map"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:92
+msgid "Listing Page Search Bar"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:96
+msgid "Show  Search Bar"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:101
+msgid "Hide Search Bar"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:108
+msgid "Claim"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:112
+msgid "Show Claim"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:117
+msgid "Hide Claim"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:124
+msgid "Listing Publish By User"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:129
+msgid "Admin Will Approve "
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:135
+msgid "User Can Publish"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:146
+msgid "Listing Radius"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:164
+#: framework/tiger-profile/admin/pages/settings.php:1053
+msgid "Cron Job URL"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_all.php:156
+#: framework/tiger-profile/admin/pages/package_all.php:286
+msgid "Create A New Package"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_all.php:167
+msgid "All Package / Membership Level"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_all.php:185
+#: framework/tiger-profile/admin/pages/package_create.php:96
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:631
+#: framework/tiger-profile/template/private-profile/iv_stripe_form_upgrade.php:26
+#: framework/tiger-profile/template/signup/iv_stripe_form_2.php:23
+#: framework/tiger-profile/template/signup/paypal_form_2.php:2
+msgid "Package Name"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_all.php:186
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:671
+#: framework/tiger-profile/template/private-profile/iv_stripe_form_upgrade.php:69
+#: framework/tiger-profile/template/signup/iv_stripe_form_2.php:78
+#: framework/tiger-profile/template/signup/paypal_form_2.php:63
+msgid "Amount"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_all.php:188
+#: framework/tiger-profile/template/user-directory/directory-template-company.php:62
+#: framework/tiger-profile/template/signup/wizard-style-2.php:144
+#: framework/uoulib/class-tgm-plugin-activation.php:2634
+msgid "Type"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_all.php:189
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:515
+msgid "User Role"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_all.php:303
+msgid ""
+"User role \"Basic\" is created on the plugin activation. Paid exprired or "
+"unsuccessful payment user will set on the \"Basic\" user role."
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_all.php:317
+msgid "Package Page :"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_all.php:329
+msgid ""
+"Note: You can use other available pricing table. The package link URL will "
+"go on \"Sign UP \" button."
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/map_marker.php:24
+msgid "Hospital Category Image / Map Marker"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/map_marker.php:30
+#: framework/tiger-profile/admin/pages/map_marker.php:186
+msgid "Category Main"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/map_marker.php:31
+#: framework/tiger-profile/admin/pages/map_marker.php:187
+msgid "Sub Category"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/map_marker.php:32
+#: framework/tiger-profile/admin/pages/map_marker.php:188
+msgid "Map Marker"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/map_marker.php:33
+#: framework/tiger-profile/admin/pages/map_marker.php:189
+#: framework/tiger-profile/admin/pages/map_marker.php:390
+#: framework/tiger-profile/admin/pages/map_marker.php:392
+msgid "Category Image"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/map_marker.php:179
+msgid "Doctor Category Image / Map Marker"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/map_marker.php:343
+#: framework/tiger-profile/admin/pages/map_marker.php:345
+msgid "Marker Image"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/protected_page.php:20
+msgid "Pages Restriction By Roles"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/protected_page.php:44
+msgid "Page Visibility Module :"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/protected_page.php:47
+msgid "Show Page By Role Access"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/protected_page.php:52
+#: framework/tiger-profile/admin/pages/settings.php:513
+#: framework/tiger-profile/template/private-profile/bookmark.php:44
+#: framework/tiger-profile/template/private-profile/my-network.php:52
+#: framework/tiger-profile/template/private-profile/my-follower.php:12
+#: framework/tiger-profile/template/private-profile/bookmarker.php:12
+#: framework/tiger-profile/template/private-profile/following.php:11
+msgid "Show All"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/protected_page.php:58
+msgid "Select which pages are available for each user role.\t"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/protected_page.php:83
+#: framework/tiger-profile/admin/pages/settings.php:550
+msgid "Check/Uncheck"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/corporate_fields.php:24
+#: framework/tiger-profile/admin/pages/corporate_fields.php:34
+msgid "Corporate Profile Fields"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/corporate_fields.php:42
+msgid "Company Type/ Category"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/corporate_fields.php:52
+#: framework/tiger-profile/admin/pages/corporate_fields.php:149
+#: framework/tiger-profile/admin/pages/profile_fields.php:43
+#: framework/tiger-profile/admin/pages/profile_fields.php:144
+msgid "Post Meta Name"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/corporate_fields.php:55
+#: framework/tiger-profile/admin/pages/corporate_fields.php:152
+#: framework/tiger-profile/admin/pages/profile_fields.php:46
+#: framework/tiger-profile/admin/pages/profile_fields.php:147
+msgid "Display Label"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/corporate_fields.php:140
+#: framework/tiger-profile/admin/pages/profile_fields.php:135
+msgid "Review Fields"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:30
+msgid "Please install pages, email template and setting. This is required"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:30
+msgid "Install Now"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:48
+msgid "Directory"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:49
+msgid "Category Image/Marker"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:53
+msgid "Terms Link"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:55
+msgid "MailChimp"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:57
+msgid "Page Redirect"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:58
+#: framework/tiger-profile/admin/pages/settings.php:486
+msgid "Visibility Control"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:61
+msgid "Tax"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:88
+msgid "Tax Setting"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:113
+msgid "Tax Module "
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:117
+msgid "Active Tax On Registration"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:122
+msgid "No Tax"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:131
+msgid "Tax Type "
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:135
+msgid "Common Tax"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:140
+msgid "Tax By Country"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:152
+msgid "Common Tax % "
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:165
+#: framework/tiger-profile/template/signup/wizard-style-2.php:209
+msgid "Country"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:166
+msgid "Tax %"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:467
+msgid "Note : Tax will not work on Stripe Ruccring Subscriotion Payment"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:505
+msgid "Content Visibility Module "
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:521
+msgid "Content Show By Roles"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:525
+msgid "Select which contents are available for each user role.\t"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/settings.php:1038
+msgid "Google Map API Key"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:101
+#: framework/tiger-profile/admin/pages/package_create.php:103
+msgid "Package for"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:107
+#: framework/tiger-profile/admin/pages/package_create.php:109
+msgid " Professional"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:111
+#: framework/tiger-profile/admin/pages/package_create.php:113
+msgid " Personal"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:288
+#: framework/tiger-profile/admin/pages/package_create.php:293
+msgid "Access Control/Options"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:290
+#: framework/tiger-profile/admin/pages/package_create.php:296
+msgid "listing Visibility"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:293
+#: framework/tiger-profile/admin/pages/package_create.php:299
+msgid "listing will hide after user subscription expire."
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:300
+#: framework/tiger-profile/admin/pages/package_create.php:305
+msgid "Maximum listing (Hospital + Doctor)"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:303
+#: framework/tiger-profile/admin/pages/package_create.php:308
+msgid "Maximum # of post by this package. Blank is none."
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:308
+#: framework/tiger-profile/admin/pages/package_create.php:313
+msgid "Hospital Event"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:311
+#: framework/tiger-profile/admin/pages/package_create.php:316
+msgid "Can Add Event."
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:318
+#: framework/tiger-profile/admin/pages/package_create.php:323
+msgid "Hospital's Doctor"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:321
+#: framework/tiger-profile/admin/pages/package_create.php:326
+msgid "Can Add doctors list."
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:327
+#: framework/tiger-profile/admin/pages/package_create.php:332
+msgid "listing Videos"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:330
+#: framework/tiger-profile/admin/pages/package_create.php:335
+msgid "Can Add Videos."
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:335
+#: framework/tiger-profile/admin/pages/package_create.php:340
+msgid "listing Award"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:338
+#: framework/tiger-profile/admin/pages/package_create.php:343
+msgid "Can Add Award."
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:344
+#: framework/tiger-profile/admin/pages/package_create.php:350
+msgid "Doctor Appointment"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:347
+#: framework/tiger-profile/admin/pages/package_create.php:353
+msgid "Can Add Doctor Appointment Shortcode"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/profile_fields.php:24
+msgid "Professional Profile Fields & Rating Fields"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/profile_fields.php:34
+msgid "Professional Profile Fields"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:72
+#: framework/tiger-profile/admin/pages/package_create.php:365
+msgid "Save Package"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:76
+msgid "Create Package / Membership Level"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:119
+msgid "Package Feature List"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:122
+msgid "It will display on price list table"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:125
+msgid "Billing Details"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:128
+msgid "Initial Payment"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:131
+msgid "The initial amount collected at user registration."
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:136
+msgid "Package Expire After"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:171
+msgid ""
+"If select none then user package will expire after 19 years. Package Expire "
+"Option will not work on Recurring Subscription. \"Billing Cycle Limit\" will "
+"Work For Recurring Subscription."
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:178
+msgid "Recurring Subscription"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:181
+msgid "Enable Recurring Payment"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:187
+msgid "Billing Amount"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:191
+msgid "Per"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:205
+msgid "The \"Billing Amount\" will Collect at User Registration."
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:210
+msgid "Billing Cycle Limit"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:233
+msgid "Trial"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:236
+msgid "Enable Trial Period"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:239
+msgid "\"Billing Amount\" will Collect After Trial Period. "
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:247
+msgid "Trial Amount"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:250
+msgid ""
+"Amount to Bill for The Trial Period. Free is 0.[Stripe will not support this "
+"option ]"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:255
+msgid "Trial Period"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_create.php:285
+msgid "After The Trial Period \"Billing Amount\"\tWill Be Billed."
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/update.php:9
+msgid "Update Products"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/update.php:10
+msgid "Synchronize your Products from Amazon with latest data"
+msgstr ""
+
+#: framework/tiger-profile/template/profile-public/profile-template.php:104
+msgid "Mobile"
+msgstr ""
+
+#: framework/tiger-profile/template/profile-public/profile-template.php:152
+msgid "User Listing"
+msgstr ""
+
+#: framework/tiger-profile/template/profile-public/profile-template.php:206
+msgid "VIEW DETAIL"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:111
+msgid "Change Image"
+msgstr "Schimbați imaginea"
+
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:152
+#: framework/tiger-profile/template/private-profile/bookmark.php:82
+#: framework/tiger-profile/template/private-profile/my-network.php:6
+#: framework/tiger-profile/template/private-profile/my-network.php:97
+#: framework/tiger-profile/template/private-profile/my-follower.php:57
+#: framework/tiger-profile/template/private-profile/bookmarker.php:57
+#: framework/tiger-profile/template/private-profile/following.php:56
+msgid "Network"
+msgstr "Reţea"
+
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:184
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:326
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:740
+msgid "Upgrade"
+msgstr "Actualizare"
+
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:200
+msgid "Edit Profile"
+msgstr "Editează profilul"
+
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:246
+msgid "View My Profile"
+msgstr "Vizualizați profilul meu"
+
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:253
+msgid "Sign out"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:318
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:320
+msgid "Profile Image"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/bookmark.php:10
+msgid "My bookmarks"
+msgstr "marcajele mele"
+
+#: framework/tiger-profile/template/private-profile/bookmark.php:17
+msgid "Bookmarkers"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/bookmark.php:45
+#: framework/tiger-profile/template/private-profile/my-network.php:53
+#: framework/tiger-profile/template/private-profile/my-follower.php:13
+#: framework/tiger-profile/template/private-profile/bookmarker.php:13
+#: framework/tiger-profile/template/private-profile/following.php:12
+msgid "Professionals"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/bookmark.php:46
+#: framework/tiger-profile/template/private-profile/my-network.php:54
+#: framework/tiger-profile/template/private-profile/my-follower.php:14
+#: framework/tiger-profile/template/private-profile/bookmarker.php:14
+#: framework/tiger-profile/template/private-profile/following.php:13
+msgid "Companies"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/bookmark.php:65
+#: framework/tiger-profile/template/private-profile/my-network.php:80
+#: framework/tiger-profile/template/private-profile/my-follower.php:40
+#: framework/tiger-profile/template/private-profile/bookmarker.php:40
+msgid "Follow"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/bookmark.php:232
+#: framework/tiger-profile/template/private-profile/my-network.php:247
+#: framework/tiger-profile/template/private-profile/my-follower.php:208
+#: framework/tiger-profile/template/private-profile/bookmarker.php:208
+#: framework/tiger-profile/template/private-profile/following.php:206
+msgid " More"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/bookmark.php:236
+#: framework/tiger-profile/template/private-profile/bookmark.php:243
+#: framework/tiger-profile/template/private-profile/my-network.php:251
+#: framework/tiger-profile/template/private-profile/my-network.php:258
+#: framework/tiger-profile/template/private-profile/my-follower.php:212
+#: framework/tiger-profile/template/private-profile/my-follower.php:219
+#: framework/tiger-profile/template/private-profile/bookmarker.php:212
+#: framework/tiger-profile/template/private-profile/bookmarker.php:219
+#: framework/tiger-profile/template/private-profile/following.php:210
+#: framework/tiger-profile/template/private-profile/following.php:217
+msgid "No result found."
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-login.php:16
+msgid "Sign In"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-login.php:48
+#: framework/tiger-profile/template/private-profile/profile-login.php:92
+#: framework/tiger-profile/template/private-profile/iv_stripe_form_upgrade.php:203
+#: framework/tiger-profile/template/private-profile/contact_popup.php:24
+#: framework/tiger-profile/template/signup/iv_stripe_form_2.php:223
+#: framework/tiger-profile/template/signup/without_payment.php:47
+#: framework/tiger-profile/template/signup/without_payment.php:53
+#: framework/tiger-profile/template/signup/paypal_form_2.php:180
+#: framework/tiger-profile/template/signup/paypal_form_2.php:186
+#: framework/tiger-profile/template/contact/contact-us.php:36
+msgid "Submit"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-login.php:52
+msgid "Remember"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-login.php:55
+msgid "Forgot Password?"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-login.php:65
+msgid "Or Login with:"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-login.php:76
+msgid "Are you a new user?"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-login.php:76
+msgid "Create an account"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-login.php:83
+msgid "Forget Password ?"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:316
+msgid "Membership"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:323
+msgid "Current"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:329
+msgid "Cancel"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:359
+msgid "User's Information"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:373
+msgid "Publishing Status"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:397
+msgid "Current Package"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:429
+msgid "Package Amount"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:471
+msgid "Package Type"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:546
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:581
+msgid "Exprie Date"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:696
+#: framework/tiger-profile/template/private-profile/iv_stripe_form_upgrade.php:86
+#: framework/tiger-profile/template/signup/iv_stripe_form_2.php:104
+#: framework/tiger-profile/template/signup/paypal_form_2.php:88
+msgid "Vat/Tax"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:727
+#: framework/tiger-profile/template/private-profile/iv_stripe_form_upgrade.php:117
+#: framework/tiger-profile/template/signup/iv_stripe_form_2.php:135
+#: framework/tiger-profile/template/signup/paypal_form_2.php:122
+msgid "Total"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:766
+msgid ""
+"Note: Your Successful Upgrade or Downgrade will affect on your user role "
+"immediately."
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:786
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:833
+msgid "Cancel Reason"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:787
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:834
+msgid "Canceling Reason"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:793
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:839
+msgid "Cancel Membership"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:806
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:852
+msgid "Nothing to Cancel"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:866
+msgid ""
+"Nothing to Cancel [Only recurring payment user can cancel his/her "
+"subscription]."
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/following.php:39
+msgid "UnFollow"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/iv_stripe_form_upgrade.php:123
+#: framework/tiger-profile/template/signup/iv_stripe_form_2.php:142
+#: framework/tiger-profile/files/short_code_file/iv_stripe_form_display.php:3
+msgid "Card Number"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/iv_stripe_form_upgrade.php:125
+msgid "Enter card number"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/iv_stripe_form_upgrade.php:125
+msgid "Card number is not correct"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/iv_stripe_form_upgrade.php:129
+msgid "Card CVV"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/iv_stripe_form_upgrade.php:132
+msgid "CVV number is not correct"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/iv_stripe_form_upgrade.php:132
+msgid "Enter card CVC"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/iv_stripe_form_upgrade.php:136
+#: framework/tiger-profile/template/signup/iv_stripe_form_2.php:155
+#: framework/tiger-profile/files/short_code_file/iv_stripe_form_display.php:11
+msgid "Expiration (MM/YYYY)"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:4
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:4
+msgid "Information"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:7
+msgid "Personal Info"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:8
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:526
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:8
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:604
+msgid "Change Password"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:10
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:10
+msgid "Privacy Settings"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:22
+msgid "Name"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:24
+msgid "Enter Your Name Here"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:28
+msgid "Designation"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:30
+msgid "Enter Your Designation Here"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:91
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:151
+msgid "Address"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:93
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:153
+msgid "Enter here Here"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:103
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:163
+msgid "Address Map"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:275
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:310
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:371
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:335
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:370
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:425
+msgid "Edit  "
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:305
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:365
+msgid "Detail"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:381
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:419
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:454
+msgid "Skill Title"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:384
+msgid "Enter Skill title *required"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:388
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:427
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:461
+msgid "Skill Level (%)"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:391
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:430
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:464
+msgid "Enter Skill Level (%)"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:395
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:434
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:468
+msgid "Skill Description"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:423
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:471
+msgid "Enter service title *required"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:457
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:438
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:522
+msgid "Enter services title *required"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:513
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:591
+msgid "Current Password"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:517
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:595
+msgid "New Password"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:521
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:599
+msgid "Re-type New Password"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:540
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:617
+msgid "Hide Email Address "
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:544
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:553
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:562
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:621
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:630
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:639
+msgid "Yes"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:549
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:626
+msgid "Hide Phone Number"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:558
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:635
+msgid "Hide Mobile Number"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:622
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:700
+msgid "Set services Image "
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:624
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:702
+msgid "Set services Image"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:650
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:728
+msgid "Gallery Images "
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:652
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:730
+msgid "Gallery Images"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:712
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:790
+msgid "Set Banner Image "
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:714
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:792
+msgid "Set Banner Image"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:7
+msgid "Company Info"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:22
+msgid "Company Name"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:24
+msgid "Enter company Name Here"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:47
+msgid "Company Type"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:52
+#: framework/tiger-profile/template/user-directory/directory-template-company.php:14
+msgid ""
+"Automotive,IT,Basic Industries,Capital Goods,Finance,Healthcare,Technology,"
+"Consumer Services,Transportation,Energy,Agriculture,Arts,Entertainment,"
+"Construction,Business Services,Education,Electric ,Finance & Insurance ,"
+"Government,Health Care,Lodging,Manufacturing,Media,Mining,Natural Gas "
+"Distribution,Nonprofit,Oil & Gas,Private Households,Real Estate,Religious "
+"Organizations,Rental & Leasing,Restaurants,Bars & Food,Food Ingredients"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:81
+msgid "Profile Top Header Image [Best fit :1350 px X 450px ]"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:101
+msgid "Add"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:112
+msgid "Image Gallery"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:113
+msgid "Add Images"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:435
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:519
+msgid "Services Title"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:442
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:537
+msgid "Service Detail"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:467
+msgid "Service Title"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:476
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:527
+msgid "Service Icon"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/contact_popup.php:10
+msgid "Message Board"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/contact_popup.php:14
+msgid "Subject"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/contact_popup.php:15
+msgid "Enter Subject"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/contact_popup.php:18
+msgid "Enter Message"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/contact_popup.php:19
+msgid "Please Enter Message"
+msgstr ""
+
+#: framework/tiger-profile/template/user-directory/directory-template-professionals.php:26
+#: framework/tiger-profile/template/user-directory/directory-template-company.php:34
+msgid "Keyword"
+msgstr ""
+
+#: framework/tiger-profile/template/user-directory/directory-template-professionals.php:31
+#: framework/tiger-profile/template/user-directory/directory-template-company.php:39
+msgid "City"
+msgstr ""
+
+#: framework/tiger-profile/template/user-directory/directory-template-professionals.php:38
+msgid "Profession"
+msgstr ""
+
+#: framework/tiger-profile/template/user-directory/directory-template-professionals.php:45
+msgid "Search Professionals"
+msgstr ""
+
+#: framework/tiger-profile/template/user-directory/directory-template-professionals.php:85
+#: framework/tiger-profile/template/user-directory/directory-template-company.php:101
+msgid "Filter Results"
+msgstr ""
+
+#: framework/tiger-profile/template/user-directory/directory-template-professionals.php:91
+#: framework/tiger-profile/template/user-directory/directory-template-company.php:107
+msgid "Distance (in kilometers)"
+msgstr ""
+
+#: framework/tiger-profile/template/user-directory/directory-template-professionals.php:96
+#: framework/tiger-profile/template/user-directory/directory-template-company.php:112
+msgid "100"
+msgstr ""
+
+#: framework/tiger-profile/template/user-directory/directory-template-professionals.php:96
+#: framework/tiger-profile/template/user-directory/directory-template-company.php:112
+msgid "km"
+msgstr ""
+
+#: framework/tiger-profile/template/user-directory/directory-template-professionals.php:260
+#: framework/tiger-profile/template/user-directory/directory-template-company.php:294
+msgid "Sorry, no data matched your criteria."
+msgstr ""
+
+#: framework/tiger-profile/template/user-directory/directory-template-company.php:48
+msgid "Select Industry"
+msgstr ""
+
+#: framework/tiger-profile/template/user-directory/directory-template-company.php:69
+msgid "Search Companies"
+msgstr ""
+
+#: framework/tiger-profile/template/user-directory/directory-template-company.php:130
+msgid "Industry"
+msgstr ""
+
+#: framework/tiger-profile/template/signup/iv_stripe_form_2.php:90
+#: framework/tiger-profile/template/signup/wizard-style-2.php:555
+#: framework/tiger-profile/template/signup/paypal_form_2.php:76
+msgid "Have a coupon?"
+msgstr ""
+
+#: framework/tiger-profile/template/signup/iv_stripe_form_2.php:148
+msgid "Card CVV "
+msgstr ""
+
+#: framework/tiger-profile/template/signup/wizard-style-2.php:119
+msgid "User Information"
+msgstr ""
+
+#: framework/tiger-profile/template/signup/wizard-style-2.php:165
+msgid "Full Name"
+msgstr ""
+
+#: framework/tiger-profile/template/signup/wizard-style-2.php:171
+msgid "Email Address"
+msgstr ""
+
+#: framework/tiger-profile/template/signup/wizard-style-2.php:212
+msgid "Please select your country"
+msgstr ""
+
+#: framework/tiger-profile/template/signup/wizard-style-2.php:472
+msgid "Select Country"
+msgstr ""
+
+#: framework/tiger-profile/template/signup/wizard-style-2.php:516
+msgid "Payment Info"
+msgstr ""
+
+#: framework/tiger-profile/template/signup/wizard-style-2.php:554
+msgid "Hide Coupon"
+msgstr ""
+
+#: framework/tiger-profile/template/signup/coupon_form_2.php:4
+msgid "Discount Coupon"
+msgstr ""
+
+#: framework/tiger-profile/template/signup/coupon_form_2.php:13
+msgid "(-) Discount"
+msgstr ""
+
+#: framework/tiger-profile/template/contact/contact-us.php:3
+msgid "Name:"
+msgstr ""
+
+#: framework/tiger-profile/template/contact/contact-us.php:5
+msgid " Please Enter Your Name"
+msgstr ""
+
+#: framework/tiger-profile/template/contact/contact-us.php:5
+msgid "Enter your name"
+msgstr ""
+
+#: framework/tiger-profile/template/contact/contact-us.php:11
+msgid "Email:"
+msgstr ""
+
+#: framework/tiger-profile/template/contact/contact-us.php:13
+msgid "Enter your email"
+msgstr ""
+
+#: framework/tiger-profile/template/contact/contact-us.php:17
+msgid "Subject:"
+msgstr ""
+
+#: framework/tiger-profile/template/contact/contact-us.php:19
+msgid "Enter subject"
+msgstr ""
+
+#: framework/tiger-profile/template/contact/contact-us.php:24
+msgid "Message:"
+msgstr ""
+
+#: framework/tiger-profile/template/contact/contact-us.php:26
+msgid "Enter message"
+msgstr ""
+
+#: framework/tiger-profile/files/short_code_file/iv_stripe_form_display.php:7
+msgid "CVC"
+msgstr ""
+
+#: framework/tiger-profile/files/short_code_file/iv_stripe_form_display.php:18
+msgid "Payment Type:"
+msgstr ""
+
+#: framework/tiger-profile/files/short_code_file/iv_stripe_form_display.php:19
+msgid "One time payment"
+msgstr ""
+
+#: framework/tiger-profile/files/short_code_file/iv_stripe_form_display.php:20
+msgid "Recurring monthly payment"
+msgstr ""
+
+#: framework/tiger-profile/files/short_code_file/iv_stripe_form_display.php:26
+msgid "Submit Payment"
+msgstr ""
+
+#: framework/theme/style.php:15
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr ""
+
+#: framework/theme/style.php:16
+msgctxt "Droid Serif font: on or off"
+msgid "on"
+msgstr ""
+
+#: framework/theme/style.php:17
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr ""
+
+#: framework/theme/style.php:18
+msgctxt "Nothing You Could Do font: on or off"
+msgid "on"
+msgstr ""
+
+#: framework/theme/style.php:19
+msgctxt "Libre Baskerville  font: on or off"
+msgid "on"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:361
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:383
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:393
+#: framework/uoulib/class-tgm-plugin-activation.php:912
+#: framework/uoulib/class-tgm-plugin-activation.php:2618
+#: framework/uoulib/class-tgm-plugin-activation.php:3665
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:395
+#: framework/uoulib/class-tgm-plugin-activation.php:3037
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:1019
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:1019
+#: framework/uoulib/class-tgm-plugin-activation.php:1022
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:1022
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:1206
+#: framework/uoulib/class-tgm-plugin-activation.php:3033
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2067
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2358
+msgid "Required"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2361
+msgid "Recommended"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2377
+msgid "WordPress Repository"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2380
+msgid "External Source"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2383
+msgid "Pre-Packaged"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2400
+msgid "Not Installed"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2404
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2412
+msgid "Required Update not Available"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2415
+msgid "Requires Update"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2418
+msgid "Update recommended"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2427
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2473
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2477
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2481
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2485
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2567
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2575
+msgid "Installed version:"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2583
+msgid "Minimum required version:"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2595
+msgid "Available version:"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2618
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2632
+msgid "Plugin"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2633
+msgid "Source"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2638
+msgid "Version"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2688
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2693
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2699
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2769
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2802
+msgid "Install"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2811
+msgid "Activate"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2842
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2844
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2885
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2887
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:2993
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3019
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3243
+msgid "Plugin activation failed."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3583
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3586
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3588
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3592
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3594
+#: framework/uoulib/class-tgm-plugin-activation.php:3602
+msgid "Show Details"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3594
+#: framework/uoulib/class-tgm-plugin-activation.php:3602
+msgid "Hide Details"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3595
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3597
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3603
+msgid "All installations have been completed."
+msgstr ""
+
+#: framework/uoulib/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""

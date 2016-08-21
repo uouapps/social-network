@@ -633,12 +633,28 @@ $user_id=1;
 							   <?php
 								}
 							   ?>
-								  <?php
+								 <?php
 								if(get_user_meta($user_id,'linkedin',true)!=""){ ?>
 							   <li><a href="<?php echo get_user_meta($user_id,'linkedin',true); ?>"><i class="fa fa-linkedin"></i></a></li>
 							   <?php
 								}
 							   ?>
+							   
+							   	 <?php
+								if(get_user_meta($user_id,'instagram',true)!=""){ ?>
+							   <li><a href="<?php echo get_user_meta($user_id,'instagram',true); ?>"><i class="fa fa-instagram"></i></a></li>
+							   <?php
+								}
+							   ?>
+							   
+							   	 <?php
+								if(get_user_meta($user_id,'pinterest',true)!=""){ ?>
+							   <li><a href="<?php echo get_user_meta($user_id,'pinterest',true); ?>"><i class="fa fa-pinterest"></i></a></li>
+							   <?php
+								}
+							   ?>
+							   
+							   
 
                       </ul>
                     </div>

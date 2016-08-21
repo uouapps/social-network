@@ -1866,18 +1866,21 @@
 						 $service_description= $form_data['service_description'];	
 						 $service_value= (isset($form_data['service_value']) ? $form_data['service_value']:'');	
 						 $service_image_id= (isset($form_data['service_image_id']) ? $form_data['service_image_id']:'');							
-																		
+						print_r( $service_image_id);
+													
 						$i=0;
 						//foreach($award_title  as $one_award_title){							
 						for($i=0;$i<20;$i++){	
 							if(isset($service_title[$i]) AND $service_title[$i]!=''){
-								
 								if(isset($service_title[$i])){
 									update_user_meta($current_user->ID, '_service_title_'.$i, $service_title[$i]); 
 								}
 								if(isset($service_description[$i])){
 									update_user_meta($current_user->ID, '_service_description_'.$i, $service_description[$i]); 
-								}													
+								}	
+								echo'i==='.$i;	
+								print_r( $service_image_id[$i]); 
+									
 												
 								if(isset($service_image_id[$i])){
 									update_user_meta($current_user->ID, '_service_image_id_'.$i, $service_image_id[$i]); 
