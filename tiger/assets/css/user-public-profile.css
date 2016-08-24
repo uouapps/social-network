@@ -478,6 +478,10 @@ iframe {
 	border-radius: 50%;
 	border: 1px solid #2aadde;
 	margin-right: 30px;
+	overflow: hidden;
+}
+.compny-profile .profile-serv .icon img {
+	min-width: 200px;
 }
 .compny-profile .profile-serv .media-left {
 	display: table-cell;

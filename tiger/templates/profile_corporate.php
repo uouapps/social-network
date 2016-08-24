@@ -7,7 +7,7 @@
 <?php get_header();
 if(defined('wp_uou_tigerp_URLPATH')){
 	wp_enqueue_style('uou_tigerp-style-71', wp_uou_tigerp_URLPATH . 'assets/cube/css/cubeportfolio.css');
-	
+
 }
 wp_enqueue_style('Company-Profile-style', tiger_CSS.'user-public-profile.css', array(), $ver = false, $media = 'all');
 $display_name='';
@@ -33,19 +33,19 @@ $user_id=1;
 		$user_id=1;
 	  }
   }
-  
+
   $tigerp_user_status = get_user_meta($user_id, 'uou_tigerp_user_status', true);
-	if($tigerp_user_status!='active'){ 
+	if($tigerp_user_status!='active'){
 		if($user_id!=$current_user->ID ){
 			 include( get_query_template( '404' ) );
 			 header('HTTP/1.0 404 Not Found');
-            exit; 
-			
+            exit;
+
 		}
 
 	}
-  
-  
+
+
   $iv_profile_pic_url=get_user_meta($user_id, 'iv_profile_pic_url',true);
    $iv_post = get_option( '_uou_tigerp_profile_post');
 	if($iv_post!=''){
@@ -60,7 +60,7 @@ $user_id=1;
 	$dir_lat=$lat;
 	$dir_lng=$lng;
 	$address = get_user_meta($user_id,'address',true);
-	
+
 ?>
 <div id="">
   <div class="compny-profile">
@@ -81,16 +81,16 @@ $user_id=1;
 
         <!-- User Iinfo -->
         <div class="user-info">
-          <h1><?php echo get_user_meta($user_id,'profile_name',true); ?> 
+          <h1><?php echo get_user_meta($user_id,'profile_name',true); ?>
 			  <?php
 			  if(get_user_meta($user_id,'verified',true)=='Yes'){
-				?>  
+				?>
 				<a data-toggle="tooltip" data-placement="top" title="<?php  esc_html_e('Verified Member','tiger');?>  ">
 					<img src="<?php echo tiger_IMAGE."icon-ver.png";?>" alt="icon" >
-				</a> 
+				</a>
 			<?php
 				}
-			?>	
+			?>
 			</h1>
 
           <h6><?php echo get_user_meta($user_id,'company_type',true); ?> </h6>
@@ -126,20 +126,20 @@ $user_id=1;
 			   <a href="<?php echo get_user_meta($user_id,'linkedin',true); ?>"><i class="fa fa-linkedin"></i></a>
 			   <?php
 				}
-			   ?>			   
+			   ?>
 			     <?php
 				if(get_user_meta($user_id,'instagram',true)!=""){ ?>
 			   <a href="<?php echo get_user_meta($user_id,'instagram',true); ?>"><i class="fa fa-instagram"></i></a>
 			   <?php
 				}
-			   ?>		   
+			   ?>
 			     <?php
 				if(get_user_meta($user_id,'pinterest',true)!=""){ ?>
 			   <a href="<?php echo get_user_meta($user_id,'pinterest',true); ?>"><i class="fa fa-pinterest"></i></a>
 			   <?php
 				}
 			   ?>
-			   
+
            </div>
 
           <!-- Stars -->
@@ -489,11 +489,11 @@ $user_id=1;
 
 						<?php
 						foreach ( $default_fields as $field_key => $field_value ) {
-							
-							
+
+
 							$field_value_trim=trim($field_value);
 							$old_rating= get_user_meta($user_id,$field_key.'_rating',true);
-							$key_total_count= get_user_meta($user_id,$field_key.'_count',true);	
+							$key_total_count= get_user_meta($user_id,$field_key.'_count',true);
 							if($key_total_count<1){$key_total_count=1;}
 							$old_rating=$old_rating/$key_total_count;
 							?>
@@ -596,7 +596,7 @@ $user_id=1;
 				.img-circle {
 						border-radius: 50%!important;
 					}
-				</style>	
+				</style>
 
                 <!-- Services -->
                 <div class="profile-main">
@@ -614,7 +614,7 @@ $user_id=1;
 							<div class="icon">
 								<?php
 									if(get_user_meta($user_id,'_service_image_id_'.$i,true)!=''){?>
-										<img class="img-circle" src="<?php echo wp_get_attachment_url( get_user_meta($user_id,'_service_image_id_'.$i,true) ); ?>" alt="icon">
+										<img class="" src="<?php echo wp_get_attachment_url( get_user_meta($user_id,'_service_image_id_'.$i,true) ); ?>" alt="icon">
 									<?php
 									}else{?>
 										<img src="<?php echo tiger_IMAGE."icon-prifile-3.png";?>" alt="icon" >
