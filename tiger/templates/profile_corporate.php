@@ -614,7 +614,7 @@ $user_id=1;
 							<div class="icon">
 								<?php
 									if(get_user_meta($user_id,'_service_image_id_'.$i,true)!=''){?>
-										<img class="" src="<?php echo wp_get_attachment_url( get_user_meta($user_id,'_service_image_id_'.$i,true) ); ?>" alt="icon">
+										<img class="custom-img" src="<?php echo wp_get_attachment_url( get_user_meta($user_id,'_service_image_id_'.$i,true) ); ?>" alt="icon">
 									<?php
 									}else{?>
 										<img src="<?php echo tiger_IMAGE."icon-prifile-3.png";?>" alt="icon" >
