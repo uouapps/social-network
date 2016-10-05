@@ -11,7 +11,7 @@
 					</ul>
 					
                    
-                
+					
                   
                  
                     <div class="tab-content">
@@ -24,6 +24,42 @@
 										<input type="text" class="" name="title" id="title" value="<?php echo get_user_meta($current_user->ID,'profile_name',true); ?>" placeholder="<?php esc_html_e('Enter Your Name Here','tiger'); ?>">
 									</div>																		
 								</div>
+							<div class="upload-content">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group ">
+
+												<label for="text" class=" control-label"><?php esc_html_e('Profile Top Header Image [Best fit :1350 px X 450px ]','tiger'); ?>  </label>
+													<?php
+													$top_banner_image_id=get_user_meta($current_user->ID ,'top_banner_image_id',true);
+													?>
+													<div class="image-content" id="top_banner_image_div"> 	
+														<a  href="javascript:void(0);" onclick="top_banner_post_image('top_banner_image_div');"  >
+															<?php
+															if($top_banner_image_id>0){
+																
+																echo '<img width="" src="'. wp_get_attachment_url( $top_banner_image_id ).'">';
+															}else{
+																echo '<img width="" src="'. wp_uou_tigerp_URLPATH.'assets/images/image-add-icon.png">';
+															}
+															?>
+														</a>					
+													</div>
+													
+													<input type="hidden" name="top_banner_image_id" id="top_banner_image_id" value="<?php echo $top_banner_image_id; ?>">
+													
+													<div class="" id="top_banner_image_edit">	
+														<button type="button" onclick="top_banner_post_image('top_banner_image_div');"  class="btn btn-sm green-haze"><?php esc_html_e('Add','tiger'); ?> </button>
+														
+													</div>									
+											</div>
+										</div>
+
+									
+									</div>
+								</div>
+								
+								
 							<div class=" form-group">
 									<label for="text" class=" control-label"><?php esc_html_e('Designation','tiger'); ?></label>
 									<div class="  "> 

@@ -299,7 +299,9 @@ $user_id=1;
 						}
 					?>
 				</span>
-				<a title="<?php esc_html_e('Report the profile','tiger'); ?>"  href="#." data-toggle="modal" data-target="#modal-contact"><i class="fa fa-envelope-o"></i> </a> <a href="#." data-toggle="modal" data-target="#modal-claim"><i class="fa fa-exclamation"></i> </a>
+				<a title="<?php esc_html_e('Contact','tiger'); ?>"  href="#." data-toggle="modal" data-target="#modal-contact"><i class="fa fa-envelope-o"></i> </a>
+				<a title="<?php esc_html_e('Report the profile','tiger'); ?>"  href="#." data-toggle="modal" data-target="#modal-claim"><i class="fa fa-exclamation"></i> </a>
+				
            </div>
           </div>
         </div>
@@ -592,12 +594,7 @@ $user_id=1;
 
                   </div>
                 </div>
-                <style>
-				.img-circle {
-						border-radius: 50%!important;
-					}
-				</style>
-
+               
                 <!-- Services -->
                 <div class="profile-main">
                   <h3><?php  esc_html_e('Services','tiger');?> </h3>

@@ -464,7 +464,7 @@ global $wpdb;
 											<br/>
 											<div class=" col-md-12  bs-callout bs-callout-info">						
 												<?php
-															_e('Note : Tax will not work on Stripe Ruccring Subscriotion Payment','tiger');
+															_e('Note : Tax will not work on Stripe Recurring Subscription Payment','tiger');
 													?>
 											</div>
 											<div class="form-group">

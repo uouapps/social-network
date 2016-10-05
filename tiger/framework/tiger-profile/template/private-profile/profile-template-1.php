@@ -70,7 +70,7 @@ global $current_user;
 	// End for  social login empty status
 	
 	//update_user_meta($current_user->ID, 'iv_profile_pic_url','');
-	
+	$iv_post='';
 ?>
 
 
@@ -127,6 +127,15 @@ global $current_user;
 			  }
 			   if(isset($_GET['profile']) AND $_GET['profile']=='level' ){
 				 $active='level';
+			  }
+			   if(isset($_GET['profile']) AND $_GET['profile']=='blog' ){
+				 $active='add-news';
+			  }
+			  if(isset($_GET['profile']) AND $_GET['profile']=='all-blog' ){
+				 $active='all-blog';
+			  }
+			   if(isset($_GET['profile']) AND $_GET['profile']=='blog-edit' ){
+				 $active='All-blog';
 			  }
 
 
@@ -186,6 +195,18 @@ global $current_user;
 					 <?php
 					}
 					?>
+					
+				 <li class="<?php echo ($active=='blog'? 'active':''); ?> ">
+                    <a href="<?php echo get_permalink(); ?>?&profile=add-blog">
+                    <i class="fa fa-cog"></i>
+                    <?php  esc_html_e('Blog','tiger');?> </a>
+                  </li>
+					
+				<li class="<?php echo ($active=='job'? 'active':''); ?> ">
+                    <a href="<?php echo get_permalink(); ?>?&profile=add-job">
+                    <i class="fa fa-cog"></i>
+                    <?php  esc_html_e('Jobs','tiger');?> </a>
+                  </li>	
 					
 				  <?php
 					$account_menu_check= '';
@@ -272,7 +293,17 @@ global $current_user;
 			include(  wp_uou_tigerp_template. 'private-profile/my-network.php');
 		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='bookmark' ){
 			include(  wp_uou_tigerp_template. 'private-profile/bookmark.php');
-		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='setting' ){
+		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='add-blog' ){
+			include(  wp_uou_tigerp_template. 'private-profile/add-blog.php');
+		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='blog-edit' ){
+			include(  wp_uou_tigerp_template. 'private-profile/edit-blog.php');
+		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='add-job' ){
+			include(  wp_uou_tigerp_template. 'private-profile/add-job.php');
+		  }elseif(isset($_GET['profile']) AND $_GET['profile']=='job-edit' ){
+			include(  wp_uou_tigerp_template. 'private-profile/edit-job.php');
+		  }
+		  
+		  elseif(isset($_GET['profile']) AND $_GET['profile']=='setting' ){
 				$iv_member_type=get_user_meta($current_user->ID,'iv_member_type',true);
 				if($iv_member_type=='corporate'){
 					include(  wp_uou_tigerp_template. 'private-profile/profile-setting-corporate.php');

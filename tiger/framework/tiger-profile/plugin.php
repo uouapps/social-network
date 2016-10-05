@@ -71,13 +71,8 @@
 					add_action('wp_ajax_nopriv_uou_tigerp_update_profile_pic', array(&$this, 'uou_tigerp_update_profile_pic'));
 					add_action('wp_ajax_uou_tigerp_update_profile_setting', array(&$this, 'uou_tigerp_update_profile_setting'));
 					add_action('wp_ajax_nopriv_uou_tigerp_update_profile_setting', array(&$this, 'uou_tigerp_update_profile_setting'));
-					add_action('wp_ajax_uou_tigerp_update_wp_post', array(&$this, 'uou_tigerp_update_wp_post'));
-					add_action('wp_ajax_nopriv_uou_tigerp_update_wp_post', array(&$this, 'uou_tigerp_update_wp_post'));
-					add_action('wp_ajax_uou_tigerp_save_wp_post', array(&$this, 'uou_tigerp_save_wp_post'));
-					add_action('wp_ajax_nopriv_uou_tigerp_save_wp_post', array(&$this, 'uou_tigerp_save_wp_post'));
-					add_action('wp_ajax_uou_tigerp_save_hospital', array(&$this, 'uou_tigerp_save_hospital'));
-					add_action('wp_ajax_nopriv_uou_tigerp_save_hospital', array(&$this, 'uou_tigerp_save_hospital'));
-					add_action('wp_ajax_uou_tigerp_save_doctor', array(&$this, 'uou_tigerp_save_doctor'));
+					
+					
 					add_action('wp_ajax_nopriv_uou_tigerp_save_doctor', array(&$this, 'uou_tigerp_save_doctor'));
 					add_action('wp_ajax_uou_tigerp_update_setting_fb', array(&$this, 'uou_tigerp_update_setting_fb'));
 					add_action('wp_ajax_nopriv_uou_tigerp_update_setting_fb', array(&$this, 'uou_tigerp_update_setting_fb'));
@@ -171,14 +166,22 @@
 					add_action('wp_ajax_nopriv_uou_tigerp_claim_send', array(&$this, 'uou_tigerp_claim_send'));
 					add_action('wp_ajax_uou_tigerp_cron_job', array(&$this, 'uou_tigerp_cron_job'));
 					add_action('wp_ajax_nopriv_uou_tigerp_cron_job', array(&$this, 'uou_tigerp_cron_job'));				
-					add_action('wp_ajax_iv_hospital_ajax_single', array(&$this, 'iv_hospital_ajax_single'));
-					add_action('wp_ajax_nopriv_iv_hospital_ajax_single', array(&$this, 'iv_hospital_ajax_single'));					
-					add_action('wp_ajax_iv_doctor_ajax_single', array(&$this, 'iv_doctor_ajax_single'));
-					add_action('wp_ajax_nopriv_iv_doctor_ajax_single', array(&$this, 'iv_doctor_ajax_single'));					
-					add_action('wp_ajax_uou_tigerp_update_hospital', array(&$this, 'uou_tigerp_update_hospital'));
-					add_action('wp_ajax_nopriv_uou_tigerp_update_hospital', array(&$this, 'uou_tigerp_update_hospital'));					
-					add_action('wp_ajax_uou_tigerp_update_doctor', array(&$this, 'uou_tigerp_update_doctor'));
-					add_action('wp_ajax_nopriv_uou_tigerp_update_doctor', array(&$this, 'uou_tigerp_update_doctor'));
+					
+					
+					
+					
+					add_action('wp_ajax_uou_tigerp_update_wp_post', array(&$this, 'uou_tigerp_update_wp_post'));
+					add_action('wp_ajax_nopriv_uou_tigerp_update_wp_post', array(&$this, 'uou_tigerp_update_wp_post'));
+					add_action('wp_ajax_uou_tigerp_save_wp_post', array(&$this, 'uou_tigerp_save_wp_post'));
+					add_action('wp_ajax_nopriv_uou_tigerp_save_wp_post', array(&$this, 'uou_tigerp_save_wp_post'));
+					//jobs jobs jobs
+					add_action('wp_ajax_uou_tigerp_update_jobs', array(&$this, 'uou_tigerp_update_jobs'));
+					add_action('wp_ajax_nopriv_uou_tigerp_update_jobs', array(&$this, 'uou_tigerp_update_jobs'));
+					add_action('wp_ajax_uou_tigerp_save_jobs', array(&$this, 'uou_tigerp_save_jobs'));
+					add_action('wp_ajax_nopriv_uou_tigerp_save_jobs', array(&$this, 'uou_tigerp_save_jobs'));
+					
+					
+					
 					
 					
 					add_action('plugins_loaded', array(&$this, 'start'));
@@ -193,6 +196,8 @@
 					add_action('pre_get_posts',array(&$this, 'iv_restrict_media_library') );
 					
 					add_action('init', array(&$this, 'remove_admin_bar') );	
+					add_action( 'init', array(&$this, 'iv_jobs_post_type') );
+					add_action( 'init', array(&$this, 'tr_create_my_taxonomy_jobs'));	
 					
 						// For Visual Composer 
 					add_action('vc_before_init',array(&$this, 'dir_vc_pricing_table') );
@@ -443,6 +448,257 @@
 							 )
 						  )
 					   ) );
+				}
+				public function tr_create_my_taxonomy_jobs() {
+					$directory_url_1='jobs';				
+					
+						register_taxonomy(
+							$directory_url_1.'-category',
+							$directory_url_1,
+							array(
+								'label' => __( 'Categories','tiger' ),
+								'rewrite' => array( 'slug' => $directory_url_1.'-category' ),
+								'hierarchical' => true,
+							)
+						);
+				}	
+				public function iv_jobs_post_type() {
+					$directory_url_1=get_option('_iv_directory_url_1');					
+					if($directory_url_1==""){$directory_url_1='jobs';}
+
+					$labels = array(
+						'name'                => _x( 'jobs', 'Post Type General Name', 'tiger' ),
+						'singular_name'       => _x( $directory_url_1, 'Post Type Singular Name', 'tiger' ),
+						'menu_name'           => __( 'Jobs', 'tiger' ),
+						'name_admin_bar'      => __( "Jobs", 'text_directories' ),
+						'parent_item_colon'   => __( 'Parent Item:', 'text_directories' ),
+						'all_items'           => __( 'All Items', 'text_directories' ),
+						'add_new_item'        => __( 'Add New Item', 'text_directories' ),
+						'add_new'             => __( 'Add New', 'text_directories' ),
+						'new_item'            => __( 'New Item', 'text_directories' ),
+						'edit_item'           => __( 'Edit Item', 'text_directories' ),
+						'update_item'         => __( 'Update Item', 'text_directories' ),
+						'view_item'           => __( 'View Item', 'text_directories' ),
+						'search_items'        => __( 'Search Item', 'text_directories' ),
+						'not_found'           => __( 'Not found', 'text_directories' ),
+						'not_found_in_trash'  => __( 'Not found in Trash', 'text_directories' ),
+					);
+					$args = array(
+						'label'               => __( $directory_url_1, 'text_hospital' ),
+						'description'         => __( $directory_url_1, 'text_hospital' ),
+						'labels'              => $labels,
+						'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'comments', 'post-formats','custom-fields' ),
+						//'taxonomies'          => array(  'post_tag' ),
+						'hierarchical'        => false,
+						'public'              => true,
+						'show_ui'             => true,
+						'show_in_menu'        => true,
+						'menu_position'       => 5,
+						'show_in_admin_bar'   => true,
+						'show_in_nav_menus'   => true,
+						'can_export'          => true,
+						'has_archive'         => true,
+						'exclude_from_search' => false,
+						'publicly_queryable'  => true,
+						'capability_type'     => 'post',
+						
+					);
+					register_post_type( $directory_url_1, $args );
+
+				}	
+				public function uou_tigerp_save_jobs(){
+					global $current_user; global $wpdb;	
+					parse_str($_POST['form_data'], $form_data);				
+					$my_post = array();
+					//$my_post['ID'] = $form_data['user_post_id'];
+					$my_post['post_title'] = $form_data['title'];
+					$my_post['post_content'] = $form_data['new_post_content'];
+					
+					if($form_data['post_status']=='publish'){
+							$dir_approve_publish =get_option('_dir_approve_publish');
+							if($dir_approve_publish!='yes'){
+								$form_data['post_status']='publish';
+							}
+						
+					}
+					
+					$my_post['post_status'] = $form_data['post_status'];					
+					$newpost_id= wp_insert_post( $my_post );						
+					//get_option( '_uou_tigerp_profile_post');
+									
+					$directory_url_1='jobs';
+					$post_type = $directory_url_1;
+					if($post_type!=''){
+							$query = "UPDATE {$wpdb->prefix}posts SET post_type='" . $post_type . "' WHERE id='" . $newpost_id . "' LIMIT 1";
+							$wpdb->query($query);										
+					}						
+					if(isset($form_data['feature_image_id'] )){
+							$attach_id =$form_data['feature_image_id'];
+							set_post_thumbnail( $newpost_id, $attach_id );					
+					}
+					
+					// WPML Start******
+					if ( function_exists('icl_object_id') ) {
+					include_once( WP_PLUGIN_DIR . '/sitepress-multilingual-cms/inc/wpml-api.php' );
+					$_POST['icl_post_language'] = $language_code = ICL_LANGUAGE_CODE;
+					$query = "UPDATE {$wpdb->prefix}icl_translations SET element_type='post_".$post_type."' WHERE element_id='" . $newpost_id . "' LIMIT 1";
+					$wpdb->query($query);					
+					//wpml_update_translatable_content( 'post_directories', $newpost_id , $language_code );	
+					}
+					// End WPML**********
+						
+					if(isset($form_data['feature_image_id'] )){
+							$attach_id =$form_data['feature_image_id'];
+							set_post_thumbnail( $newpost_id, $attach_id );
+					
+					}
+						
+					if(isset($form_data['postcats'] )){ 
+						$category_ids = array($form_data['postcats']);
+							wp_set_object_terms( $newpost_id, $category_ids, $post_type.'-category');
+					}
+					if(isset($form_data['custom_name'] )){
+						$custom_metas= $form_data['custom_name'] ;
+						$custom_value = $form_data['custom_value'] ;
+						$i=0;
+						foreach($custom_metas  as $one_meta){
+							if(isset($custom_metas[$i]) and isset($custom_value[$i]) ){
+								if($custom_metas[$i] !=''){
+									update_post_meta($newpost_id, $custom_metas[$i], $custom_value[$i]); 
+								}
+							}
+							
+						$i++;	
+						}
+					
+					}	
+					//update_user_meta($current_user->ID,'first_name', $form_data['first_name']); 
+					
+					echo json_encode(array("code" => "success","msg"=>"Updated Successfully"));
+					exit(0);
+				
+				}
+				public function uou_tigerp_update_jobs(){
+					global $current_user;global $wpdb;	
+					parse_str($_POST['form_data'], $form_data);
+			
+					$my_post = array();
+					$my_post['ID'] = $form_data['user_post_id'];
+					$my_post['post_title'] = $form_data['title'];
+					$my_post['post_content'] = $form_data['edit_post_content'];
+					$my_post['post_status'] = $form_data['post_status'];
+					//wp_update_post( $my_post );
+					
+					$query = "UPDATE {$wpdb->prefix}posts SET post_title='" . $form_data['title'] . "', post_content='" . $form_data['edit_post_content'] . "', post_status='" . $form_data['post_status'] . "'   WHERE id='" . $form_data['user_post_id'] . "' LIMIT 1";
+					$wpdb->query($query);		
+					
+					 
+					if(isset($form_data['feature_image_id'] ) AND $form_data['feature_image_id']!='' ){
+							$attach_id =$form_data['feature_image_id'];
+							set_post_thumbnail( $form_data['user_post_id'], $attach_id );
+						
+					}else{
+						$attach_id='0';
+						delete_post_thumbnail( $form_data['user_post_id'] );
+					
+					}
+					if(isset($form_data['postcats'] )){ 
+						wp_set_post_categories($form_data['user_post_id'], $form_data['postcats'] );
+					}
+					// Delete All custom Post Meta 
+					$custom_fields = get_post_custom($form_data['user_post_id']);
+					foreach ( $custom_fields as $field_key => $field_values ) {
+						if(!isset($field_values[0])){ continue;}
+						if(in_array($field_key,array("_edit_lock","_edit_last"))) {continue;}
+						$underscore_str=substr($field_key,0,1);
+						if($underscore_str!='_'){
+							 delete_post_meta($form_data['user_post_id'] ,$field_key); 
+						}
+						
+					}					
+					
+					if(isset($form_data['custom_name'] )){
+						$custom_metas= $form_data['custom_name'] ;
+						$custom_value = $form_data['custom_value'] ;
+						$i=0;
+						foreach($custom_metas  as $one_meta){
+							if(isset($custom_metas[$i]) and isset($custom_value[$i]) ){
+								if($custom_metas[$i] !=''){
+									update_post_meta($form_data['user_post_id'], $custom_metas[$i], $custom_value[$i]); 
+								}
+							}
+							
+						$i++;	
+						}
+					
+					}	
+					//update_user_meta($current_user->ID,'first_name', $form_data['first_name']); 
+					
+					echo json_encode(array("code" => "success","msg"=>"Updated Successfully"));
+					exit(0);
+				
+				}
+				public function uou_tigerp_update_wp_post(){
+					global $current_user;global $wpdb;	
+					parse_str($_POST['form_data'], $form_data);
+			
+					$my_post = array();
+					$my_post['ID'] = $form_data['user_post_id'];
+					$my_post['post_title'] = $form_data['title'];
+					$my_post['post_content'] = $form_data['edit_post_content'];
+					$my_post['post_status'] = $form_data['post_status'];
+					//wp_update_post( $my_post );
+					
+					$query = "UPDATE {$wpdb->prefix}posts SET post_title='" . $form_data['title'] . "', post_content='" . $form_data['edit_post_content'] . "', post_status='" . $form_data['post_status'] . "'   WHERE id='" . $form_data['user_post_id'] . "' LIMIT 1";
+					$wpdb->query($query);		
+					
+					 
+					if(isset($form_data['feature_image_id'] ) AND $form_data['feature_image_id']!='' ){
+							$attach_id =$form_data['feature_image_id'];
+							set_post_thumbnail( $form_data['user_post_id'], $attach_id );
+						
+					}else{
+						$attach_id='0';
+						delete_post_thumbnail( $form_data['user_post_id'] );
+					
+					}
+					if(isset($form_data['postcats'] )){ 
+						//$category_ids = array($form_data['postcats']);
+						
+						 wp_set_post_categories($form_data['user_post_id'], $form_data['postcats'] );
+					}
+					// Delete All custom Post Meta 
+					$custom_fields = get_post_custom($form_data['user_post_id']);
+					foreach ( $custom_fields as $field_key => $field_values ) {
+						if(!isset($field_values[0])){ continue;}
+						if(in_array($field_key,array("_edit_lock","_edit_last"))) {continue;}
+						$underscore_str=substr($field_key,0,1);
+						if($underscore_str!='_'){
+							 delete_post_meta($form_data['user_post_id'] ,$field_key); 
+						}
+						
+					}					
+					
+					if(isset($form_data['custom_name'] )){
+						$custom_metas= $form_data['custom_name'] ;
+						$custom_value = $form_data['custom_value'] ;
+						$i=0;
+						foreach($custom_metas  as $one_meta){
+							if(isset($custom_metas[$i]) and isset($custom_value[$i]) ){
+								if($custom_metas[$i] !=''){
+									update_post_meta($form_data['user_post_id'], $custom_metas[$i], $custom_value[$i]); 
+								}
+							}
+							
+						$i++;	
+						}
+					
+					}	
+					//update_user_meta($current_user->ID,'first_name', $form_data['first_name']); 
+					
+					echo json_encode(array("code" => "success","msg"=>"Updated Successfully"));
+					exit(0);
+				
 				}
 				public function dir_vc_user_directory() {
 						vc_map( array(
@@ -1362,7 +1618,7 @@
 				
 				}
 			
-				public function uou_tigerp_save_wp_post(){
+			public function uou_tigerp_save_wp_post(){
 					global $current_user; global $wpdb;	
 					parse_str($_POST['form_data'], $form_data);				
 					$my_post = array();
@@ -1380,7 +1636,10 @@
 					
 					$my_post['post_status'] = $form_data['post_status'];					
 					$newpost_id= wp_insert_post( $my_post );						
-					$post_type = 'hospital';//get_option( '_uou_tigerp_profile_post');
+					//get_option( '_uou_tigerp_profile_post');
+					$directory_url_1=get_option('_iv_directory_url_1');					
+					if($directory_url_1==""){$directory_url_1='post';}
+					$post_type = $directory_url_1;
 					if($post_type!=''){
 							$query = "UPDATE {$wpdb->prefix}posts SET post_type='" . $post_type . "' WHERE id='" . $newpost_id . "' LIMIT 1";
 							$wpdb->query($query);										
@@ -1388,137 +1647,44 @@
 					if(isset($form_data['feature_image_id'] )){
 							$attach_id =$form_data['feature_image_id'];
 							set_post_thumbnail( $newpost_id, $attach_id );					
-					}						
-					if(isset($form_data['postcats'] )){ 
-						//wp_set_post_categories($newpost_id, $form_data['postcats'] );
-						//wp_set_post_categories($newpost_id, array($form_data['postcats'] ));
-							
-							$category_ids = array($form_data['postcats']);
-							wp_set_object_terms( $newpost_id, $category_ids, 'hospital-category');
 					}
-					$default_fields = array();
-					$field_set=get_option('uou_tigerp_fields' );
-					if($field_set!=""){ 
-							$default_fields=get_option('uou_tigerp_fields' );
-					}else{															
-							$default_fields['business_type']='Business Type';
-							$default_fields['main_products']='Main Products';
-							$default_fields['number_of_employees']='Number Of Employees';
-							$default_fields['main_markets']='Main Markets';
-							$default_fields['total_annual_sales_volume']='Total Annual Sales Volume';	
+					
+					// WPML Start******
+					if ( function_exists('icl_object_id') ) {
+					include_once( WP_PLUGIN_DIR . '/sitepress-multilingual-cms/inc/wpml-api.php' );
+					$_POST['icl_post_language'] = $language_code = ICL_LANGUAGE_CODE;
+					$query = "UPDATE {$wpdb->prefix}icl_translations SET element_type='post_".$post_type."' WHERE element_id='" . $newpost_id . "' LIMIT 1";
+					$wpdb->query($query);					
+					//wpml_update_translatable_content( 'post_directories', $newpost_id , $language_code );	
 					}
-					if(sizeof($default_fields )){			
-						foreach( $default_fields as $field_key => $field_value ) { 
-							update_post_meta($newpost_id, $field_key, $form_data[$field_key] );							
+					// End WPML**********
 						
-						}					
+					if(isset($form_data['feature_image_id'] )){
+							$attach_id =$form_data['feature_image_id'];
+							set_post_thumbnail( $newpost_id, $attach_id );
+					
 					}
-					$opening_day=array();
-					if(isset($form_data['day_name'] )){
-						$day_name= $form_data['day_name'] ;
-						$day_value1 = $form_data['day_value1'] ;
-						$day_value2 = $form_data['day_value2'] ;
+						
+					if(isset($form_data['postcats'] )){ 
+						$category_ids = array($form_data['postcats']);
+						 wp_set_post_categories($newpost_id, $category_ids );
+					}
+					if(isset($form_data['custom_name'] )){
+						$custom_metas= $form_data['custom_name'] ;
+						$custom_value = $form_data['custom_value'] ;
 						$i=0;
-						foreach($day_name  as $one_meta){
-							if(isset($day_name[$i]) and isset($day_value1[$i]) ){
-								if($day_name[$i] !=''){
-									$opening_day[$day_name[$i]]=$day_value1[$i].'|'.$day_value2[$i];
-								}
-							}							
-						$i++;	
-						}
-						update_post_meta($newpost_id, '_opening_time', $opening_day); 	
-					}
-					// For Tag Save tag_arr
-					$tag_all='';
-					if(isset($form_data['tag_arr'] )){
-						$tag_name= $form_data['tag_arr'] ;							
-						$i=0;$tag_all='';
-						foreach($tag_name  as $one_tag){							
-							$tag_all= $tag_all.",".$one_tag;												
-							$i++;	
-						}
-						wp_set_post_tags($newpost_id, $tag_all, true); 	
-					}
-					if(isset($form_data['new_tag'] )){
-						$tag_all=$tag_all.','.$form_data['new_tag'];
-						wp_set_post_tags($newpost_id, $tag_all, true); 	
-					
-					}	
-					
-					
-					//wp_set_post_tags( 42, 'meaning,life', true );
-					
-					
-					update_post_meta($newpost_id, 'address', $form_data['address']); 
-					update_post_meta($newpost_id, 'latitude', $form_data['latitude']); 
-					update_post_meta($newpost_id, 'longitude', $form_data['longitude']);					
-					update_post_meta($newpost_id, 'city', $form_data['city']); 
-					update_post_meta($newpost_id, 'postcode', $form_data['postcode']); 
-					update_post_meta($newpost_id, 'country', $form_data['country']); 
-					
-					// Get latlng from address* START********
-					$dir_lat=$form_data['latitude'];
-					$dir_lng=$form_data['longitude'];
-					$address = $form_data['address'];
-					if($address!=''){
-							if($dir_lat=='' || $dir_lng==''){
-								$latitude='';$longitude='';
-								
-								$prepAddr = str_replace(' ','+',$address);
-								$geocode=wp_remote_fopen('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
-								$output= json_decode($geocode);
-								if(isset( $output->results[0]->geometry->location->lat)){
-									$latitude = $output->results[0]->geometry->location->lat;
-								}
-								if(isset($output->results[0]->geometry->location->lng)){
-									$longitude = $output->results[0]->geometry->location->lng;
-								}
-								if($latitude!=''){
-									update_post_meta($newpost_id,'latitude',$latitude);
-								}
-								if($longitude!=''){
-									update_post_meta($newpost_id,'longitude',$longitude);
+						foreach($custom_metas  as $one_meta){
+							if(isset($custom_metas[$i]) and isset($custom_value[$i]) ){
+								if($custom_metas[$i] !=''){
+									update_post_meta($newpost_id, $custom_metas[$i], $custom_value[$i]); 
 								}
 							}
+							
+						$i++;	
+						}
+					
 					}	
-					// Get latlng from address* ENDDDDDD********	
-					
-					update_post_meta($newpost_id, 'image_gallery_ids', $form_data['gallery_image_ids']); 
-					update_post_meta($newpost_id, 'phone', $form_data['phone']); 
-					update_post_meta($newpost_id, 'fax', $form_data['fax']); 
-					update_post_meta($newpost_id, 'contact-email', $form_data['contact-email']); 
-					update_post_meta($newpost_id, 'contact_web', $form_data['contact_web']); 
-					
-					if(isset($form_data['vimeo'] )){
-						update_post_meta($newpost_id, 'vimeo', $form_data['vimeo']); 
-						update_post_meta($newpost_id, 'youtube', $form_data['youtube']); 
-					}
-					update_post_meta($newpost_id, 'facebook', $form_data['facebook']); 
-					update_post_meta($newpost_id, 'linkedin', $form_data['linkedin']); 
-					update_post_meta($newpost_id, 'twitter', $form_data['twitter']); 
-					update_post_meta($newpost_id, 'gplus', $form_data['gplus']);
-					if(isset($form_data['event-title'])){
-						update_post_meta($newpost_id, '_event_image_id', $form_data['event_image_id']);
-						update_post_meta($newpost_id, 'event_title', $form_data['event-title']);
-						update_post_meta($newpost_id, 'event_detail', $form_data['event-detail']);
-					}
-					if(isset($form_data['deal-title'])){
-						update_post_meta($newpost_id, '_deal_image_id', $form_data['deal_image_id']);
-						update_post_meta($newpost_id, 'deal_title', $form_data['deal-title']);
-						update_post_meta($newpost_id, 'deal_detail', $form_data['deal-detail']);
-						update_post_meta($newpost_id, 'deal_paypal', $form_data['deal-paypal']);
-						update_post_meta($newpost_id, 'deal_amount', $form_data['deal-amount']);
-						
-					}
-					if(isset($form_data['booking'])){
-						update_post_meta($newpost_id, 'booking', $form_data['booking']);
-					}
-					if(isset($form_data['booking_detail'])){
-						update_post_meta($newpost_id, 'booking_detail', $form_data['booking_detail']);
-												
-					}
-					
+					//update_user_meta($current_user->ID,'first_name', $form_data['first_name']); 
 					
 					echo json_encode(array("code" => "success","msg"=>"Updated Successfully"));
 					exit(0);

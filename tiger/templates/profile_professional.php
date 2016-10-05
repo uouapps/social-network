@@ -59,7 +59,23 @@ $user_id=1;
 <div id="">
   <div class="compny-profile">
     <!-- SUB Banner -->
-    <div  class="profile-bnr user-profile-bnr" style="background:url(<?php echo tiger_IMAGE."user-bg.jpg";?>) no-repeat; background-size:cover;">
+     <?php $top_banner_image= get_user_meta($user_id,'top_banner_image_id',true);
+
+     if(get_user_meta($user_id,'top_banner_image_id',true)!=""){?>
+		  
+		    <div  class="profile-bnr user-profile-bnr" style="background:url(<?php echo wp_get_attachment_url( $top_banner_image ); ?>) no-repeat; background-size:cover;">
+	 <?php
+	 }else{?>
+		 
+		   <div  class="profile-bnr user-profile-bnr" style="background:url(<?php echo tiger_IMAGE."user-bg.jpg";?>) no-repeat; background-size:cover;">
+	 <?php
+	 }
+
+     ?>
+   
+    
+    
+    
       <div class="container">
         <div class="pull-left">
           <h2><?php echo get_user_meta($user_id,'profile_name',true); ?></h2>
@@ -143,7 +159,8 @@ $user_id=1;
 						}
 					?>
 				</span>
-				<a title="<?php esc_html_e('Report the profile','tiger'); ?>"  href="#." data-toggle="modal" data-target="#modal-contact"><i class="fa fa-envelope-o"></i> </a> <a href="#." data-toggle="modal" data-target="#modal-claim"><i class="fa fa-exclamation"></i> </a>
+				<a title="<?php esc_html_e('Contact','tiger'); ?>"  href="#." data-toggle="modal" data-target="#modal-contact"><i class="fa fa-envelope-o"></i> </a> 
+				<a title="<?php esc_html_e('Report the profile','tiger'); ?>" href="#." data-toggle="modal" data-target="#modal-claim"><i class="fa fa-exclamation"></i> </a>
            </div>
           </div>
         </div>
