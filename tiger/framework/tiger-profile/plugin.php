@@ -141,7 +141,12 @@
 					add_action('wp_ajax_nopriv_uou_tigerp_load_more_bookmarker', array(&$this, 'uou_tigerp_load_more_bookmarker'));						
 					add_action('wp_ajax_uou_tigerp_load_more_follower', array(&$this, 'uou_tigerp_load_more_follower'));
 					add_action('wp_ajax_nopriv_uou_tigerp_load_more_follower', array(&$this, 'uou_tigerp_load_more_follower'));	
-									
+					
+					add_action('wp_ajax_uou_tigerp_load_more_jobs', array(&$this, 'uou_tigerp_load_more_jobs'));
+					add_action('wp_ajax_nopriv_uou_tigerp_load_more_jobs', array(&$this, 'uou_tigerp_load_more_jobs'));	
+					
+					add_action('wp_ajax_uou_tigerp_load_more_post', array(&$this, 'uou_tigerp_load_more_post'));
+					add_action('wp_ajax_nopriv_uou_tigerp_load_more_post', array(&$this, 'uou_tigerp_load_more_post'));					
 					
 					add_action('wp_ajax_uou_tigerp_save_deletebookmark', array(&$this, 'uou_tigerp_save_deletebookmark'));
 					add_action('wp_ajax_nopriv_uou_tigerp_save_deletebookmark', array(&$this, 'uou_tigerp_save_deletebookmark'));
@@ -3894,6 +3899,136 @@
 						}
 						
 						//echo json_encode(array("result" => $result));
+						echo $result;
+						exit(0);	
+						
+				}
+				public function uou_tigerp_load_more_post(){
+					global $current_user;
+						parse_str($_POST['data'], $form_data);	
+						$paged =$form_data['page'];
+						$user_id=$form_data['user_id'];
+						
+						$result='';
+						
+						$no=1;			
+						$offset= ($paged-1)*$no;	
+								
+				        $args = array();	
+						$args['number']=$no;
+						$args['offset']=$offset;		     
+						$args['post_type']='post'; 
+						$args['author']=$user_id;  
+						$args['post_status']='publish';  			       
+					 
+					  
+                      $post_query = new WP_Query( $args );
+						
+					  
+					  
+						 if ( $post_query->have_posts() ) {
+				        	while ( $post_query->have_posts() ) {
+								$post_query->the_post();
+								$post_id= $post_query->post->ID;
+								
+								
+								$content = $post_query->post->post_content;
+								$content = str_replace( ']]>', ']]&gt;', $content );
+								$title=$post_query->post->post_title;
+								$content = $post_query->post->post_content;
+								$content = str_replace( ']]>', ']]&gt;', $content );
+								$post_image="";
+								if ( has_post_thumbnail() ) {
+										$image_id =  get_post_thumbnail_id( get_the_ID() );
+										$large_image = wp_get_attachment_url( $image_id ,'full');
+										$resize = tiger_aq_resize( $large_image, true );
+									  
+										$post_image ='<img src="'. esc_url($resize).'" class="thumb">';
+								} 
+										  
+								$result=$result.'
+								<article class="uou-block-7f"> '.$post_image.'																
+										 
+										  <h1><a href="'. get_permalink( $post_id ).'">'.$title.'</a></h1>
+										   <div class="meta"> <span class="time-ago">'. esc_html__( 'Date: ','toger' ).' '.$post_query->post->post_date.'</span></div>
+										  <p>
+											'. substr($content ,0,200).' <a href="'. get_permalink( $post_id ).'">'. esc_html__( 'Read More','toger' ).'</a>
+								  </p>
+								  </article>';
+									
+								
+							}
+						}
+						
+						
+						echo $result;
+						exit(0);	
+				
+				
+				}
+				
+				public function uou_tigerp_load_more_jobs(){
+						global $current_user;
+						parse_str($_POST['data'], $form_data);	
+						$paged =$form_data['page'];
+						$user_id=$form_data['user_id'];
+						
+						$result='';
+						
+						$no=1;			
+						$offset= ($paged-1)*$no;	
+								
+				        $args = array();	
+						$args['number']=$no;
+						$args['offset']=$offset;		     
+						$args['post_type']='jobs'; 
+						$args['author']=$user_id;  
+						$args['post_status']='publish';  			       
+					 
+					  
+                      $job_query = new WP_Query( $args );
+						
+					  
+					  
+						 if ( $job_query->have_posts() ) {
+				        	while ( $job_query->have_posts() ) {
+								$job_query->the_post();
+								$post_id= $job_query->post->ID;
+								
+								$currentCategory=wp_get_object_terms( $id,'jobs-category');
+								$cat_link='';$cat_name='';$cat_slug='';
+								if(isset($currentCategory[0]->slug)){
+									$cat_slug = $currentCategory[0]->slug;
+									$cat_name = $currentCategory[0]->name;
+									$cat_link= get_term_link($currentCategory[0], 'jobs-category');
+								}
+								$content = $job_query->post->post_content;
+								$content = str_replace( ']]>', ']]&gt;', $content );
+								$title=$job_query->post->post_title;
+								$post_image="";
+								if ( has_post_thumbnail() ) {
+										$image_id =  get_post_thumbnail_id( get_the_ID() );
+										$large_image = wp_get_attachment_url( $image_id ,'full');
+										$resize = tiger_aq_resize( $large_image, true );
+									  
+										$post_image ='<img src="'. esc_url($resize).'" class="thumb">';
+								} 
+										  
+								$result=$result.'
+								<article class="uou-block-7f"> '.$post_image.'																
+										 
+										  <h1><a href="'. get_permalink( $post_id ).'">'.$title.'</a></h1>
+										   <div class="meta"> <span class="time-ago">'. esc_html__( 'Date: ','toger' ).' '.$job_query->post->post_date.'</span></div>
+										  <p>
+											'. substr($content ,0,200).' <a href="'. get_permalink( $post_id ).'">'. esc_html__( 'Read More','toger' ).'</a>
+								  </p>
+								  </article>';
+									
+								
+							}
+						}
+						
+						
 						echo $result;
 						exit(0);	
 						

@@ -207,6 +207,7 @@
 									
 									echo'<div class="text-center" id="add_more_follower_more_button"><button type="button" onclick="add_more_follower_ajax(2);"><i class="fa fa-plus"></i> '.esc_html__(' More','tiger').'</button> </div>';
 								}
+								
 							} else {?>
 								<li>
 								 <?php esc_html_e('No result found.','tiger'); ?>

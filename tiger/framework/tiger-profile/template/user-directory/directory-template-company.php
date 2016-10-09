@@ -297,7 +297,7 @@ sort($company_type_data);
         </div>
       </div>
     </section>
-    		<div class="text-center">
+				<div class="text-center">
 				<?php
 					$total_user = $user_query->total_users;
 					$total_pages=ceil($total_user/$no);
@@ -315,6 +315,6 @@ sort($company_type_data);
 						));
 					echo '</div></div>';
 					?>
-					</div>
+			</div>
 	</div>
 

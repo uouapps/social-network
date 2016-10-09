@@ -409,7 +409,7 @@ $user_id=1;
         <div class="row">
 
           <!-- Nav Tabs -->
-          <!--
+         
           <div class="col-md-12">
             <ul class="nav nav-tabs">
               <li class="active"><a data-toggle="tab" href="#profile"><?php  esc_html_e('Profile','tiger');?></a></li>
@@ -417,7 +417,7 @@ $user_id=1;
               <li><a data-toggle="tab" href="#contact"><?php  esc_html_e('Contact','tiger');?></a></li>
             </ul>
           </div>
-          -->
+        
           <!-- SIDE BAR -->
           <div class="col-md-4">
 
