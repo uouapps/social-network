@@ -22,7 +22,34 @@ function modal_send_message_iv(){
 					}
 				});
 		}	
+		
 }
+function contact_send_message_iv(){
+		var formc = jQuery("#contact_form_2");
+		if (jQuery.trim(jQuery("#message-content",formc).val()) == "") {
+                  alert("Please put your message");
+        } else {    
+			var ajaxurl = tiger_data.ajaxurl;	
+			var loader_image =  tiger_data.loading_image;
+				jQuery('#update_contact2').html(loader_image); 
+				var search_params={
+					"action"  : 	"uou_tigerp_message_send",	
+					"form_data":	jQuery("#message-content").serialize(), 					
+				};				
+				jQuery.ajax({					
+					url : ajaxurl,					 
+					dataType : "json",
+					type : "post",
+					data : search_params,
+					success : function(response){											
+						jQuery('#update_contact2').html(response.msg );
+						jQuery("#message-content").reset();						
+					}
+				});
+		}	
+
+}
+
 function send_message_iv(){		 
 		var formc = jQuery("#message-pop");
 		if (jQuery.trim(jQuery("#message-content",formc).val()) == "") {

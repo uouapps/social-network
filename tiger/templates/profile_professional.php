@@ -994,13 +994,16 @@ $user_id=1;
                     <div class="profile-main">
                       <h3><?php  esc_html_e('Contact','tiger');?> </h3>
                       <div class="profile-in">
-								<form action="#">
-								  <input type="text" placeholder="Name & Surname">
-								  <input type="text" placeholder="E-mail address">
-								  
-								  <textarea placeholder="Your Message"></textarea>
-								  <button class="btn btn-primary">Send message</button>
+								<form id="contact_form_2" name="contact_form_2" action="#">
+									  <input name="contact_name"  id="contact_name"  type="text" placeholder="Name & Surname">
+									  
+									  <input name="contact_address" id="contact_address"  type="text" placeholder="E-mail address">
+									  
+									  <textarea name="message-content" id="message-content" placeholder="Your Message"></textarea>
+										<div class="col-md-1" id="update_contact2" name="update_contact2"> </div>
+									  <button class="btn btn-primary" onclick="contact_send_message_iv();return false;"><?php  esc_html_e('Send message','tiger');?></button>
 								</form>
+								
 							  
                       </div>
                     </div>
