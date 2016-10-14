@@ -562,6 +562,14 @@
 						$category_ids = array($form_data['postcats']);
 							wp_set_object_terms( $newpost_id, $category_ids, $post_type.'-category');
 					}
+					
+					update_post_meta($newpost_id, 'job_skills', $form_data['job_skills']); 
+					update_post_meta($newpost_id, 'company_name', $form_data['company_name']); 
+					update_post_meta($newpost_id, 'company_address', $form_data['company_address']); 
+					update_post_meta($newpost_id, 'company_email', $form_data['company_email']); 
+					update_post_meta($newpost_id, 'company_phone', $form_data['company_phone']); 
+					update_post_meta($newpost_id, 'company_web', $form_data['company_web']); 
+					
 					if(isset($form_data['custom_name'] )){
 						$custom_metas= $form_data['custom_name'] ;
 						$custom_value = $form_data['custom_value'] ;
@@ -620,7 +628,14 @@
 							 delete_post_meta($form_data['user_post_id'] ,$field_key); 
 						}
 						
-					}					
+					}	
+					update_post_meta($form_data['user_post_id'], 'job_skills', $form_data['job_skills']); 
+					update_post_meta($form_data['user_post_id'], 'company_name', $form_data['company_name']); 
+					update_post_meta($form_data['user_post_id'], 'company_address', $form_data['company_address']); 
+					update_post_meta($form_data['user_post_id'], 'company_email', $form_data['company_email']); 
+					update_post_meta($form_data['user_post_id'], 'company_phone', $form_data['company_phone']); 
+					update_post_meta($form_data['user_post_id'], 'company_web', $form_data['company_web']); 
+									
 					
 					if(isset($form_data['custom_name'] )){
 						$custom_metas= $form_data['custom_name'] ;
@@ -3911,7 +3926,7 @@
 						
 						$result='';
 						
-						$no=1;			
+						$no=10;			
 						$offset= ($paged-1)*$no;	
 								
 				        $args = array();	
@@ -3975,7 +3990,7 @@
 						
 						$result='';
 						
-						$no=1;			
+						$no=10;			
 						$offset= ($paged-1)*$no;	
 								
 				        $args = array();	

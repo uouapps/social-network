@@ -351,7 +351,7 @@ $user_id=1;
                       <div class="similar">
                       <?php
                       $connection_type=get_user_meta($user_id,'iv_member_type',true);
-                       $args = array();
+                      $args = array();
 				      $args['number']='3';
 					  if($connection_type=='professional'){
 
@@ -701,7 +701,7 @@ $user_id=1;
                       <h5 class="main-title"><?php esc_html_e('Jobs','tiger'); ?> </h5>
                       <div class="similar">
                       <?php                 
-						$no=1;						
+						$no=10;						
 						$paged = 1;						
 						$offset=0;  						
                       $args = array();	
@@ -903,7 +903,7 @@ $user_id=1;
                           <div class="row">
                       <div class="col-md-12">
 						   <?php                 
-						$no=1;						
+						$no=10;						
 						$paged = 1;						
 						$offset=0;  						
                       $args = array();	
@@ -993,19 +993,21 @@ $user_id=1;
                   <div class="col-md-12">
                     <div class="profile-main">
                       <h3><?php  esc_html_e('Contact','tiger');?> </h3>
-                      <div class="profile-in">
-								<form id="contact_form_2" name="contact_form_2" action="#">
+							<div class="profile-in">
+								<form id="contact_form_2" name="contact_form_2" >
 									  <input name="contact_name"  id="contact_name"  type="text" placeholder="Name & Surname">
 									  
-									  <input name="contact_address" id="contact_address"  type="text" placeholder="E-mail address">
+									  <input name="email_address" id="email_address"  type="text" placeholder="E-mail address">
 									  
 									  <textarea name="message-content" id="message-content" placeholder="Your Message"></textarea>
-										<div class="col-md-1" id="update_contact2" name="update_contact2"> </div>
+										
 									  <button class="btn btn-primary" onclick="contact_send_message_iv();return false;"><?php  esc_html_e('Send message','tiger');?></button>
-								</form>
-								
-							  
-                      </div>
+									 
+								</form>	
+								<div class="col-md-2" id="update_contact2" name="update_contact2"> </div>
+							</div>
+							 
+                      
                     </div>
                   </div>              
 

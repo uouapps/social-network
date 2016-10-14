@@ -75,8 +75,15 @@
 										</div>
 									
 								</div>
+								<div class=" form-group">
+									<label for="text" class=" control-label"><?php  _e('Skills','tiger');?></label>									
+									<div class="  "> 
+										<input type="text" class="form-control" name="job_skills" id="job_skills" value="<?php echo get_post_meta($curr_post_id,'job_skills',true); ?>" placeholder="<?php  _e('Enter Skills, Separated By Commas e.g Php, Java','tiger');?>">
+									</div>																		
+								</div>
+								
 								<div class=" row form-group ">
-									<label for="text" class=" col-md-5 control-label"><?php  _e('Feature Image','wpmembership');?> </label>
+									<label for="text" class=" col-md-5 control-label"><?php  _e('Logo','wpmembership');?> </label>
 									
 										<div class="col-md-4" id="post_image_div">										
 												
@@ -120,6 +127,42 @@
 										</div>									
 								</div>
 								<div class="clearfix"></div>
+								
+								
+								<div class=" form-group">
+									<label for="text" class=" control-label"><?php  _e('Company Name','tiger');?></label>									
+									<div class="  "> 
+										<input type="text" class="form-control" name="company_name" id="company_name" value="<?php echo get_post_meta($curr_post_id,'company_name',true); ?>" placeholder="<?php  _e('Enter Company Name','tiger');?>">
+									</div>																		
+								</div>
+								<div class=" form-group">
+									<label for="text" class=" control-label"><?php  _e('Company Address','tiger');?></label>									
+									<div class="  "> 
+										<input type="text" class="form-control" name="company_address" id="company_address" value="<?php echo get_post_meta($curr_post_id,'company_address',true); ?>" placeholder="<?php  _e('Enter Company Address','tiger');?>">
+									</div>																		
+								</div>
+								<div class=" form-group">
+									<label for="text" class=" control-label"><?php  _e('Company Email','tiger');?></label>									
+									<div class="  "> 
+										<input type="text" class="form-control" name="company_email" id="company_email" value="<?php echo get_post_meta($curr_post_id,'company_email',true); ?>" placeholder="<?php  _e('Enter Company Email','tiger');?>">
+									</div>																		
+								</div>
+								<div class=" form-group">
+									<label for="text" class=" control-label"><?php  _e('Company Phone','tiger');?></label>									
+									<div class="  "> 
+										<input type="text" class="form-control" name="company_phone" id="company_phone" value="<?php echo get_post_meta($curr_post_id,'company_phone',true); ?>" placeholder="<?php  _e('Enter Company Phone','tiger');?>">
+									</div>																		
+								</div>
+								<div class=" form-group">
+									<label for="text" class=" control-label"><?php  _e('Company Web','tiger');?></label>									
+									<div class="  "> 
+										<input type="text" class="form-control" name="company_web" id="company_web" value="<?php echo get_post_meta($curr_post_id,'company_web',true); ?>" placeholder="<?php  _e('Enter Company Web','tiger');?>">
+									</div>																		
+								</div>
+								
+								
+								
+								<!--
 								<?php 								
 									$custom_fields = get_post_custom($curr_post_id);
 									?>
@@ -145,12 +188,14 @@
 											?>
 											
 										
-								</div>		
+								</div>	
+									
 								<div class=" row  form-group ">
 									<div class="col-md-12" >	
 									<button type="button" onclick="add_custom_field();"  class="btn btn-xs green-haze"><?php  _e('More Field','wpmembership');?></button>
 									</div>
 								</div>	
+								-->
 								<div class="clearfix"></div>
 								<div class=" row form-group ">
 									<label for="text" class=" col-md-12 control-label"><?php  _e('Post Status','wpmembership');?>  </label>

@@ -238,8 +238,8 @@ global $wpdb;
 								   		</a>
 
 								   	<div class="user-details">
-								   		<a href="<?php echo $reg_page_user.'?&id='.$user->user_login; ?>"><h6><?php echo substr(get_user_meta($user->ID,'profile_name',true), 0, 25 ); ?> &nbsp;<span><?php echo substr(get_user_meta($user->ID,'designation',true), 0, 25 );  ?>&nbsp;</span></h6></a>
-								   		<p><i class="fa fa-map-marker"></i> <?php echo substr(get_user_meta($user->ID,'address',true), 0, 32 ); ?>&nbsp;</p>
+								   		<a href="<?php echo $reg_page_user.'?&id='.$user->user_login; ?>"><h6><?php echo substr(get_user_meta($user->ID,'profile_name',true), 0, 25 ); ?> &nbsp;<span><?php echo substr(get_user_meta($user->ID,'designation',true), 0, 20 );  ?>&nbsp;</span></h6></a>
+								   		<p><i class="fa fa-map-marker"></i> <?php echo substr(get_user_meta($user->ID,'address',true), 0, 25 ); ?>&nbsp;</p>
 								   	</div>
 
 									</div>

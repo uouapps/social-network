@@ -140,12 +140,10 @@ if(isset($_GET['delete_id']))  {
 							 
 							<form action="" id="new_post" name="new_post"  method="POST" role="form">
 								<div class=" form-group">
-									<label for="text" class=" control-label"><?php  _e('Title','tiger');?></label>
-									
+									<label for="text" class=" control-label"><?php  _e('Title','tiger');?></label>									
 									<div class="  "> 
 										<input type="text" class="form-control" name="title" id="title" value="" placeholder="<?php  _e('Enter Title Here','tiger');?>">
-									</div>
-																		
+									</div>																		
 								</div>
 								<div class="form-group">
 										
@@ -163,8 +161,15 @@ if(isset($_GET['delete_id']))  {
 										</div>
 									
 								</div>
+								<div class=" form-group">
+									<label for="text" class=" control-label"><?php  _e('Skills','tiger');?></label>									
+									<div class="  "> 
+										<input type="text" class="form-control" name="job_skills" id="job_skills" value="" placeholder="<?php  _e('Enter Skills, Separated By Commas e.g Php, Java','tiger');?>">
+									</div>																		
+								</div>
+								
 								<div class=" row form-group ">
-									<label for="text" class=" col-md-5 control-label"><?php  _e('Feature Image','tiger');?>  </label>
+									<label for="text" class=" col-md-5 control-label"><?php  _e('Logo Image','tiger');?>  </label>
 									
 										<div class="col-md-4" id="post_image_div">
 											<a  href="javascript:void(0);" onclick="edit_post_image('post_image_div');"  >									
@@ -180,6 +185,40 @@ if(isset($_GET['delete_id']))  {
 										</div>									
 								</div>
 								
+								<div class=" form-group">
+									<label for="text" class=" control-label"><?php  _e('Company Name','tiger');?></label>									
+									<div class="  "> 
+										<input type="text" class="form-control" name="company_name" id="company_name" value="" placeholder="<?php  _e('Enter Company Name','tiger');?>">
+									</div>																		
+								</div>
+								<div class=" form-group">
+									<label for="text" class=" control-label"><?php  _e('Company Address','tiger');?></label>									
+									<div class="  "> 
+										<input type="text" class="form-control" name="company_address" id="company_address" value="" placeholder="<?php  _e('Enter Company Address','tiger');?>">
+									</div>																		
+								</div>
+								<div class=" form-group">
+									<label for="text" class=" control-label"><?php  _e('Company Email','tiger');?></label>									
+									<div class="  "> 
+										<input type="text" class="form-control" name="company_email" id="company_email" value="" placeholder="<?php  _e('Enter Company Email','tiger');?>">
+									</div>																		
+								</div>
+								<div class=" form-group">
+									<label for="text" class=" control-label"><?php  _e('Company Phone','tiger');?></label>									
+									<div class="  "> 
+										<input type="text" class="form-control" name="company_phone" id="company_phone" value="" placeholder="<?php  _e('Enter Company Phone','tiger');?>">
+									</div>																		
+								</div>
+								<div class=" form-group">
+									<label for="text" class=" control-label"><?php  _e('Company Web','tiger');?></label>									
+									<div class="  "> 
+										<input type="text" class="form-control" name="company_web" id="company_web" value="" placeholder="<?php  _e('Enter Company Web','tiger');?>">
+									</div>																		
+								</div>
+								
+								
+								
+								<!--
 								<div class="clearfix"></div>
 								<label for="text" class="row col-md-12 control-label"><?php  _e('Custom Fields','tiger');?> </label>
 								<div id="custom_field_div">
@@ -197,7 +236,7 @@ if(isset($_GET['delete_id']))  {
 									<button type="button" onclick="add_custom_field();"  class="btn btn-xs green-haze"><?php  _e('More Field','tiger');?></button>
 									</div>
 								</div>	
-								
+								-->
 								
 								<div class="clearfix"></div>
 								<div class=" row form-group ">
