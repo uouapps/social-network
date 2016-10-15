@@ -590,10 +590,12 @@ if (!class_exists('wp_uou_tigerp_Admin')) {
 						parse_str($_POST['form_data'], $form_data);	
 						
 						//update_option('_iv_new_badge_day',$form_data['iv_new_badge_day']);
-					    update_option('_dir_approve_publish',$form_data['dir_approve_publish']);					    
-					    //update_option('_dir_search_redius',$form_data['dir_search_redius']);
-					    //update_option('_dir_claim_show',$form_data['dir_claim_show']);
-					   // update_option('_search_button_show',$form_data['search_button_show']);
+					    update_option('_dir_approve_publish',$form_data['dir_approve_publish']);	
+					    				    
+					    update_option('_blog_approve_publish',$form_data['blog_approve_publish']);
+					    update_option('_job_approve_publish',$form_data['job_approve_publish']);
+					    //update_option('_search_button_show',$form_data['search_button_show']);
+					    
 					   // update_option('_dir_searchbar_show',$form_data['dir_searchbar_show']);
 					   // update_option('_dir_map_show',$form_data['dir_map_show']);
 					     

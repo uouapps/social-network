@@ -17,7 +17,7 @@
 </style>	
 	
 
-		<h3  class=""><?php _e('Directory Setting','tiger');  ?><small></small>	
+		<h3  class=""><?php _e('Setting','tiger');  ?><small></small>	
 		</h3>
 	
 		<br/>
@@ -28,53 +28,74 @@
 				
 					$new_badge_day=get_option('_iv_new_badge_day');
 					//$bid_start_amount=get_option('_bid_start_amount');
-					$dir_approve_publish =get_option('_dir_approve_publish');
-					$dir_archive=get_option('_dir_archive_page');	
+					 $dir_approve_publish =get_option('_dir_approve_publish');
 					if($dir_approve_publish==""){$dir_approve_publish='no';}
 					
-					$dir_claim_show=get_option('_dir_claim_show');	
-					if($dir_claim_show==""){$dir_claim_show='yes';}
+					$blog_approve_publish =get_option('_blog_approve_publish');
+					if($blog_approve_publish==""){$blog_approve_publish='no';}
 					
-					$search_button_show=get_option('_search_button_show');	
-					if($search_button_show==""){$search_button_show='yes';}
+					$job_approve_publish =get_option('_job_approve_publish');
+					if($job_approve_publish==""){$job_approve_publish='no';}
 					
-					$dir_searchbar_show=get_option('_dir_searchbar_show');	
-					if($dir_searchbar_show==""){$dir_searchbar_show='no';}
 					
-					$dir_map_show=get_option('_dir_map_show');	
-					if($dir_map_show==""){$dir_map_show='no';}
+					
+				
 						
 					?>
-					<!--
-					<div class="form-group">
-					<label  class="col-md-3 control-label"> <?php _e('Days #','tiger');  ?></label>
-						<div class="col-md-2">						
-							<input type="text" class="form-control" name="iv_new_badge_day" id="iv_new_badge_day" value="<?php echo $new_badge_day;?>" placeholder="Enter Days">
-							
-						</div>
-						<div class="col-md-7">
-							<img  width="40px" src="<?php echo  wp_uou_tigerp_URLPATH."/assets/images/newicon-big.png";?>">	
-							<?php _e('The new item badge will show for the days','tiger');  ?>
-						</div>	
-					</div>
-					-->
+					
 					
 					
 					
 					
 					
 					<div class="form-group">
-						<label  class="col-md-3 control-label"> <?php _e('Listing Publish By User','tiger');  ?></label>
+						<label  class="col-md-3 control-label"> <?php _e('Company & Professional','tiger');  ?></label>
 					
-					<div class="col-md-2">
+					<div class="col-md-4">
 							<label>												
 							<input type="radio" name="dir_approve_publish" id="dir_approve_publish" value='yes' <?php echo ($dir_approve_publish=='yes' ? 'checked':'' ); ?> >
-							<?php _e('Admin Will Approve ','tiger');  ?>   
+							<?php _e(" Don't publish without admin approval",'tiger');  ?>
 							</label>	
 						</div>
 						<div class="col-md-3">	
 							<label>											
-							<input type="radio"  name="dir_approve_publish" id="dir_approve_publish" value='no' <?php echo ($dir_approve_publish=='no' ? 'checked':'' );  ?> >
+							<input type="radio"  name="dir_approve_publish" id="dir_approve_publish" value='no' <?php echo ($dir_approve_publish=='no' ? 'checked ':'' );  ?> >
+							<?php _e('User Can Publish','tiger');  ?> 
+							 
+							</label>
+						</div>	
+					</div>
+					
+					<div class="form-group">
+						<label  class="col-md-3 control-label"> <?php _e('Blog','tiger');  ?></label>
+					
+					<div class="col-md-4">
+							<label>												
+							<input type="radio" name="blog_approve_publish" id="blog_approve_publish" value='yes' <?php echo ($blog_approve_publish=='yes' ? 'checked':'' ); ?> >
+							<?php _e(" Don't publish without admin approval",'tiger');  ?>
+							</label>	
+						</div>
+						<div class="col-md-3">	
+							<label>											
+							<input type="radio"  name="blog_approve_publish" id="blog_approve_publish" value='no' <?php echo ($blog_approve_publish=='no' ? 'checked':'' );  ?> >
+							<?php _e('User Can Publish','tiger');  ?> 
+							 
+							</label>
+						</div>	
+					</div>
+					
+					<div class="form-group">
+						<label  class="col-md-3 control-label"> <?php _e('Job','tiger');  ?></label>
+					
+						<div class="col-md-4">
+							<label>												
+							<input type="radio" name="job_approve_publish" id="job_approve_publish" value='yes' <?php echo ($job_approve_publish=='yes' ? 'checked':'' ); ?> >
+							<?php _e(" Don't publish without admin approval",'tiger');  ?>
+							</label>	
+						</div>
+						<div class="col-md-3">	
+							<label>											
+							<input type="radio"  name="job_approve_publish" id="job_approve_publish" value='no' <?php echo ($job_approve_publish=='no' ? 'checked':'' );  ?> >
 							<?php _e('User Can Publish','tiger');  ?> 
 							 
 							</label>
@@ -95,7 +116,7 @@
 							</label>	
 						</div>
 						<div class="col-md-3">
-							Cron JOB Detail : Hide Listing( Package setting),Subscription Remainder email.
+							Cron JOB Detail : Hide jobs( Package setting),Subscription Remainder email.
 						</div>		
 							
 					</div>

@@ -244,7 +244,17 @@ if(isset($_GET['delete_id']))  {
 									
 										<div class="col-md-12" id="">										
 										<select name="post_status" id="post_status"  class="form-control">
-											<option value="pending"><?php  _e('Pending Review','tiger');?></option>
+											<?php
+												$dir_approve_publish =get_option('_job_approve_publish');
+												if($dir_approve_publish!='yes'){?>
+													<option value="publish"><?php esc_html_e('Publish','tiger'); ?></option>
+												<?php	
+												}else{ ?>
+													<option value="pending"><?php esc_html_e('Pending Review','tiger'); ?></option>
+												<?php
+												}
+											?>	
+											
 											<option value="draft"><?php  _e('Draft','tiger');?></option>
 										</select>										
 											

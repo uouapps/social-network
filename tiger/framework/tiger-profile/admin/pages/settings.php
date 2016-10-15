@@ -44,8 +44,9 @@ global $wpdb;
 					<div class="panel-heading">
 							<ul class="nav nav-tabs">
 								<li class="active"><a href="#page" data-toggle="tab"><?php _e('Page','tiger'); ?></a></li>
+								
+								<li ><a href="#dir-setting" data-toggle="tab"><?php _e('Setting','tiger'); ?> </a></li>
 								<!--
-								<li ><a href="#dir-setting" data-toggle="tab"><?php _e('Directory','tiger'); ?> </a></li>
 								<li ><a href="#dir-marker" data-toggle="tab"><?php _e('Category Image/Marker','tiger'); ?></a></li>
 								
 								

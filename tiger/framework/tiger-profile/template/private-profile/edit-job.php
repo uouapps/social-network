@@ -202,7 +202,18 @@
 								
 										<div class="col-md-12" id="">										
 										<select name="post_status" id="post_status"  class="form-control">
-											<option value="pending"<?php echo (get_post_status( $post_edit->ID )=='pending'?'selected="selected"':'' ) ; ?> ><?php  _e('Pending Review','wpmembership');?></option>
+											<?php
+												$dir_approve_publish =get_option('_job_approve_publish');
+												if($dir_approve_publish!='yes'){?>
+													<option value="publish" <?php echo (get_post_status( $post_edit->ID )=='publish'?'selected="selected"':'' ) ; ?>><?php esc_html_e('Publish','tiger'); ?></option>
+												<?php	
+												}else{ ?>
+													<option value="pending" <?php echo (get_post_status( $post_edit->ID )=='pending'?'selected="selected"':'' ) ; ?>><?php esc_html_e('Pending Review','tiger'); ?></option>
+												<?php
+												}
+											?>	
+											
+											
 											<option value="draft" <?php echo (get_post_status( $post_edit->ID )=='draft'?'selected="selected"':'' ) ; ?> ><?php  _e('Draft','wpmembership');?></option>
 										</select>										
 											
