@@ -29,10 +29,18 @@
               ?>
 
             </nav>
+             <?php $tiger_option_data =get_option('tiger_option_data'); ?>
+            <?php
+			  $tigertopphone='(02) 123-456-7890';
+			 if(isset($tiger_option_data['tiger-top-phone']) AND $tiger_option_data['tiger-top-phone']!=""):
+				$tigertopphone=$tiger_option_data['tiger-top-phone'];
+			 endif;
+         
+			?>
 
           <div class="contact">
             <span>Call Us:</span>
-            <a href="tel:(02)1234567890">(02) 123-456-7890</a>
+            <a href="tel:<?php echo $tigertopphone;?>"><?php echo $tigertopphone;?></a>
           </div>
         </div>
       </div> <!-- end .uou-block-2e -->

@@ -838,7 +838,36 @@ if (!class_exists('tiger_admin_config')) {
                       
 
                     ),
+                    
+                    array(
+                        'id'        => 'tiger-breadcrumb',
+                        'type'      => 'switch',
+                        'title'     => esc_html__('Top breadcrumb Show/hide', 'tiger'),
+                        'default'   => true,
+                    ),
+                    
+                     array(
+                        'id'        => 'tiger-banner-breadcrumb',
+                        'type'      => 'media',
+                        'url'       => true,
+                        'title'     => esc_html__('Banner Breadcrumb', 'tiger'),
+                        'compiler'  => 'true',
+                        'subtitle'      => esc_html__('Upload banner breadcrumb image', 'tiger'),
+                        
+                      
 
+                    ),
+					
+					 array(
+                        'id'        => 'tiger-top-phone',
+                        'type'      => 'text',                        
+                        'title'     => esc_html__('Top Phone #', 'tiger'),
+                        'compiler'  => 'true',
+                        'subtitle'      => esc_html__('Add top phone number', 'tiger'),
+                        
+                      
+
+                    ),
 
 
                     array(

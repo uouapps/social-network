@@ -4,12 +4,29 @@ $tiger_option_data =get_option('tiger_option_data');
 ?>
 
 <!-- SIngle page code **************************************************************************** -->
-  <div class="breadcrumb-content">
-		<img   src="<?php echo tiger_IMAGE."banner-breadcrumb.jpg";?>" alt="<?php esc_html_e( 'banner', 'tiger' ); ?>">
-		<div class="container">
-		  <h3><?php  echo esc_attr($post->post_title) ;?></h3>
-		</div>
-  </div> 
+  <?php
+		$top_breadcrumb_image= tiger_IMAGE."banner-breadcrumb.jpg";
+        if(isset($tiger_option_data['tiger-banner-breadcrumb']['url']) AND $tiger_option_data['tiger-banner-breadcrumb']['url']!=""):
+			$top_breadcrumb_image=esc_url($tiger_option_data['tiger-banner-breadcrumb']['url']);
+         endif;
+         
+         $tiger_breadcrumb_value='1';
+         if(isset($tiger_option_data['tiger-breadcrumb']) AND $tiger_option_data['tiger-breadcrumb']!=""):
+			$tiger_breadcrumb_value=$tiger_option_data['tiger-breadcrumb'];
+         endif;
+         
+         
+         if($tiger_breadcrumb_value=='1'){ 
+		?>
+		 <div class="breadcrumb-content">
+			<img   src="<?php echo $top_breadcrumb_image;?>" alt="<?php esc_html_e( 'banner', 'tiger' ); ?>">
+			<div class="container">
+				<h3><?php  echo esc_attr($post->post_title) ;?></h3>
+			</div>
+		</div>	
+		<?php
+			}
+		?>
 <div class="compny-profile">
 <div class="profile-company-content has-bg-image user-profile">
     <div class="container">
@@ -25,7 +42,7 @@ $tiger_option_data =get_option('tiger_option_data');
                 		<div class="listing-ver-3">
 							
 						  <div class="listing-inner">
-							<div class="listing-content">
+							<div class="job-content">
 							  <h6 class="title-company"><?php echo get_post_meta($curr_post_id,'company_name',true); ?> </h6>
 							  <span class="location"> <i class="fa fa-map-marker"></i> <?php echo get_post_meta($curr_post_id,'company_address',true); ?>  </span> <span class="type-work full-time">  </span>
 								<p>

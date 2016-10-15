@@ -15837,6 +15837,13 @@ a:hover, a:focus, a:active, a.active {
 	text-align: center;
 	background: #fff;
 }
+.job-content {
+	position: relative;
+	padding: 28px;
+	display: inline-block;
+	text-align: left;
+	background: #fff;
+}
 .listing.listing-1 .listing-ver-3 .listing-inner .listing-content .title-company {
 	margin: 0 0 5px 0;
 }
