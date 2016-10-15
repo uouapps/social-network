@@ -58,66 +58,9 @@
 						</div>	
 					</div>
 					-->
-					<div class="form-group">
-						<label  class="col-md-3 control-label"> <?php _e('Listing Page toggle button[Search + Map] ','tiger');  ?></label>
-					
-					<div class="col-md-2">
-							<label>												
-							<input type="radio" name="search_button_show" id="search_button_show" value='yes' <?php echo ($dir_map_show=='yes' ? 'checked':'' ); ?> ><?php _e('Show','tiger');  ?>
-							</label>	
-						</div>
-						<div class="col-md-3">	
-							<label>											
-							<input type="radio"  name="search_button_show" id="search_button_show" value='no' <?php echo ($dir_map_show=='no' ? 'checked':'' );  ?> > <?php _e('Hide','tiger');  ?>
-							</label>
-						</div>	
-					</div>
-					<div class="form-group">
-						<label  class="col-md-3 control-label"> <?php _e('Listing Page Top Map','tiger');  ?></label>
-					
-					<div class="col-md-2">
-							<label>												
-							<input type="radio" name="dir_map_show" id="dir_map_show" value='yes' <?php echo ($dir_map_show=='yes' ? 'checked':'' ); ?> ><?php _e('Show  Top Map','tiger');  ?>
-							</label>	
-						</div>
-						<div class="col-md-3">	
-							<label>											
-							<input type="radio"  name="dir_map_show" id="dir_map_show" value='no' <?php echo ($dir_map_show=='no' ? 'checked':'' );  ?> > <?php _e('Hide Top Map','tiger');  ?>
-							</label>
-						</div>	
-					</div>
 					
 					
-					<div class="form-group">
-						<label  class="col-md-3 control-label"> <?php _e('Listing Page Search Bar','tiger');  ?></label>
 					
-					<div class="col-md-2">
-							<label>												
-							<input type="radio" name="dir_searchbar_show" id="dir_searchbar_show" value='yes' <?php echo ($dir_searchbar_show=='yes' ? 'checked':'' ); ?> ><?php _e('Show  Search Bar','tiger');  ?>
-							</label>	
-						</div>
-						<div class="col-md-3">	
-							<label>											
-							<input type="radio"  name="dir_searchbar_show" id="dir_searchbar_show" value='no' <?php echo ($dir_searchbar_show=='no' ? 'checked':'' );  ?> > <?php _e('Hide Search Bar','tiger');  ?>
-							</label>
-						</div>	
-					</div>
-					
-					
-					<div class="form-group">
-						<label  class="col-md-3 control-label"> <?php _e('Claim','tiger');  ?></label>
-					
-					<div class="col-md-2">
-							<label>												
-							<input type="radio" name="dir_claim_show" id="dir_claim_show" value='yes' <?php echo ($dir_claim_show=='yes' ? 'checked':'' ); ?> ><?php _e('Show Claim','tiger');  ?>
-							</label>	
-						</div>
-						<div class="col-md-3">	
-							<label>											
-							<input type="radio"  name="dir_claim_show" id="dir_claim_show" value='no' <?php echo ($dir_claim_show=='no' ? 'checked':'' );  ?> > <?php _e('Hide Claim','tiger');  ?>
-							</label>
-						</div>	
-					</div>
 					
 					
 					<div class="form-group">
@@ -138,26 +81,6 @@
 						</div>	
 					</div>
 					
-					<?php
-					$dir_search_redius=get_option('_dir_search_redius');	
-					if($dir_search_redius==""){$dir_search_redius='Km';}	
-					?>
-					<div class="form-group">
-					<label  class="col-md-3 control-label"> <?php _e('Listing Radius','tiger');  ?></label>
-					
-					<div class="col-md-2">
-							<label>												
-							<input type="radio" name="dir_search_redius" id="dir_search_redius" value='Km' <?php echo ($dir_search_redius=='Km' ? 'checked':'' ); ?> > Km  
-							</label>	
-						</div>
-						<div class="col-md-2">	
-							<label>											
-							<input type="radio"  name="dir_search_redius" id="dir_search_redius" value='Miles' <?php echo ($dir_search_redius=='Miles' ? 'checked':'' );  ?> > Miles
-							</label>
-						</div>	
-					</div>
-					
-					<br/>
 					
 					
 				<div class="form-group">

@@ -57,7 +57,13 @@ $package_id=esc_html__('0','tiger');
               </div>
             </div>
           </div>
-
+			<?php
+			$banner_login_show='yes';
+			if ( is_user_logged_in() ) {
+				$banner_login_show='no';
+			}
+			if($banner_login_show=='yes'){
+			?>
           <!-- FORM SECTION -->
           <div class="col-sm-5">
             <div class="login-sec">
@@ -130,6 +136,11 @@ $package_id=esc_html__('0','tiger');
               </div>
             </div>
           </div>
+		
+			<?php
+			}
+			?>
+       
         </div>
       </div>
     </div>
