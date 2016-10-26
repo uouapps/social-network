@@ -1015,7 +1015,7 @@ $user_id=1;
 									  <button class="btn btn-primary" onclick="contact_send_message_iv();return false;"><?php  esc_html_e('Send message','tiger');?></button>
 
 								</form>
-								<div class="col-md-2" id="update_contact2" name="update_contact2"> </div>
+								<div class="col-md-12" id="update_contact2" name="update_contact2"> </div>
 							</div>
 
 

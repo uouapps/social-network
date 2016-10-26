@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tiger\n"
-"POT-Creation-Date: 2016-08-01 18:14+0600\n"
-"PO-Revision-Date: 2016-08-01 18:14+0600\n"
+"POT-Creation-Date: 2016-10-22 00:18+0600\n"
+"PO-Revision-Date: 2016-10-22 00:18+0600\n"
 "Last-Translator: \n"
 "Language-Team: tiger <aktar567@gmail.com>\n"
 "Language: de\n"
@@ -16,17 +16,20 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;esc_html_e\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: category.php:25 tag.php:22 single.php:21 footer.php:55 search.php:23
-#: page-grid.php:26 archive.php:30 templates/page/content-page.php:10
-#: templates/topS/header-top12.php:4 templates/topS/header-top10.php:4
-#: templates/topS/header-top8.php:4 templates/topS/header-top13.php:9
-#: templates/topS/header-top3.php:3 templates/topS/header-top7.php:4
+#: category.php:25 tag.php:22 single.php:21 footer.php:55 archive-jobs.php:117
+#: search.php:23 page-grid.php:26 archive.php:30
+#: templates/profile_professional.php:743
+#: templates/profile_professional.php:945 templates/profile_corporate.php:689
+#: templates/profile_corporate.php:792 templates/page/content-page.php:10
+#: templates/topS/header-top12.php:11 templates/topS/header-top10.php:4
+#: templates/topS/header-top8.php:12 templates/topS/header-top13.php:24
+#: templates/topS/header-top3.php:10 templates/topS/header-top7.php:4
 #: templates/topS/header-top11.php:4 templates/topS/header-top11.php:8
 #: templates/topS/header-top9.php:4 templates/blog/content-gridNS.php:19
 #: templates/blog/content-listNS.php:23 templates/blog/content-list.php:21
 #: templates/blog/content-grid.php:19 templates/headerS/header-four.php:10
 #: templates/headerS/header-six.php:10 templates/headerS/header-two.php:10
-#: templates/headerS/header-five.php:10 templates/headerS/header-three.php:10
+#: templates/headerS/header-five.php:10 templates/headerS/header-three.php:13
 #: templates/headerS/header-one.php:10
 #: framework/ext/widget-latest-professional.php:72
 #: framework/ext/widget-contact-info.php:53
@@ -37,7 +40,8 @@ msgstr ""
 msgid "image"
 msgstr ""
 
-#: category.php:49 tag.php:46 single.php:81 search.php:48 archive.php:54
+#: category.php:49 single-jobs.php:102 tag.php:46 single.php:81 search.php:48
+#: archive.php:54
 msgid "No post have found!"
 msgstr ""
 
@@ -45,6 +49,39 @@ msgstr ""
 #: page.php:70 archive.php:82 templates/blog/content-blogChoose.php:42
 #: templates/blog/content-blogChoose.php:97
 msgid "Please activate some Widgets"
+msgstr ""
+
+#: single-jobs.php:22 archive-jobs.php:25 woocommerce/archive-product.php:26
+#: woocommerce/single-product.php:26 templates/contact-us-template.php:24
+#: templates/about-us.php:24 templates/full-width-page.php:23
+msgid "banner"
+msgstr ""
+
+#: single-jobs.php:59
+msgid "Skills required"
+msgstr ""
+
+#: single-jobs.php:80 templates/profile_professional.php:111
+#: templates/profile_corporate.php:250
+msgid "Share"
+msgstr ""
+
+#: single-jobs.php:120 single-jobs.php:202 archive-jobs.php:170
+#: archive-jobs.php:254 searchform.php:2
+#: framework/tiger-profile/template/private-profile/bookmark.php:70
+#: framework/tiger-profile/template/private-profile/my-network.php:85
+#: framework/tiger-profile/template/private-profile/my-follower.php:45
+#: framework/tiger-profile/template/private-profile/bookmarker.php:45
+#: framework/tiger-profile/template/private-profile/following.php:44
+msgid "Search"
+msgstr "Search  DE"
+
+#: single-jobs.php:133 archive-jobs.php:184
+#: framework/tiger-profile/template/private-profile/add-job.php:317
+#: framework/tiger-profile/template/private-profile/edit-blog.php:197
+#: framework/tiger-profile/template/private-profile/add-blog.php:239
+#: framework/tiger-profile/template/private-profile/edit-job.php:239
+msgid "Choose a category"
 msgstr ""
 
 #: comments.php:24
@@ -71,7 +108,7 @@ msgstr ""
 msgid "Back To Home"
 msgstr ""
 
-#: single.php:134 templates/full-width-page.php:34
+#: single.php:134 templates/full-width-page.php:50
 msgid "Comments"
 msgstr ""
 
@@ -83,6 +120,39 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
+#: archive-jobs.php:27 templates/profile_professional.php:277
+#: templates/profile_professional.php:702 templates/profile_corporate.php:416
+#: templates/profile_corporate.php:648 framework/tiger-profile/plugin.php:477
+#: framework/tiger-profile/plugin.php:478
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:208
+#: framework/tiger-profile/template/private-profile/add-job.php:23
+msgid "Jobs"
+msgstr ""
+
+#: archive-jobs.php:123 templates/profile_professional.php:749
+#: templates/profile_corporate.php:695
+msgid "Category: "
+msgstr ""
+
+#: archive-jobs.php:123 templates/profile_professional.php:749
+#: templates/profile_corporate.php:695
+msgid " Date : "
+msgstr ""
+
+#: archive-jobs.php:131 templates/profile_professional.php:758
+#: templates/profile_professional.php:959 templates/profile_corporate.php:704
+#: templates/profile_corporate.php:806
+msgid "Read More"
+msgstr ""
+
+#: archive-jobs.php:147 templates/profile_professional.php:784
+#: templates/profile_professional.php:980 templates/profile_corporate.php:730
+#: templates/profile_corporate.php:827
+#: framework/tiger-profile/template/user-directory/directory-template-professionals.php:260
+#: framework/tiger-profile/template/user-directory/directory-template-company.php:294
+msgid "Sorry, no data matched your criteria."
+msgstr ""
+
 #: header.php:17
 msgid "Menu"
 msgstr ""
@@ -90,15 +160,6 @@ msgstr ""
 #: header.php:18
 msgid "times"
 msgstr ""
-
-#: searchform.php:2
-#: framework/tiger-profile/template/private-profile/bookmark.php:70
-#: framework/tiger-profile/template/private-profile/my-network.php:85
-#: framework/tiger-profile/template/private-profile/my-follower.php:45
-#: framework/tiger-profile/template/private-profile/bookmarker.php:45
-#: framework/tiger-profile/template/private-profile/following.php:44
-msgid "Search"
-msgstr "Search  DE"
 
 #: page.php:44
 msgid "are closed from Admin-Pannel"
@@ -108,146 +169,1049 @@ msgstr ""
 msgid "Archives"
 msgstr ""
 
-#: templates/contact-us-template.php:10 templates/about-us.php:10
-#: templates/full-width-page.php:10
-msgid "banner"
+#: woocommerce/single-product-reviews.php:35
+msgid "Reviews"
 msgstr ""
 
-#: templates/home.php:68
+#: woocommerce/single-product-reviews.php:56
+msgid "There are no reviews yet."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:69
+msgid "Add a review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:69
+#, php-format
+msgid "Be the first to review &ldquo;%s&rdquo;"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:70
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:73
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:22
+msgid "Name"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:75
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:154
+#: framework/tiger-profile/admin/pages/settings.php:55
+#: framework/tiger-profile/template/profile-public/profile-template.php:111
+msgid "Email"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:78
+#: framework/tiger-profile/template/private-profile/profile-login.php:48
+#: framework/tiger-profile/template/private-profile/profile-login.php:92
+#: framework/tiger-profile/template/private-profile/iv_stripe_form_upgrade.php:203
+#: framework/tiger-profile/template/private-profile/contact_popup.php:24
+#: framework/tiger-profile/template/signup/iv_stripe_form_2.php:223
+#: framework/tiger-profile/template/signup/without_payment.php:47
+#: framework/tiger-profile/template/signup/without_payment.php:53
+#: framework/tiger-profile/template/signup/paypal_form_2.php:180
+#: framework/tiger-profile/template/signup/paypal_form_2.php:186
+#: framework/tiger-profile/template/contact/contact-us.php:36
+msgid "Submit"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:84
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a review."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:88
+msgid "Your Rating"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:89
+msgid "Rate&hellip;"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:90
+msgid "Perfect"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:91
+msgid "Good"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:92
+msgid "Average"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:93
+msgid "Not that bad"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:94
+msgid "Very Poor"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:98
+msgid "Your Review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:107
+msgid ""
+"Only logged in customers who have purchased this product may leave a review."
+msgstr ""
+
+#: woocommerce/archive-product.php:30 woocommerce/single-product.php:29
+msgid "Shop"
+msgstr ""
+
+#: woocommerce/product-searchform.php:27
+#, fuzzy
+msgid "Search for:"
+msgstr "Search  DE"
+
+#: woocommerce/global/form-login.php:35
+#: woocommerce/myaccount/form-lost-password.php:30
+#, fuzzy
+msgid "Username or email"
+msgstr "Benutzerinformation"
+
+#: woocommerce/global/form-login.php:39
+#: woocommerce/myaccount/form-login.php:48
+#: woocommerce/myaccount/form-login.php:98 woocommerce/auth/form-login.php:39
+#: templates/home.php:122 templates/header-login.php:30
+#: framework/tiger-profile/template/private-profile/profile-login.php:36
+#: framework/tiger-profile/template/signup/wizard-style-2.php:188
+msgid "Password"
+msgstr ""
+
+#: woocommerce/global/form-login.php:51
+#: woocommerce/myaccount/form-login.php:58
+msgid "Remember me"
+msgstr ""
+
+#: woocommerce/global/form-login.php:55
+#: woocommerce/myaccount/form-login.php:62
+msgid "Lost your password?"
+msgstr ""
+
+#: woocommerce/emails/customer-invoice.php:29
+#: woocommerce/emails/plain/customer-invoice.php:26
+#, php-format
+msgid ""
+"An order has been created for you on %s. To pay for this order please use "
+"the following link: %s"
+msgstr ""
+
+#: woocommerce/emails/customer-invoice.php:29
+msgid "pay"
+msgstr ""
+
+#: woocommerce/emails/email-addresses.php:26
+#: woocommerce/emails/plain/email-addresses.php:23
+msgid "Billing address"
+msgstr ""
+
+#: woocommerce/emails/email-addresses.php:32
+#: woocommerce/emails/plain/email-addresses.php:27
+msgid "Shipping address"
+msgstr ""
+
+#: woocommerce/emails/customer-on-hold-order.php:28
+#: woocommerce/emails/plain/customer-on-hold-order.php:25
+msgid ""
+"Your order is on-hold until we confirm payment has been received. Your order "
+"details are shown below for your reference:"
+msgstr ""
+
+#: woocommerce/emails/customer-reset-password.php:27
+#: woocommerce/emails/plain/customer-reset-password.php:25
+msgid "Someone requested that the password be reset for the following account:"
+msgstr ""
+
+#: woocommerce/emails/customer-reset-password.php:28
+#: woocommerce/emails/plain/customer-reset-password.php:27
+#, php-format
+msgid "Username: %s"
+msgstr ""
+
+#: woocommerce/emails/customer-reset-password.php:29
+#: woocommerce/emails/plain/customer-reset-password.php:28
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr ""
+
+#: woocommerce/emails/customer-reset-password.php:30
+#: woocommerce/emails/plain/customer-reset-password.php:29
+msgid "To reset your password, visit the following address:"
+msgstr ""
+
+#: woocommerce/emails/customer-reset-password.php:33
+msgid "Click here to reset your password"
+msgstr ""
+
+#: woocommerce/emails/customer-completed-order.php:28
+#: woocommerce/emails/plain/customer-completed-order.php:25
+#, php-format
+msgid ""
+"Hi there. Your recent order on %s has been completed. Your order details are "
+"shown below for your reference:"
+msgstr ""
+
+#: woocommerce/emails/admin-cancelled-order.php:28
+#: woocommerce/emails/plain/admin-cancelled-order.php:25
+#, php-format
+msgid "The order #%d from %s has been cancelled. The order was as follows:"
+msgstr ""
+
+#: woocommerce/emails/email-customer-details.php:26
+#: woocommerce/emails/plain/email-customer-details.php:25
+msgid "Customer details"
+msgstr ""
+
+#: woocommerce/emails/customer-processing-order.php:28
+#: woocommerce/emails/plain/customer-processing-order.php:25
+msgid ""
+"Your order has been received and is now being processed. Your order details "
+"are shown below for your reference:"
+msgstr ""
+
+#: woocommerce/emails/email-order-details.php:26
+#: woocommerce/emails/email-order-details.php:28
+#, php-format
+msgid "Order #%s"
+msgstr ""
+
+#: woocommerce/emails/email-order-details.php:34 woocommerce/cart/cart.php:36
+#: woocommerce/cart/cart.php:79 woocommerce/checkout/review-order.php:26
+#: woocommerce/checkout/form-pay.php:29 woocommerce/order/order-details.php:32
+msgid "Product"
+msgstr ""
+
+#: woocommerce/emails/email-order-details.php:35 woocommerce/cart/cart.php:38
+#: woocommerce/cart/cart.php:103
+msgid "Quantity"
+msgstr ""
+
+#: woocommerce/emails/email-order-details.php:36 woocommerce/cart/cart.php:37
+#: woocommerce/cart/cart.php:97
+msgid "Price"
+msgstr ""
+
+#: woocommerce/emails/customer-note.php:28
+#: woocommerce/emails/plain/customer-note.php:25
+msgid "Hello, a note has just been added to your order:"
+msgstr ""
+
+#: woocommerce/emails/customer-note.php:32
+#: woocommerce/emails/plain/customer-note.php:33
+msgid "For your reference, your order details are shown below."
+msgstr ""
+
+#: woocommerce/emails/customer-refunded-order.php:30
+#, php-format
+msgid "Hi there. Your order on %s has been partially refunded."
+msgstr ""
+
+#: woocommerce/emails/customer-refunded-order.php:33
+#, php-format
+msgid "Hi there. Your order on %s has been refunded."
+msgstr ""
+
+#: woocommerce/emails/admin-failed-order.php:28
+#: woocommerce/emails/plain/admin-failed-order.php:25
+#, php-format
+msgid "Payment for order #%d from %s has failed. The order was as follows:"
+msgstr ""
+
+#: woocommerce/emails/admin-new-order.php:28
+#, php-format
+msgid "You have received an order from %s. The order is as follows:"
+msgstr ""
+
+#: woocommerce/emails/customer-new-account.php:27
+#: woocommerce/emails/plain/customer-new-account.php:25
+#, php-format
+msgid ""
+"Thanks for creating an account on %s. Your username is <strong>%s</strong>"
+msgstr ""
+
+#: woocommerce/emails/customer-new-account.php:31
+#, php-format
+msgid "Your password has been automatically generated: <strong>%s</strong>"
+msgstr ""
+
+#: woocommerce/emails/customer-new-account.php:35
+#: woocommerce/emails/plain/customer-new-account.php:30
+#, php-format
+msgid ""
+"You can access your account area to view your orders and change your "
+"password here: %s."
+msgstr ""
+
+#: woocommerce/emails/plain/email-order-items.php:44
+#, php-format
+msgid "Quantity: %s"
+msgstr ""
+
+#: woocommerce/emails/plain/email-order-items.php:47
+#, php-format
+msgid "Cost: %s"
+msgstr ""
+
+#: woocommerce/emails/plain/email-order-items.php:58
+#, php-format
+msgid "Download %d"
+msgstr ""
+
+#: woocommerce/emails/plain/email-order-items.php:60
+#: woocommerce/myaccount/downloads.php:75
+msgid "Download"
+msgstr ""
+
+#: woocommerce/emails/plain/email-order-details.php:25
+#, php-format
+msgid "Order number: %s"
+msgstr ""
+
+#: woocommerce/emails/plain/email-order-details.php:26
+msgid "jS F Y"
+msgstr ""
+
+#: woocommerce/emails/plain/email-order-details.php:43
+#, php-format
+msgid "View order: %s"
+msgstr ""
+
+#: woocommerce/emails/plain/customer-refunded-order.php:25
+#, php-format
+msgid ""
+"Hi there. Your order on %s has been refunded. Your order details are shown "
+"below for your reference:"
+msgstr ""
+
+#: woocommerce/emails/plain/admin-new-order.php:25
+#, php-format
+msgid "You have received an order from %s."
+msgstr ""
+
+#: woocommerce/emails/plain/customer-new-account.php:28
+#, php-format
+msgid "Your password is <strong>%s</strong>."
+msgstr ""
+
+#: woocommerce/loop/sale-flash.php:28
+#: woocommerce/single-product/sale-flash.php:28
+msgid "Sale!"
+msgstr ""
+
+#: woocommerce/loop/no-products-found.php:24
+msgid "No products were found matching your selection."
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:27
+#: woocommerce/myaccount/my-address.php:32
+#: woocommerce/myaccount/form-edit-address.php:23
+#: woocommerce/order/order-details-customer.php:58
+msgid "Billing Address"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:28
+#: woocommerce/myaccount/form-edit-address.php:23
+#: woocommerce/order/order-details-customer.php:69
+msgid "Shipping Address"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:41
+msgid "The following addresses will be used on the checkout page by default."
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:51
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:233
+#: framework/tiger-profile/template/private-profile/add-job.php:88
+#: framework/tiger-profile/template/private-profile/edit-blog.php:6
+#: framework/tiger-profile/template/private-profile/edit-blog.php:111
+#: framework/tiger-profile/template/private-profile/add-blog.php:87
+#: framework/tiger-profile/template/private-profile/edit-job.php:6
+#: framework/tiger-profile/template/private-profile/edit-job.php:114
+msgid "Edit"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:70
+msgid "You have not set up this type of address yet."
+msgstr ""
+
+#: woocommerce/myaccount/payment-methods.php:51
+#, php-format
+msgid "%s ending in %s"
+msgstr ""
+
+#: woocommerce/myaccount/payment-methods.php:72
+msgid "No saved methods found."
+msgstr ""
+
+#: woocommerce/myaccount/payment-methods.php:78
+#, fuzzy
+msgid "Add Payment Method"
+msgstr "Zahlungshinweise"
+
+#: woocommerce/myaccount/form-edit-account.php:30
+msgid "First name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:34
+msgid "Last name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:40
+#: woocommerce/myaccount/form-login.php:91
+msgid "Email address"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:45
+msgid "Password Change"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:48
+msgid "Current Password (leave blank to leave unchanged)"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:52
+msgid "New Password (leave blank to leave unchanged)"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:56
+msgid "Confirm New Password"
+msgstr ""
+
+#: woocommerce/myaccount/my-downloads.php:30
+msgid "Available Downloads"
+msgstr ""
+
+#: woocommerce/myaccount/lost-password-confirmation.php:24
+msgid "Password reset email has been sent."
+msgstr ""
+
+#: woocommerce/myaccount/lost-password-confirmation.php:27
+msgid ""
+"A password reset email has been sent to the email address on file for your "
+"account, but may take several minutes to show up in your inbox. Please wait "
+"at least 10 minutes before attempting another reset."
+msgstr ""
+
+#: woocommerce/myaccount/view-order.php:28 woocommerce/order/tracking.php:26
+#, php-format
+msgid "Order #%1$s was placed on %2$s and is currently %3$s."
+msgstr ""
+
+#: woocommerce/myaccount/view-order.php:36 woocommerce/order/tracking.php:34
+msgid "Order Updates"
+msgstr ""
+
+#: woocommerce/myaccount/view-order.php:42 woocommerce/order/tracking.php:40
+msgid "l jS \\o\\f F Y, h:ia"
+msgstr ""
+
+#: woocommerce/myaccount/downloads.php:59
+msgid "&infin;"
+msgstr ""
+
+#: woocommerce/myaccount/downloads.php:67
+msgid "Never"
+msgstr ""
+
+#: woocommerce/myaccount/downloads.php:98 woocommerce/myaccount/orders.php:119
+msgid "Go Shop"
+msgstr ""
+
+#: woocommerce/myaccount/downloads.php:100
+msgid "No downloads available yet."
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:13
+msgid "Order"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:14
+msgid "Date"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:15
+#: framework/tiger-profile/admin/pages/user_directory_admin.php:162
+#: framework/tiger-profile/admin/pages/package_all.php:190
+#: framework/tiger-profile/template/private-profile/add-job.php:50
+#: framework/tiger-profile/template/private-profile/add-blog.php:49
+#: framework/uoulib/class-tgm-plugin-activation.php:2639
+msgid "Status"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:16 woocommerce/cart/cart.php:39
+#: woocommerce/cart/cart.php:120 woocommerce/cart/cart-totals.php:92
+#: woocommerce/checkout/review-order.php:27
+#: woocommerce/checkout/review-order.php:106
+#: woocommerce/order/order-details.php:33
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:727
+#: framework/tiger-profile/template/private-profile/iv_stripe_form_upgrade.php:117
+#: framework/tiger-profile/template/signup/iv_stripe_form_2.php:135
+#: framework/tiger-profile/template/signup/paypal_form_2.php:122
+msgid "Total"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:30
+msgid "Recent Orders"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:72 woocommerce/myaccount/orders.php:68
+#: woocommerce/checkout/thankyou.php:30
+msgid "Pay"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:76 woocommerce/myaccount/orders.php:72
+msgid "View"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:80 woocommerce/myaccount/orders.php:76
+#: framework/tiger-profile/template/private-profile/profile-level-1.php:329
+msgid "Cancel"
+msgstr ""
+
+#: woocommerce/myaccount/form-lost-password.php:27
+msgid ""
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:37 templates/home.php:123
+#: templates/header-login.php:25 framework/tiger-profile/plugin.php:746
+#: framework/tiger-profile/template/private-profile/edit-blog.php:47
+#: framework/tiger-profile/template/private-profile/edit-job.php:43
+msgid "Login"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:44 woocommerce/auth/form-login.php:35
+msgid "Username or email address"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:75 templates/home.php:105
+#: templates/header-login.php:44 templates/header-login.php:47
+msgid "Register"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:84
+#: framework/tiger-profile/template/private-profile/profile-login.php:25
+msgid "Username"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:105
+msgid "Anti-spam"
+msgstr ""
+
+#: woocommerce/myaccount/form-reset-password.php:27
+msgid "Enter a new password below."
+msgstr ""
+
+#: woocommerce/myaccount/form-reset-password.php:30
+msgid "New password"
+msgstr ""
+
+#: woocommerce/myaccount/form-reset-password.php:34
+msgid "Re-enter new password"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:107
+msgid "Previous"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:111
+msgid "Next"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:121
+msgid "No order has been made yet."
+msgstr ""
+
+#: woocommerce/myaccount/form-add-payment-method.php:59
+msgid ""
+"Sorry, it seems that there are no payment methods which support adding a new "
+"payment method. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+
+#: woocommerce/cart/cart.php:60 woocommerce/cart/mini-cart.php:49
+msgid "Remove this item"
+msgstr ""
+
+#: woocommerce/cart/cart.php:138
+msgid "Coupon:"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:28
+msgid "Cart Totals"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:33 woocommerce/cart/mini-cart.php:80
+#: woocommerce/checkout/review-order.php:59
+msgid "Subtotal"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:55
+msgid "Shipping"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:71
+#, php-format
+msgid "estimated for %s"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:33
+msgid "Calculate Shipping"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:39
+msgid "Select a country&hellip;"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:63
+msgid "Select a state&hellip;"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:96
+msgid "Update Totals"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:72
+msgid "No products in the cart."
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:85
+msgid "View Cart"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:86
+msgid "Checkout"
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:48
+msgid "Shipping costs will be calculated once you have provided your address."
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:50
+msgid ""
+"There are no shipping methods available. Please double check your address, "
+"or contact us if you need any help."
+msgstr ""
+
+#: woocommerce/cart/cart-empty.php:28
+msgid "Your cart is currently empty."
+msgstr ""
+
+#: woocommerce/cart/cart-empty.php:36
+msgid "Return To Shop"
+msgstr ""
+
+#: woocommerce/cart/cross-sells.php:47
+msgid "You may be interested in&hellip;"
+msgstr ""
+
+#: woocommerce/cart/proceed-to-checkout-button.php:27
+msgid "Proceed to Checkout"
+msgstr ""
+
+#: woocommerce/single-product/up-sells.php:48
+msgid "You may also like&hellip;"
+msgstr ""
+
+#: woocommerce/single-product/rating.php:36
+#, php-format
+msgid "Rated %s out of 5"
+msgstr ""
+
+#: woocommerce/single-product/rating.php:38
+#, php-format
+msgid "out of %s5%s"
+msgstr ""
+
+#: woocommerce/single-product/related.php:51
+msgid "Related Products"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:35
+msgid "SKU:"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:35
+#: woocommerce/order/order-details-customer.php:61
+#: woocommerce/order/order-details-customer.php:72
+msgid "N/A"
+msgstr ""
+
+#: woocommerce/single-product/product-image.php:47
+msgid "Placeholder"
+msgstr ""
+
+#: woocommerce/single-product/product-attributes.php:38
+msgid "Weight"
+msgstr ""
+
+#: woocommerce/single-product/product-attributes.php:45
+msgid "Dimensions"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:32
+msgid "This product is currently out of stock and unavailable."
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:43
+msgid "Clear"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variation.php:31
+msgid ""
+"Sorry, this product is unavailable. Please choose a different combination."
+msgstr ""
+
+#: woocommerce/single-product/tabs/additional-information.php:25
+#: woocommerce/checkout/form-shipping.php:54
+#, fuzzy
+msgid "Additional Information"
+msgstr "Benutzerinformation"
+
+#: woocommerce/single-product/tabs/description.php:25
+msgid "Product Description"
+msgstr ""
+
+#: woocommerce/checkout/payment.php:35
+msgid ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+msgstr ""
+
+#: woocommerce/checkout/payment.php:35
+msgid "Please fill in your details above to see available payment methods."
+msgstr ""
+
+#: woocommerce/checkout/payment.php:42
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the <em>Update Totals</em> button before placing your "
+"order. You may be charged more than the amount stated above if you fail to "
+"do so."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:29
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:55
+msgid "Your order"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:29
+msgid "Billing &amp; Shipping"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:33
+#: framework/tiger-profile/admin/pages/package_create.php:125
+msgid "Billing Details"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:52
+msgid "Create an account?"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:63
+msgid ""
+"Create an account by entering the information below. If you are a returning "
+"customer please login at the top of the page."
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:28
+#: framework/tiger-profile/template/signup/iv_stripe_form_2.php:90
+#: framework/tiger-profile/template/signup/wizard-style-2.php:555
+#: framework/tiger-profile/template/signup/paypal_form_2.php:76
+msgid "Have a coupon?"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:28
+msgid "Click here to enter your code"
+msgstr ""
+
+#: woocommerce/checkout/form-shipping.php:28
+msgid "Ship to a different address?"
+msgstr ""
+
+#: woocommerce/checkout/cart-errors.php:27
+msgid ""
+"There are some issues with the items in your cart (shown above). Please go "
+"back to the cart page and resolve these issues before checking out."
+msgstr ""
+
+#: woocommerce/checkout/cart-errors.php:31
+msgid "Return To Cart"
+msgstr ""
+
+#: woocommerce/checkout/form-login.php:27
+msgid "Returning customer?"
+msgstr ""
+
+#: woocommerce/checkout/form-login.php:28
+msgid "Click here to login"
+msgstr ""
+
+#: woocommerce/checkout/form-login.php:35
+msgid ""
+"If you have shopped with us before, please enter your details in the boxes "
+"below. If you are a new customer, please proceed to the Billing &amp; "
+"Shipping section."
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:30
+msgid "Qty"
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:31
+msgid "Totals"
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:79
+msgid ""
+"Sorry, it seems that there are no available payment methods for your "
+"location. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+
+#: woocommerce/checkout/terms.php:17
+#, php-format
+msgid ""
+"I&rsquo;ve read and accept the <a href=\"%s\" target=\"_blank\">terms &amp; "
+"conditions</a>"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:27
+msgid ""
+"Unfortunately your order cannot be processed as the originating bank/"
+"merchant has declined your transaction. Please attempt your purchase again."
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:32
+#: framework/tiger-profile/admin/pages/membership-profile-wizard.php:7
+msgid "My Account"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:38 woocommerce/checkout/thankyou.php:69
+msgid "Thank you. Your order has been received."
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:42
+msgid "Order Number:"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:46
+msgid "Date:"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:50
+msgid "Total:"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:55
+#, fuzzy
+msgid "Payment Method:"
+msgstr "Zahlungshinweise"
+
+#: woocommerce/auth/form-login.php:27
+#: woocommerce/auth/form-grant-access.php:25
+#, php-format
+msgid "%s would like to connect to your store"
+msgstr ""
+
+#: woocommerce/auth/form-login.php:31
+#, php-format
+msgid ""
+"To connect to %1$s you need to be logged in. Log in to your store below, or "
+"%2$scancel and return to %1$s%3$s"
+msgstr ""
+
+#: woocommerce/auth/form-grant-access.php:29
+#, php-format
+msgid ""
+"This will give \"%s\" <strong>%s</strong> access which will allow it to:"
+msgstr ""
+
+#: woocommerce/auth/form-grant-access.php:39
+#, php-format
+msgid "Logged in as %s"
+msgstr ""
+
+#: woocommerce/auth/form-grant-access.php:39 templates/header-login.php:15
+msgid "Logout"
+msgstr ""
+
+#: woocommerce/auth/form-grant-access.php:43
+#: framework/tiger-profile/admin/pages/metabox.php:39
+#: framework/tiger-profile/admin/pages/doctor-metabox.php:39
+msgid "Approve"
+msgstr ""
+
+#: woocommerce/auth/form-grant-access.php:44
+msgid "Deny"
+msgstr ""
+
+#: woocommerce/order/order-again.php:25
+msgid "Order Again"
+msgstr ""
+
+#: woocommerce/order/order-details.php:28
+msgid "Order Details"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:23
+msgid "Customer Details"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:28
+msgid "Note:"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:35
+#: framework/tiger-profile/template/contact/contact-us.php:11
+msgid "Email:"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:42
+msgid "Telephone:"
+msgstr ""
+
+#: woocommerce/order/form-tracking.php:29
+msgid ""
+"To track your order please enter your Order ID in the box below and press "
+"the \"Track\" button. This was given to you on your receipt and in the "
+"confirmation email you should have received."
+msgstr ""
+
+#: woocommerce/order/form-tracking.php:31
+msgid "Order ID"
+msgstr ""
+
+#: woocommerce/order/form-tracking.php:32
+msgid "Billing Email"
+msgstr ""
+
+#: templates/home.php:74
 msgid "Register Now"
 msgstr "Register Now DE"
 
-#: templates/home.php:69
+#: templates/home.php:75
 msgid "Member Login"
 msgstr ""
 
-#: templates/home.php:77 templates/home.php:80
+#: templates/home.php:83 templates/home.php:86
 #: framework/tiger-profile/template/signup/wizard-style-2.php:149
 #: framework/tiger-profile/template/signup/wizard-style-2.php:153
 msgid " Select user Type"
 msgstr ""
 
-#: templates/home.php:77
+#: templates/home.php:83
 #: framework/tiger-profile/admin/pages/package_update.php:103
 #: framework/tiger-profile/admin/pages/package_create.php:105
 #: framework/tiger-profile/template/signup/wizard-style-2.php:149
 msgid "Corporate"
 msgstr ""
 
-#: templates/home.php:80
+#: templates/home.php:86
 #: framework/tiger-profile/template/signup/wizard-style-2.php:153
 msgid "Professional"
 msgstr ""
 
-#: templates/home.php:84
+#: templates/home.php:90
 #: framework/tiger-profile/template/signup/wizard-style-2.php:163
 msgid "Display Name"
 msgstr ""
 
-#: templates/home.php:84
+#: templates/home.php:90
 #: framework/tiger-profile/template/signup/wizard-style-2.php:165
 msgid "Please enter Name"
 msgstr ""
 
-#: templates/home.php:87
+#: templates/home.php:93
 msgid "Enter email address"
 msgstr ""
 
-#: templates/home.php:87
+#: templates/home.php:93
 #: framework/tiger-profile/template/signup/wizard-style-2.php:173
 #: framework/tiger-profile/template/contact/contact-us.php:13
 msgid "Please enter a valid email address"
 msgstr ""
 
-#: templates/home.php:91
+#: templates/home.php:97
 #: framework/tiger-profile/template/signup/wizard-style-2.php:181
 msgid " The user name has to be an alphanumeric value between 4-12 characters"
 msgstr ""
 
-#: templates/home.php:91
+#: templates/home.php:97
 msgid "Enter User Name"
 msgstr ""
 
-#: templates/home.php:94
+#: templates/home.php:100
 msgid "Enter Password"
 msgstr ""
 
-#: templates/home.php:99 templates/header-login.php:44
-#: templates/header-login.php:47
-msgid "Register"
-msgstr ""
-
-#: templates/home.php:103
+#: templates/home.php:109
 #, fuzzy
 msgid "Or Register with:"
 msgstr "Register Now DE"
 
-#: templates/home.php:115
+#: templates/home.php:121
 #: framework/tiger-profile/admin/pages/user_directory_admin.php:153
 #: framework/tiger-profile/template/signup/wizard-style-2.php:178
 msgid "User Name"
 msgstr ""
 
-#: templates/home.php:116 templates/header-login.php:30
-#: framework/tiger-profile/template/private-profile/profile-login.php:36
-#: framework/tiger-profile/template/signup/wizard-style-2.php:188
-msgid "Password"
-msgstr ""
-
-#: templates/home.php:117 templates/header-login.php:25
-#: framework/tiger-profile/plugin.php:470
-msgid "Login"
-msgstr ""
-
-#: templates/home.php:121
+#: templates/home.php:127
 msgid "Or login with:"
 msgstr ""
 
-#: templates/home.php:126
+#: templates/home.php:132
 msgid "Forgot your password?"
 msgstr ""
 
-#: templates/home.php:126
+#: templates/home.php:132
 msgid "Click Here"
 msgstr ""
 
-#: templates/home.php:304
+#: templates/home.php:315
 msgid "App Store"
 msgstr ""
 
-#: templates/home.php:307 templates/home.php:365
+#: templates/home.php:318 templates/home.php:376
 msgid "Image."
 msgstr ""
 
-#: templates/profile_professional.php:80
-#: templates/profile_professional.php:469 templates/profile_corporate.php:223
+#: templates/profile_professional.php:97
+#: templates/profile_professional.php:496 templates/profile_corporate.php:236
 msgid "Added to Connection"
 msgstr ""
 
-#: templates/profile_professional.php:80 templates/profile_corporate.php:223
+#: templates/profile_professional.php:97 templates/profile_corporate.php:236
 msgid "Connected"
 msgstr ""
 
-#: templates/profile_professional.php:83 templates/profile_professional.php:87
-#: templates/profile_professional.php:473
-#: templates/profile_professional.php:479 templates/profile_corporate.php:226
-#: templates/profile_corporate.php:230
+#: templates/profile_professional.php:100
+#: templates/profile_professional.php:104
+#: templates/profile_professional.php:500
+#: templates/profile_professional.php:506 templates/profile_corporate.php:239
+#: templates/profile_corporate.php:243
 msgid "Add to Connection"
 msgstr ""
 
-#: templates/profile_professional.php:83 templates/profile_professional.php:87
-#: templates/profile_corporate.php:226 templates/profile_corporate.php:230
+#: templates/profile_professional.php:100
+#: templates/profile_professional.php:104 templates/profile_corporate.php:239
+#: templates/profile_corporate.php:243
 #: framework/tiger-profile/template/private-profile/following.php:40
 msgid "Connect"
 msgstr ""
 
-#: templates/profile_professional.php:94 templates/profile_corporate.php:237
-msgid "Share"
-msgstr ""
-
-#: templates/profile_professional.php:106
-#: templates/profile_professional.php:422 templates/profile_corporate.php:197
-#: templates/profile_corporate.php:249
+#: templates/profile_professional.php:123
+#: templates/profile_professional.php:449 templates/profile_corporate.php:210
+#: templates/profile_corporate.php:262
 #: framework/tiger-profile/template/private-profile/bookmark.php:209
 #: framework/tiger-profile/template/private-profile/my-network.php:26
 #: framework/tiger-profile/template/private-profile/my-network.php:224
@@ -257,127 +1221,148 @@ msgstr ""
 msgid "Following"
 msgstr ""
 
-#: templates/profile_professional.php:109
-#: templates/profile_professional.php:114
-#: templates/profile_professional.php:425
-#: templates/profile_professional.php:430 templates/profile_corporate.php:252
-#: templates/profile_corporate.php:257
+#: templates/profile_professional.php:126
+#: templates/profile_professional.php:131
+#: templates/profile_professional.php:452
+#: templates/profile_professional.php:457 templates/profile_corporate.php:265
+#: templates/profile_corporate.php:270
 msgid "Add to Follow"
 msgstr ""
 
-#: templates/profile_professional.php:129
-#: templates/profile_professional.php:444 templates/profile_corporate.php:272
+#: templates/profile_professional.php:146
+#: templates/profile_professional.php:471 templates/profile_corporate.php:285
 msgid "Added to Bookmark"
 msgstr ""
 
-#: templates/profile_professional.php:133
-#: templates/profile_professional.php:139
-#: templates/profile_professional.php:448
-#: templates/profile_professional.php:454 templates/profile_corporate.php:276
-#: templates/profile_corporate.php:282
+#: templates/profile_professional.php:150
+#: templates/profile_professional.php:156
+#: templates/profile_professional.php:475
+#: templates/profile_professional.php:481 templates/profile_corporate.php:289
+#: templates/profile_corporate.php:295
 msgid "Add to Bookmark"
 msgstr ""
 
-#: templates/profile_professional.php:146 templates/profile_corporate.php:289
+#: templates/profile_professional.php:163
+#: templates/profile_professional.php:279
+#: templates/profile_professional.php:1006 templates/profile_corporate.php:302
+#: templates/profile_corporate.php:418 templates/profile_corporate.php:539
+#: templates/profile_corporate.php:853
+msgid "Contact"
+msgstr ""
+
+#: templates/profile_professional.php:164 templates/profile_corporate.php:303
 msgid "Report the profile"
 msgstr ""
 
-#: templates/profile_professional.php:159 templates/profile_corporate.php:301
+#: templates/profile_professional.php:177 templates/profile_corporate.php:316
 msgid "Send Message"
 msgstr ""
 
-#: templates/profile_professional.php:165 templates/profile_corporate.php:307
-#: templates/profile_corporate.php:526
+#: templates/profile_professional.php:183 templates/profile_corporate.php:322
+#: templates/profile_corporate.php:542
 msgid "Name & Surname"
 msgstr ""
 
-#: templates/profile_professional.php:169
-#: templates/profile_professional.php:201 templates/profile_corporate.php:311
-#: templates/profile_corporate.php:343 templates/profile_corporate.php:527
+#: templates/profile_professional.php:187
+#: templates/profile_professional.php:219 templates/profile_corporate.php:326
+#: templates/profile_corporate.php:358 templates/profile_corporate.php:543
 msgid "E-mail address"
 msgstr ""
 
-#: templates/profile_professional.php:172
-#: templates/profile_professional.php:204 templates/profile_corporate.php:314
-#: templates/profile_corporate.php:346 templates/profile_corporate.php:528
+#: templates/profile_professional.php:190
+#: templates/profile_professional.php:222 templates/profile_corporate.php:329
+#: templates/profile_corporate.php:361 templates/profile_corporate.php:544
 msgid "Your Message"
 msgstr ""
 
-#: templates/profile_professional.php:176
-#: templates/profile_professional.php:207 templates/profile_corporate.php:318
-#: templates/profile_corporate.php:349 templates/profile_corporate.php:531
+#: templates/profile_professional.php:194
+#: templates/profile_professional.php:225
+#: templates/profile_professional.php:1015 templates/profile_corporate.php:333
+#: templates/profile_corporate.php:364 templates/profile_corporate.php:547
+#: templates/profile_corporate.php:862
 msgid "Send message"
 msgstr ""
 
-#: templates/profile_professional.php:191 templates/profile_corporate.php:333
+#: templates/profile_professional.php:209 templates/profile_corporate.php:348
 msgid "Report"
 msgstr ""
 
-#: templates/profile_professional.php:197 templates/profile_corporate.php:339
+#: templates/profile_professional.php:215 templates/profile_corporate.php:354
 msgid "Report The Listing"
 msgstr ""
 
-#: templates/profile_professional.php:222 templates/profile_corporate.php:364
+#: templates/profile_professional.php:240 templates/profile_corporate.php:379
 msgid "Share the profile"
 msgstr ""
 
-#: templates/profile_professional.php:232 templates/profile_corporate.php:373
+#: templates/profile_professional.php:250 templates/profile_corporate.php:388
 msgid "Facebook"
 msgstr ""
 
-#: templates/profile_professional.php:233 templates/profile_corporate.php:374
+#: templates/profile_professional.php:251 templates/profile_corporate.php:389
 msgid "Twitter"
 msgstr ""
 
-#: templates/profile_professional.php:234
+#: templates/profile_professional.php:252
 msgid "Google+"
 msgstr ""
 
-#: templates/profile_professional.php:235 templates/profile_corporate.php:376
+#: templates/profile_professional.php:253 templates/profile_corporate.php:391
 msgid "Linkedin"
 msgstr ""
 
-#: templates/profile_professional.php:265
+#: templates/profile_professional.php:276
+#: templates/profile_professional.php:423 templates/profile_corporate.php:415
+msgid "Profile"
+msgstr ""
+
+#: templates/profile_professional.php:278
+#: templates/profile_professional.php:911 templates/profile_corporate.php:417
+#: templates/profile_corporate.php:758
+msgid "Blog Post"
+msgstr ""
+
+#: templates/profile_professional.php:292
 #: framework/tiger-profile/template/profile-public/profile-template.php:86
 #: framework/tiger-profile/template/profile-public/profile-template.php:121
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:36
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:72
 #, fuzzy
 msgid "About"
 msgstr "About Us DE"
 
-#: templates/profile_professional.php:290
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:366
+#: templates/profile_professional.php:317
+#: framework/tiger-profile/template/private-profile/add-job.php:202
+#: framework/tiger-profile/template/private-profile/edit-job.php:79
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:413
 msgid "Skills"
 msgstr ""
 
-#: templates/profile_professional.php:324
+#: templates/profile_professional.php:351
 msgid "Similar Professionals"
 msgstr ""
 
-#: templates/profile_professional.php:396 templates/profile_corporate.php:400
-msgid "Profile"
-msgstr ""
-
-#: templates/profile_professional.php:506
+#: templates/profile_professional.php:534
+#: templates/profile_professional.php:805
 msgid "Professional Details"
 msgstr ""
 
-#: templates/profile_professional.php:554
+#: templates/profile_professional.php:582
 #: framework/tiger-profile/template/user-directory/directory-template-professionals.php:102
 #: framework/tiger-profile/template/user-directory/directory-template-company.php:118
 msgid "Rating"
 msgstr ""
 
-#: templates/profile_professional.php:616
+#: templates/profile_professional.php:644
+#: templates/profile_professional.php:854
 msgid "Social Profiles"
+msgstr ""
+
+#: templates/profile_professional.php:950 templates/profile_corporate.php:797
+msgid "Date: "
 msgstr ""
 
 #: templates/header-login.php:14
 msgid "&nbsp;Profile &nbsp;"
-msgstr ""
-
-#: templates/header-login.php:15
-msgid "Logout"
 msgstr ""
 
 #: templates/header-login.php:29
@@ -413,13 +1398,13 @@ msgstr ""
 msgid "map"
 msgstr ""
 
-#: templates/profile_corporate.php:177
-#: framework/tiger-profile/template/private-profile/profile-template-1.php:167
+#: templates/profile_corporate.php:190
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:176
 #: framework/tiger-profile/template/private-profile/bookmark.php:6
 msgid "Bookmarks"
 msgstr ""
 
-#: templates/profile_corporate.php:186
+#: templates/profile_corporate.php:199
 #: framework/tiger-profile/template/private-profile/bookmark.php:201
 #: framework/tiger-profile/template/private-profile/my-network.php:17
 #: framework/tiger-profile/template/private-profile/my-network.php:216
@@ -429,46 +1414,38 @@ msgstr ""
 msgid "Followers"
 msgstr ""
 
-#: templates/profile_corporate.php:375
+#: templates/profile_corporate.php:390
 msgid "Google"
 msgstr ""
 
-#: templates/profile_corporate.php:401
-msgid "Jobs"
-msgstr ""
-
-#: templates/profile_corporate.php:402 templates/profile_corporate.php:523
-msgid "Contact"
-msgstr ""
-
-#: templates/profile_corporate.php:411
+#: templates/profile_corporate.php:427
 #, fuzzy
 msgid " Information"
 msgstr "Benutzerinformation"
 
-#: templates/profile_corporate.php:460
+#: templates/profile_corporate.php:476
 msgid " Rating"
 msgstr ""
 
-#: templates/profile_corporate.php:545
+#: templates/profile_corporate.php:561
 #, fuzzy
 msgid "About the "
 msgstr "About Us DE"
 
-#: templates/profile_corporate.php:585
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:420
+#: templates/profile_corporate.php:601
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:428
 msgid "Services"
 msgstr ""
 
-#: templates/profile_corporate.php:587
+#: templates/profile_corporate.php:603
 msgid "Here an overview of the services we provide."
 msgstr ""
 
-#: templates/topS/header-top8.php:8
+#: templates/topS/header-top8.php:26 templates/headerS/header-fourteen.php:42
 msgid "Call Us:"
 msgstr ""
 
-#: templates/topS/header-top13.php:12 templates/topS/header-top9.php:7
+#: templates/topS/header-top13.php:27 templates/topS/header-top9.php:7
 msgid "Shopping Cart"
 msgstr ""
 
@@ -702,7 +1679,9 @@ msgstr ""
 #: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:133
 #: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:190
 #: framework/redux/ReduxCore/inc/fields/background/field_background.php:321
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:80
+#: framework/tiger-profile/template/private-profile/edit-blog.php:112
+#: framework/tiger-profile/template/private-profile/edit-job.php:115
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:116
 #: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:140
 msgid "Remove"
 msgstr ""
@@ -710,9 +1689,15 @@ msgstr ""
 #: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:145
 #: framework/redux/ReduxCore/inc/fields/slides/field_slides.php:200
 #: framework/tiger-profile/template/private-profile/bookmark.php:80
+#: framework/tiger-profile/template/private-profile/add-job.php:48
+#: framework/tiger-profile/template/private-profile/add-job.php:180
 #: framework/tiger-profile/template/private-profile/my-network.php:95
 #: framework/tiger-profile/template/private-profile/my-follower.php:55
+#: framework/tiger-profile/template/private-profile/edit-blog.php:59
+#: framework/tiger-profile/template/private-profile/add-blog.php:47
+#: framework/tiger-profile/template/private-profile/add-blog.php:142
 #: framework/tiger-profile/template/private-profile/bookmarker.php:55
+#: framework/tiger-profile/template/private-profile/edit-job.php:55
 #: framework/tiger-profile/template/private-profile/following.php:54
 msgid "Title"
 msgstr ""
@@ -738,8 +1723,10 @@ msgstr ""
 #: framework/tiger-profile/admin/pages/profile_fields.php:102
 #: framework/tiger-profile/admin/pages/profile_fields.php:193
 #: framework/tiger-profile/template/private-profile/bookmark.php:66
+#: framework/tiger-profile/template/private-profile/add-job.php:89
 #: framework/tiger-profile/template/private-profile/my-network.php:81
 #: framework/tiger-profile/template/private-profile/my-follower.php:41
+#: framework/tiger-profile/template/private-profile/add-blog.php:88
 #: framework/tiger-profile/template/private-profile/bookmarker.php:41
 msgid "Delete"
 msgstr ""
@@ -827,94 +1814,144 @@ msgstr ""
 msgid "Unsafe strings were found in your CSS and have been filtered out."
 msgstr ""
 
-#: framework/tiger-profile/plugin.php:365
+#: framework/tiger-profile/plugin.php:375
 msgid "Pricing Table"
-msgstr ""
-
-#: framework/tiger-profile/plugin.php:368
-#: framework/tiger-profile/plugin.php:389
-#: framework/tiger-profile/plugin.php:410
-#: framework/tiger-profile/plugin.php:431
-#: framework/tiger-profile/plugin.php:452
-#: framework/tiger-profile/plugin.php:473
-msgid "Content"
-msgstr ""
-
-#: framework/tiger-profile/plugin.php:376
-#: framework/tiger-profile/plugin.php:397
-#: framework/tiger-profile/plugin.php:418
-#: framework/tiger-profile/plugin.php:439
-msgid "Style Name"
 msgstr ""
 
 #: framework/tiger-profile/plugin.php:378
 #: framework/tiger-profile/plugin.php:399
 #: framework/tiger-profile/plugin.php:420
 #: framework/tiger-profile/plugin.php:441
-#: framework/tiger-profile/plugin.php:483
-msgid "Default"
-msgstr ""
-
-#: framework/tiger-profile/plugin.php:379
-msgid "You can select the style from wp-admin e.g : style-1."
+#: framework/tiger-profile/plugin.php:728
+#: framework/tiger-profile/plugin.php:749
+msgid "Content"
 msgstr ""
 
 #: framework/tiger-profile/plugin.php:386
+#: framework/tiger-profile/plugin.php:407
+#: framework/tiger-profile/plugin.php:428
+#: framework/tiger-profile/plugin.php:449
+msgid "Style Name"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:388
+#: framework/tiger-profile/plugin.php:409
+#: framework/tiger-profile/plugin.php:430
+#: framework/tiger-profile/plugin.php:451
+#: framework/tiger-profile/plugin.php:759
+msgid "Default"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:389
+msgid "You can select the style from wp-admin e.g : style-1."
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:396
 #, fuzzy
 msgid "Signup "
 msgstr "Anmelden"
 
-#: framework/tiger-profile/plugin.php:400
-#: framework/tiger-profile/plugin.php:421
+#: framework/tiger-profile/plugin.php:410
+#: framework/tiger-profile/plugin.php:431
 msgid "."
 msgstr ""
 
-#: framework/tiger-profile/plugin.php:407
+#: framework/tiger-profile/plugin.php:417
 msgid "My Acount "
 msgstr ""
 
-#: framework/tiger-profile/plugin.php:428
+#: framework/tiger-profile/plugin.php:438
 msgid "Public Profile "
 msgstr ""
 
-#: framework/tiger-profile/plugin.php:442
+#: framework/tiger-profile/plugin.php:452
 msgid "You can select the style from wp-admin e.g : style-1 , style-2 "
 msgstr ""
 
-#: framework/tiger-profile/plugin.php:449
-msgid "User Directory "
+#: framework/tiger-profile/plugin.php:464
+msgid "Categories"
 msgstr ""
 
-#: framework/tiger-profile/plugin.php:460
-msgid "Show  number of user / Page"
-msgstr ""
+#: framework/tiger-profile/plugin.php:479
+#, fuzzy
+msgid "Parent Item:"
+msgstr "Zahlungshinweise"
 
-#: framework/tiger-profile/plugin.php:462
-msgid "12"
-msgstr ""
-
-#: framework/tiger-profile/plugin.php:463
-msgid "You can set the number : 10,20 "
+#: framework/tiger-profile/plugin.php:480
+msgid "All Items"
 msgstr ""
 
 #: framework/tiger-profile/plugin.php:481
-msgid " Login"
+msgid "Add New Item"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:482
+msgid "Add New"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:483
+msgid "New Item"
 msgstr ""
 
 #: framework/tiger-profile/plugin.php:484
+msgid "Edit Item"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:485
+msgid "Update Item"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:486
+msgid "View Item"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:487
+#, fuzzy
+msgid "Search Item"
+msgstr "Search  DE"
+
+#: framework/tiger-profile/plugin.php:488
+msgid "Not found"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:489
+msgid "Not found in Trash"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:725
+msgid "User Directory "
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:736
+msgid "Show  number of user / Page"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:738
+msgid "12"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:739
+msgid "You can set the number : 10,20 "
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:757
+msgid " Login"
+msgstr ""
+
+#: framework/tiger-profile/plugin.php:760
 msgid "Default "
 msgstr ""
 
-#: framework/tiger-profile/plugin.php:543
+#: framework/tiger-profile/plugin.php:819
 msgid "Invalid Username & Password"
 msgstr ""
 
-#: framework/tiger-profile/plugin.php:1963
-#: framework/tiger-profile/plugin.php:1966
+#: framework/tiger-profile/plugin.php:2152
+#: framework/tiger-profile/plugin.php:2155
 msgid "Claim Approve "
 msgstr ""
 
-#: framework/tiger-profile/plugin.php:2215
+#: framework/tiger-profile/plugin.php:2404
 #: framework/tiger-profile/template/private-profile/profile-level-1.php:411
 #: framework/tiger-profile/template/private-profile/profile-level-1.php:414
 msgid "None"
@@ -925,10 +1962,14 @@ msgid "User Setting"
 msgstr ""
 
 #: framework/tiger-profile/admin/pages/user_directory_admin.php:20
+#: framework/tiger-profile/admin/pages/dir_setting.php:52
 msgid "Company & Professional"
 msgstr ""
 
 #: framework/tiger-profile/admin/pages/user_directory_admin.php:29
+#: framework/tiger-profile/admin/pages/dir_setting.php:57
+#: framework/tiger-profile/admin/pages/dir_setting.php:75
+#: framework/tiger-profile/admin/pages/dir_setting.php:93
 msgid " Don't publish without admin approval"
 msgstr ""
 
@@ -938,12 +1979,6 @@ msgstr ""
 
 #: framework/tiger-profile/admin/pages/user_directory_admin.php:152
 msgid "Create Date"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/user_directory_admin.php:154
-#: framework/tiger-profile/admin/pages/settings.php:54
-#: framework/tiger-profile/template/profile-public/profile-template.php:111
-msgid "Email"
 msgstr ""
 
 #: framework/tiger-profile/admin/pages/user_directory_admin.php:156
@@ -968,12 +2003,6 @@ msgstr ""
 msgid "Expiry Date"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/user_directory_admin.php:162
-#: framework/tiger-profile/admin/pages/package_all.php:190
-#: framework/uoulib/class-tgm-plugin-activation.php:2639
-msgid "Status"
-msgstr ""
-
 #: framework/tiger-profile/admin/pages/user_directory_admin.php:163
 #: framework/tiger-profile/admin/pages/my-account-menu.php:48
 #: framework/tiger-profile/admin/pages/package_all.php:191
@@ -982,10 +2011,6 @@ msgstr ""
 #: framework/tiger-profile/admin/pages/profile_fields.php:49
 #: framework/tiger-profile/admin/pages/profile_fields.php:150
 msgid "Action"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/user_directory_admin.php:233
-msgid "Edit"
 msgstr ""
 
 #: framework/tiger-profile/admin/pages/user_directory_admin.php:259
@@ -998,10 +2023,6 @@ msgstr ""
 #: framework/tiger-profile/template/user-directory/directory-template-professionals.php:276
 #: framework/tiger-profile/template/user-directory/directory-template-company.php:310
 msgid "Next &raquo;"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/membership-profile-wizard.php:7
-msgid "My Account"
 msgstr ""
 
 #: framework/tiger-profile/admin/pages/membership-profile-wizard.php:18
@@ -1043,7 +2064,7 @@ msgstr ""
 #: framework/tiger-profile/admin/pages/protected_page.php:155
 #: framework/tiger-profile/admin/pages/corporate_fields.php:127
 #: framework/tiger-profile/admin/pages/corporate_fields.php:218
-#: framework/tiger-profile/admin/pages/settings.php:127
+#: framework/tiger-profile/admin/pages/settings.php:128
 #: framework/tiger-profile/admin/pages/profile_fields.php:122
 #: framework/tiger-profile/admin/pages/profile_fields.php:213
 #: framework/uoulib/class-tgm-plugin-activation.php:2808
@@ -1088,8 +2109,8 @@ msgstr ""
 #: framework/tiger-profile/admin/pages/corporate_fields.php:210
 #: framework/tiger-profile/admin/pages/profile_fields.php:114
 #: framework/tiger-profile/admin/pages/profile_fields.php:205
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:487
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:565
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:534
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:578
 msgid "Add More"
 msgstr ""
 
@@ -1106,89 +2127,30 @@ msgstr ""
 msgid "User ID :"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/metabox.php:39
-#: framework/tiger-profile/admin/pages/doctor-metabox.php:39
-msgid "Approve"
-msgstr ""
-
 #: framework/tiger-profile/admin/pages/dir_setting.php:20
-msgid "Directory Setting"
+#: framework/tiger-profile/admin/pages/settings.php:48
+msgid "Setting"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/dir_setting.php:50
-msgid "Days #"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/dir_setting.php:57
-msgid "The new item badge will show for the days"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/dir_setting.php:62
-msgid "Listing Page toggle button[Search + Map] "
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/dir_setting.php:66
-msgid "Show"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/dir_setting.php:71
-msgid "Hide"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/dir_setting.php:76
-msgid "Listing Page Top Map"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/dir_setting.php:80
-msgid "Show  Top Map"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/dir_setting.php:85
-msgid "Hide Top Map"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/dir_setting.php:92
-msgid "Listing Page Search Bar"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/dir_setting.php:96
-msgid "Show  Search Bar"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/dir_setting.php:101
-msgid "Hide Search Bar"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/dir_setting.php:108
-msgid "Claim"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/dir_setting.php:112
-msgid "Show Claim"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/dir_setting.php:117
-msgid "Hide Claim"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/dir_setting.php:124
-msgid "Listing Publish By User"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/dir_setting.php:129
-msgid "Admin Will Approve "
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/dir_setting.php:135
+#: framework/tiger-profile/admin/pages/dir_setting.php:63
+#: framework/tiger-profile/admin/pages/dir_setting.php:81
+#: framework/tiger-profile/admin/pages/dir_setting.php:99
 msgid "User Can Publish"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/dir_setting.php:146
-msgid "Listing Radius"
+#: framework/tiger-profile/admin/pages/dir_setting.php:70
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:202
+#: framework/tiger-profile/template/private-profile/add-blog.php:22
+msgid "Blog"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/dir_setting.php:164
-#: framework/tiger-profile/admin/pages/settings.php:1053
+#: framework/tiger-profile/admin/pages/dir_setting.php:88
+#: framework/tiger-profile/template/private-profile/edit-job.php:6
+msgid "Job"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/dir_setting.php:108
+#: framework/tiger-profile/admin/pages/settings.php:1054
 msgid "Cron Job URL"
 msgstr ""
 
@@ -1294,7 +2256,7 @@ msgid "Show Page By Role Access"
 msgstr ""
 
 #: framework/tiger-profile/admin/pages/protected_page.php:52
-#: framework/tiger-profile/admin/pages/settings.php:513
+#: framework/tiger-profile/admin/pages/settings.php:514
 #: framework/tiger-profile/template/private-profile/bookmark.php:44
 #: framework/tiger-profile/template/private-profile/my-network.php:52
 #: framework/tiger-profile/template/private-profile/my-follower.php:12
@@ -1308,7 +2270,7 @@ msgid "Select which pages are available for each user role.\t"
 msgstr ""
 
 #: framework/tiger-profile/admin/pages/protected_page.php:83
-#: framework/tiger-profile/admin/pages/settings.php:550
+#: framework/tiger-profile/admin/pages/settings.php:551
 msgid "Check/Uncheck"
 msgstr ""
 
@@ -1352,93 +2314,89 @@ msgstr ""
 msgid "Page"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:48
-msgid "Directory"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/settings.php:49
+#: framework/tiger-profile/admin/pages/settings.php:50
 msgid "Category Image/Marker"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:53
+#: framework/tiger-profile/admin/pages/settings.php:54
 msgid "Terms Link"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:55
+#: framework/tiger-profile/admin/pages/settings.php:56
 msgid "MailChimp"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:57
+#: framework/tiger-profile/admin/pages/settings.php:58
 msgid "Page Redirect"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:58
-#: framework/tiger-profile/admin/pages/settings.php:486
+#: framework/tiger-profile/admin/pages/settings.php:59
+#: framework/tiger-profile/admin/pages/settings.php:487
 msgid "Visibility Control"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:61
+#: framework/tiger-profile/admin/pages/settings.php:62
 msgid "Tax"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:88
+#: framework/tiger-profile/admin/pages/settings.php:89
 msgid "Tax Setting"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:113
+#: framework/tiger-profile/admin/pages/settings.php:114
 msgid "Tax Module "
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:117
+#: framework/tiger-profile/admin/pages/settings.php:118
 msgid "Active Tax On Registration"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:122
+#: framework/tiger-profile/admin/pages/settings.php:123
 msgid "No Tax"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:131
+#: framework/tiger-profile/admin/pages/settings.php:132
 msgid "Tax Type "
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:135
+#: framework/tiger-profile/admin/pages/settings.php:136
 msgid "Common Tax"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:140
+#: framework/tiger-profile/admin/pages/settings.php:141
 msgid "Tax By Country"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:152
+#: framework/tiger-profile/admin/pages/settings.php:153
 msgid "Common Tax % "
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:165
+#: framework/tiger-profile/admin/pages/settings.php:166
 #: framework/tiger-profile/template/signup/wizard-style-2.php:209
 msgid "Country"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:166
+#: framework/tiger-profile/admin/pages/settings.php:167
 msgid "Tax %"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:467
-msgid "Note : Tax will not work on Stripe Ruccring Subscriotion Payment"
+#: framework/tiger-profile/admin/pages/settings.php:468
+msgid "Note : Tax will not work on Stripe Recurring Subscription Payment"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:505
+#: framework/tiger-profile/admin/pages/settings.php:506
 msgid "Content Visibility Module "
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:521
+#: framework/tiger-profile/admin/pages/settings.php:522
 msgid "Content Show By Roles"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:525
+#: framework/tiger-profile/admin/pages/settings.php:526
 msgid "Select which contents are available for each user role.\t"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/settings.php:1038
+#: framework/tiger-profile/admin/pages/settings.php:1039
 msgid "Google Map API Key"
 msgstr ""
 
@@ -1464,71 +2422,81 @@ msgstr ""
 
 #: framework/tiger-profile/admin/pages/package_update.php:290
 #: framework/tiger-profile/admin/pages/package_create.php:296
-msgid "listing Visibility"
+msgid "Company/Professionals Visibility"
 msgstr ""
 
 #: framework/tiger-profile/admin/pages/package_update.php:293
 #: framework/tiger-profile/admin/pages/package_create.php:299
-msgid "listing will hide after user subscription expire."
+msgid "Company/professional will hide after user subscription expire."
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/package_update.php:300
-#: framework/tiger-profile/admin/pages/package_create.php:305
-msgid "Maximum listing (Hospital + Doctor)"
+#: framework/tiger-profile/admin/pages/package_update.php:299
+#: framework/tiger-profile/admin/pages/package_create.php:304
+msgid "Job Visibility"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/package_update.php:303
-#: framework/tiger-profile/admin/pages/package_create.php:308
+#: framework/tiger-profile/admin/pages/package_update.php:302
+#: framework/tiger-profile/admin/pages/package_create.php:307
+msgid "Job listing will hide after user subscription expire."
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:309
+#: framework/tiger-profile/admin/pages/package_create.php:313
+msgid "Maximum listing (Job)"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:312
+#: framework/tiger-profile/admin/pages/package_create.php:316
 msgid "Maximum # of post by this package. Blank is none."
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/package_update.php:308
-#: framework/tiger-profile/admin/pages/package_create.php:313
+#: framework/tiger-profile/admin/pages/package_update.php:317
+#: framework/tiger-profile/admin/pages/package_create.php:323
 msgid "Hospital Event"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/package_update.php:311
-#: framework/tiger-profile/admin/pages/package_create.php:316
+#: framework/tiger-profile/admin/pages/package_update.php:320
+#: framework/tiger-profile/admin/pages/package_create.php:326
 msgid "Can Add Event."
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/package_update.php:318
-#: framework/tiger-profile/admin/pages/package_create.php:323
+#: framework/tiger-profile/admin/pages/package_update.php:327
+#: framework/tiger-profile/admin/pages/package_create.php:333
 msgid "Hospital's Doctor"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/package_update.php:321
-#: framework/tiger-profile/admin/pages/package_create.php:326
+#: framework/tiger-profile/admin/pages/package_update.php:330
+#: framework/tiger-profile/admin/pages/package_create.php:336
 msgid "Can Add doctors list."
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/package_update.php:327
-#: framework/tiger-profile/admin/pages/package_create.php:332
+#: framework/tiger-profile/admin/pages/package_update.php:336
+#: framework/tiger-profile/admin/pages/package_create.php:342
 msgid "listing Videos"
 msgstr ""
 
-#: framework/tiger-profile/admin/pages/package_update.php:330
-#: framework/tiger-profile/admin/pages/package_create.php:335
+#: framework/tiger-profile/admin/pages/package_update.php:339
+#: framework/tiger-profile/admin/pages/package_create.php:345
 msgid "Can Add Videos."
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/package_update.php:335
-#: framework/tiger-profile/admin/pages/package_create.php:340
-msgid "listing Award"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/package_update.php:338
-#: framework/tiger-profile/admin/pages/package_create.php:343
-msgid "Can Add Award."
 msgstr ""
 
 #: framework/tiger-profile/admin/pages/package_update.php:344
 #: framework/tiger-profile/admin/pages/package_create.php:350
-msgid "Doctor Appointment"
+msgid "listing Award"
 msgstr ""
 
 #: framework/tiger-profile/admin/pages/package_update.php:347
 #: framework/tiger-profile/admin/pages/package_create.php:353
+msgid "Can Add Award."
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:353
+#: framework/tiger-profile/admin/pages/package_create.php:360
+msgid "Doctor Appointment"
+msgstr ""
+
+#: framework/tiger-profile/admin/pages/package_update.php:356
+#: framework/tiger-profile/admin/pages/package_create.php:363
 msgid "Can Add Doctor Appointment Shortcode"
 msgstr ""
 
@@ -1541,7 +2509,7 @@ msgid "Professional Profile Fields"
 msgstr ""
 
 #: framework/tiger-profile/admin/pages/package_create.php:72
-#: framework/tiger-profile/admin/pages/package_create.php:365
+#: framework/tiger-profile/admin/pages/package_create.php:375
 msgid "Save Package"
 msgstr ""
 
@@ -1555,10 +2523,6 @@ msgstr ""
 
 #: framework/tiger-profile/admin/pages/package_create.php:122
 msgid "It will display on price list table"
-msgstr ""
-
-#: framework/tiger-profile/admin/pages/package_create.php:125
-msgid "Billing Details"
 msgstr ""
 
 #: framework/tiger-profile/admin/pages/package_create.php:128
@@ -1651,7 +2615,7 @@ msgid "Mobile"
 msgstr ""
 
 #: framework/tiger-profile/template/profile-public/profile-template.php:125
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:270
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:306
 #: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:330
 msgid "Social Profile"
 msgstr ""
@@ -1668,7 +2632,7 @@ msgstr ""
 msgid "Change Image"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-template-1.php:152
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:161
 #: framework/tiger-profile/template/private-profile/bookmark.php:82
 #: framework/tiger-profile/template/private-profile/my-network.php:6
 #: framework/tiger-profile/template/private-profile/my-network.php:97
@@ -1678,27 +2642,27 @@ msgstr ""
 msgid "Network"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-template-1.php:184
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:193
 #: framework/tiger-profile/template/private-profile/profile-level-1.php:326
 #: framework/tiger-profile/template/private-profile/profile-level-1.php:740
 msgid "Upgrade"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-template-1.php:200
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:221
 msgid "Edit Profile"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-template-1.php:246
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:267
 msgid "View My Profile"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-template-1.php:253
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:274
 #, fuzzy
 msgid "Sign out"
 msgstr "Anmelden"
 
-#: framework/tiger-profile/template/private-profile/profile-template-1.php:318
-#: framework/tiger-profile/template/private-profile/profile-template-1.php:320
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:349
+#: framework/tiger-profile/template/private-profile/profile-template-1.php:351
 msgid "Profile Image"
 msgstr ""
 
@@ -1760,8 +2724,8 @@ msgstr ""
 #: framework/tiger-profile/template/private-profile/bookmark.php:243
 #: framework/tiger-profile/template/private-profile/my-network.php:251
 #: framework/tiger-profile/template/private-profile/my-network.php:258
-#: framework/tiger-profile/template/private-profile/my-follower.php:212
-#: framework/tiger-profile/template/private-profile/my-follower.php:219
+#: framework/tiger-profile/template/private-profile/my-follower.php:213
+#: framework/tiger-profile/template/private-profile/my-follower.php:220
 #: framework/tiger-profile/template/private-profile/bookmarker.php:212
 #: framework/tiger-profile/template/private-profile/bookmarker.php:219
 #: framework/tiger-profile/template/private-profile/following.php:210
@@ -1769,26 +2733,194 @@ msgstr ""
 msgid "No result found."
 msgstr ""
 
+#: framework/tiger-profile/template/private-profile/add-job.php:26
+msgid "My All Job Post"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:27
+msgid "Add Job Post"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:51
+#: framework/tiger-profile/template/private-profile/add-blog.php:50
+#, fuzzy
+msgid "Actions"
+msgstr "Benutzerinformation"
+
+#: framework/tiger-profile/template/private-profile/add-job.php:89
+#: framework/tiger-profile/template/private-profile/add-blog.php:88
+msgid "Are you sure to delete this post?"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:165
+msgid "Please upgrade your account"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:166
+msgid "here"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:167
+msgid "to add more post."
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:182
+#: framework/tiger-profile/template/private-profile/add-blog.php:145
+#, fuzzy
+msgid "Enter Title Here"
+msgstr "Register Now DE"
+
+#: framework/tiger-profile/template/private-profile/add-job.php:204
+#: framework/tiger-profile/template/private-profile/edit-job.php:81
+msgid "Enter Skills, Separated By Commas e.g Php, Java"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:209
+msgid "Logo Image"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:220
+#: framework/tiger-profile/template/private-profile/edit-blog.php:117
+#: framework/tiger-profile/template/private-profile/add-blog.php:177
+#: framework/tiger-profile/template/private-profile/edit-job.php:120
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:52
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:101
+msgid "Add"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:226
+#: framework/tiger-profile/template/private-profile/edit-job.php:133
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:22
+msgid "Company Name"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:228
+#: framework/tiger-profile/template/private-profile/edit-job.php:135
+msgid "Enter Company Name"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:232
+#: framework/tiger-profile/template/private-profile/edit-job.php:139
+msgid "Company Address"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:234
+#: framework/tiger-profile/template/private-profile/edit-job.php:141
+msgid "Enter Company Address"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:238
+#: framework/tiger-profile/template/private-profile/edit-job.php:145
+msgid "Company Email"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:240
+#: framework/tiger-profile/template/private-profile/edit-job.php:147
+msgid "Enter Company Email"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:244
+#: framework/tiger-profile/template/private-profile/edit-job.php:151
+msgid "Company Phone"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:246
+#: framework/tiger-profile/template/private-profile/edit-job.php:153
+msgid "Enter Company Phone"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:250
+#: framework/tiger-profile/template/private-profile/edit-job.php:157
+msgid "Company Web"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:252
+#: framework/tiger-profile/template/private-profile/edit-job.php:159
+msgid "Enter Company Web"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:260
+#: framework/tiger-profile/template/private-profile/edit-blog.php:131
+#: framework/tiger-profile/template/private-profile/add-blog.php:183
+#: framework/tiger-profile/template/private-profile/edit-job.php:170
+msgid "Custom Fields"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:263
+#: framework/tiger-profile/template/private-profile/add-blog.php:186
+msgid "Custom Field Name"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:265
+#: framework/tiger-profile/template/private-profile/add-blog.php:188
+msgid "Value"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:273
+#: framework/tiger-profile/template/private-profile/edit-blog.php:155
+#: framework/tiger-profile/template/private-profile/add-blog.php:196
+#: framework/tiger-profile/template/private-profile/edit-job.php:195
+msgid "More Field"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:280
+#: framework/tiger-profile/template/private-profile/edit-blog.php:160
+#: framework/tiger-profile/template/private-profile/add-blog.php:203
+#: framework/tiger-profile/template/private-profile/edit-job.php:201
+#, fuzzy
+msgid "Post Status"
+msgstr "Zahlungshinweise"
+
+#: framework/tiger-profile/template/private-profile/add-job.php:287
+#: framework/tiger-profile/template/private-profile/edit-blog.php:167
+#: framework/tiger-profile/template/private-profile/add-blog.php:210
+#: framework/tiger-profile/template/private-profile/edit-job.php:208
+msgid "Publish"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:290
+#: framework/tiger-profile/template/private-profile/edit-blog.php:170
+#: framework/tiger-profile/template/private-profile/add-blog.php:213
+#: framework/tiger-profile/template/private-profile/edit-job.php:211
+msgid "Pending Review"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:295
+#: framework/tiger-profile/template/private-profile/edit-blog.php:175
+#: framework/tiger-profile/template/private-profile/add-blog.php:217
+#: framework/tiger-profile/template/private-profile/edit-job.php:217
+msgid "Draft"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:304
+#: framework/tiger-profile/template/private-profile/edit-blog.php:184
+#: framework/tiger-profile/template/private-profile/add-blog.php:226
+#: framework/tiger-profile/template/private-profile/edit-job.php:226
+msgid "Category"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:393
+#: framework/tiger-profile/template/private-profile/add-blog.php:302
+msgid "Save Post"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:463
+#: framework/tiger-profile/template/private-profile/edit-blog.php:296
+#: framework/tiger-profile/template/private-profile/add-blog.php:368
+#: framework/tiger-profile/template/private-profile/edit-job.php:378
+msgid "Set Feature Image "
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-job.php:465
+#: framework/tiger-profile/template/private-profile/edit-blog.php:298
+#: framework/tiger-profile/template/private-profile/add-blog.php:370
+#: framework/tiger-profile/template/private-profile/edit-job.php:380
+msgid "Set Feature Image"
+msgstr ""
+
 #: framework/tiger-profile/template/private-profile/profile-login.php:16
 msgid "Sign In"
 msgstr "Anmelden"
-
-#: framework/tiger-profile/template/private-profile/profile-login.php:25
-msgid "Username"
-msgstr ""
-
-#: framework/tiger-profile/template/private-profile/profile-login.php:48
-#: framework/tiger-profile/template/private-profile/profile-login.php:92
-#: framework/tiger-profile/template/private-profile/iv_stripe_form_upgrade.php:203
-#: framework/tiger-profile/template/private-profile/contact_popup.php:24
-#: framework/tiger-profile/template/signup/iv_stripe_form_2.php:223
-#: framework/tiger-profile/template/signup/without_payment.php:47
-#: framework/tiger-profile/template/signup/without_payment.php:53
-#: framework/tiger-profile/template/signup/paypal_form_2.php:180
-#: framework/tiger-profile/template/signup/paypal_form_2.php:186
-#: framework/tiger-profile/template/contact/contact-us.php:36
-msgid "Submit"
-msgstr ""
 
 #: framework/tiger-profile/template/private-profile/profile-login.php:52
 msgid "Remember"
@@ -1815,16 +2947,44 @@ msgstr ""
 msgid "Forget Password ?"
 msgstr ""
 
+#: framework/tiger-profile/template/private-profile/edit-blog.php:47
+#: framework/tiger-profile/template/private-profile/edit-job.php:43
+msgid "Please"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/edit-blog.php:47
+#: framework/tiger-profile/template/private-profile/edit-job.php:43
+msgid "To Edit The Post."
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/edit-blog.php:83
+#: framework/tiger-profile/template/private-profile/add-blog.php:166
+msgid "Feature Image"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/edit-blog.php:233
+#: framework/tiger-profile/template/private-profile/edit-job.php:315
+msgid "Update Post"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-blog.php:25
+msgid "My All Blog"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/add-blog.php:26
+msgid "Add Blog Post"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/edit-job.php:86
+msgid "Logo"
+msgstr ""
+
 #: framework/tiger-profile/template/private-profile/profile-level-1.php:316
 msgid "Membership"
 msgstr ""
 
 #: framework/tiger-profile/template/private-profile/profile-level-1.php:323
 msgid "Current"
-msgstr ""
-
-#: framework/tiger-profile/template/private-profile/profile-level-1.php:329
-msgid "Cancel"
 msgstr ""
 
 #: framework/tiger-profile/template/private-profile/profile-level-1.php:359
@@ -1858,13 +3018,6 @@ msgstr ""
 #: framework/tiger-profile/template/signup/iv_stripe_form_2.php:104
 #: framework/tiger-profile/template/signup/paypal_form_2.php:88
 msgid "Vat/Tax"
-msgstr ""
-
-#: framework/tiger-profile/template/private-profile/profile-level-1.php:727
-#: framework/tiger-profile/template/private-profile/iv_stripe_form_upgrade.php:117
-#: framework/tiger-profile/template/signup/iv_stripe_form_2.php:135
-#: framework/tiger-profile/template/signup/paypal_form_2.php:122
-msgid "Total"
 msgstr ""
 
 #: framework/tiger-profile/template/private-profile/profile-level-1.php:766
@@ -1947,9 +3100,9 @@ msgid "Personal Info"
 msgstr "Zahlungshinweise"
 
 #: framework/tiger-profile/template/private-profile/profile-setting-personal.php:8
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:526
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:573
 #: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:8
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:604
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:617
 msgid "Change Password"
 msgstr ""
 
@@ -1958,172 +3111,169 @@ msgstr ""
 msgid "Privacy Settings"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:22
-msgid "Name"
-msgstr ""
-
 #: framework/tiger-profile/template/private-profile/profile-setting-personal.php:24
 msgid "Enter Your Name Here"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:28
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:32
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:81
+msgid "Profile Top Header Image [Best fit :1350 px X 450px ]"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:64
 msgid "Designation"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:30
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:66
 msgid "Enter Your Designation Here"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:91
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:127
 #: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:151
 msgid "Address"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:93
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:129
 #: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:153
 msgid "Enter here Here"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:103
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:139
 #: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:163
 msgid "Address Map"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:275
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:310
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:371
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:311
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:357
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:418
 #: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:335
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:370
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:425
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:378
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:433
 msgid "Edit  "
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:305
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:365
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:352
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:373
 msgid "Detail"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:381
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:419
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:454
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:428
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:466
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:501
 msgid "Skill Title"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:384
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:431
 msgid "Enter Skill title *required"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:388
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:427
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:461
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:435
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:474
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:508
 msgid "Skill Level (%)"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:391
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:430
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:464
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:438
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:477
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:511
 msgid "Enter Skill Level (%)"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:395
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:434
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:468
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:442
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:481
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:515
 msgid "Skill Description"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:423
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:471
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:470
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:492
 msgid "Enter service title *required"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:457
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:438
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:522
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:504
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:446
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:544
 msgid "Enter services title *required"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:504
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:570
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:582
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:647
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:551
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:617
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:595
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:660
 msgid "Save Changes"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:513
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:591
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:560
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:604
 msgid "Current Password"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:517
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:595
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:564
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:608
 msgid "New Password"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:521
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:599
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:568
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:612
 msgid "Re-type New Password"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:540
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:617
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:587
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:630
 msgid "Hide Email Address "
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:544
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:553
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:562
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:621
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:630
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:639
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:591
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:600
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:609
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:634
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:643
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:652
 msgid "Yes"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:549
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:626
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:596
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:639
 msgid "Hide Phone Number"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:558
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:635
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:605
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:648
 msgid "Hide Mobile Number"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:622
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:700
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:669
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:713
 msgid "Set services Image "
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:624
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:702
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:671
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:715
 msgid "Set services Image"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:650
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:728
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:697
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:741
 msgid "Gallery Images "
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:652
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:730
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:699
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:743
 msgid "Gallery Images"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:712
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:790
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:759
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:803
 msgid "Set Banner Image "
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:714
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:792
+#: framework/tiger-profile/template/private-profile/profile-setting-personal.php:761
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:805
 msgid "Set Banner Image"
 msgstr ""
 
 #: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:7
 msgid "Company Info"
-msgstr ""
-
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:22
-msgid "Company Name"
 msgstr ""
 
 #: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:24
@@ -2145,14 +3295,6 @@ msgid ""
 "Organizations,Rental & Leasing,Restaurants,Bars & Food,Food Ingredients"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:81
-msgid "Profile Top Header Image [Best fit :1350 px X 450px ]"
-msgstr ""
-
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:101
-msgid "Add"
-msgstr ""
-
 #: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:112
 msgid "Image Gallery"
 msgstr ""
@@ -2161,23 +3303,24 @@ msgstr ""
 msgid "Add Images"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:435
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:519
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:443
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:541
 msgid "Services Title"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:442
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:537
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:450
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:497
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:549
+msgid "Service Image"
+msgstr ""
+
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:462
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:559
 msgid "Service Detail"
 msgstr ""
 
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:467
+#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:488
 msgid "Service Title"
-msgstr ""
-
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:476
-#: framework/tiger-profile/template/private-profile/profile-setting-corporate.php:527
-msgid "Service Icon"
 msgstr ""
 
 #: framework/tiger-profile/template/private-profile/contact_popup.php:10
@@ -2238,11 +3381,6 @@ msgstr ""
 msgid "km"
 msgstr ""
 
-#: framework/tiger-profile/template/user-directory/directory-template-professionals.php:260
-#: framework/tiger-profile/template/user-directory/directory-template-company.php:294
-msgid "Sorry, no data matched your criteria."
-msgstr ""
-
 #: framework/tiger-profile/template/user-directory/directory-template-company.php:48
 msgid "Select Industry"
 msgstr ""
@@ -2253,12 +3391,6 @@ msgstr ""
 
 #: framework/tiger-profile/template/user-directory/directory-template-company.php:130
 msgid "Industry"
-msgstr ""
-
-#: framework/tiger-profile/template/signup/iv_stripe_form_2.php:90
-#: framework/tiger-profile/template/signup/wizard-style-2.php:555
-#: framework/tiger-profile/template/signup/paypal_form_2.php:76
-msgid "Have a coupon?"
 msgstr ""
 
 #: framework/tiger-profile/template/signup/iv_stripe_form_2.php:148
@@ -2312,10 +3444,6 @@ msgstr ""
 
 #: framework/tiger-profile/template/contact/contact-us.php:5
 msgid "Enter your name"
-msgstr ""
-
-#: framework/tiger-profile/template/contact/contact-us.php:11
-msgid "Email:"
 msgstr ""
 
 #: framework/tiger-profile/template/contact/contact-us.php:13

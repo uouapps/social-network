@@ -558,9 +558,10 @@
 					
 					}
 						
-					if(isset($form_data['postcats'] )){ 
-						$category_ids = array($form_data['postcats']);
-							wp_set_object_terms( $newpost_id, $category_ids, $post_type.'-category');
+					if(isset($form_data['postcats'] )){ 						
+							
+							$category_ids = array($form_data['postcats']);
+							wp_set_object_terms( $newpost_id, $category_ids, 'jobs-category');
 					}
 					
 					update_post_meta($newpost_id, 'job_skills', $form_data['job_skills']); 
@@ -616,8 +617,12 @@
 					
 					}
 					if(isset($form_data['postcats'] )){ 
-						wp_set_post_categories($form_data['user_post_id'], $form_data['postcats'] );
+													
+							$category_ids = array($form_data['postcats']);
+							wp_set_object_terms( $form_data['user_post_id'], $category_ids, 'jobs-category');
 					}
+					
+					
 					// Delete All custom Post Meta 
 					$custom_fields = get_post_custom($form_data['user_post_id']);
 					foreach ( $custom_fields as $field_key => $field_values ) {

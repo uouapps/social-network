@@ -410,13 +410,14 @@ $user_id=1;
 
           <!-- Nav Tabs -->
          
-          <div class="col-md-12">
-            <ul class="nav nav-tabs">
-              <li class="active"><a data-toggle="tab" href="#profile"><?php  esc_html_e('Profile','tiger');?></a></li>
-              <li><a data-toggle="tab" href="#jobs"><?php  esc_html_e('Jobs','tiger');?></a></li>
-              <li><a data-toggle="tab" href="#contact"><?php  esc_html_e('Contact','tiger');?></a></li>
-            </ul>
-          </div>
+           <div class="col-md-12">
+				<ul class="nav nav-tabs" style="margin: 6px;">
+				  <li class="active"><a data-toggle="tab" href="#profile"><?php  esc_html_e('Profile','tiger');?></a></li>
+				  <li><a data-toggle="tab" href="#jobs"><?php  esc_html_e('Jobs','tiger');?></a></li>
+				  <li><a data-toggle="tab" href="#blog"><?php  esc_html_e('Blog Post','tiger');?></a></li>
+				  <li><a data-toggle="tab" href="#contact"><?php  esc_html_e('Contact','tiger');?></a></li>
+				</ul>
+			  </div>
         
           <!-- SIDE BAR -->
           <div class="col-md-4">
@@ -555,7 +556,7 @@ $user_id=1;
             <div class="tab-content">
 
               <!-- PROFILE -->
-              <div id="profile" class="tab-pane fade in active">
+				<div id="profile" class="tab-pane fade in active">
                 <div class="profile-main">
                   <h3><?php  esc_html_e('About the ','tiger');?> <?php echo get_user_meta($user_id,'profile_name',true); ?></h3>
                   <div class="profile-in">
@@ -636,7 +637,242 @@ $user_id=1;
                   </div>
                 </div>
               </div>
+			
+				   <div id="jobs" class="tab-pane fade">
+				  <div class="row">
 
+                  <div class="col-md-12">
+
+                    <!-- Professional Details -->
+                    <div class="sidebar">
+                      <h5 class="main-title"><?php esc_html_e('Jobs','tiger'); ?> </h5>
+                      <div class="similar">
+                      <?php
+						$no=10;
+						$paged = 1;
+						$offset=0;
+                      $args = array();
+                      $args['number']=$no;
+					  $args['offset']=$offset;
+				      $args['post_type']='jobs';
+				      $args['author']=$user_id;
+				      $args['post_status']='publish';
+
+
+                      $job_query = new WP_Query( $args );
+
+
+
+				        // User Loop
+				        if ( $job_query->have_posts() ) {
+				        	while ( $job_query->have_posts() ) {
+								$job_query->the_post();
+								$post_id= $job_query->post->ID;
+
+										$currentCategory=wp_get_object_terms( $id,'jobs-category');
+										$cat_link='';$cat_name='';$cat_slug='';
+										if(isset($currentCategory[0]->slug)){
+											$cat_slug = $currentCategory[0]->slug;
+											$cat_name = $currentCategory[0]->name;
+											$cat_link= get_term_link($currentCategory[0], 'jobs-category');
+										}
+										?>
+									<article class="uou-block-7f profile-job-list">
+									<div class="row">
+						  		<div class="col-md-2">
+						  			 <?php
+						  				  if ( has_post_thumbnail() ) {
+						  					$image_id =  get_post_thumbnail_id( get_the_ID() );
+						  					$large_image = wp_get_attachment_url( $image_id ,'full');
+						  					$resize = tiger_aq_resize( $large_image, true );
+						  				   ?>
+						  				  <img src="<?php echo esc_url($resize); ?>" alt="<?php esc_html_e( 'image', 'tiger' ); ?>" class="thumb">
+						  				  <?php } ?>
+
+						  		</div>
+						  		<div class="col-md-10">
+						  					  <h1><a href="<?php echo get_permalink( $post_id );?>"><?php the_title(); ?></a></h1>
+						  					   <div class="meta"> <span class="time-ago"><?php esc_html_e('Category: ','tiger'); echo $cat_name   ?>  | <?php esc_html_e(' Date : ','tiger'); echo $job_query->post->post_date;   ?> </span></div>
+						  					  <p>
+						  						<?php $content = $job_query->post->post_content;
+						  								$content = str_replace( ']]>', ']]&gt;', $content );
+						  								echo substr($content ,0,200);
+
+						  							?>
+
+
+						  			  <a href="<?php echo get_permalink( $post_id );?>"> <?php esc_html_e( 'Read More','toger' );?></a>
+						  			  </p>
+
+						  		</div>
+
+						  	</div>
+
+
+
+							</article>
+
+							<?php
+							}
+								$total_jobs = $job_query->found_posts;
+								$total_pages_jobs=ceil($total_jobs/$no);
+								if($total_pages_jobs>1){
+
+									echo'<div id="add_more_jobs"></div>';
+									echo'<div class="text-center" id="add_more_jobs_loading"></div>';
+
+									echo'<div class="text-center" id="add_more_jobs_more_button"><button type="button" onclick="add_more_jobs_ajax(2);"><i class="fa fa-plus"></i> '.esc_html__(' More','tiger').'</button> </div>';
+								}
+
+						}
+
+							if ( !$job_query->have_posts() ){
+							esc_html_e( 'Sorry, no data matched your criteria.','toger' );
+							}
+
+						?>
+
+			</div>
+
+					<?php
+						wp_reset_postdata();
+                      ?>
+
+
+                    </div>
+
+                  </div>
+
+                  <!-- Col -->
+              
+                </div>
+
+
+
+              </div>
+
+			 <div id="blog" class="tab-pane fade">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="profile-main">
+                      <h3><?php  esc_html_e('Blog Post','tiger');?> </h3>
+                      <div class="profile-in">
+
+                          <div class="row">
+                      <div class="col-md-12">
+						   <?php
+						$no=10;
+						$paged = 1;
+						$offset=0;
+                      $args = array();
+                      $args['number']=$no;
+					  $args['offset']=$offset;
+				      $args['post_type']='post';
+				      $args['author']=$user_id;
+				      $args['post_status']='publish';
+
+
+                      $post_query = new WP_Query( $args );
+
+
+
+				        // User Loop
+				        if ( $post_query->have_posts() ) {
+				        	while ( $post_query->have_posts() ) {
+								$post_query->the_post();
+								$post_id= $post_query->post->ID;
+								?>
+								<article class="uou-block-7f">
+									 <?php
+										  if ( has_post_thumbnail() ) {
+											$image_id =  get_post_thumbnail_id( get_the_ID() );
+											$large_image = wp_get_attachment_url( $image_id ,'full');
+											$resize = tiger_aq_resize( $large_image, true );
+										   ?>
+										  <img src="<?php echo esc_url($resize); ?>" alt="<?php esc_html_e( 'image', 'tiger' ); ?>" class="thumb">
+										  <?php } ?>
+
+
+										  <h1><a href="#"><?php the_title(); ?></a></h1>
+										   <div class="meta"> <span class="time-ago"><?php esc_html_e( 'Date: ','toger' );?><?php echo $post_query->post->post_date; ?></span></div>
+										  <p>
+											<?php $content = $post_query->post->post_content;
+													$content = str_replace( ']]>', ']]&gt;', $content );
+													echo substr($content ,0,200);
+
+												?>
+
+
+								  <a href="<?php echo get_permalink( $post_id );?>"> <?php esc_html_e( 'Read More','toger' );?></a>
+								  </p>
+								  </article>
+
+								<!-- end .uou-block-7f -->
+
+                       <?php
+							}
+								$total_post = $post_query->found_posts;
+								$total_pages_post=ceil($total_post/$no);
+								if($total_pages_post>1){
+
+									echo'<div id="add_more_post"></div>';
+									echo'<div class="text-center" id="add_more_post_loading"></div>';
+
+									echo'<div class="text-center" id="add_more_post_more_button"><button type="button" onclick="add_more_post_ajax(2);"><i class="fa fa-plus"></i> '.esc_html__(' More','tiger').'</button> </div>';
+								}
+
+						}
+
+							if ( !$post_query->have_posts() ){
+							esc_html_e( 'Sorry, no data matched your criteria.','toger' );
+							}
+
+						?>
+
+
+
+                      </div>
+                    </div>
+
+
+
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Col -->
+
+                </div>
+              </div>
+
+			 <div id="contact" class="tab-pane fade ">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="profile-main">
+                      <h3><?php  esc_html_e('Contact','tiger');?> </h3>
+							<div class="profile-in">
+								<form id="contact_form_2" name="contact_form_2" >
+									  <input name="contact_name"  id="contact_name"  type="text" placeholder="Name & Surname">
+
+									  <input name="email_address" id="email_address"  type="text" placeholder="E-mail address">
+
+									  <textarea name="message-content" id="message-content" placeholder="Your Message"></textarea>
+
+									  <button class="btn btn-primary" onclick="contact_send_message_iv();return false;"><?php  esc_html_e('Send message','tiger');?></button>
+									<div class="col-md-12" id="update_contact2" name="update_contact2"> </div>
+								</form>
+								
+							</div>
+
+
+                    </div>
+                  </div>
+
+                  <!-- Col -->
+
+                </div>
+              </div>
 
             </div>
           </div>

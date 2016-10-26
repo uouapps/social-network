@@ -287,23 +287,32 @@
 						
 							<h3 class="page-header"> <?php _e('Access Control/Options','tiger'); ?> </h3>
 						  <div class="form-group">
-							<label for="text" class="col-md-2 control-label"><?php _e('listing Visibility','tiger'); ?>  </label>
+							<label for="text" class="col-md-2 control-label"><?php _e('Company/Professionals Visibility','tiger'); ?>  </label>
 							<div class="col-md-6 ">
 								<label>
-								  <input type="checkbox" name="listing_hide" id="listing_hide"  value='yes' <?php echo (get_post_meta($package_id,'uou_tigerp_package_hide_exp',true)=='yes'?'checked':'' ); ?>> <?php _e('listing will hide after user subscription expire.','tiger'); ?>
+								  <input type="checkbox" name="listing_hide" id="listing_hide"  value='yes' <?php echo (get_post_meta($package_id,'uou_tigerp_package_hide_exp',true)=='yes'?'checked':'' ); ?>> <?php _e('Company/professional will hide after user subscription expire.','tiger'); ?>
 								</label>																	
 							</div>																
 						</div> 
 						 
-						<!-- 	
+						 <div class="form-group">
+							<label for="text" class="col-md-2 control-label"><?php _e('Job Visibility','tiger'); ?>  </label>
+							<div class="col-md-6 ">
+								<label>
+								  <input type="checkbox" name="job_hide" id="job_hide"  value='yes' <?php echo (get_post_meta($package_id,'uou_tigerp_package_hide_job',true)=='yes'?'checked':'' ); ?>> <?php _e('Job listing will hide after user subscription expire.','tiger'); ?>
+								</label>																	
+							</div>																
+						</div> 
+						
+							
 						<div class="form-group">
-							<label for="text" class="col-md-2  control-label"><?php _e('Maximum listing (Hospital + Doctor)','tiger'); ?> </label>
+							<label for="text" class="col-md-2  control-label"><?php _e('Maximum listing (Job)','tiger'); ?> </label>
 							<div class="col-md-6">
 							  <input type="text" class="form-control" name="max_pst_no" id="max_pst_no" placeholder="Enter Max Number" value="<?php echo get_post_meta($package_id,'uou_tigerp_package_max_post_no',true); ?>">
 							  <?php _e('Maximum # of post by this package. Blank is none.','tiger'); ?>
 							</div>
-						  </div> 
-						
+						</div> 
+						<!-- 
 						<div class="form-group">
 							<label for="text" class="col-md-2 control-label"> <?php _e('Hospital Event','tiger'); ?> </label>
 							<div class="col-md-6 ">

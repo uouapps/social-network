@@ -4,49 +4,7 @@
  }
 wp_enqueue_style('Company-Profile-style', tiger_CSS.'user-public-profile.css', array(), $ver = false, $media = 'all');
 $display_name='';
-$email='';
-$user_id=1;
- global $current_user;
 
-
-
-
- if(isset($_REQUEST['id'])){
-	   $author_name= $_REQUEST['id'];
-		$user = get_user_by( 'slug', $author_name );
-	if(isset($user->ID)){
-		$user_id=$user->ID;
-		$display_name=$user->display_name;
-		$email=$user->user_email;
-	}
-  }else{
-
-	  $user_id=$current_user->ID;
-	  $display_name=$current_user->display_name;
-	  $email=$current_user->user_email;
-	  if($user_id==0){
-		$user_id=1;
-	  }
-  }
-	$tigerp_user_status = get_user_meta($user_id, 'uou_tigerp_user_status', true);
-	if($tigerp_user_status!='active'){ 
-		if($user_id!=$current_user->ID ){
-			 include( get_query_template( '404' ) );
-			 header('HTTP/1.0 404 Not Found');
-            exit; 
-		}
-
-	}
-  
-   $iv_profile_pic_url=get_user_meta($user_id, 'iv_profile_pic_url',true);
-
-	$lat=get_user_meta($user_id,'latitude',true);
-	$lng=get_user_meta($user_id,'longitude',true);
-
-	// Get latlng from address* START********
-	$dir_lat=$lat;
-	$dir_lng=$lng;
-	$address = get_user_meta($user_id,'address',true);
 	
 ?>
 	<?php
@@ -97,17 +55,38 @@ $user_id=1;
                       
                       <div class="similar">
                       <?php                 
-												
+					  $keyword_post='';	
+					  $selected='';	
+					
+					   $page =  get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+					   
+																	
                       $args = array();	
-                      //$args['number']=$no;
+                      $args['paged']=$page;
 					  //$args['offset']=$offset;		     
 				      $args['post_type']='jobs'; 
 				      //$args['author']=$user_id;  
+				      if( isset($_REQUEST['keyword'])){
+							if($_REQUEST['keyword']!=""){ 
+								$args['s']= $_REQUEST['keyword'];
+								$keyword_post=$_REQUEST['keyword'];
+								
+							}
+						}
+						if( isset($_REQUEST['postcats'])){
+							if($_REQUEST['postcats']!=''){
+								$postcats = $_REQUEST['postcats'];
+								$args['jobs-category']=$postcats;
+								$selected=$postcats;
+								
+							}
+						}
 				      $args['post_status']='publish';  			       
 					 
 					  
                       $job_query = new WP_Query( $args );
-                      
+                      $GLOBALS['wp_the_query'] = new WP_Query( $args );
+					  $GLOBALS['wp_query'] = $GLOBALS['wp_the_query'];
 					  
 
 				        // User Loop
@@ -162,12 +141,18 @@ $user_id=1;
 								
 							
 							}
+							
 						
 							if ( !$job_query->have_posts() ){
 							esc_html_e( 'Sorry, no data matched your criteria.','toger' );
 							}
 							
 						?>
+						<!--  start pagination * -->
+						  <?php if (function_exists("wp_pagination")) {
+								wp_pagination();
+						} ?>
+						<!--  End of pagination * -->
 						
 			</div>
 							 
@@ -186,14 +171,13 @@ $user_id=1;
                       <div class="sidebar-information">
 
 						   <form id="contact_form_2" name="contact_form_2" action="#" >
-									  <input name="keyword"  id="keyword"  type="text" placeholder="keyword">
+									  <input name="keyword"  id="keyword"  type="text" value="<?php echo $keyword_post; ?>" placeholder="keyword">
 									  
-									  <input name="email_address" id="email_address"  type="text" placeholder="E-mail address">
-									  <input name="email_address" id="email_address"  type="text" placeholder="E-mail address">
+									
 									  <?php
 											$directory_url_1='jobs';								
 											//$currentCategory=wp_get_object_terms( $post_edit->ID, $directory_url_1.'-category');
-											$selected='';
+											
 											
 											
 											echo '<select name="postcats" class=" ">';
@@ -264,10 +248,7 @@ $user_id=1;
 										echo '</select>';	
 									?>
 										
-									  <select>
-										<option>ssss  </option>
-										<option>ssss  </option>
-									  </select>	  
+									  
 									  
 										
 									  <button class="btn btn-primary"><?php  esc_html_e('Search','tiger');?></button>

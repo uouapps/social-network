@@ -19,9 +19,7 @@ function tiger_sidebar() {
   $args = array(
     'id'            => 'mainsidebar',
     'name'          => esc_html__( 'Page Sidebar', 'tiger' ),   
-    'description'   => esc_html__('Put your main sidebar widgets here','tiger'),  
-    'before_widget' => '',
-    'after_widget'  => '',
+    'description'   => esc_html__('Put your main sidebar widgets here','tiger'),
     'before_title'  => '<h5 class="sidebar-title">',
     'after_title'   => '</h5>',
   );
@@ -42,6 +40,10 @@ function tiger_sidebar() {
 
   register_sidebar( $footer_left_sidebar );
 
+
+  register_sidebar(array( 'name' => esc_html__( 'Sidebar ( Shop )', 'tiger' ),'id' => 'shop-sidebar','description' => esc_html__( 'Side for Woocommerce.', 'tiger' ), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h5 class="side-tittle ">','after_title' => '</h5>'));
+
+
   $footer_middle_sidebar = array(
 
     'id'            => 'tiger_footer_middle_sidebar',
@@ -60,11 +62,7 @@ function tiger_sidebar() {
  $footer_right_sidebar = array(
     'id'            => 'tiger_footer_right_sidebar',
     'name'          => esc_html__( 'Footer Right Sidebar', 'tiger' ),
-    'description'   => esc_html__('Put your widgets here that show on footer right side area example(newsletter)','tiger'), 
-    'before_widget' => '',
-    'after_widget'  => '',
-    'before_title'  => '',
-    'after_title'   => '',
+    'description'   => esc_html__('Put your widgets here that show on footer right side area example(newsletter)','tiger'),    
   );
 
   //register_sidebar( $footer_right_sidebar );
@@ -73,10 +71,7 @@ function tiger_sidebar() {
     'id'            => 'tiger_footer_down_sidebar',
     'name'          => esc_html__( 'Footer Down Sidebar', 'tiger' ),
     'description'   => esc_html__('Put your widgets here that show on footer down side area example(contact info)','tiger'), 
-    'before_widget' => '',
-    'after_widget'  => '',
-    'before_title'  => '',
-    'after_title'   => '',
+    
   );
 
   //register_sidebar( $footer_down_sidebar );
@@ -112,10 +107,9 @@ function tiger_custom_navigation_menus() {
 
   $locations = array(
 
-    //'primary_navigation_left'   => esc_html__('Primary Menu Left','tiger'),
+    
     'primary_navigation_right'  => esc_html__('Primary Menu','tiger'), 
-    //'primary_navigation_footer' => esc_html__('Primary Menu footer','tiger'), 
-    //'primary_navigation_mobile' => esc_html__('Primary Menu mobile','tiger'), 
+    
 
 
 

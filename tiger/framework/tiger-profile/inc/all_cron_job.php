@@ -54,7 +54,7 @@
 	
 	  //End Subscription remainder email *************************
 	  						
-	// New code *****************************
+	// New code Hide Directory*****************************
 				$args = array();
 				
 				$args['posts_per_page']='9999999';
@@ -76,6 +76,18 @@
 										update_user_meta($user->ID, 'uou_tigerp_user_status','inactive'); 
 									}									
 								}
+								// Job Hide*******
+								
+								$job_hide= get_post_meta($package_id, 'uou_tigerp_package_hide_job', true);
+								if($job_hide=='yes'){									
+									if(strtotime($exp_date) < time()){
+										$query = "UPDATE {$wpdb->prefix}posts SET post_status='draft' WHERE post_author='" . $user->ID . "' AND post_type='jobs'";
+										$wpdb->query($query);		
+										
+									}									
+								}
+								
+								
 								
 							}else{
 								//update_user_meta($user->ID, 'uou_tigerp_user_status','--'); 	

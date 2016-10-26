@@ -43,8 +43,14 @@ $tiger_option_data =get_option('tiger_option_data');
 							
 						  <div class="listing-inner">
 							<div class="job-content">
-							  <h6 class="title-company"><?php echo get_post_meta($curr_post_id,'company_name',true); ?> </h6>
+							  <h4 class="title-company"><?php echo get_post_meta($curr_post_id,'company_name',true); ?></h4>
+							  <?php
+							  if(get_post_meta($curr_post_id,'company_address',true)!=''){
+							  ?>
 							  <span class="location"> <i class="fa fa-map-marker"></i> <?php echo get_post_meta($curr_post_id,'company_address',true); ?>  </span> <span class="type-work full-time">  </span>
+							  <?php
+								}
+							  ?>
 								<p>
 								 <?php the_content(); ?>
 								
@@ -66,11 +72,13 @@ $tiger_option_data =get_option('tiger_option_data');
 							  </ul>
 							</div>
 						  </div>
-						  <div class="listing-tabs">
-							<ul>
-							  <li><a href="#"><i class="fa fa-envelope"></i> <?php echo get_post_meta($curr_post_id,'company_email',true); ?> </a></li>
-							  <li><a href="#"><i class="fa fa-phone"></i> <?php echo get_post_meta($curr_post_id,'company_phone',true); ?> </a></li>
-							  <li><a href="<?php echo get_post_meta($curr_post_id,'company_web',true); ?>"><i class="fa fa-globe"></i> <?php echo get_post_meta($curr_post_id,'company_web',true); ?></a></li>
+						  <div class="listing-tabs" >
+							<ul >
+							  <li ><a href="#"><i class="fa fa-envelope"></i> <?php echo get_post_meta($curr_post_id,'company_email',true); ?> </a></li>
+							  <li ><a  href="#"><i class="fa fa-phone"></i> <?php echo get_post_meta($curr_post_id,'company_phone',true); ?> </a></li>
+							  <li >
+								  <a  href="<?php echo get_post_meta($curr_post_id,'company_web',true); ?>"><i class="fa fa-globe"></i> 
+							  <?php echo substr( get_post_meta($curr_post_id,'company_web',true),0,18); ?></a></li>
 							  <li class="share-button"> <a href="#"><i class="fa fa-share"></i> <?php esc_html_e('Share','tiger'); ?></a>
 								<div class="contact-share">
 								  <ul>
@@ -114,11 +122,9 @@ $tiger_option_data =get_option('tiger_option_data');
                       <h5 class="main-title"><?php  esc_html_e('Search','tiger');?> </h5>
                       <div class="sidebar-information">
 
-						   <form id="contact_form_2" name="contact_form_2" action="#" >
-									  <input name="keyword"  id="keyword"  type="text" placeholder="keyword">
+						   <form id="contact_form_2" name="contact_form_2" action="<?php echo get_post_type_archive_link( 'jobs' ); ?>" >
+									  <input name="keyword"  id="keyword"  type="text" placeholder="keyword">									  
 									  
-									  <input name="email_address" id="email_address"  type="text" placeholder="E-mail address">
-									  <input name="email_address" id="email_address"  type="text" placeholder="E-mail address">
 									  <?php
 											$directory_url_1='jobs';								
 											//$currentCategory=wp_get_object_terms( $post_edit->ID, $directory_url_1.'-category');
@@ -193,11 +199,7 @@ $tiger_option_data =get_option('tiger_option_data');
 										echo '</select>';	
 									?>
 										
-									  <select>
-										<option>ssss  </option>
-										<option>ssss  </option>
-									  </select>	  
-									  
+									 									  
 										
 									  <button class="btn btn-primary"><?php  esc_html_e('Search','tiger');?></button>
 									 

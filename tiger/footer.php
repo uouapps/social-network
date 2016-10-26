@@ -170,23 +170,23 @@ $tiger_option_data['tiger-multi-bottom-image']=1;
       <ul class="social-icons">
 
         <?php if(isset($tiger_option_data['tiger-facebook-profile']) && !empty($tiger_option_data['tiger-facebook-profile'])) : ?>
-        <li><a  href="http://<?php echo esc_url($tiger_option_data['tiger-facebook-profile']);?> "><i class="fa fa-facebook"></i></a></li>
+        <li><a  href="<?php echo esc_url($tiger_option_data['tiger-facebook-profile']);?> "><i class="fa fa-facebook"></i></a></li>
         <?php endif; ?>
 
         <?php if(isset($tiger_option_data['tiger-twitter-profile']) && !empty($tiger_option_data['tiger-twitter-profile'])) : ?>
-        <li><a  href="http://<?php echo esc_url($tiger_option_data['tiger-twitter-profile']);?> "><i class="fa fa-twitter"></i></a></li>
+        <li><a  href="<?php echo esc_url($tiger_option_data['tiger-twitter-profile']);?> "><i class="fa fa-twitter"></i></a></li>
         <?php endif; ?>
 
         <?php if(isset($tiger_option_data['tiger-google-profile']) && !empty($tiger_option_data['tiger-google-profile'])) : ?>
-        <li><a  href="http://<?php echo esc_url($tiger_option_data['tiger-google-profile']);?> "><i class="fa fa-google"></i></a></li>
+        <li><a  href="<?php echo esc_url($tiger_option_data['tiger-google-profile']);?> "><i class="fa fa-google"></i></a></li>
         <?php endif; ?>
 
         <?php if(isset($tiger_option_data['tiger-linkedin-profile']) && !empty($tiger_option_data['tiger-linkedin-profile'])) : ?>
-        <li><a  href="http://<?php echo esc_url($tiger_option_data['tiger-linkedin-profile']);?> "><i class="fa fa-linkedin"></i></a></li>
+        <li><a  href="<?php echo esc_url($tiger_option_data['tiger-linkedin-profile']);?> "><i class="fa fa-linkedin"></i></a></li>
         <?php endif; ?>
 
         <?php if(isset($tiger_option_data['tiger-pinterest-profile']) && !empty($tiger_option_data['tiger-pinterest-profile'])) : ?>
-        <li><a  href="http://<?php echo esc_url($tiger_option_data['tiger-pinterest-profile']);?> "><i class="fa fa-pinterest"></i></a></li>
+        <li><a  href="<?php echo esc_url($tiger_option_data['tiger-pinterest-profile']);?> "><i class="fa fa-pinterest"></i></a></li>
         <?php endif; ?>
 
       </ul>

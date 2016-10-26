@@ -133,9 +133,46 @@ if(isset($_GET['delete_id']))  {
                     <div class="tab-content">
                     
                       <div class="tab-pane active" id="tab_1_1">
+						  
+						  
 					 
 						<div class="row">
 							<div class="col-md-12">	 
+							
+							 <?php					
+						global $wpdb;
+						// Check Max\
+						$package_id=get_user_meta($current_user->ID,'uou_tigerp_package_id',true);						
+						$max=get_post_meta($package_id, 'uou_tigerp_package_max_post_no', true);
+						if($max==""){
+									$user_role= $current_user->roles[0];
+									if(isset($current_user->roles[0]) and $current_user->roles[0]=='administrator'){
+										$max=9999999;
+									}	
+							
+						}
+								
+						
+						$sql="SELECT count(*) as total FROM $wpdb->posts WHERE post_type IN ('jobs' )  and post_author='".$current_user->ID."' ";									
+						$all_post = $wpdb->get_row($sql);
+						$my_post_count=$all_post->total;
+						
+						if ( $my_post_count>=$max  )  { 
+								$iv_redirect = get_option( '_iv_directories_profile_page');							
+								$reg_page= get_permalink( $iv_redirect); 							
+							?>
+								<p><br/><br/>
+							<?php esc_html_e('Please upgrade your account','agrodir'); ?>
+							 <a href="<?php echo $reg_page.'?&profile=level'; ?>" title="Upgarde"><b><?php esc_html_e('here','tiger'); ?> </b></a> 
+							<?php esc_html_e('to add more post.','tiger'); ?>	
+							</p>
+							
+						<?php
+						}else{
+							
+						
+					
+					?>		
 							
 							 
 							<form action="" id="new_post" name="new_post"  method="POST" role="form">
@@ -358,6 +395,10 @@ if(isset($_GET['delete_id']))  {
 		                        </div>	
 									 
 							</form>
+						  
+						  <?php
+						}
+						  ?>
 						  </div>
 						</div>
 			

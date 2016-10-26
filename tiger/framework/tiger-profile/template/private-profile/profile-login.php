@@ -71,7 +71,7 @@ wp_enqueue_style('profile-login-style', tiger_CSS.'profile-login.css', array(), 
       
       <div class="create-account">
             <p><?php
-        $iv_redirect = get_option( '_uou_tigerp_price_table');
+        $iv_redirect = get_option( '_uou_tigerp_registration');
         $reg_page= get_permalink( $iv_redirect); 
         ?><?php  esc_html_e('Are you a new user?','tiger');?>  <a  href="<?php echo $reg_page;?>" id="register-btn" class=""><?php  esc_html_e('Create an account','tiger');?>  </a>
             </p>

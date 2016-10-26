@@ -447,8 +447,14 @@ if (!class_exists('wp_uou_tigerp_Admin')) {
 							));
 													
 						
-						update_post_meta($newpost_id, 'uou_tigerp_package_user_role', $role_name_new);						
-						//update_post_meta($newpost_id, 'uou_tigerp_package_max_post_no', $form_data['max_pst_no']);				
+						update_post_meta($newpost_id, 'uou_tigerp_package_user_role', $role_name_new);	
+											
+						update_post_meta($newpost_id, 'uou_tigerp_package_max_post_no', $form_data['max_pst_no']);							
+						if(isset($form_data['listing_hide'])){
+							update_post_meta($newpost_id, 'uou_tigerp_package_hide_job', $form_data['job_hide']);
+						}else{
+							update_post_meta($newpost_id, 'uou_tigerp_package_hide_job', 'no');
+						}			
 						
 						if(isset($form_data['listing_hide'])){
 							update_post_meta($newpost_id, 'uou_tigerp_package_hide_exp', $form_data['listing_hide']);
@@ -867,7 +873,14 @@ if (!class_exists('wp_uou_tigerp_Admin')) {
 						}
 						
 															
-						//update_post_meta($newpost_id, 'uou_tigerp_package_max_post_no', $form_data['max_pst_no']);				
+						update_post_meta($newpost_id, 'uou_tigerp_package_max_post_no', $form_data['max_pst_no']);							
+						if(isset($form_data['listing_hide'])){
+							update_post_meta($newpost_id, 'uou_tigerp_package_hide_job', $form_data['job_hide']);
+						}else{
+							update_post_meta($newpost_id, 'uou_tigerp_package_hide_job', 'no');
+						}
+							
+								
 						if(isset($form_data['listing_hide'])){
 							update_post_meta($newpost_id, 'uou_tigerp_package_hide_exp', $form_data['listing_hide']);
 						}else{
