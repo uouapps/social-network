@@ -23,7 +23,7 @@
 
  <div class="uou-block-11a">
         <h5 class="title">Menu</h5>
-        <a href="#" class="mobile-sidebar-close">&times;</a>
+        <a href="#" class="mobile-sidebar-close">X</a>
           
           <?php get_template_part('templates/header','menuMobile');?>
 

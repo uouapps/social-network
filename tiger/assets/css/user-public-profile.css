@@ -290,6 +290,10 @@
 		display: block;
 		float: none !important;
 	}
+		.login-sec {
+	    margin-top: 100px;
+		}
+
 }
 @media (max-width: 520px) {
 	.right-top-bnr {
@@ -1164,6 +1168,9 @@ iframe {
 	.user-profile .img-profile {
 		width: 100% !important;
 	}
+	.position-center-center.col-md-9 {
+	    top: 60%;
+	}
 }
 .media, .media-body {
 	overflow: hidden;
@@ -1645,6 +1652,7 @@ iframe {
 .banr-head input[type="email"], .banr-head input[type="text"], .banr-head input[type="password"] {
  	color: #fff;
 }
+
 
 
 

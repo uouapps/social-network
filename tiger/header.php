@@ -15,7 +15,7 @@
 <body <?php body_class(); ?> >
  <div class="uou-block-11a mobileMenu">
         <h5 class="title"><?php esc_html_e( 'Menu', 'tiger' ); ?></h5>
-        <a href="#" class="mobile-sidebar-close"><?php esc_html_e( 'times', 'tiger' ); ?> </a>
+        <a href="#" class="mobile-sidebar-close">X</a>
           <?php get_template_part('templates/header','menuMobile'); ?>
         <hr>
 
