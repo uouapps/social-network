@@ -24,6 +24,7 @@ global $wpdb;
 	$auto_subject=  $contact_email_subject; 	
 	$headers = array("From: " . $wp_title . " <" . $admin_mail . ">", "Reply-To: ".$visitor_email_address  ,"Content-Type: text/html");
 	
+	
 		
 		$h = implode("\r\n", $headers) . "\r\n";
 		wp_mail($visitor_email_address, $auto_subject, $email_body, $h);
@@ -42,7 +43,7 @@ global $wpdb;
 	$auto_subject=  $contact_email_subject; 	
 	$headers = array("From: " . $wp_title . " <" . $admin_mail . ">", "Reply-To: ".$visitor_email_address  ,"Content-Type: text/html");
 	
-			$h = implode("\r\n", $headers) . "\r\n";
-			wp_mail($admin_mail, $auto_subject, $email_body, $h);	
+	$h = implode("\r\n", $headers) . "\r\n";
+	wp_mail($admin_mail, $auto_subject, $email_body, $h);	
 	
 	

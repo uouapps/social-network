@@ -854,6 +854,7 @@ $user_id=1;
 							<div class="profile-in">
 								<form id="contact_form_2" name="contact_form_2" >
 									  <input name="contact_name"  id="contact_name"  type="text" placeholder="Name & Surname">
+									  <input type="hidden" name="profile_user" id="profile_user" value="<?php echo $user_id; ?>">
 
 									  <input name="email_address" id="email_address"  type="text" placeholder="E-mail address">
 

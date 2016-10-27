@@ -44,9 +44,13 @@ global $wpdb;
 	
 	$headers = array("From: " . $wp_title . " <" . $admin_mail . ">", "Reply-To: ".$client_email_address  ,"Content-Type: text/html");
 	
-		
+	
+
+
 	$h = implode("\r\n", $headers) . "\r\n";
-	wp_mail($client_email_address, $auto_subject, $email_body, $h);
+	if(!wp_mail($client_email_address, $auto_subject, $email_body, $h)){
+		//echo'not sent';
+	}
 	
 	
 	if($bcc_message=='yes'){
