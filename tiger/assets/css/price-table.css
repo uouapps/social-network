@@ -86,7 +86,7 @@ ul#pt-3:hover .submit-btn a{
   float: left;
   text-align: center;
   border-bottom: none;
-  background-color: transparent !important;
+  background-color: #f9f9f9;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
   }

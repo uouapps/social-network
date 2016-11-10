@@ -1,3 +1,4 @@
+
 /*
 ======================================================
 
@@ -14333,7 +14334,7 @@ a:hover, a:focus, a:active, a.active {
 	background-image: none;
 	border: 0;
 	white-space: nowrap;
-	color: #ffffff !important;
+	color: #ffffff;
 	padding: 5px 10;
 	transition: all 0.3s;
 	border-radius: 3px;
@@ -14349,9 +14350,8 @@ a:hover, a:focus, a:active, a.active {
 }
 .btn-custom {
 	background-color: #0099fe;
-	border: 2px solid #0099fe;
+	border: 1px solid #0099fe;
 	color: #fff;
-	padding: 8px 15px !important;
 }
 .btn-custom:hover, .btn-custom.hover, .btn-custom:focus, .btn-custom.focus, .btn-custom:active, .btn-custom.active {
 	background-color: #2771aa;
@@ -17974,3 +17974,196 @@ input[type="checkbox"] .styled:checked + label::after, input[type="radio"] .styl
 #jobs .sidebar .similar h1{
 
 }
+
+
+
+
+
+
+
+
+
+
+/* new home page style */
+.medicaldirectory-home-banner {
+  position: relative;
+  width: 100%;
+  display: table;
+  height: 500px;
+
+  background: url('../img/home-top.jpg') center center no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 768px ) {
+  .medicaldirectory-home-banner {
+    height: auto;
+    padding: 40px 0 0;
+  }
+
+  .medicaldirectory-home-banner .banner-content {
+    height: auto;
+  }
+}
+
+
+
+.medicaldirectory-home-banner .banner-content {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  z-index: 90;
+}
+
+
+.medicaldirectory-home-banner .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, .75);
+  display: block;
+  z-index: 10;
+}
+
+
+.banner-icon {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin: 20px auto;
+  border: 1px solid #0099FE;
+  line-height: 70px;
+}
+
+
+.banner-icon i {
+  font-size: 35px;
+  color: #0099FE;
+}
+
+
+.medicaldirectory-home-banner h2 {
+  font-size: 36px;
+  color: #333;
+  font-weight: 100;
+  margin-bottom: 20px;
+  position: relative;
+  font-weight: 400;
+  z-index: 99;
+  margin: 0;
+}
+
+
+.medicaldirectory-home-banner h2 span {
+  color: #0099fe;
+}
+.medicaldirectory-home-banner .home-banner-text strong {
+  color: #333;
+  padding: 5px 15px;
+  line-height: 50px;
+}
+
+.medicaldirectory-home-banner .home-banner-text p {
+  margin: 0;
+
+}
+
+.medicaldirectory-home-banner .home-banner-text p {
+  color: #333;
+  padding: 5px 15px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+
+
+}
+
+.medicaldirectory-home-banner .home-banner-button {
+  position: relative;
+  z-index: 99;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.medicaldirectory-home-banner .home-banner-button button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+}
+
+.medicaldirectory-home-banner .home-banner-button button {
+	text-transform: none !important;
+}
+
+
+
+.home-page-professianls {
+	position: relative;
+	padding: 50px 0 0;
+	background: #fff;
+}
+
+.home-page-professianls.with-bottom-padding {
+	padding-bottom: 80px;
+}
+
+.home-page-professianls.no-padding {
+	padding: 0;
+}
+
+.home-page-professianls .user-details {
+	background: #f9f9f9;
+}
+.home-page-professianls.with-bg-one .user-details {
+	background: #fff;
+}
+
+.home-page-professianls #header {
+	display: none;
+}
+
+.home-page-professianls .title-container {
+	position: relative;
+	width: 600px;
+	padding-bottom: 50px;
+	margin: 0 auto;
+}
+
+@media (max-width:767px) {
+	.home-page-professianls .title-container {
+		width: 100%;
+	}
+}
+.home-page-professianls.with-bg-one {
+  background: url(../img/doctor-category-bg.jpg) top center no-repeat;
+  background-size: cover;
+}
+
+.home-page-professianls.with-bg-one.two  {
+	  background: url(../img/feature-doctor.jpg) top center no-repeat;
+  background-size: cover;
+
+}
+
+.home-title {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+
+.home-page-professianls .clients-says {
+	padding: 0;
+}
+
+.home-page-professianls .clients-says  .section-title {
+	margin-top: 0;
+}
+
+
+

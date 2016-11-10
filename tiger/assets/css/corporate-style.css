@@ -14614,11 +14614,21 @@ padding-right: 0  !important;
     color: #0099fe;
 }
 
+.btn-transparent.white {
+  color: #fff;
+  border: 1px solid #fff;
+  text-transform: capitalize;
+}
+.btn-transparent.round {
+  border-radius: 30px;
+}
+
 .btn-transparent:hover ,
 .btn-transparent:focus,
 .btn-transparent:active {
   color: #fff;
   background: #0099fe;
+  border-color: #0099fe;
 }
 
 

@@ -1420,12 +1420,17 @@ iframe {
 	z-index: 50;
 	font-weight: normal;
 	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 25px;
 }
 .home-pro .services li .ser-inn .gray-border {
 	border-color: #c4c4c4;
 }
 .home-pro .services li .ser-inn p {
 	font-size: 14px;
+}
+.home-pro .services li .ser-inn button {
+	position: relative;
+	z-index: 50;
 }
 .home-pro .pro-content {
 }
