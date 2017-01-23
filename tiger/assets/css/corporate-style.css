@@ -15264,3 +15264,21 @@ padding-right: 0  !important;
     display: none;
   }
 }
+
+
+
+
+
+
+
+
+.uou-sidebar {
+  padding: 20px;
+  box-shadow: 0 0 3px rgba(0,0,0, .1);
+  border-radius: 3px;
+}
+
+.widget {
+  background: transparent !important;
+  list-style: none;
+}
