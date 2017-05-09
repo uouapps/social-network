@@ -340,6 +340,15 @@ ul#pt-4:hover .submit-btn a{
   text-align: center;
  }
 
+ @media (max-width: 991px) {
+    #pt-1,
+    #pt-2,
+    #pt-3,
+    #pt-4 {
+      width: 50% !important;
+    }
+  }
+
 /* .wrapper .text-center > ul {
   padding-right: 30px  !important;
 
@@ -359,7 +368,7 @@ ul#pt-4:hover .submit-btn a{
     ul#pt-2 .submit-btn a,
     ul#pt-3 .submit-btn a,
     ul#pt-4 .submit-btn a{
-    font-size: 8px;
+    font-size: 12px;
     width:60px;
   }
   ul#pt-1  h2,
@@ -386,9 +395,29 @@ ul#pt-4:hover .submit-btn a{
    ul#pt-2 .submit-btn a,
    ul#pt-3 .submit-btn a,
    ul#pt-4 .submit-btn a{
-    height: 23px;
   }
  }
   .wrapper{
     width: 100%;
   }
+
+
+
+@media (max-width: 991px) {
+  #pt-1,
+  #pt-2,
+  #pt-3,
+  #pt-4 {
+    width: 50% !important;
+    margin-bottom: 30px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #pt-1,
+  #pt-2,
+  #pt-3,
+  #pt-4 {
+    width: 100% !important;
+  }
+}

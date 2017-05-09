@@ -36,11 +36,25 @@ var contactWindow = $(contact).find('.contact-details');
 $('.sponsors-slider').owlCarousel({
   items: 6,
   center: true,
+  nav:true,
+  pagination: true,
+  autoPlay: true,
+  responsive:{
+    0:{
+        items:1
+    },
+    600:{
+        items:3
+    },
+  }
+
 });
 
 $('.texti-slide').owlCarousel({
     loop:true,
     nav:true,
+    pagination: true,
+    autoPlay: true,
 	items: 2,
 	navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
     responsive:{
